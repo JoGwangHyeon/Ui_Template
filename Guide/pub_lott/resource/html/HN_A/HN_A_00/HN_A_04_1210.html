@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap n22UI">
+        <!-- HEADER -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">적금</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //HEADER -->
+
+        <!-- CONTENT -->
+        <div id="content" class="app-main prodmall-detail-savings">
+            <div class="prodmall-section section-top">
+                <div>
+                    <em>펫사랑 적금</em>
+                    <div class="tit-default">애견인, 애묘인을 위한<br>
+                        반려동물 전용 적금</div>
+                </div>
+                <div class="content-wrap">
+                    <div class="main-desc">
+                        <em>최대금리(세전, 1년)</em>
+                        <!-- 2022-09-06 'desc-percent' class 추가 -->
+                        <strong><span>연</span><em class="desc-percent">2.80%</em></strong>
+                    </div>
+                    <div class="half-cont">
+                        <dl>
+                            <dt>가입기간</dt>
+                            <dd>1년</dd>
+                        </dl>
+                        <dl>
+                            <dt>가입금액</dt>
+                            <dd>10만원~50만원</dd>
+                        </dl>
+                    </div>
+                    <div class="section-top-buttons">
+                        <button type="button" class="btn-line line-white" data-ecrm="COE1010"><i class="btn-icon download"></i>상품 비교함</button>
+                        <div class="util-btn-group finance-detail__button-wrap">
+                            <!-- 2022-08-10 활성화시 util-btn에 추가클래스 부여 is-active
+                            <button type="button" class="util-btn icon-favorite is-active">관심상품</button>
+                             -->
+                            <button type="button" class="util-btn icon-share" data-ecrm="SHE1010">공유하기</button>
+                            <button type="button" class="util-btn icon-favorite">
+                                <i class="icon-heart icon-heart--large" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prodmall-section">
+                <div class="tit-default txt-bold">펫사랑 서약하면 <br>
+                    연 0.10% 우대금리</div>
+                <p>펫사랑 서약서를 작성하면<br>
+                    연 0.10% 우대금리를 받을 수 있어요. </p>
+                    
+                <div id="prd_detail_1470992_01" class="icon-svg-area" style="height: 12.5rem;">
+                    <img class="motion01" src="../../../images/C/n22_img_ani_document01.png" alt="">
+                    <img class="motion02" src="../../../images/C/n22_img_ani_document02.png" alt="">
+                    <span class="motion03"></span>
+                    <img class="motion04" src="../../../images/C/n22_img_ani_document04.png" alt="">
+                    <img class="motion05" src="../../../images/C/n22_img_ani_document05.png" alt="">
+                </div>
+            </div>
+
+            <div class="prodmall-section">
+                <div class="tit-default txt-bold">하나카드 쓰면 우대금리 더!</div>
+                <p>하나은행 계좌에 10만원 이상 하나카드 <br> 결제실적이 있거나 마케팅 동의하면 <br>
+                   연 0.20% 우대금리를 드려요.</p>
+                   <!-- 2022-10-20 수정 -->
+                   <div id="prd_detail_1470992_02" class="icon-svg-area" style="height: 12.5rem;">
+                   </div>
+            </div>
+
+            <div class="prodmall-section">
+                <div class="tit-default txt-bold">반려동물 무료 보험 혜택까지</div>
+                <p>반려동물 배상책임 보험서비스에<br>
+                    무료로 가입할 수 있어요.</p>
+                <div id="prd_detail_1470992_03" class="icon-svg-area" style="height: 12.5rem;">
+                    <img class="motion01" src="../../../images/C/n22_img_ani_document01.png" alt="">
+                    <img class="motion02" src="../../../images/C/n22_img_ani_document02.png" alt="">
+                    <img class="motion03" src="../../../images/C/n22_img_ani_document03_pet.png" alt="">
+                    <img class="motion04" src="../../../images/C/n22_img_ani_document04.png" alt="">
+                </div>
+            </div>
+
+            <!-- 2022-08-19 시뮬레이션 영역 클래스 변경 "prodmall-section simulation-area" -->
+            <div class="prodmall-section simulation-area">
+                <div class="tit-default txt-bold">나의 예상 혜택</div>
+                <div data-element="tab" class="my-benefit-cont">
+                    <div class="tab-wrap tab-wrap--option box-type">
+                        <ul class="tab-wrap__menu" role="tablist">
+                            <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                                <a href="#" class="tab-wrap__button" data-element="tab__anchor" role="tab" aria-selected="false" data-ecrm="TAB1010">얼마를 모을까</a>
+                            </li>
+                            <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                                <a href="#" class="tab-wrap__button is-active" data-element="tab__anchor" role="tab" aria-selected="true" data-ecrm="TAB1020">얼마를 넣을까</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pualugin-tab__panel" data-element="tab__panel" role="tabpanel">
+                        <div class="gray-box">
+                            <!-- 2022-09-02 세전 위치 변경 관련 마크업 변경 -->
+                            <!-- 2022-09-07 세전, 기본/우대 금리 text 변경 -->
+                            <dl>
+                                <dt>만기금액<span>세전</span></dt>
+                                <!-- 2022-09-07 '원'에 em 추가 -->
+                                <dd>1,200,000<em>원</em></dd>
+                            </dl>
+                            <dl>
+                                <dt>적용금리
+                                    <!-- 2022-09-08 기본/우대 금리 띄어쓰기 수정 -->
+                                    <span>기본 / 우대 금리</span>
+                                </dt>
+                                <!-- 2022-08-22 | 디자인 고려 em태그 텍스트 수정 및 span태그 추가 / span 텍스트 수정 -->
+                                <dd>
+                                    <em>연 <span>1.90%</span></em>
+                                    <span>연 1.50% / 연 0.40%</span>
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <div class="cont">
+                            <div class="button-select underline-type inline">
+                                <button type="button" class="button button-select__item readonly" title="수익률 높은순 선택" data-element="modal__open" data-target="#combobox_1" aria-controls="#combobox_2" data-ecrm="SET1010">1년</button>동안
+                            </div>
+                            <div class="input native-readonly underline-type" data-native="focus">
+                                <!--
+                                    * 오류시 class="input input--error"
+                                    * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                                -->
+                                <div class="input__inner">
+                                    <span class="every">매월</span>
+                                    <div class="native-inner" role="button">
+                                        <span id="inputText02" class="input__element" title="가입금액 입력" placeholder="100,000원" data-ecrm="SET1020"></span>
+                                    </div>
+                                    <span>씩 저축하기</span>
+                                    <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
+                                </div>
+                            
+                                <!-- 에러메시지-->
+                                <p class="input__error" aria-live="assertive">출금가능금액이 부족합니다.</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="pualugin-tab__panel is-active" data-element="tab__panel" role="tabpanel">
+                        <div class="gray-box">
+                            <dl>
+                                <dt>적립금액</dt>
+                                <dd><em>매월 </em>818,998<em>원</em></dd>
+                            </dl>
+                            <dl>
+                                <dt>적용금리
+                                    <!-- 2022-09-08 기본/우대 금리 띄어쓰기 수정 -->
+                                    <span>기본 / 우대 금리</span>
+                                </dt>
+                                <!-- 2022-08-22 | 디자인 고려 em태그 텍스트 수정 및 span태그 추가 / span 텍스트 수정 -->
+                                <dd>
+                                    <em>연 <span>1.90%</span></em>
+                                    <span>연 1.50% / 연 0.40%</span>
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <div class="cont">
+                            <div class="button-select underline-type inline">
+                                <button type="button" class="button button-select__item readonly" title="수익률 높은순 선택" data-element="modal__open" data-target="#combobox_1" aria-controls="#combobox_2" data-ecrm="SET1010">1년</button>동안
+                            </div>
+                            <div class="input native-readonly underline-type" data-native="focus">
+                                <!--
+                                    * 오류시 class="input input--error"
+                                    * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                                -->
+                                
+                                <div class="input__inner">
+                                    
+                                    <div class="native-inner" role="button">
+                                        <span id="inputText02" class="input__element" title="가입금액 입력" placeholder="1,200,000원" data-ecrm="SET1020"></span>
+                                    </div>
+                                    
+                                    
+                                    <span> 모으기</span>
+                                    <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
+                                </div>
+
+                                <!-- 에러메시지-->
+                                <p class="input__error" aria-live="assertive">출금가능금액이 부족합니다.</p>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+
+                <div class="guide-wrap" data-element="toggle">
+                    <div class="title-xsmall">
+                        <!-- 2022-09-07 우대항목 예상 금리 띄어쓰기 수정 -->
+                        <button type="button" class="pualugin__button button-arrow" data-element="toggle__anchor" data-ecrm="SET1030">우대항목 예상금리</button>
+                    </div>
+                    <div class="guide-wrap__list guide-wrap__list--small" data-element="toggle__panel">
+                        <ul class="select-item-group">
+                            <li>
+                                <div class="checkbox-wrap">
+                                    <input type="checkbox" id="ratesChk01-01" class="checkbox-wrap__check" name="ratesChk01">
+                                    <label for="ratesChk01-01" class="checkbox-wrap__label">펫사랑 서약</label>
+        
+                                    <!--tooltip-->
+                                    <div class="tooltip" data-tooltip="paragraph">
+                                        <button type="button" class="tooltip__open" data-tooltip-button="open" aria-label="저축방법 정보 툴팁 닫기" aria-hidden="true"></button>
+                                        <!-- 툴팁 레이어 -->
+                                        <div class="tooltip__panel" data-tooltip-panel="false">
+                                            하나은행 홈페이지 또는 하나원큐에서 반려동물을 위한 온라인 펫사랑 서약서를 작성한 경우 적용됩니다.
+                                            <button class="tooltip__close" data-tooltip-button="close" aria-label="툴팁 닫기" type="button"></button>
+                                        </div>
+                                        <!-- //툴팁 레이어 -->
+                                    </div>
+                                    <!--//tooltip-->
+                                </div>
+                                <span class="txt-medium">연 0.10%</span>
+                            </li>
+                            <li>
+                                <div class="checkbox-wrap">
+                                    <input type="checkbox" id="ratesChk01-02" class="checkbox-wrap__check" name="ratesChk02">
+                                    <label for="ratesChk01-02" class="checkbox-wrap__label">하나카드</label>
+        
+                                    <!--tooltip-->
+                                    <div class="tooltip" data-tooltip="paragraph">
+                                        <button type="button" class="tooltip__open" data-tooltip-button="open" aria-label="저축방법 정보 툴팁 닫기" aria-hidden="true"></button>
+                                        <!-- 툴팁 레이어 -->
+                                        <div class="tooltip__panel" data-tooltip-panel="false">
+                                            · 적금 가입일로부터 만기 전전월 말일까지, 본인 명의 하나은행 입출금통장에 10만원 이상 하나카드(신용/체크) 결제실적이 있는 경우 적용됩니다.<br>
+                                            · 해당 조건 충족 여부는 과거 실적 기준이며, 실제 우대금리는 만기 시점에 알 수 있습니다.
+                                            <button class="tooltip__close" data-tooltip-button="close" aria-label="툴팁 닫기" type="button"></button>
+                                        </div>
+                                        <!-- //툴팁 레이어 -->
+                                    </div>
+                                    <!--//tooltip-->
+                                </div>
+                                <span class="txt-medium">연 0.20%</span>
+                            </li>
+                            <li>
+                                <div class="checkbox-wrap">
+                                    <input type="checkbox" id="ratesChk01-03" class="checkbox-wrap__check" name="ratesChk01">
+                                    <label for="ratesChk01-03" class="checkbox-wrap__label">마케팅 동의</label>
+        
+                                    <!--tooltip-->
+                                    <div class="tooltip" data-tooltip="paragraph">
+                                        <button type="button" class="tooltip__open" data-tooltip-button="open" aria-label="저축방법 정보 툴팁 닫기" aria-hidden="true"></button>
+                                        <!-- 툴팁 레이어 -->
+                                        <div class="tooltip__panel" data-tooltip-panel="false">
+                                            상품 가입 전 하나은행 상품/서비스 마케팅 동의 항목에 모두 동의한 경우 적용됩니다.
+                                            <button class="tooltip__close" data-tooltip-button="close" aria-label="툴팁 닫기" type="button"></button>
+                                        </div>
+                                        <!-- //툴팁 레이어 -->
+                                    </div>
+                                    <!--//tooltip-->
+                                </div>
+                                <span class="txt-medium">연 0.20%</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2022-09-02 오타 수정 -->
+                <!-- 2022-09-16 수정 -->
+                <p class="interest-rate-info">
+                    예상금리는 현재 상황으로 예상한 결과이며,<br>실제금리는 조건 충족 여부에 따라 달라질 수 있습니다.
+                </p>
+            </div>
+
+            <div class="prodmall-section pb-0">
+                <div class="tit-default">가입 전 확인해 주세요!</div>
+                <div class="finance-box-wrap prodmall-notice">
+                    <!-- 상품개요 -->
+                    
+                        
+                        <!-- 상품내용 -->
+                        <div class="white-box white-box--fund" data-element="toggle">
+                            <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false">
+                                <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                    <div class="list-wrap__box">
+                                        <strong class="title">상품정보</strong>
+                                    </div>
+                                    <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                                </div>
+                            </div>
+                            <div class="white-box__content" data-element="toggle__panel" style="display: none;">
+                                
+                                    
+        
+                                    
+                                    
+                                <!-- 적금  -->
+                                
+                                <div class="tit-small">상품특징</div>
+                                  <div><p class="text-guide">펫코노미 시대(반려인 1,500만명) 반려동물을 위한 목돈마련 저축상품</p></div>
+                                <div class="tit-small">가입대상</div>
+                                  <div><p class="text-guide">실명의 개인 또는 개인사업자(1인 1계좌)</p></div>
+                                <div class="tit-small">가입기간</div>
+                                  <div><p class="text-guide">1년</p></div>
+
+                                
+                                
+                                <div class="tit-small">가입금액</div>
+                                
+                                
+                                  <div><p class="text-guide color-red">매월 10만원 이상 ~ 50만원 이하 </p></div>
+                                <div class="tit-small">이자지급방법</div>
+                                  <div><p class="text-guide">만기일시지급식 : 만기(후)해지시 이자를 지급</p></div>
+                                
+                                
+    
+                                
+    
+                                
+    
+                                
+                                
+                                
+    
+                             </div><!-- //white-box__content-->
+                        </div><!-- //toggle-->
+                        
+                        
+                        
+                
+                        
+                        <!-- 기본금리안내 -->
+                        <div class="white-box white-box--fund" data-element="toggle">
+                            <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false">
+                                <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                    <div class="list-wrap__box">
+                                        <strong class="title">기본금리</strong>
+                                    </div>
+                                    <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                                </div>
+                            </div>
+                            <div class="white-box__content" data-element="toggle__panel" style="display: none;">
+                                
+                                <div class="tit-small">기본금리</div>
+                                
+                                <div class="additional-button">
+                                    <button type="button" class="button-underline button-underline--green" onclick="HanaOpenPopup(MIAPS_DOMAIN+'/mbp/resource/html/FFPM/FFPM03/FFPM0303020_P01.html');">예금기본금리 조회</button>
+                                </div>
+                                
+                                
+                                <div id="depRateArea"><div class="sub-label">(펫사랑 적금)</div>
+            
+        
+    
+    
+    <div class="tit-small">
+        <span class="table-header__unit text-guide">(2022-08-22 기준, 세전)</span>
+    </div>
+    
+    
+    
+    
+    
+    
+    <div class="table table-vertical table-vertical--narrow">
+        <table>
+            <colgroup>
+                <col span="2">
+            </colgroup>
+            <!-- thead Title -->
+            <thead>
+            
+            
+            
+                <tr>
+                    <th scope="col" class="table-vertical__th">가입기간</th>
+                    <th scope="col" class="table-vertical__th">금리 (연율,세전)</th>
+                </tr>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            </thead>
+            <!-- tbody Contents -->
+            <tbody>
+            
+                
+                
+                
+                
+                
+                
+                
+                
+                    
+                        <tr>
+                            <td class="table-vertical__td">1년</td>
+                        
+                            <td class="table-vertical__td">2.3%</td>
+                        
+                        </tr>
+                    
+                
+            
+            </tbody>
+        </table> 
+        
+    </div></div>
+                                
+    
+    
+                                
+    
+                            
+                             </div>
+                             <!-- //white-box__content-->
+                        </div><!-- //toggle-->
+                        
+                
+                
+                
+                
+                        
+                        
+                        
+                        <!-- 우대금리 안내 -->
+                
+                            
+                            <div class="white-box white-box--fund" data-element="toggle">
+                                <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false">
+                                    <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                        <div class="list-wrap__box">
+                                            <strong class="title">우대금리</strong>
+                                        </div>
+                                        <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                                    </div>
+                                </div>
+                                <div class="white-box__content" data-element="toggle__panel" style="display: none;">
+                                        
+                                    <div class="tit-small">우대금리</div>
+                                    <div><p class="text-guide">아래 항목을 충족하는 경우, 아래의 우대금리를 제공(중도해지시 미제공)</p>
+<div class="guide-wrap">
+<ul class="guide-list guide-list--large">
+<li class="guide-list__item">1. 펫사랑 서약 우대(연0.1%) 예금 가입시(또는 가입월 말일까지) 온라인채널(인터넷/스마트폰 뱅킹)에서 반려동물을 위한 「온라인 펫사랑 서약서」 를 작성한 경우</li>
+<li class="guide-list__item">2. 하나카드 우대(연 0.2%) 예금 가입일로부터 만기 전전월말 기준 본인명의 하나은행 입출금통장을 통해 10만원 이상 하나카드 (신용/체크) 결제 실적 보유한 경우</li>
+<li class="guide-list__item">3. 마케팅동의 우대(연 0.2%) 가입 전 하나은행 상품·서비스 마케팅 동의 항목 모두 동의한 경우</li>
+</ul></div></div> 
+                                </div>
+                                <!-- //white-box__content-->
+                            </div>
+                             
+                
+                
+                            <!-- //toggle-->
+                        
+                    
+                
+                
+                
+                
+                  
+                
+                
+                    
+                    
+                
+                        
+                        
+                        <!-- 우대서비스 -->
+                        <div class="white-box white-box--fund" data-element="toggle">
+                            <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false">
+                                <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                    <div class="list-wrap__box">
+                                         
+                                        <strong class="title">우대서비스</strong>
+                                        
+                                    </div>
+                                    <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                                </div>
+                            </div>
+                            <div class="white-box__content" data-element="toggle__panel" style="display: none;">
+                                    
+										 
+                                <div class="tit-small">연계.제휴서비스 내용 : 반려동물 배상책임보험서비스 무료가입</div>
+                                
+                                <div><div class="table table-vertical table-vertical--narrow">
+<table>
+<colgroup>
+    <col span="2">
+</colgroup>
+<tbody>
+    <tr>
+        <td class="table-vertical__td">담보</td>
+        <td class="table-vertical__td">반려동물 배상책임(대인, 대동물)</td>
+    </tr>
+    <tr>
+        <td class="table-vertical__td">담보내용</td>
+        <td class="table-vertical__td">피보험자가 대한민국 내에서 보험 기간 중에 발생된 보험증권에 기재된 반려동물의 행위에 기인하는 우연한 사고로 인하여 타인의 신체장해 및 타인 소유의 반려동물에 손해를 입혀 발생하는 법률상의 배상책임</td>
+    </tr>
+    <tr>
+        <td class="table-vertical__td">보험가입금액(1사고당)</td>
+        <td class="table-vertical__td">5백만원</td>
+    </tr>
+    <tr>
+        <td class="table-vertical__td">자기부담금(1사고당)</td>
+        <td class="table-vertical__td">3만원</td>
+    </tr>
+    <tr>
+        <td class="table-vertical__td">종류</td>
+        <td class="table-vertical__td">개(맹견 등 제외) 또는 고양이</td>
+    </tr>
+    <tr>
+        <td class="table-vertical__td">비고</td>
+        <td class="table-vertical__td">1인 1마리 한(限)</td>
+    </tr>
+</tbody>
+</table>
+</div></div>
+                            
+                                 
+                                <div class="tit-small">연계.제휴서비스 이행책임</div>
+                                
+                                <div><div class="guide-wrap">
+<ul class="guide-list guide-list--large">
+<li class="guide-list__item">하나은행은 연계.제휴서비스 등을 부당하게 축소하거나 변경하지 않으며, 불가피하게 축소하거나 변경하는 경우 그에 상응하는 다른 연계.제휴서비스를 제공</li>
+</ul>
+</div></div>
+                            
+                                 
+                                <div class="tit-small">연계.제휴서비스 제공기간</div>
+                                
+                                <div><div class="guide-wrap">
+<ul class="guide-list guide-list--large">
+<li class="guide-list__item">보험개시일은 이 예금의 신규일(재예치일)다음날로 하며, 보험개시일로부터 1년까지 적용.<br>
+    ※ 단, 보장기간은 예금 계약기간을 초과할 수 없으며, 이 예금을 중도해지 하는 경우 보험가입서비스 제공 중단됩니다.
+</li>
+</ul>
+</div></div>
+                            
+                                 
+                                <div class="tit-small">연계.제휴서비스 변경내용 사전 통지방법</div>
+                                
+                                <div><div class="guide-wrap">
+<ul class="guide-list guide-list--large">
+<li class="guide-list__item">다음중 2개이상의 방법으로 6개월 전부터 매월 고지
+    <ul class="guide-sub-list guide-sub-list--gray">
+        <li class="guide-sub-list__item">서면 교부, 우편 또는 전자우편, 전화 또는 팩스, 휴대전화 메시지 또는 이에 준하는 전자적 의사표시</li>
+    </ul>
+    ※단, 그에 상응하는 다른 연계.제휴서비스를 제공하거나 금융회사의 휴업.파산.경영상의 위기 등에 따른 불가피한 경우 제외
+</li>
+</ul>
+</div></div>
+                            
+                                 
+                                <div class="tit-small">연계.제휴서비스 제공요건 </div>
+                                
+                                <div><div class="guide-wrap">
+<ul class="guide-list guide-list--large">
+<li class="guide-list__item mgt24">이 예금 가입시 보험가입 및 선택 개인(신용)정보의 제3자 제공에 동의한 고객</li>
+</ul>
+</div></div>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                         </div>
+                             <!-- //white-box__content-->
+                        </div><!-- //toggle-->
+                        
+                
+                        
+                        
+                        <!-- 해지 안내 -->
+                        <div class="white-box white-box--fund" data-element="toggle">
+                            <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false">
+                                <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                    <div class="list-wrap__box">
+                                        <strong class="title">상품해지</strong>
+                                    </div>
+                                    <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                                </div>
+                            </div>
+                            <div class="white-box__content" data-element="toggle__panel">
+                                
+                                <div class="tit-small">특별중도해지</div>
+                                  <div><p class="text-guide">가능. 영업점 창구를 통해 반려동물 의료비 지출 증빙서류를 제출하고 중도해지 하는 경우, 이 예금 가입일에 고시한 기본금리를 적용합니다.</p></div>
+                                <div class="tit-small">중도해지 금리</div>
+                                  <div><div class="table table-vertical table-vertical--narrow">
+                <table>
+                <colgroup>
+                <col span="2">
+                </colgroup>
+                <thead>
+                <tr>
+                <th scope="col" class="table-vertical__th">기간</th>
+                <th scope="col" class="table-vertical__th">적용금리(세전)</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td class="table-vertical__td">1개월 미만</td>
+                <td class="table-vertical__td">연 0.10%</td>
+                </tr>
+                <tr>
+                <td class="table-vertical__td">1개월 이상 ~ 3개월 미만</td>
+                <td class="table-vertical__td">연 0.15%</td>
+                </tr>
+                <tr>
+                <td class="table-vertical__td">3개월 이상 ~ 6개월 미만</td>
+                <td class="table-vertical__td">연 0.2%</td>
+                </tr>
+                <tr>
+                <td class="table-vertical__td">6개월 이상</td>
+                <td class="table-vertical__td">
+                가입(재예치)당시 해당 상품의 기본금리 X  차등률<sup class="color-red">(주1)</sup> X 경과율<sup class="color-red">(주2)</sup><br/>
+                (단, 해당금리가 연 0.2% 미만 시 연 0.2% 적용)
+                </td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+                <div class="guide-wrap">
+                <ul class="guide-list">
+                <li class="guide-list__item"><span class="color-red">(주1)</span> 차등률: 기간(6개월 이상)에 따른 아래 차등률 참고
+                <ul class="guide-sub-list guide-sub-list--gray">
+                <li class="guide-sub-list__item">6개월 이상 ~ 9개월 미만 경과시 60% 적용</li>
+                <li class="guide-sub-list__item">9개월 이상 ~ 11개월 미만 경과시 70% 적용</li>
+                <li class="guide-sub-list__item">11개월 이상 경과시 90% 적용</li>
+                </ul>
+                </li>
+                <li class="guide-list__item"><span class="color-red">(주2)</span> 경과율: 경과일수/계약일수 (단, 경과일수는 계약일수를 초과할 수 없음)
+                </li>
+                </ul>
+                </div></div>
+                                <div class="tit-small">만기 후 금리</div>
+                                  <div><div class="table table-vertical table-vertical--narrow">
+                <table>
+                <colgroup>
+                <col span="2">
+                </colgroup>
+                <thead>
+                <tr>
+                <th scope="col" class="table-vertical__th">기간</th>
+                <th scope="col" class="table-vertical__th">금리(세전)</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td class="table-vertical__td">1개월 이내</td>
+                <td class="table-vertical__td">지급당시 해당기간별 정기적금 기본금리 1/2</td>
+                </tr>
+                <tr>
+                <td class="table-vertical__td">1개월 초과</td>
+                <td class="table-vertical__td">지급당시 해당기간별 정기적금 기본금리의 1/4</td>
+                </tr>
+                </tbody>
+                </table>
+                </div></div>
+                                <div class="tit-small">일부해지</div>
+                                  <div><p class="text-guide">만기일 이전 2회까지 가능, 일부해지 금액은 중도해지금리가 적용됩니다. (단, 일부해지후 월적립액은 최소 10만원 이상이어야 함)</p></div>
+                                
+                             </div><!-- //white-box__content-->
+                        </div><!-- //toggle-->
+                        
+                
+                        
+                        
+                        <!-- 유의사항 및 기타 -->
+                        <div class="white-box white-box--fund" data-element="toggle">
+                            <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false">
+                                <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                    <div class="list-wrap__box">
+                                         
+                                        <strong class="title">유의사항</strong>
+                                        
+                                    </div>
+                                    <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                                </div>
+                            </div>
+                            <div class="white-box__content" data-element="toggle__panel" style="display: none;">
+                                  	
+                                    
+
+                                    
+
+                                <div class="tit-small">세제혜택</div>
+                                  <div><p class="text-guide">개인의 경우 비과세종합저축 가능 (전 금융기관 통합한도 범위내),  만기 후 이자는 과세</p></div>
+                                 
+                                <div class="tit-small">유의사항</div>
+                                
+                                  <div><p class="text-guide">만기일 전에 중도해지 시 약정한 금리보다 낮은 중도해지금리가 적용됩니다. 일부해지 후 월 납입액은 최초 납입액과 달라지므로 유의하시기 바랍니다. → 일부해지 후 월 납입액 : 최초 월 납입액 – (일부해지금액/납입횟수) 적금의 중도해지시 반려동물 배상책임보험서비스 무료가입 보장기간도 종료됩니다.</p>
+
+<div class="tit-small">원금 및  이자지급제한</div>
+<div class="guide-wrap">
+<ul class="guide-list guide-list--large">
+    <li class="guide-list__item">계좌에 압류, 가압류, 질권설정 등이 등록될 경우 원금 및 이자지급 제한될 수 있음(일부해지 포함)
+  <br>※ 민사집행법에 따라 최저생계비 이하 등 압류금지채권에 해당하는 경우에는 법원에 압류금지채권 범위 변경 신청 등을 통해 압류를 취소할 수 있음</li>
+    <li class="guide-list__item">예금잔액증명서 발급 당일에는 잔액 변동 불가</li>
+</ul>
+</div>
+
+<div class="tit-small">위법계약해지권</div>
+<div class="guide-wrap">
+<ul class="guide-list guide-list--large">
+    <li class="guide-list__item">금융소비자 보호에 관한 법률 제47조에 따른 위법계약해지 사유가 발생한 경우, 계약체결일로부터 5년 이내 범위에서 위반사실을 안 날로부터 1년 이내에 서면 등으로 해당 계약의 해지를 요구할 수 있습니다. 이 경우 금융회사는 해지를 요구받은 날부터 10일 이내에 금융소비자에게 수락 여부를 통지하여야 하며, 거절할 때에는 거절사유를 함께 통지하여야 합니다. 만약 금융소비자의 요구가 정당한 것으로 판단될 경우 수수료 등 계약해지와 관련한 추가비용 부담없이 계약해지가 가능합니다.</li>
+</ul>
+</div></div>
+
+<div class="finance-detail-info flex deposit-insurance-corp">
+    <i class="finance-detail-info__image">
+        <img src="../../../images/C/img_finance_label.png" alt="보호금융상품">
+    </i>
+    <p class="text-guide-xsmall">
+        이 예금은 예금자보호법에 따라 예금보험공사가 보호하되,
+        보호한도는 본 은행에 있는 귀하의 모든 예금 보호 대상 금융
+        상품의 원금과 소정의 이자를 합하여 1인당 “최고 5천만원”
+        이며, 5천만원을 초과하는 나머지 금액은 보호하지 않습니다.
+    </p>
+</div>
+                                
+                             </div><!-- //white-box__content-->
+                        </div><!-- //toggle-->
+                        
+                
+                        
+                        <!-- 상품내용변경에 관한 사항 -->
+                        <div class="white-box white-box--fund" data-element="toggle">
+                            <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false">
+                                <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                    <div class="list-wrap__box">
+                                        <strong class="title">상품변경안내</strong>
+                                    </div>
+                                    <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                                </div>
+                            </div>
+                            <div class="white-box__content" data-element="toggle__panel" style="display: none;">
+                                
+                                <div>
+                                    <div class="changes-info" data-options="{&quot;isInitActive&quot;:true}" data-element="accordion" role="presentation"> 
+                                        <div class="changes-info__item" data-element="accordion__item">
+                                            <button class="changes-info__anchor is-active" type="button" data-element="accordion__anchor" aria-expanded="true" role="button">
+                                                <span class="title">2022.01.07 변경</span>
+                                            </button> 
+                                            <div class="changes-info__panel is-active" data-element="accordion__panel" style=""> 
+                                                <div class="tit-small">원금 및 이자지급제한</div>
+                                                <pre>■ 기존 가입 고객에 대한 적용 여부 : 적용
+                                                    변경 전
+                                                    - 계좌에 합류, 가압류 등이 등록될 경우 원금 이자지급이 제한될 수 있음
+                                                    - 예금잔액증명서 발급 당일 잔액 변동이 불가
+                                                    변경 후
+                                                    - 계좌에 압류, 가압류, 질권설정 등이 등록될 경우 원금 및 이자지급 제한될 수 있음(일부해지 포함)
+                                                    ※ 민사집행법에 따라 최저생계비 이하 등 압류금지채권에 해당하는 경우에는 법원에 압류금지채권 범위 변경 신청 등을 통해 압류를 취소할 수 있음
+                                                    - 예금잔액증명서 발급 당일에는 잔액 변동 불가</pre> 
+                                                <div class="tit-small">위법계약해지권</div>
+                                                <pre>■ 기존 가입 고객에 대한 적용 여부 : 2021.03.25 이후 신규 가입 고객에 한해 적용
+                                                    변경전
+                                                    - 설명의무 위반 등 금융소비자 보호에 관한 법률 제47조에 따른 위법계약해지 사유가 발생한 경우, 계약체결일로부터 5년 이내 범위에서 위반사실을 안 날로부터 1년 이내에 서면 등으로 해당 계약의 해지를 요구할 수 있습니다. 만약 금융소비자의 요구가 정당한 것으로 판단될 경우 수수료 등 계약해지와 관련한 추가 비용 부담없이 계약해지가 가능
+                                                    변경 후
+                                                    - 금융소비자 보호에 관한 법률 제47조에 따른 위법계약해지 사유가 발생한 경우, 계약체결일로부터 5년 이내 범위에서 위반사실을 안 날로부터 1년 이내에 서면 등으로 해당 계약의 해지를 요구할 수 있습니다. 이 경우 금융회사는 해지를 요구받은 날부터 10일 이내에 금융소비자에게 수락 여부를 통지하여야 하며, 거절할 때에는 거절사유를 함께 통지하여야 합니다. 만약 금융소비자의 요구가 정당한 것으로 판단될 경우 수수료 등 계약해지와 관련한 추가비용 부담없이 계약해지가 가능합니다.
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="changes-info" data-element="accordion" role="presentation">
+                                        <div class="changes-info__item" data-element="accordion__item">
+                                            <button class="changes-info__anchor" type="button" data-element="accordion__anchor" aria-expanded="false" role="button">
+                                                <span class="title">2021.03.25 변경</span>
+                                            </button> 
+                                            <div class="changes-info__panel" data-element="accordion__panel" style="display: none;"> 
+                                                <div class="tit-small">우대서비스 변경</div>
+                                                <pre>■ 기존 가입고객에 대한 적용 여부: 적용
+                                                변경 전
+                                                반려동물 배상책임보험서비스 무료가입
+                                                변경 후
+                                                (신설) 연계.제휴서비스의 내용, 이행책임, 제공기간, 변경내용 사전 통지방법, 제공요건</pre> 
+                                                <div class="tit-small">원금 및 이자지급제한 항목 신설</div>
+                                                <pre>■ 기존 가입고객에 대한 적용 여부: 적용
+                                                변경 전
+                                                해당사항 없음 (신설)
+                                                변경 후
+                                                -계좌에 압류, 가압류  등이 등록될 경우 원금 및 이자지급이 제한 될 수 있음
+                                                -예금잔액증명서 발급 당일 잔액 변동이 불가</pre> 
+                                                <div class="tit-small">위법계약해지권 항목 신설</div>
+                                                <pre>■ 기존 가입 고객에 대한 적용 여부 :
+                                                2021.03.25 이후 신규 가입 고객에 한해 적용
+                                                변경 전
+                                                해당사항 없음 (신설)
+                                                변경 후
+                                                설명의무 위반 등 금융소비자 보호에 관한 법률 제47조에 따른 위법계약해지 사유가 발생한 경우, 계약체결일로부터 5년이내 범위에서 위반사실을 안 날로부터 1년이내에 서면 등으로  해당계약의 해지를 요구 할 수 있습니다. 만약 금융소비자의 요구가 정당한 것으로 판단될 경우 수수료 등 계약해지와 관련한 추가 비용 부담없이 계약해지가 가능</pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div><!-- //white-box__content-->
+                        </div><!-- //toggle-->
+                
+                
+                        
+                        
+                        <!-- 약관 및 상품설명서-->
+                        <div class="white-box white-box--fund" data-element="toggle" >
+                            <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false">
+                                <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                    <div class="list-wrap__box">
+                                        <strong class="title">약관 및 상품설명서</strong>
+                                    </div>
+                                    <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                                </div>
+                            </div>
+                            <div class="white-box__content" data-element="toggle__panel" style="display: block;">
+                                <div class="button-content">
+                                    <div class="button-content__inner">
+                                        <button type="button" class="pdf-button" aria-label="약관 열기" onclick="pbk.mbp.cmsUtil.fncShowPdf('/cont/pdf/product/0100285000101_t.pdf');">
+                                            <i class="pdf-button__icon" aria-hidden="true">
+                                                <img src="/cont/resource/img/product/icon_pdf.png" alt="약관">
+                                            </i>
+                                            약관
+                                        </button>
+                                        <button type="button" class="pdf-button" aria-label="상품설명서 열기" onclick="pbk.mbp.cmsUtil.fncShowPdf('/cont/pdf/product/0100285000101_d.pdf');">
+                                            <i class="pdf-button__icon" aria-hidden="true">
+                                                <img src="/cont/resource/img/product/icon_pdf.png" alt="상품설명서">
+                                            </i>
+                                            상품설명서
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //white-box__content-->
+                        </div>
+                    </div>
+
+                    <!-- 2022-11-07 텍스트 수정 -->
+                    <span class="notice">준법감시인 심의필 제2022-상품-1409호 (2022.11.04)<br>
+                        본 공시내용의 유효기간 : 2022.11.04 ~ 2024.11.03<br>기준일 : 2022년 11월 4일
+            </div>
+        </div>
+        <!-- //CONTENT -->
+
+        <!-- FOOTER -->
+        <div id="footer" class="app-footer app-footer--button app-footer--button-round-corner">
+            <div class="button-wrap">
+                <!-- <button type="button" class="button button--positive-dark round-corner">전환</button> -->
+                <button type="button" class="button button--positive round-corner" data-ecrm="JON1010">가입 시작하기</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+        </div>
+        <!-- //FOOTER -->
+    </div>
+
+
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
+    <!-- 상품상세 js 별도분기 -->
+    <script src="../../../../resource/library/lottie/lottie.min.js"></script>
+    <script src="../../../../resource/js/ui/prd_detail_n22UI.js"></script>
+
+    <!-- 2022-10-20 추가 -->
+    <script>
+        $(document).ready(function(){
+            setSVGApply('#prd_detail_1470992_02', '/pub/resource/images/C/lottie/detail/J15.json');
+            
+        });
+    </script>
+
+</body>
+</html>

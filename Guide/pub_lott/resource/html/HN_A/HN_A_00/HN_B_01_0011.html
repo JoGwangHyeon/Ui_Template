@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+	<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/jquery-ui.css" type="text/css">
+    <!-- 2022-09-21 swiper 추가 -->
+    <link rel="stylesheet" href="../../../../resource/css/swiper.min.css" type="text/css">
+    <!-- 2022 상품몰 고도화 추가 -->
+  <link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+
+<body>
+    <div class="modal-full modal-full--button">
+        <div class="modal__header">
+            <h1 class="modal__header--title">머니박스통장</h1>
+        </div>
+        <div class="modal__contents">
+            <!-- 2022-09-21 마크업 변경 -->
+            <div id="moneboxInfoGuide" class="moneybox-info-guide">
+                <div class="swiper-wrapper">
+                    <div class="slide-item">
+                        <h2 class="moneybox-info-tit">하나의 통장을 <em>용도별</em>로<br>
+                            <em>나누어 사용</em>해 보세요
+                        </h2>
+                        <div class="guide-thumb">
+                            <div><img src="../../../../resource/images/C/n22_img_moneybox_slide_01.png" alt=""/></div>
+                        </div>
+                    </div>
+                    <div class="slide-item">
+                        <!-- 2022-10-06 띄어쓰기 추가 -->
+                        <h2 class="moneybox-info-tit"><em>여유자금</em>을 분리해서 보관만<br>
+                            해도 매일 <em>이자가 쌓여요</em>
+                        </h2>
+                        <div class="guide-thumb">
+                            <div><img src="../../../../resource/images/C/n22_img_moneybox_slide_02.png" alt=""/></div>
+                        </div>
+                    </div>
+                    <div class="slide-item">
+                        <h2 class="moneybox-info-tit"><em>내 소비패턴</em>을 확인하고<br>
+                            <em>계획적</em>으로 지출할 수 있어요
+                        </h2>
+                        <div class="guide-thumb">
+                            <div><img src="../../../../resource/images/C/n22_img_moneybox_slide_03.png" alt=""/></div>
+                        </div>
+                    </div>
+                    <div class="slide-item">
+                        <!-- 2022-10-06 띄어쓰기 추가 -->
+                        <h2 class="moneybox-info-tit"><em>짧은 기간, 적은 금액</em>으로<br>
+                            나만의 <em>챌린지</em>에 도전해 보세요
+                        </h2>
+                        <div class="guide-thumb">
+                            <div><img src="../../../../resource/images/C/n22_img_moneybox_slide_04.png" alt=""/></div>
+                        </div>
+                        <div class="moneybox-info-guide-push">
+                            <p>혜택을 알려주는 푸시 알림</p>
+                            <label class="switch" for="selectAuto2" data-input-selector="checkbox">
+                                <input type="checkbox" id="selectAuto2" data-input-name="checkbox-1" data-input-target="checkbox-section-2" aria-expanded="true" title="">
+                                <span class="switch__toggle" aria-hidden="true"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <!-- 2022-09-21 수정 -->
+        <div id="moneboxInfoGuideBtn" class="button-fixed">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive">다음</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+            <div class="button-wrap" style="display:none;">
+                <button type="button" class="button button--positive">머니박스 시작하기</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+        </div>
+        <button class="modal__btn--close" type="button" title="닫기"></button>
+    </div>
+
+
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/ui/jquery-ui.js"></script>
+    <script src="../../../../resource/library/jquery/jquery.ui.touch-punch.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <!--  2022-08-08 lottie 플러그인 추가 -->
+    <script src="../../../../resource/library/lottie/lottie.min.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
+    <!-- 2022-09-21 swiper 추가 -->
+    <script src="../../../../resource/library/swiper/swiper.min.js"></script>
+    <script src="../../../../resource/js/ui/common_n22UI.js"></script>
+    <script type="text/javascript">
+        //2022-09-21 수정 ====================================== 
+        function moneboxInfoGuideSwiper(){
+                var swiperOptions = {
+                    resistanceRatio: 0,
+                    slidesPerView: 'auto',
+                    effect:'slide',
+                    threshold:20,
+                    spaceBetween: 0,
+                    speed: 300,
+                    slideClass : 'slide-item',
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true
+                    },
+                }
+                var swiperSection = new Swiper('#moneboxInfoGuide', swiperOptions);
+                var btn = $('#moneboxInfoGuideBtn .button-wrap')
+                swiperSection.on('slideChangeTransitionStart', function(ui){
+                    var swiperLen = $('.slide-item').length;
+                    if(swiperSection.realIndex == (swiperLen-1)){
+                        btn.eq(1).show();
+                        btn.eq(0).hide();
+                    }else{
+                        btn.eq(0).show();
+                        btn.eq(1).hide();
+                    }
+                })
+            }
+
+		$(document).ready(function(){
+            moneboxInfoGuideSwiper();
+        })
+        //=========================2022-09-21 수정 =
+    </script>
+</body>
+
+</html>

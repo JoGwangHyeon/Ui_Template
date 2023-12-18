@@ -1,0 +1,4751 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width<br> initial-scale=1.0<br> user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>하나은행 원큐플러스 구축 퍼블리싱 리스트</title>
+	<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		min-width: 980px;
+		padding: 0 20px 50px 20px;
+		font-family: 'Malgun Gothic', '맑은 고딕', AppleSDGothicNeo, Droid Sans, Roboto, sans-serif;
+		font-size: 12px;
+		font-weight: 600;
+	}
+	a:focus {
+		color:#e30101
+	}
+	/* a {
+		color: #444;
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: #444;
+	}
+
+	a:visited,
+	a:focus,
+	a:active {
+		color: #444;
+	} */
+
+	.list_header {
+		width: 100%;
+		padding: 20px;
+		background: #fff;
+		box-sizing: border-box;
+		position: relative;
+	}
+
+	h1 {
+		font-size: 30px;
+		margin: 20px 0 10px 0;
+		letter-spacing: -1px;
+		font-weight: 800;
+	}
+
+	h1 img {
+		height: 27px;
+		margin: 10px 5px 0 0;
+		vertical-align: top;
+	}
+
+	.info {
+		position: absolute;
+		right: 25px;
+		top: 40px;
+	}
+
+	.guide {
+		margin: 10px 0 5px 0;
+		text-align: right;
+	}
+
+	.red {
+		color: #e80000 !important
+	}
+
+    .green {
+		color: green !important
+	}
+
+	h2 {
+		padding: 10px 0 10px 15px;
+		font-size: 13px;
+		border: 1px solid #444;
+		border-bottom: none;
+		background: #595959;
+		color: #fff;
+		font-weight: 500;
+	}
+
+
+	caption {
+		display: none;
+	}
+
+    #wrap {
+        padding:0 20px;
+    }
+	div.cont {
+		border-top: 1px solid #444;
+	}
+
+	table {
+		border-collapse: collapse;
+		width: 100%;
+		border-spacing: 0;
+		margin-bottom: 30px;
+		table-layout:fixed;
+	}
+
+	table thead th {
+		padding: 7px 3px;
+		border: 1px solid #ccc;
+		background: #eee;
+		font-size: 13px;
+	}
+
+	table tbody td {
+		padding: 7px 3px;
+		background: #e5e5e5;
+		border: 1px solid #ccc;
+		text-align: left;
+		font-size: 11px;
+		color: #333;
+		padding: 0 10px;
+	}
+
+
+	table tbody td.left {
+		padding: 7px 10px;
+		text-align: left;
+	}
+
+	table tbody td.url {
+		padding: 7px 10px;
+		text-align: left;
+	}
+
+	table tbody tr.del td {
+		text-decoration: line-through;
+		color: #999;
+		background: #e9e9e9;
+	}
+
+	table tbody tr.del td a {
+		text-decoration: line-through;
+		color: #999;
+	}
+
+	table tbody tr td {
+		height: 30px;
+		box-sizing: border-box;
+		display: table-cell;
+		background: #fff;
+		color: #444;
+		transition: all 0.4s;
+        text-align:center;
+	}
+
+	table tbody tr:hover td {
+		background: #e9e9e9;
+	}
+	table tbody tr td:last-of-type {
+		text-align:left;
+	}
+
+	.proc_wrap {
+		margin: 0 0 20px;
+		text-align: right
+	}
+
+	.proc_wrap strong {
+		color: #0d643a;
+		font-weight: bold;
+	}
+
+	/* tab */
+	.tab {
+		overflow: hidden;
+	}
+
+	.tab ul {
+		font-size: 0;
+		overflow: hidden;
+	}
+
+	.tab ul li {
+		display: inline-block;
+	}
+
+	.tab ul li a {
+		position: relative;
+		float: left;
+		padding: 10px 30px;
+		background: #eee;
+		border-right: 1px solid #fff;
+		font-size: 13px;
+		color: #666;
+		text-align: center;
+		transition: all 0.3s;
+		text-decoration: none;
+	}
+
+	.tab ul li:last-child a {
+		border: none;
+	}
+
+	.tab ul li a:hover {
+		background: #ccc;
+	}
+
+	.tab ul li.on a {
+		background: #1994da;
+		color: #fff;
+	}
+
+	.tab ul li.on a:hover {
+		background: #1994da;
+	}
+
+    table tr.gray td{
+        background:#e9e9e9;
+		color:gray;
+    }
+	table tr.gray td.url a {
+        background:#e9e9e9;
+		color:gray;
+    }
+
+	/* marker */
+	.marker {
+		position: relative;
+		text-align: right;
+		margin-bottom: 20px;
+	}
+
+	.marker li {
+		position: relative;
+		display: inline-block;
+		margin-right: 15px;
+		padding-left: 17px;
+		color: #666;
+		list-style: none;
+	}
+
+	.marker li.dep {
+		padding-right: 25px;
+	}
+
+	.marker li:before {
+		position: absolute;
+		left: 0;
+		top: 2px;
+		width: 12px;
+		height: 12px;
+		content: "";
+	}
+
+	.marker li.m1:before {
+		background: #999;
+	}
+
+	.marker li.s1:before {
+		background: #53b100;
+	}
+
+	.marker li.s2:before {
+		background: #0142b3;
+	}
+
+	.marker li.s3:before {
+		background: orange;
+		animation: over_a both linear infinite 3s;
+	}
+
+	.marker li.s4 {
+		text-decoration: line-through;
+	}
+
+	.marker li.s4:before {
+		background: #333;
+	}
+
+	.marker li.s5:before {
+		width: 10px;
+		height: 10px;
+		border: 2px solid #f68500;
+		border-radius: 100%;
+	}
+
+	.marker li.s6:before{
+		width: 14px;
+		height: 14px;
+		background: red;
+		border-radius: 100%;
+		animation: emer 1s linear infinite;
+	}
+
+	.marker:after {
+		display: block;
+		clear: both;
+		height: 0;
+		content: "";
+		overflow: hidden;
+	}
+
+	/* state */
+	.state {
+		padding-left: 10px;
+	}
+
+	.state i {
+		display: inline-block;
+		position: relative;
+		width: 12px;
+		height: 12px;
+		margin-right: 1px;
+		border-radius: 1px;
+		vertical-align: middle;
+	}
+
+	.state.ing i {
+		background: #0142b3;
+	}
+
+	.state.comp i {
+		background: #53b100;
+	}
+
+	.state.modi i {
+		background: orange;
+		animation: over_a both linear infinite 3s
+	}
+
+	.state.wait i {
+		background: #999;
+	}
+
+	.state.del i {
+		background: #333;
+	}
+	.state.em i {
+		background: blue;;
+		animation: emer 1s linear infinite;
+	}
+
+	.state.mc i {
+		width: 10px;
+		height: 10px;
+		border: 2px solid #f68500;
+		border-radius: 100%;
+	}
+
+	td.depa {
+		background:#b3e976 !important
+	}
+	td.date{
+		text-align: center;
+	}
+	.result{
+		position:relative;
+		font-size: 0;
+		margin: 10px 0 20px;
+		width: 1200px;
+		border-top: 1px solid #eaeaea;
+	}
+	.result:after{
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background: #eaeaea;
+	}
+	strong.complate{
+		font-weight: 700;
+		color: #53b100;
+	}
+	strong.percentage{
+		font-size: 16px;
+		color: blue;
+	}
+	.result li{
+		box-sizing: border-box;
+		display: inline-block;
+		width: 400px;
+		padding: 5px 10px;
+		list-style: none;
+		font-size: 14px;
+		color: #666;
+		border-bottom: 1px solid #eaeaea;
+	}
+	tr.emer td{
+		animation: emerColor .4s linear infinite;
+		background: #eee8aa55;
+	}
+	.result li span{
+		color: #000;
+	}
+	#total{
+		padding-left: 10px;
+		font-size: 20px;
+		color: #666;
+		letter-spacing: 1px;
+		font-weight: 700;
+	}
+	#total .total-count{
+		color: #000;
+	}
+	#total .total-complate{
+		color: #53b100;
+	}
+	#total .percent{
+		font-size: 22px;
+		color: blue;
+	}
+	tr.asap td{
+		background: aliceblue;
+	}
+	tr.asap.today td{
+		background: palegoldenrod;
+	}
+	.helper{
+		position: absolute;
+		left: 20px;
+		bottom: 20px;
+		font-size: 16px;
+	}
+	.helper .url{
+		text-transform: uppercase;
+		margin-right: 20px;
+	}
+	@keyframes over_a {
+		0% {
+			opacity: 1;
+		}
+
+		40% {
+			opacity: 0.2;
+		}
+
+		60% {
+			opacity: 0.2;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@keyframes emer{
+		50% {
+			background: #ed1651;
+			color: #ed1651
+		}
+		75% {
+			background: #009591;
+			color: #009591
+		}
+	}
+	@keyframes emerColor{
+		50% {
+			color: #ed1651
+		}
+		75% {
+			color: #009591
+		}
+	}
+</style>
+	<style>
+	body{
+		padding: 0;
+	}
+	</style>
+</head>
+
+<body>
+    <div class="list_header">
+        <h1 onclick="location.reload()">하나은행 원큐플러스 상품몰 고도화 프로젝트 Publishing List</h1>
+        <div class="proc_wrap"></div>
+        <ul class="marker">
+            <li class="m1">대기</li>
+            <li class="s1">완료</li>
+            <li class="s2">진행중</li>
+            <li class="s3">수정중</li>
+            <li class="s4">삭제됨</li>
+            <li class="s5">수정완료</li>
+            <li class="s6">긴급</li>
+        </ul>
+    </div>
+	<!-- wrap -->
+	<div id="wrap">
+		<div class="cont">
+			<table>
+				<colgroup>
+					<col style="width:120px;">
+					<col style="width:120px;">
+					<col style="width:180px;">
+					<col style="width:180px;">
+					<col style="width:180px;">
+					<col style="width:60px">
+					<col style="width:50px;">
+					<col style="width:150px"/>
+					<col style="width:100px;">
+					<col style="width:100px;">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">페이지ID</th>
+						<th scope="col">1 Depth</th>
+						<th scope="col">2 Depth</th>
+						<th scope="col">3 Depth</th>
+						<th scope="col">4 Depth</th>
+						<th scope="col">작업자</th>
+						<th scope="col">구분</th>
+						<th scope="col">LINK</th>
+						<th scope="col">상태(개발진행가능시 완료)</th>
+                        <th scope="col">검수진행요청</th>
+						<th scope="col">날짜</th>
+						<th scope="col">비고</th>
+                        <th scope="col">ecrm적용</th>
+					</tr>
+				</thead>
+                <tbody>
+                    <tr>
+                        <td>HN_A_01_0001</td>
+                        <td>메인</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_01_0001.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-29</td>
+                        <td></td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_01_0011</td>
+                        <td></td>
+                        <td>상품찾기</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_01_0011.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-29</td>
+                        <td></td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_01_0012</td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]검색결과 선택옵션</td>
+                        <td></td>
+                        <td></td>
+                        <td>AS-IS</td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_01_0012.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-29</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_01_0021</td>
+                        <td></td>
+                        <td>적금상품찾기</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_01_0021.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-10-08</td>
+                        <td>검색결과없을시 조회하기 버튼추가</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_01_0021</td>
+                        <td></td>
+                        <td>적금상품찾기_검색결과</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_01_0021_2.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-29</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="gray">
+                        <td>HN_A_01_0022</td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]기간선택 </td>
+                        <td></td>
+                        <td></td>
+                        <td>AS-IS</td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_01_0022.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date">2022-09-29</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="gray">
+                        <td>HN_A_01_0023</td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]가입금액</td>
+                        <td></td>
+                        <td></td>
+                        <td>native</td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_01_0023.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state">
+                            <i class="icon"></i>
+                        </td>
+                        <td></td>
+                        <td class="date">2022-09-29</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_01_0031</td>
+                        <td></td>
+                        <td>전문가상담</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_01_0031.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-08-29</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <!--
+                    <tr>
+                        <td>-</td>
+                        <td></td>
+                        <td>개인화 배너</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_01_0031.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td>디자인 컨펌 대기</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td></td>
+                        <td>상품 배너</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_01_0031.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td>디자인 컨펌 대기</td>
+                        <td></td>
+                    </tr>
+                    -->
+                    <tr>
+                        <td>HN_A_02_1001</td>
+                        <td>서브메인</td>
+                        <td>저축</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_02_1001.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-10-24</td>
+                        <td>스크립트 수정 및 추가
+                            1024 마크업변경
+                        </td>
+                        <td>o</td>
+                    </tr> 
+                    <tr>
+                        <td>HN_A_02_1002</td>
+                        <td></td>
+                        <td></td>
+                        <td>쿠폰함</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_02_1002.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-14</td>
+                        <td>1031 마크업 수정</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_02_1011</td>
+                        <td></td>
+                        <td></td>
+                        <td>적금 상품 전체 리스트</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_02_1011.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-10-04</td>
+                        <td>10/04 상품목록 변경</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_02_1021</td>
+                        <td></td>
+                        <td></td>
+                        <td>입출금 상품 전체 리스트</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_02_1021.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-10-04</td>
+                        <td>10/04 상품목록 변경</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_02_2001</td>
+                        <td></td>
+                        <td>투자</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_02_1001.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-08-12</td>
+                        <td>10/04 상품목록 변경</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_02_2011</td>
+                        <td></td>
+                        <td></td>
+                        <td>신탁_ELT상품 안내페이지</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_02_2011.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-10-24</td>
+                        <td>10/24일 마크업변경</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_02_2012</td>
+                        <td></td>
+                        <td></td>
+                        <td>신탁_ETF상품 안내페이지</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_02_2012.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-10-24</td>
+                        <td>10/24일 마크업변경</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_02_2013</td>
+                        <td></td>
+                        <td></td>
+                        <td>신탁_해외ETF상품 안내페이지</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_02_2013.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-10-24</td>
+                        <td>10/24일 마크업변경</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_02_2014</td>
+                        <td></td>
+                        <td></td>
+                        <td>신탁_자문형상품 안내페이지</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_02_2014.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-10-24</td>
+                        <td>10/24일 마크업변경</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_02_2015</td>
+                        <td></td>
+                        <td></td>
+                        <td>신탁_금현물상품 안내페이지</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_02_2015.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-10-24</td>
+                        <td>10/24일 마크업변경</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_02_2016</td>
+                        <td></td>
+                        <td></td>
+                        <td>신탁_분할매수형ETF 안내페이지</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_02_2016.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td></td>
+                        <td class="date">2022-10-24</td>
+                        <td>10/24 마크업변경</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_02_3001</td>
+                        <td></td>
+                        <td>대출</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_02_1001.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-14</td>
+                        <td>09/14 마크업변경</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_02_3011</td>
+                        <td></td>
+                        <td></td>
+                        <td>신용대출 리스트</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_02_3011.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-13</td>
+                        <td>0922마크업변경</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_02_3012</td>
+                        <td></td>
+                        <td></td>
+                        <td>갈아타기대출 리스트</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_02_3012.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td></td>
+                        <td class="date">2022-10-24</td>
+                        <td>1024 페이지추가</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_02_4001</td>
+                        <td></td>
+                        <td>외환</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_02_1001.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-13</td>
+                        <td>09/14 마크업변경</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_02_5001</td>
+                        <td></td>
+                        <td>보험</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_02_1001.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-08-12</td>
+                        <td></td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_02_5015</td>
+                        <td></td>
+                        <td></td>
+                        <td>DIY미니보험 리스트</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_02_5015.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-08-12</td>
+                        <td>보험목록은 as-is 마크업 유지</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_02_5011</td>
+                        <td></td>
+                        <td></td>
+                        <td>저축성보험 리스트</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_02_5011.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-08-12</td>
+                        <td>보험목록은 as-is 마크업 유지</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_02_5012</td>
+                        <td></td>
+                        <td></td>
+                        <td>변액보험 리스트</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_02_5012.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-08-12</td>
+                        <td>보험목록은 as-is 마크업 유지</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_02_5013</td>
+                        <td></td>
+                        <td></td>
+                        <td>건강/상해보험 리스트</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_02_5013.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-08-12</td>
+                        <td>보험목록은 as-is 마크업 유지</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_02_5014</td>
+                        <td></td>
+                        <td></td>
+                        <td>기타 보장성보험 리스트</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_02_5014.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-08-12</td>
+                        <td>보험목록은 as-is 마크업 유지</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_02_6001</td>
+                        <td></td>
+                        <td>퇴직연금</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_02_1001.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-08-12</td>
+                        <td></td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0101</td>
+                        <td>가입프로세스</td>
+                        <td>예금</td>
+                        <td>정보입력</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0101.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-10-24</td>
+                        <td class="etc">
+                            10-24마크업 변경됨
+							<a href="https://dev12-mbp.kebhana.com:18080/pub/resource/html/FDEP/FDEP01/FDEP0101002.html" target="_blank">AS-IS-정보입력</a>
+							<a href="https://dev12-mbp.kebhana.com:18080/pub/resource/html/FDEP/FDEP01/FDEP0101003.html" target="_blank">AS-IS-부가정보입력</a>
+							<!-- <a href="https://dev11-mbp.kebhana.com:18080/pub/resource/html/FDEP/FDEP01/FDEP0101003_P01.html" target="_blank">AS-IS</a>-->
+						</td>
+                        <td>o</td>
+                    </tr>
+                    <tr class="gray">
+                        <td>HN_A_03_0102</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]가입금액</td>
+                        <td></td>
+                        <td>AS-IS</td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0102.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0203</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]가입기간</td>
+                        <td></td>
+                        <td>공통</td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0203.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-08-10</td>
+                        <td>직접선택만 있는 케이스 추가 및 월 출력오류 수정</td>
+                        <td></td>
+                    </tr>
+                    <tr class="gray">
+                        <td>HN_A_03_0104</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]출금계좌선택</td>
+                        <td></td>
+                        <td>AS-IS</td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0104.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0105</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]이자지급방법</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0105.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-07-29</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0106</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]이자지급간격</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0106.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-06</td>
+                        <td>0906문구변경</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0107</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]금리연동기간선택</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0107.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-07-29</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0108</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]만기 설정</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0108.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-07-29</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0120</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]금리변동 안내방법선택</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0109_2.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-13</td>
+                        <td>추가페이지</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0109</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]만기안내방법선택</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0109.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-08-09</td>
+                        <td>텍스트 수정</td>
+                        <td></td>
+                    </tr>
+                    <tr class="gray">
+                        <td>HN_A_03_0110</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]계좌선택</td>
+                        <td></td>
+                        <td>AS-IS</td>
+                        <td class="url"><!-- <a href="javascript:void(0);" target="_blank">내부망 확인 링크</a>--></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <!--
+                    <tr class="gray">
+                        <td>HN_A_03_0111</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[LP]비과세 종합저축 한도 안내</td>
+                        <td></td>
+                        <td>AS-IS</td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0111.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td class="etc">
+                            <a href="https://dev12-mbp.kebhana.com:18080/pub/resource/html/FDEP/FDEP01/FDEP0101002_P01.html" target="_blank" target="_blank">AS-IS</a></td>
+                        <td></td>
+                    </tr>
+                    -->
+                    <tr>
+                        <td>HN_A_03_0112</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[LP]비과세 종합저축 동의</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0112.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td>검수완료</td>
+                        <td class="date"></td>
+                        <td class="etc">
+                            <a href="https://dev12-mbp.hanabank.com:18080/hanaplus_dist/mbp/resource/html/FDEP/FDEP00/FDEP0007001_P01.html" target="_blank">AS-IS</a>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0113</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[LP]이자지급방식 안내</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0113.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-10-24</td>
+                        <td class="etc">
+                            10-24 마크업 수정
+                            <a href="https://dev12-mbp.kebhana.com:18080/pub/resource/html/FDEP/FDEP01/FDEP0101003_P02.html" target="_blank" target="_blank">AS-IS</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr class="gray">
+                        <td>HN_A_03_0114</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[LP]권유직원</td>
+                        <td></td>
+                        <td>AS-IS</td>
+                        <td class="url"><a href="javascript:void(0);" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td class="etc">
+                            <a href="https://dev12-mbp.kebhana.com:18080/pub/resource/html/CCOM/CCOM00/CCOM0003001_P02.html#" target="_blank" target="_blank">AS-IS</a>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0115</td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]가입정보확인</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0115.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-06</td>
+                        <td class="etc">
+                            마크업변경됨
+							<a href="https://dev12-mbp.kebhana.com:18080/pub/resource/html/FDEP/FDEP01/FDEP0101003_P01.html" target="_blank">AS-IS</a>
+						</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0116</td>
+                        <td></td>
+                        <td></td>
+                        <td>약관동의</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0116.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청</td>
+                        <td class="date">2022-09-13</td>
+                        <td><a href="https://dev12-mbp.kebhana.com:18080/pub/resource/html/FDEP/FDEP01/FDEP0101001.html" target="_blank">AS-IS</a>
+                        마크업 변경
+                        </td>
+                        <td>o</td>
+                    </tr>
+                    <tr class="gray">
+                        <td>HN_A_03_0117</td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]오픈뱅킹 pin인증</td>
+                        <td></td>
+                        <td></td>
+                        <td>native</td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0118.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="gray">
+                        <td>HN_A_03_0118</td>
+                        <td></td>
+                        <td></td>
+                        <td>간편인증</td>
+                        <td></td>
+                        <td></td>
+                        <td>native</td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0118.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0119</td>
+                        <td></td>
+                        <td></td>
+                        <td>가입완료</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0119.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-08-17</td>
+                        <td class="etc">
+							<a href="https://dev12-mbp.kebhana.com:18080/pub/resource/html/FDEP/FDEP01/FDEP0101004.html" target="_blank">AS-IS</a>
+                            08-17마크업 변경됨 / 계약정보 상세보기 최신화 수정
+                        </td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_오픈뱅킹</td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]오픈뱅킹</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_open_banking.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-07-29</td>
+                        <td class="etc"></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>HN_A_03_0201</td>
+                        <td></td>
+                        <td>적금</td>
+                        <td>정보입력</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0201.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-10-24</td>
+                        <td class="etc">
+                            10-24마크업 변경
+							<a href="https://dev12-mbp.kebhana.com:18080/pub/resource/html/FSAP/FSAP01/FSAP0101002.html" target="_blank">AS-IS-정보입력</a>
+							<a href="https://dev12-mbp.kebhana.com:18080/pub/resource/html/FSAP/FSAP01/FSAP0101003.html" target="_blank">AS-IS-부가정보입력</a>
+						</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_joinRemit</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>가입제한</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_joinRemit.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-10-11</td>
+                        <td>하단 5:5 버튼 클래스 변경</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0202</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]적금방식선택</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0202.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-07-29</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0203</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]가입기간</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0203.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-13</td>
+                        <td>직접선택만 있는 케이스 추가 및 월 출력오류 수정</td>
+                        <td></td>
+                    </tr>
+                    <tr class="gray">
+                        <td>HN_A_03_0204</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]가입금액</td>
+                        <td></td>
+                        <td>native</td>
+                        <td class="url"><!-- <a href="resource/html/HN_A/HN_A_00/HN_A_03_0204.html" target="_blank">내부망 확인 링크</a>--></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0205</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]자동이체일 선택</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0203.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td>검수완료</td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <!--
+                    <tr class="gray">
+                        <td>HN_A_03_0112</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[LP]신청동의 약관</td>
+                        <td></td>
+                        <td>AS-IS</td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0207.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    -->
+                    <tr class="gray">
+                        <td>HN_A_03_0104</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]출금계좌선택</td>
+                        <td></td>
+                        <td>AS-IS</td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/출금계좌선택_적금.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0206</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]만기 설정</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0206.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-07-29</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0109</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]만기안내방법선택</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0109.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td>검수완료</td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="gray">
+                        <td>HN_A_03_0207</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[LP]만기자동재예치용 신청서</td>
+                        <td></td>
+                        <td>PDF</td>
+                        <td class="url"><!-- <a href="resource/html/HN_A/HN_A_00/HN_A_03_0207.html" target="_blank">내부망 확인 링크</a> --></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td class="etc">
+                            <a href="https://dev12-mbp.kebhana.com:18080/pub/resource/html/BDEP/BDEP02/BDEP0202001_P02.html" target="_blank">AS-IS</a>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <!--
+                    <tr>
+                        <td>HN_A_03_0208</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><del>[LP]만기설정 안내</del></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="javascript:void(0);" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date">2022-07-13</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    -->
+                    <tr  class="gray">
+                        <td>HN_A_03_0110</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]계좌선택</td>
+                        <td></td>
+                        <td>AS-IS</td>
+                        <td class="url"><!-- <a href="resource/html/HN_A/HN_A_00/HN_A_03_0110.html" target="_blank">내부망 확인 링크</a> --></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <!--
+                    <tr  class="gray">
+                        <td>HN_A_03_0111</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[LP]비과세 종합저축 한도 안내</td>
+                        <td></td>
+                        <td>공통</td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0111.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td class="etc">
+                            <a href="https://dev12-mbp.kebhana.com:18080/pub/resource/html/FSAP/FSAP03/FSAP0301003_P02.html" target="_blank">AS-IS</a>
+                        </td>
+                        <td></td>
+                    </tr>
+                    -->
+                    <tr>
+                        <td>HN_A_03_0201_alert</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>적금화면 추가 alert</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0201_alert.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-13</td>
+                        <td class="etc">
+						</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0112</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[LP]비과세 종합저축 동의</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0112.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td>검수완료</td>
+                        <td class="date"></td>
+                        <td class="etc">
+                            <a href="https://dev12-mbp.hanabank.com:18080/hanaplus_dist/mbp/resource/html/FDEP/FDEP00/FDEP0007001_P01.html" target="_blank">AS-IS</a>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr  class="gray">
+                        <td>HN_A_03_0114</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[LP]권유직원</td>
+                        <td></td>
+                        <td>AS-IS</td>
+                        <td class="url"><a href="javascript:void(0);" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td class="etc">
+                            <a href="https://dev12-mbp.kebhana.com:18080/pub/resource/html/CCOM/CCOM00/CCOM0003001_P02.html" target="_blank">AS-IS</a>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <!--
+                    <tr class="gray">
+                        <td>HN_A_03_0210</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[LP]나만의 계좌이름</td>
+                        <td></td>
+                        <td>삭제</td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0210.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    -->
+                    <tr>
+                        <td>HN_A_03_0211</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[LP]보험서비스안내</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0211.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-07-29</td>
+                        <td class="etc">
+                            <a href="https://dev12-mbp.hanabank.com:18080/hanaplus_dist/mbp/resource/html/FSAP/FSAP01/FSAP0101020_P06.html">AS-IS</a>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0212</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[LP]사랑의 서약서</td>
+                        <td>펫사랑</td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0212.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-21</td>
+                        <td class="etc">
+                            <a href="https://dev12-mbp.hanabank.com:18080/hanaplus_dist/mbp/resource/html/FSAP/FSAP01/FSAP0101020_P05.html">AS-IS
+                            </a>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0212_2</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[LP]사랑의 서약서</td>
+                        <td>사랑나눔</td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0212_2.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td></td>
+                        <td class="date">2022-10-05</td>
+                        <td class="etc"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0213</td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]가입정보확인</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0213.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-08-18</td>
+                        <td class="etc">
+                            마크업변경됨
+                            <a href="resource/html/HN_A/HN_A_00/HN_A_03_0213.html">AS-IS 수정</a>
+                        </td>
+                        <td>o</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>HN_A_03_0214</td>
+                        <td></td>
+                        <td></td>
+                        <td>약관동의</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0214.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-07-28</td>
+                         <td class="etc"><a href="https://dev12-mbp.kebhana.com:18080/pub/resource/html/FSAP/FSAP01/FSAP0101001.html" target="_blank">AS-IS</a>
+                            디자인반영 필요
+                        </td>
+                        <td>o</td>
+                    </tr>
+                    <tr class="gray">
+                        <td>HN_A_03_0117</td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]오픈뱅킹 pin인증</td>
+                        <td></td>
+                        <td></td>
+                        <td>공통</td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0118.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="gray">
+                        <td>HN_A_03_0118</td>
+                        <td></td>
+                        <td></td>
+                        <td>간편인증</td>
+                        <td></td>
+                        <td></td>
+                        <td>공통</td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0220.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0215</td>
+                        <td></td>
+                        <td></td>
+                        <td>가입완료</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0215.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-10-31</td>
+                        <td class="etc">
+                            1031마크업수정 및 케이스추가
+                        </td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0301</td>
+                        <td></td>
+                        <td>청약</td>
+                        <td>설문조사</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0301.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-06</td>
+                        <td class="etc">
+                            0906문구변경
+                            <a href="https://dev12-mbp.kebhana.com:18080/pub/resource/html/FSAP/FSAP02/FSAP0201002.html" target="_blank">AS-IS</a>
+                            <a href="https://dev11-mbp.kebhana.com:18080/pub/resource/html/FINS/FINS03/FINS0301001.html" target="_blank">AS-IS02</a>
+                        </td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0302</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]희망 입주지역</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0302.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-08-01</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="gray">
+                        <td>HN_A_03_0303</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]희망 입주시기</td>
+                        <td></td>
+                        <td>native</td>
+                        <td class="url"><a href="javascript:void(0);" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0304</td>
+                        <td></td>
+                        <td></td>
+                        <td>정보입력</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0304.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-10-24</td>
+                        <td class="etc">
+                            10-24마크업 변경
+							<a href="https://dev12-mbp.kebhana.com:18080/pub/resource/html/FSAP/FSAP02/FSAP0201002.html" target="_blank">AS-IS-정보입력</a>
+							<a href="https://dev12-mbp.kebhana.com:18080/pub/resource/html/FSAP/FSAP02/FSAP0201003.html" target="_blank">AS-IS-부가정보입력1</a>
+							<a href="https://dev12-mbp.kebhana.com:18080/pub/resource/html/FSAP/FSAP02/FSAP0201004.html" target="_blank">AS-IS-부가정보입력2</a>
+						</td>
+                        <td>o</td>
+                    </tr>
+                    <tr class="gray">
+                        <td>HN_A_03_0305</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]청약입금회차</td>
+                        <td></td>
+                        <td>AS-IS</td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0305.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td>검수완료</td>
+                        <td class="date"></td>
+                        <td class="url">
+                            <a href="https://dev12-mbp.kebhana.com:18080/pub/resource/html/FDEP/FDEP01/FDEP0101002_P01.html">비과세 종합저축 한도 안내 링크 페이지와 비슷한 틀</a></td>
+                        <td></td>
+                    </tr>
+                    <tr class="gray">
+                        <td>HN_A_03_0104</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]출금계좌선택</td>
+                        <td></td>
+                        <td>AS-IS</td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/출금계좌선택_적금.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="gray">
+                        <td>HN_A_03_0306</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]자동이체 주기</td>
+                        <td></td>
+                        <td>native</td>
+                        <td class="url"><!-- <a href="javascript:void(0);" target="_blank">내부망 확인 링크</a>--></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="gray">
+                        <td>HN_A_03_0307</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]가입금액</td>
+                        <td></td>
+                        <td>native</td>
+                        <td class="url"><!-- <a href="resource/html/HN_A/HN_A_00/HN_A_03_0308.html" target="_blank">내부망 확인 링크</a> --></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="gray">
+                        <td>HN_A_03_0308</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]자동이체 종료일</td>
+                        <td></td>
+                        <td>native</td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0203.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0309</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[LP]청약입금회차 안내</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0309.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-07-29</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <!--
+                    <tr class="gray">
+                        <td>HN_A_03_0112</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[LP]신청동의 약관</td>
+                        <td></td>
+                        <td>AS-IS</td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0207.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    -->
+                    <!--
+                    <tr class="gray">
+                        <td>HN_A_03_0112</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[LP]비과세 종합저축 한도 안내</td>
+                        <td></td>
+                        <td>공통</td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0112.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td class="etc"><a href="https://dev12-mbp.kebhana.com:18080/pub/resource/html/FSAP/FSAP03/FSAP0301003_P02.html" target="_blank">AS-IS</a></td>
+                        <td></td>
+                    </tr>
+                    -->
+                    <tr>
+                        <td>HN_A_03_0112</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[LP]비과세 종합저축 동의</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0112.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td>검수완료</td>
+                        <td class="date"></td>
+                        <td class="etc">
+                            <a href="https://dev12-mbp.hanabank.com:18080/hanaplus_dist/mbp/resource/html/FDEP/FDEP00/FDEP0007001_P01.html" target="_blank">AS-IS</a>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr class="gray">
+                        <td>HN_A_03_0114</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[LP]권유직원</td>
+                        <td></td>
+                        <td>AS-IS</td>
+                        <td class="url"><a href="javascript:void(0);" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td class="etc">
+                            <a href="https://dev12-mbp.kebhana.com:18080/pub/resource/html/CCOM/CCOM00/CCOM0003001_P02.html" target="_blank">AS-IS</a>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0310</td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]가입정보확인</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0310.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-06</td>
+                        <td class="etc">
+                            0906문구변경됨
+                            <a href="resource/html/HN_A/HN_A_00/HN_A_03_0310.html">AS-IS 수정</a>
+                        </td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0311</td>
+                        <td></td>
+                        <td></td>
+                        <td>약관동의</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0311.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-07-28</td>
+                        <td class="etc"><a href="https://dev12-mbp.kebhana.com:18080/pub/resource/html/FSAP/FSAP02/FSAP0201001.html" target="_blank">AS-IS</a>
+                            디자인반영 필요
+                        </td>
+                        <td>o</td>
+                    </tr>
+                    <tr class="gray">
+                        <td>HN_A_03_0117</td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]오픈뱅킹 pin인증</td>
+                        <td></td>
+                        <td></td>
+                        <td>native</td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0118.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="gray">
+                        <td>HN_A_03_0118</td>
+                        <td></td>
+                        <td></td>
+                        <td>간편인증</td>
+                        <td></td>
+                        <td></td>
+                        <td>native</td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0118.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0313</td>
+                        <td></td>
+                        <td></td>
+                        <td>가입완료</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0313.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-06</td>
+                        <td class="etc">
+                            0906문구 변경
+                            <a href="https://dev12-mbp.kebhana.com:18080/pub/resource/html/FSAP/FSAP02/FSAP0201005.html" target="_blank">AS-IS</a>
+                        </td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0313</td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]오픈뱅킹</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_open_banking2.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-06</td>
+                        <td class="etc">화면 추가</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0401</td>
+                        <td></td>
+                        <td>입출금 전환</td>
+                        <td>정보입력</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0401.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-08-19</td>
+                        <td class="etc">
+                            2022-08-19 푸터 버튼 마크업 수정
+                            <a href="https://dev12-mbp.kebhana.com:18080/pub/resource/html/FTRS/FTRS01/FTRS0101001.html" target="_blank">AS-IS</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0402</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]전환할 계좌선택</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0402.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-07-29</td>
+                        <td class="etc">
+                            <a href="https://dev12-mbp.kebhana.com:18080/pub/resource/html/FTRS/FTRS01/FTRS0101001.html" target="_blank">AS-IS</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0403</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]급여일</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0403.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-07-29</td>
+                        <td class="etc">
+                            <a href="https://dev12-mbp.kebhana.com:18080/pub/resource/html/FTRS/FTRS01/FTRS0101001.html" target="_blank">AS-IS</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0404</td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]가입정보확인</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0404.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-08-17</td>
+                        <td class="etc">
+                            마크업변경됨
+                            <a href="resource/html/HN_A/HN_A_00/HN_A_03_0404.html">AS-IS 수정</a>
+                        </td>
+                        <td>o</td>
+                </tr>
+                    <tr>
+                        <td>HN_A_03_0405</td>
+                        <td></td>
+                        <td></td>
+                        <td>약관동의</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0405.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-07-07</td>
+                        <td class="etc">
+                            <a href="https://dev12-mbp.kebhana.com:18080/pub/resource/html/FTRS/FTRS01/FTRS0101002.html" target="_blank">AS-IS</a>
+                            디자인반영 필요
+                        </td>
+                        <td>o</td>
+                    </tr>
+                    <tr class="gray">
+                        <td>HN_A_03_0316</td>
+                        <td></td>
+                        <td></td>
+                        <td>간편인증</td>
+                        <td></td>
+                        <td></td>
+                        <td>공통</td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0407.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_03_0406</td>
+                        <td></td>
+                        <td></td>
+                        <td>가입완료</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_03_0406.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-08-17</td>
+                        <td class="etc">
+                            08-17마크업 변경됨
+                            <a href="https://dev12-mbp.kebhana.com:18080/pub/resource/html/FTRS/FTRS01/FTRS0101004.html" target="_blank">AS-IS</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_1101</td>
+                        <td>상품상세</td>
+                        <td>01_저축</td>
+                        <td>01_입출금</td>
+                        <td>01_급여하나 통장</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_1101.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0907</td>
+                        <td class="date">2022-09-06</td>
+                        <td>0906 마크업변경</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_1102</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>02_연금하나 통장</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_1102.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0907</td>
+                        <td class="date">2022-09-06</td>
+                        <td>0906 마크업변경</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_1103</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>03_주거래하나 통장</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_1103.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0907</td>
+                        <td class="date">2022-07-29</td>
+                        <td>이미지 제외</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_1104</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>04_영하나플러스 통장 </td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_1104.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0907</td>
+                        <td class="date">2022-07-29</td>
+                        <td>이미지 제외</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_1105</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>05_하나플러스 통장</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_1105.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0907</td>
+                        <td class="date">2022-07-29</td>
+                        <td>이미지 제외</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_1106</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>06_증권저축계좌</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_1106.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0907</td>
+                        <td class="date">2022-07-29</td>
+                        <td>이미지 제외</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_1201</td>
+                        <td></td>
+                        <td></td>
+                        <td>02_적금/청약</td>
+                        <td>우대금리 case별 템플릿</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_preferential.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td></td>
+                        <td class="date">2022-09-06</td>
+                        <td>1031 마크업수정</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_1201</td>
+                        <td></td>
+                        <td></td>
+                        <td>02_적금/청약</td>
+                        <td>01_급여하나 월복리 적금</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_1201.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0907</td>
+                        <td class="date">2022-09-07</td>
+                        <td>이미지 및 탭 내부 수정사항 제외<br>
+                            2022-07-29<br>
+                            - 비로그인시 우대항목 예상 금리 영역 추가<br>
+                            - 'selectbox' readonly 케이스 추가
+                            0907 마크업변경</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_1202</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>02_연금하나 월복리 적금</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_1202.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0907</td>
+                        <td class="date">2022-09-07</td>
+                        <td>0907 마크업변경</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_1203</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>03_주거래하나 월복리 적금</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_1203.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0907</td>
+                        <td class="date">2022-09-07</td>
+                        <td>이미지 및 탭 내부 수정사항 제외 / 우대항목별 예상금리 디자인 필요
+                            0907 마크업변경
+                        </td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_1204</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>04_내집마련 더블업(Double-Up)적금</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_1204.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0907</td>
+                        <td class="date">2022-09-07</td>
+                        <td>이미지 및 탭 내부 수정사항 제외
+                            0907 마크업변경
+                        </td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_1205</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>05_(내맘) 적금</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_1205.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0907</td>
+                        <td class="date">2022-09-07</td>
+                        <td>이미지 및 탭 내부 수정사항 제외
+                            0907 마크업변경
+                        </td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_1206</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>06_에너지챌린지 적금</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_1206.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0907</td>
+                        <td class="date">2022-09-07</td>
+                        <td>이미지 및 탭 내부 수정사항 제외
+                            0907 마크업변경
+                        </td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_1207</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>07_하나 타이밍 적금</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_1207.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0907</td>
+                        <td class="date">2022-09-07</td>
+                        <td>이미지 및 탭 내부 수정사항 제외
+                            0907 마크업변경
+                        </td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_1208</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>08_하나의 여행 적금</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_1208.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0907</td>
+                        <td class="date">2022-09-07</td>
+                        <td>이미지 및 탭 내부 수정사항 제외 / 우대항목별 예상금리 디자인 필요
+                            0907 마크업변경
+                        </td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_1209</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>09_도전365 적금</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_1209.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0907</td>
+                        <td class="date">2022-09-07</td>
+                        <td>이미지 및 탭 내부 수정사항 제외
+                            0907 마크업변경
+                        </td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_1210</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>10_펫사랑 적금</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_1210.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0907</td>
+                        <td class="date">2022-09-07</td>
+                        <td>이미지 및 탭 내부 수정사항 제외
+                            0907 마크업변경
+                        </td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_1211</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>11_주택청약종합저축</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_1211.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0907</td>
+                        <td class="date">2022-09-06</td>
+                        <td>0906 마크업변경</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_1212</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>12_자유적금</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_1212.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0907</td>
+                        <td class="date">2022-09-07</td>
+                        <td>0907 마크업변경</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_1213</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>13_정기적금</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_1213.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0907</td>
+                        <td class="date">2022-09-07</td>
+                        <td>0907 마크업변경</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_1214</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>14_청년내일저축계좌</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_1214.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0929</td>
+                        <td class="date">2022-09-06</td>
+                        <td>0906 페이지추가</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_1215</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>15_하나 나눔 적금</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_1215.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0929</td>
+                        <td class="date">2022-09-27</td>
+                        <td>0927 새항목 추가
+                        </td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_1216</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>16_Best 11 적금</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_1216.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0929</td>
+                        <td class="date">2022-09-27</td>
+                        <td>0927 새항목 추가
+                        </td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_hanahab</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>17_하나 합해볼래 적금</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_hanahab.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td></td>
+                        <td class="date">2022-10-25</td>
+                        <td>1025 페이지추가</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_1301</td>
+                        <td></td>
+                        <td></td>
+                        <td>03_예금</td>
+                        <td>01_하나의 정기예금</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_1301.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0907</td>
+                        <td class="date">2022-09-20</td>
+                        <td>이미지 및 탭 내부 css 수정 제외
+                            0906 마크업변경
+                        </td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_1302</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>02_369 정기예금</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_1302.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0907</td>
+                        <td class="date">2022-09-07</td>
+                        <td>이미지 및 탭 내부 css 수정 제외
+                            0907 마크업변경
+                        </td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_1303</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>03_고단위플러스 정기예금 (금리확정형)</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_1303.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0907</td>
+                        <td class="date">2022-09-06</td>
+                        <td>이미지 및 탭 내부 css 수정 제외
+                            0906 마크업변경
+                        </td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_1304</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>04_고단위플러스 정기예금 (금리연동형)</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_1304.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0907</td>
+                        <td class="date">2022-09-06</td>
+                        <td>0906 마크업변경</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_1004</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>적금/청약공통비교함담기_상품비교함</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_1004.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0907</td>
+                        <td class="date">2022-09-07</td>
+                        <td class="etc">디자인 필요, 아코디언 수정 필요
+                            0907 마크업변경
+                        </td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_1005</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>적금/청약공통비교함담기_상품비교함 [SP]선택옵션</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_1005.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0907</td>
+                        <td class="date">2022-07-22</td>
+                        <td></td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_2101</td>
+                        <td></td>
+                        <td>02_투자</td>
+                        <td>01_펀드</td>
+                        <td>ㅡ</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_2101.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0913</td>
+                        <td class="date">2022-09-13</td>
+                        <td>전체 마크업 수정 / O</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_2102</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>ELF</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_2102.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0913</td>
+                        <td class="date">2022-10-04</td>
+                        <td>10/04 마크업 변경</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_2201</td>
+                        <td></td>
+                        <td></td>
+                        <td>02_신탁</td>
+                        <td>ELT</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_2201.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0913</td>
+                        <td class="date">2022-10-04</td>
+                        <td>10/04 마크업 변경</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_2202</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>ETF</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_2202.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0913</td>
+                        <td class="date">2022-10-04</td>
+                        <td>10/21 마크업 변경</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_2203</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>해외ETF</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_2203.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0913</td>
+                        <td class="date">2022-10-04</td>
+                        <td>10/04 마크업 변경</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_2204</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>자문형신탁 고위험</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_2204.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0913</td>
+                        <td class="date">2022-09-13</td>
+                        <td>10/25 아코디언 마크업 수정 / O / CMS추가</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_2205</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>자문형신탁 중위험</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_2205.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0913</td>
+                        <td class="date">2022-09-13</td>
+                        <td>10/25 아코디언 마크업 수정 / O / CMS추가</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_2206</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>금현물</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_2206.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0913</td>
+                        <td class="date">2022-10-04</td>
+                        <td>10/04 마크업 변경</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_2207</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>분할매수형 ETF</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_2207.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td></td>
+                        <td class="date">2022-10-04</td>
+                        <td>10/25 마크업 변경</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_2301</td>
+                        <td></td>
+                        <td></td>
+                        <td>03_ISA</td>
+                        <td>01_개인종합자산관리계좌</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_2301.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0913</td>
+                        <td class="date">2022-09-13</td>
+                        <td>전체 마크업 수정 / 납입한도 텍스트 디자인필요</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_3101</td>
+                        <td></td>
+                        <td>03_대출</td>
+                        <td>01_신용</td>
+                        <td>01_하나원큐신용대출(직장인)</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_3101.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0929</td>
+                        <td class="date">2022-09-26</td>
+                        <td>0926 CMS 아코디언내용 마크업변경</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_3102</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>02_프리미엄직장인론(직장인)</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_3102.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0929</td>
+                        <td class="date">2022-09-13</td>
+                        <td></td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_3103</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>03_BEST 신용대출(직장인)</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_3103.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0929</td>
+                        <td class="date">2022-09-13</td>
+                        <td></td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_3104</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>04_공무원클럽대출(직장인)</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_3104.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0929</td>
+                        <td class="date">2022-09-13</td>
+                        <td></td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_3105</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>05_의료인클럽대출(직장인)</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_3105.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0929</td>
+                        <td class="date">2022-09-13</td>
+                        <td></td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_3106</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>06_닥터클럽대출-골드(전문직)</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_3106.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0929</td>
+                        <td class="date">2022-09-13</td>
+                        <td></td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_3107</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>07_전문직 클럽대출(전문직)</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_3107.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0929</td>
+                        <td class="date">2022-09-13</td>
+                        <td></td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_3108</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>08_로이어 클럽대출(전문직)</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_3108.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0929</td>
+                        <td class="date">2022-09-13</td>
+                        <td></td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_3109</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>09_하나 수의사 클럽대출(전문직)</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_3109.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0929</td>
+                        <td class="date">2022-09-13</td>
+                        <td></td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_3110</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>10_하나 새희망홀씨2(서민금융)</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_3110.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0929</td>
+                        <td class="date">2022-10-31</td>
+                        <td>1031문구변경</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_3111</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>11_하나 사잇돌 중금리대출(서민금융)</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_3111.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0929</td>
+                        <td class="date">2022-10-31</td>
+                        <td>1031 아코디언영역 운영이행버전 반영</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_3112</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>12_하나원큐비상금대출(서민금융)</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_3112.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0929</td>
+                        <td class="date">2022-09-13</td>
+                        <td>이미지 제외</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_3113</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>13_햇살론15(서민금융)</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_3113.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0929</td>
+                        <td class="date">2022-10-31</td>
+                        <td>1031 아코디언영역 운영이행버전 반영</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_3114</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>14_AI대출(일반/기타)</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_3114.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0929</td>
+                        <td class="date">2022-09-13</td>
+                        <td>이미지 제외</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_3115</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>15_하나원큐연금대출(일반/기타)</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_3115.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0929</td>
+                        <td class="date">2022-09-13</td>
+                        <td></td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_3116</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>16_씨티 갈아타기 대출</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_3116.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0929</td>
+                        <td class="date">2022-10-25</td>
+                        <td>1025마크업수정</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_3201</td>
+                        <td></td>
+                        <td></td>
+                        <td>02_담보</td>
+                        <td>01_하나원큐주택담보대출</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_3201.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0929</td>
+                        <td class="date">2022-10-25</td>
+                        <td>1031 아코디언영역 운영이행버전 반영</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_3202</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>02_예금담보대출</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_3202.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0929</td>
+                        <td class="date">2022-09-13</td>
+                        <td>이미지 제외</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_3301</td>
+                        <td></td>
+                        <td></td>
+                        <td>03_전세</td>
+                        <td>01_하나원큐전세대출</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_3301.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0929</td>
+                        <td class="date">2022-10-31</td>
+                        <td>1031문구 수정</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_3302</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>02_원큐 주택신보 전세자금대출</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_3302.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0929</td>
+                        <td class="date">2022-10-31</td>
+                        <td>1031마크업 수정 및 추가 </td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_3303</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>03_원큐 신혼부부전세론</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_3303.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0929</td>
+                        <td class="date">2022-10-31</td>
+                        <td>1031마크업 수정 및 추가 </td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_3304</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>04_원큐 다둥이전세론</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_3304.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0929</td>
+                        <td class="date">2022-10-31</td>
+                        <td>1031마크업 수정 및 추가 </td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_3305</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>05_우량주택전세론</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_3305.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0929</td>
+                        <td class="date">2022-10-31</td>
+                        <td>1031마크업 수정 및 추가 </td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_3306</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>06_원큐 서울특별시 신혼부부 임차보증금대출</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_3306.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0929</td>
+                        <td class="date">2022-10-31</td>
+                        <td>1031 아코디언영역 운영이행버전 반영</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_3307</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>07_원큐 서울특별시 청년 임차보증금대출</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_3307.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0929</td>
+                        <td class="date">2022-10-31</td>
+                        <td>1031 아코디언영역 운영이행버전 반영</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_3401</td>
+                        <td></td>
+                        <td></td>
+                        <td>04_자동차</td>
+                        <td>01_1Q오토론</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_3401.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0929</td>
+                        <td class="date">2022-09-13</td>
+                        <td>이미지 제외</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_3402</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>02_EV오토론</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_3402.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0929</td>
+                        <td class="date">2022-09-13</td>
+                        <td>이미지 제외</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_4101</td>
+                        <td></td>
+                        <td>04_외화</td>
+                        <td>01_입출금</td>
+                        <td>01_하나 밀리언달러 통장</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_4101.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0913</td>
+                        <td class="date">2022-10-04</td>
+                        <td>10/04 마크업 변경</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_4102</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>02_글로벌페이 전용통장</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_4102.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0913</td>
+                        <td class="date">2022-09-13</td>
+                        <td>이미지 제외</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_4201</td>
+                        <td></td>
+                        <td></td>
+                        <td>02_적금</td>
+                        <td>01_일달러 외화적금</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_4201.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0913</td>
+                        <td class="date">2022-10-11</td>
+                        <td>1011 마크업 변경</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_4202</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>02_더와이드 외화적금</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_4202.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0913</td>
+                        <td class="date">2022-09-13</td>
+                        <td>이미지 제외</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_4203</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>03_자녀사랑 외화로유학적금</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_4203.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0913</td>
+                        <td class="date">2022-09-13</td>
+                        <td>이미지 제외</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_4301</td>
+                        <td></td>
+                        <td></td>
+                        <td>03_예금</td>
+                        <td>01_HIFI Plus 외화적립예금</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_4301.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0913</td>
+                        <td class="date">2022-09-13</td>
+                        <td>이미지 제외</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_4302</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>02_스마트팝콘 외화적립예금</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_4302.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0913</td>
+                        <td class="date">2022-09-13</td>
+                        <td>이미지 제외</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_5101</td>
+                        <td></td>
+                        <td>05_보험</td>
+                        <td></td>
+                        <td>case01</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_5101.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td></td>
+                        <td class="date">2022-08-01</td>
+                        <td>기획검수필요</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_5102</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>case02</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_5102.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td></td>
+                        <td class="date">2022-10-24</td>
+                        <td>1024 마크업변경</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_5103</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>case03</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_5103.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td></td>
+                        <td class="date">2022-10-24</td>
+                        <td>1024 마크업변경</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_5104</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>노란우산</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_5104.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td></td>
+                        <td class="date">2022-10-26</td>
+                        <td>1026 페이지추가</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_6101</td>
+                        <td></td>
+                        <td>06_퇴직연금</td>
+                        <td></td>
+                        <td>01_개인형IRP</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_6101.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0913</td>
+                        <td class="date">2022-09-13</td>
+                        <td class="etc">
+                            아코디언 디자인 및 내용 추가
+                        </td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_6102</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>02_퇴직IRP</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_6102.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청0913</td>
+                        <td class="date">2022-09-13</td>
+                        <td> 아코디언 디자인 및 내용 추가
+                        </td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_04_6103</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>03_ETF</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_04_6103.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td></td>
+                        <td class="date">2022-09-27</td>
+                        <td>0927 페이지추가
+                        </td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_B_01_0101</td>
+                        <td>머니박스</td>
+                        <td>머니박스 상세안내</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_0101.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-10-13</td>
+                        <td>json관련 수정/아코디언 내용수정<br>
+                            221013 마크업변경</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_B_01_0011</td>
+                        <td></td>
+                        <td>[LP]머니박스 통장 안내</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_0011.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-21</td>
+                        <td>0921 마크업변경</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_B_01_0004</td>
+                        <td></td>
+                        <td>[LP]통장이용안내</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_0004.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-10-13</td>
+                        <td>221013 마크업변경</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_B_01_0001</td>
+                        <td></td>
+                        <td>메인</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_0001.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-27</td>
+                        <td>0927마크업변경</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_B_01_0001</td>
+                        <td></td>
+                        <td>메인(진행 중 시)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_0001_2.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-10-15</td>
+                        <td>1015스크립트 수정</td>
+                        <td>o</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>HN_B_01_0001</td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]챌린지 끝내기</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_fail.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-01</td>
+                        <td>1005스크립트 수정/0930기획변경으로 인한 마크업변경예정</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_B_01_0002</td>
+                        <td></td>
+                        <td>[SP]테마 변경</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_0002.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-08-26</td>
+                        <td>아이콘 이미지 필요</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_B_01_5001</td>
+                        <td></td>
+                        <td>통장 관리</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_5001.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-10-11</td>
+                        <td>1011기획변경으로 인한 수정</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_B_01_0003</td>
+                        <td></td>
+                        <td>[SP]금액보관 대상선택</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_0003.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-08-26</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_B_01_1002</td>
+                        <td></td>
+                        <td>파킹</td>
+                        <td>[LP]금액조정</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_1002.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-10-08</td>
+                        <td>스크립트 수정</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_B_01_1006</td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]더하기/빼기 선택</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_1006.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-26</td>
+                        <td>0926 클래스 변경 </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_B_01_1003</td>
+                        <td></td>
+                        <td></td>
+                        <td>[LP]직접입력</td>
+                        <td>더하기</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_1003.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-21</td>
+                        <td>0921 script변경</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>_HN_B_01_1003</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>빼기</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/_HN_B_01_1003.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-21</td>
+                        <td>0921 script변경</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_B_01_1004</td>
+                        <td></td>
+                        <td></td>
+                        <td>파킹상세</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_1004.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-21</td>
+                        <td>0930기획변경으로 인한 마크업변경예정</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_B_01_1004_2</td>
+                        <td></td>
+                        <td></td>
+                        <td>파킹상세(내역없음)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_1004_2.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-01</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_B_01_1005</td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]조회기간</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_1005.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-08-12</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_B_01_1101</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>이자상세</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_1101.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-21</td>
+                        <td>0921마크업변경</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_B_01_2002</td>
+                        <td></td>
+                        <td>소비</td>
+                        <td>[LP]금액조정</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_2002.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-08-22</td>
+                        <td></td>
+                        <td>o</td>
+                    </tr>
+                    <tr class="gray">
+                        <td>HN_B_01_2006</td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]더하기/빼기 선택</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_1006.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-08-12</td>
+                        <td>더하기/빼기 동일</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_B_01_2003</td>
+                        <td></td>
+                        <td></td>
+                        <td>[LP]직접입력</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_2003.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-21</td>
+                        <td>0921 script변경</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_B_01_2004</td>
+                        <td></td>
+                        <td></td>
+                        <td>소비상세</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_2004.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-21</td>
+                        <td>0921마크업변경</td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_B_01_2004_2</td>
+                        <td></td>
+                        <td></td>
+                        <td>소비상세(내역없음)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_2004_2.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-21</td>
+                        <td>0921마크업변경</td>
+                        <td></td>
+                    </tr>
+                    <tr class="gray">
+                        <td>HN_B_01_2005</td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]조회기간</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_1005.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date"></td>
+                        <td>조회기간 동일</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_B_01_popup</td>
+                        <td></td>
+                        <td></td>
+                        <td>소비/파킹상세 적용금리팝업</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_popup.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-10-04</td>
+                        <td>1004 페이지추가</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_B_01_3002</td>
+                        <td></td>
+                        <td>챌린지</td>
+                        <td>챌린지 상세</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_3002.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-21</td>
+                        <td>2022-09-22 마크업 변경</td>
+                        <td>o</td>
+                    </tr>
+                    <!-- 2022-09-19 디자인 변경 으로 인해 기본 컨펌팝업 사용
+                    <tr>
+                        <td>HN_B_01_fail</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[LP]챌린지실패</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_fail.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청</td>
+                        <td class="date">2022-08-22</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    -->
+                    <tr>
+                        <td>HN_B_01_3003</td>
+                        <td></td>
+                        <td></td>
+                        <td>가입 - 주차선택</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_3003.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-01</td>
+                        <td></td>
+                        <td>o</td>
+                    </tr>
+                    <tr>
+                        <td>HN_B_01_3004</td>
+                        <td></td>
+                        <td></td>
+                        <td>가입 - 금액입력</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_3004.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-21</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_B_01_3101</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[LP]챌린지 달성현황</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_3101.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-21</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_B_01_3105</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[LP]챌린지 내역상세</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_3105.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-21</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_B_01_3102</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[LP]하나머니 획득</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_3102.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-10-08</td>
+                        <td>json관련 수정</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_B_01_3103</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[LP]리워드 받기</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_3103.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-10-08</td>
+                        <td>json관련 수정</td>
+                        <td>o</td>
+                    </tr>
+                    <tr class="gray">
+                        <td>HN_B_01_3104</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>[LP]공유하기</td>
+                        <td></td>
+                        <td>as-is</td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_3104.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state"></td>
+                        <td>검수완료</td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>HN_B_01_4001</td>
+                        <td></td>
+                        <td>가계부</td>
+                        <td>가계부 상세</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_4001.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-21</td>
+                        <td>0921마크업수정</td>
+                        <td>o</td>
+                    </tr>
+                    <tr class="gray">
+                        <td>HN_B_01_4002</td>
+                        <td></td>
+                        <td></td>
+                        <td>[SP]조회기간</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_1005.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date"></td>
+                        <td>조회기간 동일</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_B_01_4003</td>
+                        <td></td>
+                        <td></td>
+                        <td>[LP]메모</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_4003.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-08-11</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_B_01_4101</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>수입 상세</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_4101.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-21</td>
+                        <td>0921마크업수정/조회내역없음 숨김처리</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_B_01_4102</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>지출 상세</td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_4102.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-21</td>
+                        <td>0921마크업수정</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_B_01_5101</td>
+                        <td></td>
+                        <td></td>
+                        <td>[LP]순서 변경</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_B_01_5101.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-24</td>
+                        <td>0924마크업변경</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_C_01_0001</td>
+                        <td>인증/보안</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_C_01_0001.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-29</td>
+                        <td>10/26 마크업 변경</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_C_01_0002</td>
+                        <td></td>
+                        <td>로그인수단</td>
+                        <td>로그인시</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_C_01_0002.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-29</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_C_01_0002</td>
+                        <td></td>
+                        <td></td>
+                        <td>비로그인시</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_C_01_0002_2.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-29</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_C_01_0003</td>
+                        <td></td>
+                        <td>금융인증서</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_C_01_0003.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-29</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_C_01_0004</td>
+                        <td></td>
+                        <td>공동인증서</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_C_01_0004.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-29</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_C_01_0005</td>
+                        <td></td>
+                        <td>보안매체관리</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_C_01_0005.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-29</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_C_01_0006</td>
+                        <td></td>
+                        <td>하나Onesign인증서</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_C_01_0006.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-29</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_C_01_0005_popup</td>
+                        <td></td>
+                        <td>보안매체관리-팝업</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_C_01_OTP.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수완료</td>
+                        <td class="date">2022-09-29</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HN_A_grade</td>
+                        <td>평점</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/HN_A_grade.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state comp">
+                            <i class="icon"></i>
+                        </td>
+                        <td>검수요청</td>
+                        <td class="date">2022-08-09</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>SVG-lottie 테스트</td>
+                        <td>200kb</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/svg_200kb.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state">
+                        </td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <!--
+                    <tr>
+                        <td>SVG-lottie 테스트</td>
+                        <td>400kb</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/svg_400kb.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state">
+                        </td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>SVG-lottie 테스트</td>
+                        <td>700kb</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/svg_700kb.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state">
+                        </td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>SVG-lottie 테스트</td>
+                        <td>2mb</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="resource/html/HN_A/HN_A_00/svg_2mb.html" target="_blank">내부망 확인 링크</a></td>
+                        <td class="state">
+                        </td>
+                        <td></td>
+                        <td class="date"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    -->
+                </tbody>
+			</table>
+		</div>
+
+	</div>
+	<!-- //wrap -->
+
+	<script src="resource/library/jquery/jquery-3.4.1.min.js"></script>
+	<script>
+	$(function () {
+		$.each($("td.url > a"), function (i, v) {
+			let link = $(v).attr("href");
+			// link = link.replace('../', '')
+			$(v).text('내부망 확인 링크');
+			$(v).attr('href', link)
+		})
+		$.each($("td.state"), function () {
+			if ($(this).hasClass('ing')) {
+				$(this).append(' 진행중');
+			}
+			if ($(this).hasClass('wait')) {
+				$(this).append(' 대기');
+			}
+			if ($(this).hasClass('modi')) {
+				$(this).append(' 수정중');
+			}
+			if ($(this).hasClass('comp')) {
+				$(this).append(' 완료');
+			}
+			if ($(this).hasClass('del')) {
+				$(this).append(' 삭제됨');
+				$(this).parent().addClass('del');
+			}
+			if ($(this).hasClass('mc')) {
+				$(this).append(' 수정완료');
+			}
+			if ($(this).hasClass('em')) {
+				$(this).closest('tr').addClass('emer')
+				$(this).append(' 긴급');
+			}
+		});
+
+
+        //현황 log
+        var cntIng = 0;
+        var cntComp = 0;
+        var cntTotal = 0;
+        var category = ["메인","서브메인", ,"가입프로세스", "상품상세","머니박스","인증/보안"];
+        var detail = {
+            "메인" : {
+                total : 0,
+                ing : 0,
+                compleate : 0
+            },
+            "서브메인" : {
+                total : 0,
+                ing : 0,
+                compleate : 0
+            },
+            "가입프로세스" : {
+                total : 0,
+                ing : 0,
+                compleate : 0
+            },
+            "상품상세" : {
+                total : 0,
+                ing : 0,
+                compleate : 0
+            },
+            "머니박스" : {
+                total : 0,
+                ing : 0,
+                compleate : 0
+            },
+            "인증/보안" : {
+                total : 0,
+                ing : 0,
+                compleate : 0
+            }
+        }
+        var category = "";
+        $('.cont tbody tr:not(.gray)').each(function(idx){
+
+            if($.trim($(this).find('td:eq(1)').text()).length > 1){
+                category = $(this).find('td:eq(1)').text();
+            }
+            if($(this).find('.state').is('.ing')){
+                detail[category].ing = detail[category].ing+1;
+            }
+            if($(this).find('.state').is('.comp')){
+                detail[category].compleate = detail[category].compleate+1;
+            }
+            detail[category].total = detail[category].total+1
+        })
+        console.log(detail);
+	})
+</script>
+</body>
+
+</html>

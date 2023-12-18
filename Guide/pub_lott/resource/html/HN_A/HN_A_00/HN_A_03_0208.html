@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<!-- 2022 상품몰 고도화 추가 -->
+<link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap goods-layout">
+
+        <!-- Content -->
+        <div id="content" class="app-main">
+            
+            <div class="tit-default">만기일이 되면
+                어떻게 할까요?                
+                <!-- 200526 수정 | uiux 수정사항 툴팁 추가 -->
+                <div class="tooltip" data-tooltip="paragraph">
+                    <!-- 200608 | 기획분 수정 | 문구 수정-->
+                    <button type="button" class="tooltip__open" data-tooltip-button="open" aria-label="저축방법 정보 툴팁 열기"></button>
+                    <!-- 툴팁 레이어 -->
+                    <div class="tooltip__panel" data-tooltip-panel="false">
+                        만기설정안내
+                        <div class="tooltip__column">
+                            <div class="tooltip__title" data-tooltip="focus">만기 시 자동해지
+                            </div>
+                            <p class="tooltip__description"></p>
+                            <ul class="tooltip-wrap__list">
+                                <li class="tooltip-wrap__item">- 만기일에 자동으로 해지 및 입금됩니다.</li>
+                            </ul>
+                            <div class="tooltip__title" data-tooltip="focus">직접해지
+                            </div>
+                            <p class="tooltip__description"></p>
+                            <ul class="tooltip-wrap__list">
+                                <li class="tooltip-wrap__item">- 만기일에 ARS인증을 통해 손님이 직접해지해야 합니다. (만기일부터 만기 후 금리 적용)</li>
+                            </ul>
+                            <div class="tooltip__title" data-tooltip="focus">만기 재예치
+                            </div>
+                            <p class="tooltip__description"></p>
+                            <ul class="tooltip-wrap__list">
+                                <li class="tooltip-wrap__item">- 이 적금의 특약에 따라 최초 계약기간 단위로 최대 3회 재예치됩니다.</li>
+                                <li class="tooltip-wrap__item">- 재예치 시 이 적금의 최소가입금액 ㅇㅇ원을 제외한 세후원리금은 이 적금을 가입할 때 최초로 출금한 계좌에 자동 입금됩니다.</li>
+                                <li class="tooltip-wrap__item">- 만기 재예치 시, 적금계좌의 자동이체도 자동연장됩니다.</li>
+                                <li class="tooltip-wrap__item">- 압류 등 법적 지급제한이 있거나 기타 재예치를 할 수 없는 사유가 있는 경우, 재예치되지 않습니다. 
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="tooltip__close" data-tooltip-button="close" aria-label="툴팁 닫기"></button>
+                    </div>
+                    <!-- //툴팁 레이어 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

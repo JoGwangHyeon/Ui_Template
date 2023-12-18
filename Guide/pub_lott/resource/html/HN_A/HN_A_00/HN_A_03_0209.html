@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<!-- 2022 상품몰 고도화 추가 -->
+<link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap goods-layout">
+
+        <!-- Content -->
+        <div id="content" class="app-main">
+            
+            <div class="tit-default">자동해지일    
+                <!-- 200526 수정 | uiux 수정사항 툴팁 추가 -->
+                <div class="tooltip" data-tooltip="paragraph">
+                    <!-- 200608 | 기획분 수정 | 문구 수정-->
+                    <button type="button" class="tooltip__open" data-tooltip-button="open" aria-label="저축방법 정보 툴팁 열기"></button>
+                    <!-- 툴팁 레이어 -->
+                    <div class="tooltip__panel" data-tooltip-panel="false">
+                        <div class="tooltip__column">
+                            <div class="tooltip__title" data-tooltip="focus">만기일 해지
+                            </div>
+                            <p class="tooltip__description">납입일보다 늦게 납입한 경우, 만기약정금액에서
+                                지연이자(지연일수×월 납입금액 지연금리) 차감 후 지급합니다.
+                            </p>
+                            <div class="tooltip__title" data-tooltip="focus">연장된 만기일 해지</div>
+                            <p class="tooltip__description">납입일보다 늦게 납입한 경우, 
+                                납입 지연일수만큼 연장된 만기일에 해지되며
+                                전체 납입 완료 시 만기약정금액을 지급합니다</p>
+                        </div>
+                        <button class="tooltip__close" data-tooltip-button="close" aria-label="툴팁 닫기"></button>
+                    </div>
+                    <!-- //툴팁 레이어 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

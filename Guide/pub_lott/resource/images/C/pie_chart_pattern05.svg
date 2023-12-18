@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="4px" height="4px" viewBox="0 0 4 4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>pattern_vertical copy@1x</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="4" height="4"></rect>
+    </defs>
+    <g id="작업중" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="월간(펀드나침반)_6-copy-3" transform="translate(-454.000000, -663.000000)">
+            <g id="pattern_vertical-copy" transform="translate(454.000000, 663.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Rectangle" fill="#7C4DFF" xlink:href="#path-1"></use>
+                <rect id="Rectangle" fill="#FFFFFF" opacity="0.400000006" mask="url(#mask-2)" x="0" y="0" width="2" height="4"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+
+
+</head>
+
+<body>
+    <div id="wrap" class="wrap n22UI">
+        <!-- HEADER -->
+        <!-- 2022-08-16 | 타이틀 텍스트 변경-->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">로그인/인증 설정</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //HEADER -->
+
+        <!-- CONTENT -->
+         <!--2022-08-04 ======================================================
+                    * certi-service class 추가
+                    * 간격 수정을 위한 li a 내부 p태그 추가
+                -->
+        <div id="content" class="app-main n22ui-pg-security certi-service">
+            <!-- 2022-09-29 title없는 케이스  none-title 추가 -->
+            <div class="section-n22ui none-title"> 
+                <!-- 보안서비스 | 로그인시에만 노출-->
+                <!-- 2022-08-16 | =====================
+                * 보안 서비스 비 로그인 시 라디오 버튼 비활성화
+                * 보안 서비스 비 로그인 시 확인 버튼 비활성화
+                * 비 로그인 시 '인증서', '아이디' 텍스트 색상 변경
+             -->
+                <ul class="white-box-n22ui">
+                    <!-- 2022-08-10 링크 영역과 라디오 영역 분리 마크업 변경// -->
+
+                    <!-- 2022-08-30 비로그인시 
+
+                        li 에  class="disabled" 클래스 추가 및
+                        input 태그에  disabled="disabled" 추가 필요
+                        
+                    -->
+                    
+                    <li class="disabled">
+                        <p>
+                            <input type="radio" id="loginMethodRdo01" class="radio-wrap__radio" name="ratesRdo01" disabled="disabled">
+                            <label for="loginMethodRdo01" class="radio-wrap__label">간편비밀번호</label>
+                            <button type="button" class="loginType__detail" id="loginType-1"></button>
+                        </p>
+                        
+                    </li>
+                    <li class="disabled">
+                        <p>
+                            <input type="radio" id="loginMethodRdo02" class="radio-wrap__radio" name="ratesRdo01" disabled="disabled">
+                            <label for="loginMethodRdo02" class="radio-wrap__label">얼굴인증(하나은행 전용)</label>
+                            <button type="button" class="loginType__detail" id="loginType-2"></button>
+                        </p>
+                    </li>
+                    <!-- 2022-08-16 | 텍스트 변경-->
+                    <li class="disabled">
+                        <p>
+                            <input type="radio" id="loginMethodRdo03" class="radio-wrap__radio" name="ratesRdo01" disabled="disabled">
+                            <label for="loginMethodRdo03" class="radio-wrap__label">Face ID</label>
+                            <button type="button" class="loginType__detail" id="loginType-3"></button>
+                        </p>
+                    </li>
+                    
+                    
+                    <li class="disabled">
+                        <p>
+                            <input type="radio" id="loginMethodRdo04" class="radio-wrap__radio" name="ratesRdo01" disabled="disabled">
+                            <!-- 2022-08-16 | 비 로그인 시 '인증서' 텍스트 비활성화 -->
+                            <label for="loginMethodRdo04" class="radio-wrap__label">인증서</label>
+                        </p>
+                    </li>
+                    
+                    
+                    <li class="disabled">
+                        <p>
+                            <input type="radio" id="loginMethodRdo05" class="radio-wrap__radio" name="ratesRdo01" disabled="disabled">
+                            <!-- 2022-08-16 | 비 로그인 시 '아이디' 텍스트 비활성화 -->
+                            <label for="loginMethodRdo05" class="radio-wrap__label">아이디</label>
+                        </p>
+                    </li>
+                    <!-- //2022-08-09 링크 영역과 라디오 영역 분리 마크업 변경 -->
+                </ul>
+            </div>
+
+
+        </div>
+
+        <!-- //CONTENT -->
+
+        <!-- 2022-08-19 마크업 변경 FOOTER -->
+        <!-- 2022-08-30 비회원일때 노출안함 -->
+        <div id="footer" class="app-footer app-footer--button" style="display:none;">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive">확인</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+        </div>
+        <!-- //FOOTER -->
+    </div>
+
+
+  
+
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
+  
+</body>
+</html>

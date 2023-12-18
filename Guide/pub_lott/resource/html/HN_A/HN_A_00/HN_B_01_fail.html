@@ -1,0 +1,94 @@
+
+<!-- v0.9 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+
+<body>
+    <!--2022-07-12 모달 작업-->
+    <div id="wrap" class="wrap">
+        <!-- Content -->
+        <div id="content" class="app-main">
+        
+
+            <div class="container">
+                <div class="button-select">
+                    <button type="button" class="button button-select__item" data-element="modal__open" data-target="#challenge-fail">챌린지 실패</button>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="button-select">
+                    <button type="button" class="button button-select__item" data-element="modal__open" data-target="#challenge-fail2">챌린지 실패2</button>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- //Content -->
+
+        <!-- Modal layer -->
+        <!-- 2022-10-12  기본 컨펌 팝업 으로 변경 -->
+        <div id="challenge-fail" class="modal modal--alert" data-element="modal__element">
+            <div class="modal__container" data-element="modal__element-container">
+                <div class="modal__contents">
+                    <div class="modal__description" data-element="focus" tabindex="0">
+                        챌린지를 끝냈어요.<Br>
+                        다시 시작해 볼까요?
+                    </div>
+                </div>
+                <div class="button-wrap">
+                    <button type="button" class="button button--negative button--span3" data-element="modal__close">닫기</button>
+                    <button type="button" class="button button--positive" data-element="modal__close">챌린지 시작하기</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2022-11-03 하단 슬라이드 -->
+        <div id="challenge-fail2" class="modal challenge-fail modal--slide modal--selet-value modal--openbanking" data-element="modal__element">
+            <div class="modal__container modal__container--interval" data-element="modal__element-container">
+                <div class="modal__header">
+                    <br>
+                </div>
+                <div class="modal__contents modal__contents--no-spacer">
+                    <div class="container">
+                        
+                        <div class="list-section">
+                            <p>챌린지를 끝냈어요.</p>
+                            <strong>다시 시작해 볼까요?</strong>
+                        </div>
+                    
+                    </div>
+                </div>
+                <div class="button-fixed">
+                    <div class="button-wrap">
+                        <button type="button" class="button button--negative button--span3" data-element="modal__close">아니오</button>
+                        <button type="button" class="button button--positive" data-element="modal__close">예</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--// Modal layer -->
+    </div>
+    <!--//2022-07-12 모달 작업-->
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap n22UI moneybox">
+        <!-- HEADER -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <!-- 2022-09-01 text 수정 -->
+            <h1 class="app-header__title">머니박스 통장 이자 조회</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //HEADER -->
+
+        <!-- CONTENT -->
+        <div id="content" class="app-main moneybox-cont moneybox-detail">
+            <div class="interest-detail">
+                <!--2022-08-04 | -->
+                <div class="parking-graybox">
+                    <span class="parking-graybox-tit">6개월 동안 받은 이자
+                        <!-- 2022-09-01 tooltip 추가 -->
+                        <div class="tooltip" data-tooltip="paragraph" data-options='{"position": "top"}'>
+                            <button type="button" class="tooltip__open" data-tooltip-button="open" aria-label="분류 가능 툴팁 열기"></button>
+                            <div class="tooltip__panel" data-tooltip-panel="false">
+                                <div class="tooltip__column"><!-- 2차 기획현행화 | 텍스트 수정 -->
+                                    <!-- 2022-09-26 br태그 위치 수정  -->
+                                    <p class="tooltip__description" data-tooltip="focus">머니박스 통장 잔액에 대한 기본금리와<br>파킹 공간 잔액에 대한 우대금리를<br>합산하여 계산해요.</p>
+                                </div>
+                                <button type="button" class="tooltip__close" data-tooltip-button="close" aria-label="툴팁 닫기"></button>
+                            </div>
+                        </div>
+                    </span>
+                    <!-- 2022-09-22 마크업 변경 -->
+                    <span class="parking-amount"><em>2,500,000</em> <span class="unit">원</span></span>
+                    
+                    <!--2022-08-29 수정 그래프 영역-->
+                    <div id="columnChart" class="graph-area">
+                        그래프
+                    </div>
+                </div>
+
+
+                <div class="pay-list">
+                    <!--2022-08-26 | 텍스트 띄어쓰기 제거-->
+                    <em class="container">이자내역</em>
+                    <ul>
+                        <li>
+                            <div class="calc"><em>2022년 6월</em><strong>10,000원</strong></div>
+                        </li>
+                        <li>
+                            <div class="calc"><em>2022년 5월</em><strong>10,000원</strong></div>
+                        </li>
+                        <li>
+                            <div class="calc"><em>2022년 4월</em><strong>10,000원</strong></div>
+                        </li>
+                        <li>
+                            <div class="calc"><em>2022년 3월</em><strong>10,000원</strong></div>
+                        </li>
+                        <li>
+                            <div class="calc"><em>2022년 2월</em><strong>10,000원</strong></div>
+                        </li>
+                        <li>
+                            <div class="calc"><em>2022년 2월</em><strong>10,000원</strong></div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 2022-09-16 삭제 
+                <button type="button" class="view-more" title="더보기">더보기</button>
+                -->
+            </div>
+        </div>
+        <!-- //CONTENT -->
+    </div>
+
+
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
+
+    <!-- 2022-08-29 추가 -->
+    <script type="text/javascript">
+        //2022-08-26 하이차트
+
+        //2022-09-24  DEV set  ============
+        var monthArr = ['3월', '4월', '5월', '6월', '7월', '8월']; //조회대상월 
+        var incomArr = [100, 500, 100, 50, 60, 40]; //이자
+        var seriesData = [{
+            color:'#333',
+            name : '이자',
+            data: incomArr
+        }]
+        var clickabled = true; //클릭기능 막기시 false
+        //========== 2022-09-24  DEV set  ===
+
+        function showChart(target){
+            var chartWrapper = $(target);
+            chartWrapper.each(function(){
+                var chartObj = $(this);
+
+                function createChartObj(){
+                    var _o = {
+                        category : monthArr,
+                        series : seriesData,
+                        xLineLen : 4,
+                        dataLabels : false,
+                        templeate : {
+                            column:'<li>\
+                                        <input type="radio" class="inp-radio" name="chartseries">\
+                                        <div class="column-list-item">\
+                                            <div class="group">\
+                                                {{item}}\
+                                                 {{tooltipHTML}}\
+                                            </div>\
+                                            <em class="category">{{category}}</em></span>\
+                                        </div>\
+                                    </li>',
+                            tooltip : '<div class="tooltip__container" style="bottom:{{maxHeight}}"><div class="tooltip__panel">\
+                                            {{value}}\
+                                        </div></div>'
+                        }
+                    },
+                    
+                    _f = {
+                        getMax : function(){
+                            if(seriesData.length > 1 ){
+                                var aa = seriesData[0].data.concat(seriesData[1].data);
+                            }else{
+                                var aa = seriesData[0].data.concat([]);
+                            }
+                            aa.sort(function(a, b){ return b-a});
+                            return aa[0];
+                        },
+                        getPer : function(_sData){
+                            var _maxVal = _f.getMax();
+                            return Math.floor(((_sData/_maxVal) * 100)) +'%';
+                        },
+                        getMoreHigh : function(arr){
+                            var aa = arr;
+                            aa.sort(function(a, b){ return b-a});
+                            return aa[0];
+                        },
+                        getWon : function(localKey){
+                            return new Intl.NumberFormat('ko-KR').format(localKey);
+                        },                        
+                        createArticle : function(){
+                            var _arrTooltip = [];
+                            var _arrColumn = [];
+
+                            var strLine = '';
+                            for(var i=0; i<_o.xLineLen; i++){ strLine += "<span></span>";}
+                            
+                            $.each(_o.category, function(_idx){                            
+                                var tooltipText = '';
+                                var columnItemText = '';
+                                var maxheight = [];
+
+                                $.each(seriesData, function(_sidx){
+                                    var _data = this;
+                                    if(_o.dataLabels){
+                                        tooltipText += '<em style="color:'+_data.color+';"><span class="cate">'+_data.name+'</span><span>'+ _f.getWon(_data.data[_idx]) +' 원</span></em>';
+                                    }else{
+                                        tooltipText += '<em style="color:'+_data.color+';"><span>'+ _f.getWon(_data.data[_idx]) +' 원</span></em>';
+                                    }
+                                    maxheight.push(_data.data[_idx]);
+                                    columnItemText += '<span class="column-item" style="background:'+_data.color+'; height:'+ _f.getPer(_data.data[_idx]) +'"></span>';
+                                });
+                                var tooltip = _o.templeate.tooltip.replace('{{maxHeight}}',(_f.getPer(_f.getMoreHigh(maxheight))+'')).replace('{{value}}',tooltipText);
+                                
+                                if(!clickabled){
+                                    _arrColumn.push(_o.templeate.column.replace('<input type="radio" class="inp-radio" name="chartseries">','<input type="radio" class="inp-radio" name="chartseries" disabled>').replace('{{category}}', _o.category[_idx]).replace('{{tooltipHTML}}', tooltip).replace('{{item}}', columnItemText));    
+                                }else{
+                                    _arrColumn.push(_o.templeate.column.replace('{{category}}', _o.category[_idx]).replace('{{tooltipHTML}}', tooltip).replace('{{item}}', columnItemText));
+                                }
+                            })
+                            chartObj.html('<div class="bg-liner">' + strLine + '</div> <ul>' + _arrColumn.join("") + '</ul>');
+                            chartObj.removeClass('init')
+                            setTimeout(function(){
+                                chartObj.addClass('init');
+                            },20)
+                            if(_o.dataLabels){
+                                var dataLabelsText = "";
+                                $.each(seriesData, function(_sidx){
+                                    var _data = this;
+                                    dataLabelsText += '<em><span style="background-color:'+_data.color + ';"></span><span class="cate">'+_data.name+'</span></em>'
+                                })
+                                $('<div class="data-labels">'+ dataLabelsText +'</div>').prependTo(chartObj)
+                            }
+                        }
+                    };
+                    _f.createArticle();
+                }
+
+                function init(){
+                    createChartObj();
+                }
+
+                init();
+            })
+			//columnChart : 화면상 div id
+        }
+        $(document).ready(function(){
+            showChart('.graph-area');
+        })
+    </script>
+</body>
+</html>

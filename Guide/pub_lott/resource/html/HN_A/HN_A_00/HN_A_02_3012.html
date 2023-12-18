@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/prodmall-main.css" type="text/css">
+</head>
+<body>
+    <div id="wrap" class="wrap n22UI">
+        <!-- HEADER -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">갈아타기 대출</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //HEADER -->
+
+        <!-- CONTENT -->
+        <div id="content" class="app-main prodmall-sub">
+            <div id="credit-section01" class="prd-list-view">
+                <ul class="prod-list item-sim">
+                    <li>
+                        <button type="button" class="arrow-none">
+                            <dl class="item-tit">
+                                <dt>씨티 갈아타기 대출</dt>
+                                <dd>씨티은행 손님의 대출 갈아타기</dd>
+                            </dl>
+                            <div class="item-amount">
+                                <span>최대</span>
+                                <em class="amount">1억원</em>
+                            </div>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="arrow-none">
+                            <dl class="item-tit">
+                                <dt>하나원큐신용대출</dt>
+                                <dd>다른은행 신용대출 갈아타기</dd><!-- 2022-10-25 수정 -->
+                            </dl>
+                            <div class="item-amount">
+                                <span>최대</span>
+                                <em class="amount">1억원</em>
+                            </div>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="arrow-none">
+                            <dl class="item-tit">
+                                <dt>하나원큐신용대출(소방관)</dt>
+                                <dd>소방관 특별 우대 상품</dd><!-- 2022-10-25 수정 -->
+                            </dl>
+                            <div class="item-amount">
+                                <span>최대</span>
+                                <em class="amount">1억원</em>
+                            </div>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
+    <script src="../../../../resource/js/ui/common_n22UI.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            hanaprodMainUI.sticky('.sub-menu-wrap.top-fixed');
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap n22UI">
+        <!-- HEADER -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">외화입출금</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //HEADER -->
+
+        <!-- CONTENT -->
+        <div id="content" class="app-main prodmall-detail-foreign-currency prodmall-4101">
+            <div class="prodmall-section section-top">
+                <div>
+                    <em>하나 밀리언달러 통장</em>
+                    <div class="tit-default">해외주식 투자할 때<br>꼭 필요한 하나</div>
+                </div>
+                <div class="content-wrap">
+                    <div class="main-desc">
+                        <!--2022-09-13 | '(최대 10개 예치)' 텍스트 삭제-->
+                        <em>예치가능통화</em>
+                        <strong>
+                            
+                            <em>27개국</em>
+                            <!--2022-08-23 | 텍스트 추가 사항 / span 추가-->
+                            <span class="plus-braket-txt">최대 10개 예치 가능</span>
+                        </strong>
+                    </div>
+                    <div class="half-cont">
+                        <dl>
+                            <dt>가입기간</dt>
+                            <dd>자유입출금</dd>
+                        </dl>
+                        <dl>
+                            <dt>가입금액</dt>
+                            <dd>제한 없음</dd>
+                        </dl>
+                    </div>
+                    <div class="util-btn-group finance-detail__button-wrap">
+                            <!-- 2022-08-10 활성화시 util-btn에 추가클래스 부여 is-active
+                            <button type="button" class="util-btn icon-favorite is-active">관심상품</button>
+                            -->
+                        <button type="button" class="util-btn icon-share" data-ecrm="SHE1010">공유하기</button>
+                        <button type="button" class="util-btn icon-favorite">
+                                <i class="icon-heart icon-heart--large" aria-hidden="true"></i>
+                            </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prodmall-section">
+                <ul class="investment interaction-area">
+                    <!-- 2022-09-14 class="one/two/three/other-action" 추가-->
+                    <li class="one other-action">
+                        <span>환테크부터 미국주식까지</span>
+                        <em>한 번에 투자하기</em>
+                    </li>
+                    <li class="two other-action">
+                        <span>목표 환율일 때</span>
+                        <em>알림 받고 투자하기</em>
+                    </li>
+                    <li class="three other-action">
+                        <span>갖고 있는 외화로</span>
+                        <em>알뜰하게 투자하기</em>
+                    </li>
+                </ul>
+                <script>
+                    $(document).ready(function(){
+                        var interactionPos = $('.interaction-area').offset().top;
+                        var aniDuration = 600;
+                        $(document).scroll(function(){
+                            var windowTop = $(window).scrollTop();
+
+                            if(windowTop > (interactionPos / 3)){
+                                $('.interaction-area').find('li').eq(2).animate({
+                                    opacity: '1'
+                                }, aniDuration, function(){
+                                    $('.interaction-area').find('li').eq(1).animate({
+                                        opacity: '1'
+                                    }, aniDuration, function(){
+                                        $('.interaction-area').find('li').eq(0).animate({
+                                            opacity: '1'
+                                        });
+                                    });
+                                });
+                            }
+                        })
+                    });
+                </script>
+            </div>
+
+            <div class="prodmall-section">
+                <div class="tit-default txt-bold">이체 없이 바로 투자</div>
+                <p>증권사로 이체할 필요 없이 갖고 있는<br>USD(미국 달러)로 바로 투자할 수 있어요.</p>
+                <!-- 2022-11-14 이미지 파일명 변경
+                03.png - 08.png
+                04.png - 09.png
+                -->
+                <div id="prd_detail_04_4101_01" class="icon-svg-area" style="height: 12.5rem;">
+                    <img class="motion02" src="../../../images/C/n22_img_ani_bank_logo02.png" alt="">
+                    <img class="motion03" src="../../../images/C/n22_img_ani_bank_logo08.png" alt="">
+                    <img class="motion04" src="../../../images/C/n22_img_ani_bank_logo09.png" alt="">
+                    <img class="motion05" src="../../../images/C/n22_img_ani_bank_logo05.png" alt="">
+                    <img class="motion06" src="../../../images/C/n22_img_ani_bank_logo06.png" alt="">
+                </div>
+            </div>
+
+            <div class="prodmall-section">
+                <div class="tit-default txt-bold">외화 결제카드와 연결하면<br>해외이용수수료 0원</div>
+                <p>하나 밀리언달러 통장을 만들고, 미국 달러<br>(USD)로 바로 결제되는 외화 결제카드를 <br> 이용해 보세요.</p>
+                
+                <div id="prd_detail_04_4101_02" class="icon-svg-area" style="height: 12.5rem;"></div>
+            </div>
+
+            <div class="prodmall-section">
+                <div class="tit-default txt-bold">24시간 언제든지 사고파는 <br> 해외주식</div>
+                <p>거래시간 제약 없이<br>자유롭게 해외주식을 사고팔 수 있어요.</p>
+                <div id="prd_detail_04_4101_03" class="icon-svg-area" style="height: 12.5rem;"></div>
+            </div>
+
+            <div class="prodmall-section pb-0">
+                <div class="tit-default">가입 전 확인해 주세요!</div>
+                <div class="finance-box-wrap prodmall-notice">
+                    <!-- 상품내용 -->
+                    <div class="white-box white-box--fund" data-element="toggle"><!-- 내용펼침 class: data-options="{&quot;isOpened&quot;:true}" -->
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">상품정보</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+                        <div class="white-box__content" data-element="toggle__panel" style="display: none;">
+                            <!-- 외화 -->
+                            <div class="tit-small">상품특징</div>
+                            <div class="guide-wrap">
+                                <ul class="guide-list guide-list--large">
+                                    <li class="guide-list__item">은행과 제휴된 증권회사를 통해 해외주식 매매거래 가능</li>
+                                    <li class="guide-list__item">외화로 바로 결제 가능한 외화카드 결제계좌</li>
+                                    <li class="guide-list__item">여러 통화를 거래할 수 있는 외화 입출금 통장</li>
+                                </ul>
+                            </div>
+                            <div class="tit-small">가입대상</div>
+                            <div>
+                                <p class="text-guide">개인(개인사업자 포함)</p>
+                            </div>
+                            <div class="tit-small">예금종류</div>
+                            <div>
+                                <p class="text-guide">외화 입출금 통장</p>
+                            </div>
+                            <div class="tit-small">가입금액</div>
+                            <div>
+                                <p class="text-guide">제한없음</p>
+                            </div>
+                            <div class="tit-small">이자지급방법</div>
+                            <div class="guide-wrap">
+                                <ul class="guide-list guide-list--large">
+                                    <li class="guide-list__item">이 예금의 이자지급은 외화보통예금의 이자지급 방법을 따르며, 이자율은 해당 통화별 외화보통예금 고시 금리를 따릅니다. 외화보통예금 이자지급방법은 매년 3,6,9,12월
+                                        셋째주 금요일(단, 공휴일인 경우 직전 영업일)에 셈하여 익일(이하 '원가일'이라 한다)에 원금에 더합니다.</li>
+                                    <li class="guide-list__item">이 예금의 이자는 최초 예금일 또는 원가일부터 원가일 또는 지급일 전날까지의 기간 동안 매일의 최종잔액에 평균하여 은행이 영업점 및 인터넷 홈페이지에 고시한 통화별 외화보통예금
+                                        이율을 적용하여 계산합니다.</li>
+                                </ul>
+                            </div>
+                            <div class="tit-small">예치통화</div>
+                            <div class="guide-wrap">
+                                <ul class="guide-list guide-list--large">
+                                    <li class="guide-list__item">아래의 27개국 통화 중 최대 10개까지 예치 가능합니다.</li>
+                                    <li class="guide-list__item">예치 가능통화: USD, EUR, JPY, GBP, CHF, CAD, AUD, NZD, HKD, SGD, DKK, NOK, SEK, THB, IDR, SAR, AED,
+                                        KWD, BHD, RUB, ZAR, HUF, PLN, MXN, CNY, TRY, CZK</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //white-box__content-->
+                    </div>
+
+                    <!-- 증권계좌 이용안내 -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">증권계좌 이용</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <!-- 2022-10-31 운영이행시 반영(as-is준용) -->
+                        <div class="white-box__content" data-element="toggle__panel" style="display: block;">
+                            <div class="tit-small">증권계좌 이용안내</div>
+                            <div>
+                              <p class="text-guide-regular">※ 연계방식 : 증권사와 은행간 실시간 잔액 정보의 공유로 증권계좌로 외화이체 거래 불필요. 은행계좌 잔액 범위 내, 증권사앱에서 해외주식 거래를 함.</p>
+                              <div class="mgt60">[삼성증권]</div>
+                              <ol class="ordered-list">
+                                <li class="ordered-list__item">계좌 신규 가능 시간 : 00:30~23:30(토/일 및 휴일 가능)</li>
+                                <li class="ordered-list__item">계좌 신규 가능 고객 : 만 19세 이상 내국인(외국인 제외)</li>
+                                <li class="ordered-list__item">해외주식 거래 위한 절차
+                                  <ol class="ordered-list__sub-list">
+                                    <li class="ordered-list__item">하나 밀리언달러 통장 및 삼성증권 계좌 동시개설
+                                      <br>(하나 밀리언달러 통장 보유 고객은 삼성증권 계좌 개설 및 연결)</li>
+                                    <li class="ordered-list__item">삼성증권 mPOP&gt;고객센터&gt;거래준비&gt;ID/ID비밀번호 등록
+                                      <br>(온라인 ID등록은 삼성증권 신규 고객에 한함)</li>
+                                    <li class="ordered-list__item">삼성증권 mPOP에서 개설한 계좌의 해외주식거래 이용신청(거래약정)</li>
+                                  </ol>
+                                </li>
+                                <li class="ordered-list__item">증권거래 가능한 시장 : 미국 시장</li>
+                              </ol>
+                  
+                              <div class="mgt30">[하나증권]</div>
+                              <ol class="ordered-list">
+                                <li class="ordered-list__item">계좌 신규 가능 시간 : 00:10~23:35(토/일 및 휴일 가능)</li>
+                                <li class="ordered-list__item">계좌 신규 가능 고객 : 만 19세 이상 내국인(외국인 제외)</li>
+                                <li class="ordered-list__item">해외주식 거래 위한 절차
+                                  <ol class="ordered-list__sub-list">
+                                    <li class="ordered-list__item">밀리언달러 통장 및 하나증권 계좌 동시개설
+                                      <br>(하나 밀리언달러 통장 보유 고객은 하나증권 계좌 개설 및 연결)</li>
+                                    <li class="ordered-list__item">하나증권 원큐스탁앱에서 온라인 ID등록 및 해외주식 거래전 등록
+                                      <br>(온라인 ID등록은 하나증권 신규 고객에 한함)</li>
+                                  </ol>
+                                </li>
+                              </ol>
+                              <p class="text-guide-regular mgt60">※ 이체방식 : 해외주식 거래를 위해 증권계좌로 외화이체 후, 증권사 앱에서 해외주식 거래를 함.</p>
+                  
+                              <div class="mgt30">[한국투자증권]</div>
+                              <ol class="ordered-list">
+                                <li class="ordered-list__item">계좌 신규 가능 시간 : 00:10~23:30 (토/일 및 휴일 가능)</li>
+                                <li class="ordered-list__item">계좌 신규 가능 고객 : 만 19세 이상 내국인(외국인 제외)</li>
+                                <li class="ordered-list__item">해외주식 거래를 위한 절차
+                                  <ol class="ordered-list__sub-list">
+                                    <li class="ordered-list__item">하나 밀리언달러 통장 및 한국투자증권 계좌 동시 개설 (하나 밀리언 달러 통장 보유 고객은 한국투자증권 계좌 개설 및 연결)</li>
+                                    <li class="ordered-list__item">한국투자증권앱에서 ID등록 및 이용약관 동의 절차 필수, (해외주식 서비스 신청 포함)</li>
+                                    <li class="ordered-list__item">증권사앱 주문 시 자금 이체 방법 :
+                                      <br> 증권사앱(자산/뱅킹 &gt; 이체 &gt; 은행제휴계좌이체(외화))에서 미국달러 이체 입금 후 거래 시작</li>
+                                  </ol>
+                                </li>
+                                <li class="ordered-list__item">증권회사로 이체 가능한 외화 : 미국달러($)</li>
+                                <li class="ordered-list__item">증권거래 가능한 시장 : 미국 시장 등 (증권사앱을 통한 국내,해외 시장 등 추가 투자 가능)</li>
+                              </ol>
+                              <p class="text-guide-regular mgt60">
+                                *증권계좌 개설 시 아래의 증권저축계좌 특약 및 서비스설명서가 적용됩니다.</p>
+                              <div class="button-content mgt30">
+                                <div class="button-content__inner">
+                                  <button type="button" class="pdf-button" aria-label="약관 열기" onclick="pbk.mbp.cmsUtil.fncShowPdf('/cont/pdf/etc/pdf_security_account_t.pdf');">
+                                    <i class="pdf-button__icon" aria-hidden="true">
+                                      <img src="/cont/resource/img/product/icon_pdf.png" alt="약관">
+                                    </i>
+                                    증권저축계좌
+                                    <br>특약
+                                  </button>
+                                  <button type="button" class="pdf-button" aria-label="상품설명서 열기" onclick="pbk.mbp.cmsUtil.fncShowPdf('/cont/pdf/etc/pdf_security_account_d.pdf');">
+                                    <i class="pdf-button__icon" aria-hidden="true">
+                                      <img src="/cont/resource/img/product/icon_pdf.png" alt="상품설명서">
+                                    </i>
+                                    증권저축계좌
+                                    <br>서비스설명서
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        <!-- //white-box__content-->
+                    </div>
+                        
+                    <!-- 금리안내 -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">금리정보</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <div class="white-box__content" data-element="toggle__panel" style="display: none;">
+                            <div class="tit-small">기본금리</div>
+                            <div>
+                                <p class="text-guide">가입일 당시 영업점 및 당행 홈페이지(www.kebhana.com)에 고시된 통화별 외화보통예금 이율</p>
+                            </div>
+        
+                            <div id="depRateArea"><div class="button-select"><button type="button" id="selCurCd" class="button button-select__item" title="통화 선택">USD 달러 (미국)</button></div><div class="table-info">(2022-08-22 기준, 연이율 세전)</div><div class="table table-vertical table-vertical--narrow">    <table>        <colgroup>            <col span="4">        </colgroup>        <thead>            <tr>                <th scope="col" class="table-vertical__th">거주자 구분</th>                <th scope="col" class="table-vertical__th">금리기간 시작범위</th>                <th scope="col" class="table-vertical__th">금리기간 종료범위</th>                <th scope="col" class="table-vertical__th">금리</th>            </tr>        </thead>        <tbody id="foreignRemit"><tr><td class="table-vertical__td" rowspan="1">거주자</td><td class="table-vertical__td"></td><td class="table-vertical__td"></td><td class="table-vertical__td">0.0100</td></tr><tr><td class="table-vertical__td" rowspan="1">비거주자</td><td class="table-vertical__td"></td><td class="table-vertical__td"></td><td class="table-vertical__td">0.0100</td></tr></tbody>    </table></div></div>
+                        </div>
+                        <!-- //white-box__content-->
+                        
+                    </div>
+                        
+                    <!-- 유의사항 및 기타 -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">유의사항</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <div class="white-box__content" data-element="toggle__panel" style="display: none;">
+                            <div class="tit-small">원금 및 이자지급제한</div>
+                            <div>
+                                <div class="guide-wrap">
+                                    <ul class="guide-list guide-list--large">
+                                        <li class="guide-list__item">계좌에 압류, 가압류, 질권설정 등이 등록될 경우 원금 및 이자지급이 제한 될 수 있습니다.
+                                            <br>※ 민사집행법에 따라 최저생계비 이하 등 압류금지채권에 해당하는 경우에는 법원에 압류금지채권 범위변경 신청 등을 통해 압류를 취소할 수 있습니다.</li>
+                                        <li class="guide-list__item">예금잔액증명서 발급 당일 잔액 변동 불가</li>
+                                        <li class="guide-list__item">통장이 ‘전기통신금융사기 피해 방지 및 피해금 환급에 관한 특별법’에서 정의한 피해의심거래계좌 및 사기 이용계좌로 이용될 경우 이체, 송금지연, 지급정지 등의
+                                            금융거래 제한조치를 할 수 있음</li>
+                                    </ul>
+                                </div>
+                            </div>
+        
+        
+                            <div class="tit-small">유의사항</div>
+                            <div>
+                                <div class="guide-wrap">
+                                    <ul class="guide-list guide-list--large">
+                                        <li class="guide-list__item">이 예금은 원화로 인출하는 경우 환율변동으로 인하여 이익 또는 손실이 발생할 수 있으며, 외화현찰로 입출금하는 경우 현찰수수료가 부과될 수 있습니다.</li>
+                                        <li class="guide-list__item">예금의 입출금시에 적용하는 환율은 은행이 영업점에 고시한 거래시점의 대고객 전신환매매율로 합니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="finance-detail-info flex deposit-insurance-corp">
+                                <i class="finance-detail-info__image">
+                                    <img src="../../../images/C/img_finance_label.png" alt="보호금융상품">
+                                </i>
+                                <p class="text-guide-xsmall">
+                                    이 예금은 예금자보호법에 따라 예금보험공사가 보호하되,
+                                    보호한도는 본 은행에 있는 귀하의 모든 예금 보호 대상 금융
+                                    상품의 원금과 소정의 이자를 합하여 1인당 “최고 5천만원”
+                                    이며, 5천만원을 초과하는 나머지 금액은 보호하지 않습니다.
+                                </p>
+                            </div>
+
+
+                        </div>
+                        <!-- //white-box__content-->
+                    </div>
+                        
+                    <!-- 상품변경에 관한 사항 -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">상품변경안내</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <div class="white-box__content" data-element="toggle__panel" style="display: none;">
+                            <!-- 220107 상품내용변경에 관한 사항 추가 -->
+                            <div class="changes-info" data-element="accordion" data-options="{&quot;isInitActive&quot;:true}" role="presentation">
+                                <div class="changes-info__item" data-element="accordion__item">
+                                    <button class="changes-info__anchor is-active" type="button" data-element="accordion__anchor" aria-expanded="true" role="button">
+                                        <span class="title">2022.01.01 변경</span>
+                                    </button>
+                                    <div class="changes-info__panel is-active" data-element="accordion__panel" style="">
+                                        <div class="tit-small">자료열람권 항목 신설</div>
+                                        <pre>- 기존가입고객 적용여부 : 적용 
+        - 변경 전 : 해당사항 없음(신설)
+        - 변경 후 : 
+        &nbsp;
+        - 금융소비자는 분쟁조정 또는 소송의 수행 등 권리구제를 위한 목적으로 은행이 기록 및 유지·관리하는 다음의 자료에 대한 열람(사본 및 청취 포함)을 요구할 수 있습니다.
+        · 계약체결에 관한 자료, 계약의 이행에 관한 자료, 금융상품 등에 관한   광고 자료, 금융소비자의 권리행사에 관한 자료, 내부통제기준의 제정 및 운영 등에 관한 자료, 업무 위탁에 관한 자료
+        - 은행은 법령, 제3자의 이익 침해, 영업비밀의 침해 등의 사유가 있는 경우 이를 금융소비자에게 알리고 자료 열람을 제한하거나 거절할 수 있습니다.
+        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //220107 상품내용변경에 관한 사항 추가 -->
+                            <div class="changes-info" data-element="accordion" role="presentation">
+                                <div class="changes-info__item" data-element="accordion__item">
+                                    <button class="changes-info__anchor" type="button" data-element="accordion__anchor" aria-expanded="false" role="button">
+                                        <span class="title">2021.09.24 변경</span>
+                                    </button>
+                                    <div class="changes-info__panel" data-element="accordion__panel" style="display: none;">
+                                        <div class="tit-small">원금 및 이자지급제한 문구 추가</div>
+                                        <pre>변경 전
+        - 계좌에 압류, 가압류 등이 등록될 경우 원금 및 이자지급이 제한될 수 있음
+        - 예금잔액증명서 발급 당일 잔액 변동이 불가
+        변경 후
+        - 계좌에 압류, 가압류, 질권설정 등이 등록될 경우 원금 및 이자지급이 제한 될 수 있습니다.
+        ※ 민사집행법에 따라 최저생계비 이하 등 압류금지채권에 해당하는 경우에는 법원에 압류금지채권 범위변경 신청 등을 통해 압류를 취소할 수 있습니다.
+        - 예금잔액증명서 발급 당일 잔액 변동 불가
+        - 통장이 ‘전기통신금융사기 피해 방지 및 피해금 환급에 관한 특별법’에서 정의한 피해의심거래계좌 및 사기 이용계좌로 이용될 경우 이체, 송금지연, 지급정지 등의 금융거래 제한조치를 할 수 있음
+        </pre>
+                                        <div class="tit-small">위법계약해지권 항목 삭제</div>
+                                        <pre>변경 전
+        - 설명의무 위반 등 금융소비자 보호에 관한 법률 제47조에 따른 위법계약해지 사유가 발생한 경우, 5년 이내 범위에서 위반사실을 안 날로부터 1년이내에 서면 등으로 해당계약의 해지를 요구할 수 있습니다. 만약 금융소비자의 요구가 정당한 것으로 판단될 경우 수수료 등 계약해지와 관련한 추가 비용 부담없이 계약해지가 가능
+        변경 후
+        삭제
+        </pre>
+        
+                                    </div>
+                                </div>
+                            </div>
+        
+        
+        
+                        </div>
+                        <!-- //white-box__content-->
+                        
+                    </div>
+                        
+                    <!-- 약관 및 상품설명서 -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">약관 및 상품설명서</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <div class="white-box__content" data-element="toggle__panel" style="display: block;">
+                            <div class="button-content">
+                                <div class="button-content__inner">
+                                    <button type="button" class="pdf-button" aria-label="약관 열기" onclick="pbk.mbp.cmsUtil.fncShowPdf('/cont/pdf/product/0100292000101_t.pdf');">
+                                        <i class="pdf-button__icon" aria-hidden="true">
+                                            <img src="/cont/resource/img/product/icon_pdf.png" alt="약관">
+                                        </i>
+                                        약관
+                                    </button>
+                                    <button type="button" class="pdf-button" aria-label="상품설명서 열기" onclick="pbk.mbp.cmsUtil.fncShowPdf('/cont/pdf/product/0100292000101_d.pdf');">
+                                        <i class="pdf-button__icon" aria-hidden="true">
+                                            <img src="/cont/resource/img/product/icon_pdf.png" alt="상품설명서">
+                                        </i>
+                                        상품설명서
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //white-box__content-->
+                    </div>
+                </div>
+                <!-- 2022-11-07 텍스트 수정 -->
+                <span class="notice">준법감시인 심의필 제2022-상품-1416호 (2022.11.04)<br>
+                    본 공시내용의 유효기간 : 2022.11.04 ~ 2024.11.03<br>기준일 : 2022년 11월 4일
+                </span>
+            </div>
+        </div>
+        <!-- //CONTENT -->
+
+        <!-- FOOTER -->
+        <div id="footer" class="app-footer app-footer--button app-footer--button-round-corner">
+            <div class="button-wrap">
+                <!-- 2022-10-04 모달 속성 추가 -->
+                <button type="button" class="button button--positive round-corner" data-element="modal__open" data-target="#stockPopup" data-ecrm="JON1010">해외주식계좌<br>동시가입</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+                <button type="button" class="button button--positive round-corner" data-ecrm="JON1020">가입 시작하기</button>
+            </div>
+        </div>
+        <!-- //FOOTER -->
+    </div>
+
+
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
+    <!-- 상품상세 js 별도분기 -->
+    <script src="../../../../resource/library/lottie/lottie.min.js"></script>
+    <script src="../../../../resource/js/ui/prd_detail_n22UI.js"></script>
+
+    <!-- 2022-10-08 추가 -->
+    <script>
+        $(document).ready(function(){
+            setSVGApply('#prd_detail_04_4101_02', '/pub/resource/images/C/lottie/detail/J15.json');
+            setSVGApply('#prd_detail_04_4101_03', '/pub/resource/images/C/lottie/detail/J41.json');
+        });
+    </script>
+
+
+
+    <!--모달-->
+    <div class="pualugin-modal" data-element="modal">
+        <!-- 2022-10-04 as-is 증권사 팝업 추가[S] -->
+        <div id="stockPopup" class="modal modal--slide" data-element="modal__element">
+            <div class="modal__container modal__container--interval modal__find-bank" data-element="modal__element-container">
+               
+                <div class="modal__header modal__header--interval">
+                    <h1 class="modal__header--title">거래 증권사 선택</h1><!-- 2022-10-04 타이틀 수정-->
+                </div>
+   
+            <div class="modal__contents">
+                <!-- 2022-10-04 제거 
+                <div class="container mgt30 pdb30">
+                <div class="text-guide color-000">거래 하시고자 하는 증권사를 선택해주세요</div>
+                </div>
+                -->
+        
+                <!-- 2022-10-04 border-t border-gray 클래스 제거 -->
+                <div class="bank-list pdb30">
+                <ul class="ico_stock_list mgt60">
+                    <li class="bank-list__item">
+                    <button type="button" class="button button--select-bank" onclick="HanaShowDim('',700);pbk.mbp.cmsUtil.fncRegistMillion( '0100292000101','068' );">
+                        <i class="bank-list__icon">
+                        <img src="/cont/resource/img/product/info/ico_stock_hana.png" alt="하나증권">
+                        </i>
+                        <p class="bank-list__name">하나증권</p>
+                    </button>
+                    </li>
+                    <li class="bank-list__item">
+                    <button type="button" class="button button--select-bank" onclick="HanaShowDim('',700);pbk.mbp.cmsUtil.fncRegistMillion( '0100292000101','030' );">
+                        <i class="bank-list__icon">
+                        <img src="/cont/resource/img/product/info/ico_stock_samsung.png" alt="삼성증권">
+                        </i>
+                        <p class="bank-list__name">삼성증권</p>
+                    </button>
+                    </li>
+                    <li class="bank-list__item">
+                    <button type="button" class="button button--select-bank" onclick="HanaShowDim('',700);pbk.mbp.cmsUtil.fncRegistMillion( '0100292000101','003' );">
+                        <i class="bank-list__icon">
+                        <img src="/cont/resource/img/product/info/ico_stock_koreainvestment.png" alt="한국투자 증권">
+                        </i>
+                        <p class="bank-list__name">한국투자증권</p>
+                    </button>
+                    </li>
+                    <!-- 추후 노출 예정 [S] -->
+                    <!--<li class="bank-list__item">
+        <button type="button" class="button button--select-bank">
+        <i class="bank-list__icon">
+        <img src="/cont/resource/img/product/info/ico_stock_kyobo.png" alt="교보증권">
+        </i>
+        <p class="bank-list__name">교보증권</p>
+        </button>
+        </li>
+        <li class="bank-list__item">
+        <button type="button" class="button button--select-bank">
+        <i class="bank-list__icon">
+        <img src="/cont/resource/img/product/info/ico_stock_daishin.png" alt="대신증권">
+        </i>
+        <p class="bank-list__name">대신증권</p>
+        </button>
+        </li>
+        <li class="bank-list__item">
+        <button type="button" class="button button--select-bank">
+        <i class="bank-list__icon">
+        <img src="/cont/resource/img/product/info/ico_stock_meritz.png" alt="메리츠증권">
+        </i>
+        <p class="bank-list__name">메리츠증권</p>
+        </button>
+        </li>
+        <li class="bank-list__item">
+        <button type="button" class="button button--select-bank">
+        <i class="bank-list__icon">
+        <img src="/cont/resource/img/product/info/ico_stock_bookook.png" alt="부국증권">
+        </i>
+        <p class="bank-list__name">부국증권</p>
+        </button>
+        </li>
+        <li class="bank-list__item">
+        <button type="button" class="button button--select-bank">
+        <i class="bank-list__icon">
+        <img src="/cont/resource/img/product/info/ico_stock_shinyoung.png" alt="신영증권">
+        </i>
+        <p class="bank-list__name">신영증권</p>
+        </button>
+        </li>
+        <li class="bank-list__item">
+        <button type="button" class="button button--select-bank">
+        <i class="bank-list__icon">
+        <img src="/cont/resource/img/product/info/ico_stock_shinhan.png" alt="신한금융투자">
+        </i>
+        <p class="bank-list__name">신한금융투자</p>
+        </button>
+        </li>
+        <li class="bank-list__item">
+        <button type="button" class="button button--select-bank">
+        <i class="bank-list__icon">
+        <img src="/cont/resource/img/product/info/ico_stock_myasset.png" alt="유안타증권">
+        </i>
+        <p class="bank-list__name">유안타증권</p>
+        </button>
+        </li>
+        <li class="bank-list__item">
+        <button type="button" class="button button--select-bank">
+        <i class="bank-list__icon">
+        <img src="/cont/resource/img/product/info/ico_stock_eugene.png" alt="유진증권">
+        </i>
+        <p class="bank-list__name">유진증권</p>
+        </button>
+        </li>
+        <li class="bank-list__item">
+        <button type="button" class="button button--select-bank">
+        <i class="bank-list__icon">
+        <img src="/cont/resource/img/product/info/ico_stock_ebest.png" alt="이베스트투자증권">
+        </i>
+        <p class="bank-list__name">이베스트투자증권</p>
+        </button>
+        </li>-->
+                    <!-- //추후 노출 예정 [E] -->
+                </ul>
+                </div>
+            </div>
+            <!--<div class="button-fixed">
+        <div class="button-wrap">
+        <button type="button" class="button button--negative button--span3" data-element="modal__close">취소</button>
+        <button type="button" class="button button--positive stock_go" disabled="">확인</button>
+        </div>
+        </div>-->
+            <button type="button" class="modal__btn--close" data-element="modal__close" title="닫기"></button>
+            </div>
+        </div>
+        <!-- //2022-10-04 as-is 증권사 팝업 추가 [E] -->
+    </div>
+    <!--//모달-->
+</body>
+</html>

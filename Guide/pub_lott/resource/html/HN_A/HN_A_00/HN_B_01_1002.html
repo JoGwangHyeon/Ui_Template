@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+	<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/jquery-ui.css" type="text/css">
+    <!-- 2022 상품몰 고도화 추가 -->
+  <link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+
+<body>
+    <div id="BDEP0301001_P03" class="modal-full modal-full--button">
+        <div class="modal__header">
+            <h1 class="modal__header--title">파킹</h1>
+        </div>
+
+        <div class="amount-moving">
+            <!-- 2022-08-29 더미 모션이미지 적용 -->
+            <div id="svgMoneyBoxAreaParking" class="icon-svg-area"></div>
+
+            <!-- 2022-09-16 텍스트 붙여쓰기로 변경 -->
+            <span>보관금액</span>
+            <em><strong>1,000,000</strong><span> 원</span></em>
+            <div class="about-money">
+                <!--2022-08-08 | 직접입력 다른 텍스트
+                
+                <p class="minus-number"><em>- 50</em> 만원</p>
+                <p class="avail-cash"><span class="avail-cash-tit">출금가능잔액</span> <em>500,000</em> 원</p>
+                               
+                <p class="direct-cash-guideh">잔액이 부족해요</p>
+                     -->
+                <!-- 2022-08-24 display none 적용 -->
+                <p class="minus-number" style="display: none;"><em>- 50,000원</em></p>
+                <p class="plus-number" style="display: none;"><em>+ 250,000원</em></p>
+                
+            </div>
+            <!-- 2022-10-05 bottom 정렬 영역 추가 -->
+            <div class="abs-bottom">
+                <!--슬라이더-->
+                <div class="slider-controller-wrap">
+                    <div class="slider-minus">0</div>
+                    <div class="slider" role="button">
+                        <div class="ui-slider-handle slider-controller" data-ecrm="Pag2010"><div></div></div><!-- 2022-11-03 data-ecrm 변경 -->
+                    </div>
+                    <!-- 2022-09-30 최대금액 변경 반영 -->
+                    <div class="slider-plus">최대 3,000,000원</div>
+                </div>
+            
+                <button class="direct-writing" data-ecrm="Pag2020">직접 입력</button><!-- 2022-11-03 data-ecrm 변경 -->
+            </div>
+        </div>
+
+        
+        <div class="button-fixed">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive" onclick="javascript:HanaClosePopup('','');">확인</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+        </div>
+        <button class="modal__btn--close" type="button" title="닫기" onclick="javascript:HanaClosePopup('','');"></button>
+    </div>
+
+
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/ui/jquery-ui.js"></script>
+    <script src="../../../../resource/library/jquery/jquery.ui.touch-punch.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <!--  2022-08-08 lottie 플러그인 추가 -->
+    <script src="../../../../resource/library/lottie/lottie.min.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
+    <script src="../../../../resource/js/ui/common_n22UI.js"></script>
+    <script type="text/javascript">
+		var moneyBoxSlider2 = function(obj){
+			var slider = $(obj);
+            
+            var available,parking, totalMoney, moveMoney, moveMoneyTxt, _step;
+            var tick = 0;
+            var maxAvailable = 0;
+            var initVal= 0;
+            
+            
+            var isParkingCategory = false;
+            /*
+                샘플 세팅 데이터 
+                isParkingCategory =  파킹 금액조절화면일경우 true로 변경 필요
+                available :  분류가능금액
+                parkingVal  : 보관금액
+                totalMoney  =  보관금액 + 분류가능금액
+            */
+            function init(){
+                //====== DEV set =============
+                available = 50000000;
+
+                //파킹화면 아닌경우가 defalut set입니다.
+                
+                //if 파킹화면일경우
+                isParkingCategory = true; //파킹 화면이라면 true
+                maxAvailable = 3000000 //2022-09-30 기획변경 최대 설정한도 금액을 300만으로 제한 최대금액 
+                //================ DEV set ===
+
+                parking = $('.amount-moving > em > strong');
+                parkingVal = parking.text().split(',').join('');
+                parking.data('init-value', parkingVal);
+                totalMoney = available + parseInt(parkingVal);
+                
+                if(maxAvailable) { //한도 설정 금액이 존재한다면 적용
+                    totalMoney = maxAvailable;
+                }
+                moveMoney = $('.about-money');
+                _step = setStep(totalMoney);
+                initVal = parkingVal/tick;
+            }
+
+            //총가능금액 기준으로 step 리턴해주는 함수
+            function setStep(totalMoney){
+                var arr = [2000, 10000,20000,200000,1000000,5000000,10000000,500000000,100000000, 500000000,500000000]
+                var arrVal = [0, 100,500, 1000,10000, 50000, 100000, 500000, 1000000,5000000,10000000]
+                for(var i=1; i< arr.length; i++){
+                    if(totalMoney < arr[i]){
+                        tick = arrVal[i];
+                        break;
+                    }else{
+                        if(i == (arr.length-1)){
+                            tick = arrVal[i];
+                            break;
+                        }
+                    }
+                }
+                return totalMoney/tick;
+            }
+            
+
+            function event(){
+                //slide시 호출될 콜백함수
+                var strHtmltemplate = "<p class='{{class}}'><em>{{price}}</em></p>";
+                
+                function refreshSwatch(e, ui){
+                    var curStep = ui.value;
+                    var price = new Intl.NumberFormat('ko-KR').format(curStep*tick);
+                    var strHTML = '';
+                    var curMovemoney = 0;
+                    parking.text(price);
+                    
+                    if(initVal > curStep){//minus
+                        curMovemoney = (initVal - curStep) * tick;
+                        curMovemoney = new Intl.NumberFormat('ko-KR').format(curMovemoney);
+                        strHTML = strHtmltemplate.replace('{{class}}', 'minus-number').replace('{{price}}', '- '+curMovemoney+'원');
+                        moveMoney.html(strHTML)
+                    }else if(initVal < curStep){
+                        curMovemoney = (curStep - initVal) * tick;
+                        curMovemoney = new Intl.NumberFormat('ko-KR').format(curMovemoney);
+                        strHTML = strHtmltemplate.replace('{{class}}', 'plus-number').replace('{{price}}', '+ '+curMovemoney+'원');
+                        moveMoney.html(strHTML)
+                    }else{
+                        moveMoney.html('');
+                    }
+
+                  
+                }
+                //2022-11-09 수정 ======
+                var oldValue = initVal;
+                var uiSlider = slider.slider({
+                    orientation: "horizontal",
+                    range: "min",
+                    max: _step,//보관금액 + 분류가능금액
+                    value : _step/2,//(최대 금액 = 보관금액 + 분류가능금액) / 보관 금액의 비율
+                    slide: refreshSwatch
+                })
+                
+                setTimeout(function(){
+                    slider.slider('value', initVal)
+                },400);
+                setTimeout(function(){
+                    slider.addClass('init-motion-end');
+                },900)
+                //====== 2022-11-09 수정
+                
+                
+                slider.on('touchmove',function(){
+                    if(oldValue != slider.slider('value')){
+                        if(navigator.vibrate){
+                            navigator.vibrate(0);
+                            navigator.vibrate(70);
+                        }
+                        oldValue = slider.slider('value');
+                    }
+                })
+            }
+            init();
+            event();
+		}
+
+        /* 2022-10-08 common_n22ui.js 에 있는 소스로 업데이트 필요
+        function setSVGApply(id, jsonUrl){
+            var item = $(id).get(0);
+            var animData = {
+                wrapper: item, //pure element
+                animType: 'svg',
+                loop: true,
+                autoplay: true,
+                path: jsonUrl,
+            };
+            
+            var anim = bodymovin.loadAnimation(animData);
+            anim.play();
+        }
+        */
+        $(document).ready(function(){
+            //2022-08-24 함수명 변경
+            moneyBoxSlider2('.modal-full .slider');
+
+            //2022-10-10 인자값 추가
+            setSVGApply('#svgMoneyBoxAreaParking', '/pub/resource/images/C/lottie/theme02.json', true, true);
+        })
+        
+
+    </script>
+</body>
+
+</html>

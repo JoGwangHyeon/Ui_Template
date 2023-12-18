@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap n22UI moneybox">
+        <!-- HEADER -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">가계부</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //HEADER -->
+
+        <!-- CONTENT -->
+        <div id="content" class="app-main moneybox-cont moneybox-detail">
+            <div class="household-income">
+                <!--2022-08-04 | -->
+                <div class="parking-graybox">
+                    <div class="button-select underline-type inline selected">
+                        <!-- select 버튼에 추가 | data-element="modal__open" data-target="모달 레이어팝업 id 값 예)#combobox_1" -->
+                        <!-- 2022-08-24 | 텍스트 수정 -->
+                        <div class="the-amount">
+                            <button type="button" class="button button-select__item" title="저축 방식 선택" data-element="modal__open" data-target="#combobox_1" aria-controls="#combobox_2"><span>6</span>월 지출</button>
+                        </div>
+
+                        <!-- 2022-09-22 마크업 수정 -->
+                        <p class="the-balance"><em>2,500,000</em> <span class="unit">원</span></p>
+                    </div>
+                </div>
+
+
+                <!--나의 수입과 지출을 확인해 보세요 가계부> 공간-->
+
+                <div class="pay-list">
+                    <div class="pay-list-upper">
+                        <em class="pay-list-date">2022.06.19</em>
+                        <p>포함 여부</p>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="pay-list-left">
+                                <p class="pay-list-left-tit">챌린지 이벤트 참여</p>
+                                <span class="pay-list-left-amount expense expense">-10,000원</span>
+                            </div>
+                            <div class="pay-list-right">
+                                <label class="switch" for="selectAuto1" data-input-selector="checkbox">
+                                    <input type="checkbox" id="selectAuto1" data-input-name="checkbox-1" data-input-target="checkbox-section-1" aria-expanded="true" title="만기 시 SMS 알림 여부 선택" checked="">
+                                    <span class="switch__toggle" aria-hidden="true"></span>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pay-list-left">
+                                <p class="pay-list-left-tit">마일리지 충전</p>
+                                <span class="pay-list-left-amount expense">-800,000,000원</span>
+                            </div>
+                            <div class="pay-list-right">
+                                <label class="switch" for="selectAuto2" data-input-selector="checkbox">
+                                    <input type="checkbox" id="selectAuto2" data-input-name="checkbox-1" data-input-target="checkbox-section-1" aria-expanded="true" title="만기 시 SMS 알림 여부 선택" checked="">
+                                    <span class="switch__toggle" aria-hidden="true"></span>
+                                </label>
+                            </div>
+                        </li>
+                        <!--2022-08-10 | 토글 비활성화 시(disabled 클래스 추가) 해당 금액 비활성화 처리  -->
+                        <li>
+                            <div class="pay-list-left disabled">
+                                <p class="pay-list-left-tit">타행이체(기업은행)</p>
+                                <span class="pay-list-left-amount expense">-10,000원</span>
+                            </div>
+                            <div class="pay-list-right">
+                                <label class="switch" for="selectAuto3" data-input-selector="checkbox">
+                                    <input type="checkbox" id="selectAuto3" data-input-name="checkbox-1" data-input-target="checkbox-section-1" aria-expanded="true" title="만기 시 SMS 알림 여부 선택" >
+                                    <span class="switch__toggle" aria-hidden="true"></span>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pay-list-left">
+                                <p class="pay-list-left-tit">타행이체(기업은행)</p>
+                                <span class="pay-list-left-amount expense">-10,000원</span>
+                            </div>
+                            <div class="pay-list-right">
+                                <label class="switch" for="selectAuto4" data-input-selector="checkbox">
+                                    <input type="checkbox" id="selectAuto4" data-input-name="checkbox-1" data-input-target="checkbox-section-1" aria-expanded="true" title="만기 시 SMS 알림 여부 선택" checked="">
+                                    <span class="switch__toggle" aria-hidden="true"></span>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pay-list-left">
+                                <p class="pay-list-left-tit">챌린지 이벤트 참여</p>
+                                <span class="pay-list-left-amount expense">-10,000원</span>
+                            </div>
+                            <div class="pay-list-right">
+                                <label class="switch" for="selectAuto5" data-input-selector="checkbox">
+                                    <input type="checkbox" id="selectAuto5" data-input-name="checkbox-1" data-input-target="checkbox-section-1" aria-expanded="true" title="만기 시 SMS 알림 여부 선택" checked="">
+                                    <span class="switch__toggle" aria-hidden="true"></span>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pay-list-left">
+                                <p class="pay-list-left-tit">챌린지 이벤트 참여</p>
+                                <span class="pay-list-left-amount expense">-10,000원</span>
+                            </div>
+                            <div class="pay-list-right">
+                                <label class="switch" for="selectAuto6" data-input-selector="checkbox">
+                                    <input type="checkbox" id="selectAuto6" data-input-name="checkbox-1" data-input-target="checkbox-section-1" aria-expanded="true" title="만기 시 SMS 알림 여부 선택" checked="">
+                                    <span class="switch__toggle" aria-hidden="true"></span>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pay-list-left">
+                                <p class="pay-list-left-tit">챌린지 이벤트 참여</p>
+                                <span class="pay-list-left-amount expense expense">-10,000원</span>
+                            </div>
+                            <div class="pay-list-right">
+                                <label class="switch" for="selectAuto1" data-input-selector="checkbox">
+                                    <input type="checkbox" id="selectAuto1" data-input-name="checkbox-1" data-input-target="checkbox-section-1" aria-expanded="true" title="만기 시 SMS 알림 여부 선택" checked="">
+                                    <span class="switch__toggle" aria-hidden="true"></span>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pay-list-left">
+                                <p class="pay-list-left-tit">마일리지 충전</p>
+                                <span class="pay-list-left-amount expense">-800,000,000원</span>
+                            </div>
+                            <div class="pay-list-right">
+                                <label class="switch" for="selectAuto2" data-input-selector="checkbox">
+                                    <input type="checkbox" id="selectAuto2" data-input-name="checkbox-1" data-input-target="checkbox-section-1" aria-expanded="true" title="만기 시 SMS 알림 여부 선택" checked="">
+                                    <span class="switch__toggle" aria-hidden="true"></span>
+                                </label>
+                            </div>
+                        </li>
+                        <!--2022-08-10 | 토글 비활성화 시(disabled 클래스 추가) 해당 금액 비활성화 처리  -->
+                        <li>
+                            <div class="pay-list-left disabled">
+                                <p class="pay-list-left-tit">타행이체(기업은행)</p>
+                                <span class="pay-list-left-amount expense">-10,000원</span>
+                            </div>
+                            <div class="pay-list-right">
+                                <label class="switch" for="selectAuto3" data-input-selector="checkbox">
+                                    <input type="checkbox" id="selectAuto3" data-input-name="checkbox-1" data-input-target="checkbox-section-1" aria-expanded="true" title="만기 시 SMS 알림 여부 선택" >
+                                    <span class="switch__toggle" aria-hidden="true"></span>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pay-list-left">
+                                <p class="pay-list-left-tit">타행이체(기업은행)</p>
+                                <span class="pay-list-left-amount expense">-10,000원</span>
+                            </div>
+                            <div class="pay-list-right">
+                                <label class="switch" for="selectAuto4" data-input-selector="checkbox">
+                                    <input type="checkbox" id="selectAuto4" data-input-name="checkbox-1" data-input-target="checkbox-section-1" aria-expanded="true" title="만기 시 SMS 알림 여부 선택" checked="">
+                                    <span class="switch__toggle" aria-hidden="true"></span>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pay-list-left">
+                                <p class="pay-list-left-tit">챌린지 이벤트 참여</p>
+                                <span class="pay-list-left-amount expense">-10,000원</span>
+                            </div>
+                            <div class="pay-list-right">
+                                <label class="switch" for="selectAuto5" data-input-selector="checkbox">
+                                    <input type="checkbox" id="selectAuto5" data-input-name="checkbox-1" data-input-target="checkbox-section-1" aria-expanded="true" title="만기 시 SMS 알림 여부 선택" checked="">
+                                    <span class="switch__toggle" aria-hidden="true"></span>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pay-list-left">
+                                <p class="pay-list-left-tit">챌린지 이벤트 참여</p>
+                                <span class="pay-list-left-amount expense">-10,000원</span>
+                            </div>
+                            <div class="pay-list-right">
+                                <label class="switch" for="selectAuto6" data-input-selector="checkbox">
+                                    <input type="checkbox" id="selectAuto6" data-input-name="checkbox-1" data-input-target="checkbox-section-1" aria-expanded="true" title="만기 시 SMS 알림 여부 선택" checked="">
+                                    <span class="switch__toggle" aria-hidden="true"></span>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pay-list-left">
+                                <p class="pay-list-left-tit">챌린지 이벤트 참여</p>
+                                <span class="pay-list-left-amount expense">-10,000원</span>
+                            </div>
+                            <div class="pay-list-right">
+                                <label class="switch" for="selectAuto5" data-input-selector="checkbox">
+                                    <input type="checkbox" id="selectAuto5" data-input-name="checkbox-1" data-input-target="checkbox-section-1" aria-expanded="true" title="만기 시 SMS 알림 여부 선택" checked="">
+                                    <span class="switch__toggle" aria-hidden="true"></span>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pay-list-left">
+                                <p class="pay-list-left-tit">챌린지 이벤트 참여</p>
+                                <span class="pay-list-left-amount expense">-10,000원</span>
+                            </div>
+                            <div class="pay-list-right">
+                                <label class="switch" for="selectAuto6" data-input-selector="checkbox">
+                                    <input type="checkbox" id="selectAuto6" data-input-name="checkbox-1" data-input-target="checkbox-section-1" aria-expanded="true" title="만기 시 SMS 알림 여부 선택" checked="">
+                                    <span class="switch__toggle" aria-hidden="true"></span>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pay-list-left">
+                                <p class="pay-list-left-tit">챌린지 이벤트 참여</p>
+                                <span class="pay-list-left-amount expense">-10,000원</span>
+                            </div>
+                            <div class="pay-list-right">
+                                <label class="switch" for="selectAuto6" data-input-selector="checkbox">
+                                    <input type="checkbox" id="selectAuto6" data-input-name="checkbox-1" data-input-target="checkbox-section-1" aria-expanded="true" title="만기 시 SMS 알림 여부 선택" checked="">
+                                    <span class="switch__toggle" aria-hidden="true"></span>
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <button type="button" class="view-more" title="더보기" data-element="" data-target="" aria-controls="">더보기</button>
+            </div>
+        </div>
+        <!-- 제거
+        <button class="top-button" type="button"></button>
+        -->
+        <!-- //CONTENT -->
+    </div>
+
+    <!-- 2022-09-05 공통 Top 버튼 -->
+    <div class="floating--top">
+        <button type="button" data-ecrm="" onclick="" role="button" class="floating__btn--top" aria-label="맨 위로 이동">
+            <i class="ico-floating--arrow"></i>
+        </button>
+    </div>
+
+
+
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
+    <script type="text/javascript">
+        //2022-08-29 추가
+        function listSwitchContrl(){
+            var container = $('.pay-list ul');
+            var items = container.find('.switch input[type="checkbox"]');
+
+            items.on('change',function(){
+                var me = $(this);
+                var listItem = me.parents('li:eq(0)').find('.pay-list-left');
+                if(this.checked){//active
+                    listItem.removeClass('disabled');
+                }else{//disabled
+                    listItem.addClass('disabled');
+                }
+            })
+        }
+        $(document).ready(function(){
+            listSwitchContrl();
+        })
+    </script>
+</body>
+</html>

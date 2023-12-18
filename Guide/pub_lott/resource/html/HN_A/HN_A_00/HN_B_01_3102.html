@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+
+<body>
+    <div id="modalWinning" class="modal modal-winning-wrap modal--alert" data-element="modal__element">
+        <div class="modal__container" data-element="modal__element-container">
+            <div class="modal__contents">
+                <div class="modal__description">
+                    <div class="money-winning">
+                        <div class="wining-contents">
+                            <div class="thumb">
+                                <!-- img영역 추가해야함 -->
+                            </div>
+                            <span class="small">하나머니</span>
+                            <p>
+                                <strong>10,000</strong>
+                                <em>원 당첨</em>
+                            </p>
+                            <span>잠시 후 적립될 거에요.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- //CONTENT -->
+
+
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <!--  2022-08-08 lottie 플러그인 추가 -->
+    <script src="../../../../resource/library/lottie/lottie.min.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
+    <script src="../../../../resource/js/ui/common_n22UI.js"></script>
+    
+    <script type="text/javascript">
+        //2022-08-24 추가
+        
+        $(document).ready(function(){
+            hanamoneyLayerPopup()
+        })
+        function hanamoneyLayerPopup(){
+            $('body').data('plugin_modal').open('#modalWinning');
+            //2022-10-08 추가 
+            setSVGApply('.wining-contents .thumb', '/pub/resource/images/C/lottie/detail/J22.json', true, false);//j06
+            
+            $('#modalWinning').on('click',function(){
+                $('body').data('plugin_modal').close('#modalWinning');
+            })
+            setTimeout(function(){
+                $('body').data('plugin_modal').close('#modalWinning');
+            },3000)
+            
+        }
+        
+    </script>
+</body>
+</html>

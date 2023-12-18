@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<title>샘플 테스트</title>
+	<!-- 
+
+		<meta http-equiv="refresh" content="1;url=https://www.naver.com/">
+
+		OG(Open Graph)태그 - 소셜 미디어 공유
+		<meta property="og:title" content="페이지 제목">
+		<meta property="og:description" content="페이지 설명">
+		<meta property="og:image" content="이미지 URL">
+		<meta property="og:url" content="페이지 URL">
+
+		트위터 카드 태그 - 트위터 공유
+		<meta name="twitter:card" content="card type">
+		<meta name="twitter:site" content="@사이트아이디">
+		<meta name="twitter:title" content="페이지 제목">
+		<meta name="twitter:description" content="페이지 설명">
+		<meta name="twitter:image" content="이미지 URL">
+
+		Robots 메타태그 - 검색엔진 크롤링 제어
+		<meta name="robots" content="index, follow">
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	 -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="description" content="프로젝트 설명">
+	<meta name="keywords" content="키워드1, 키워드2, 키워드3">
+	<!-- 안드로이드 홈화면추가시 상단 주소창 제거 -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<!-- ios홈화면추가시 상단 주소창 제거 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<link rel="stylesheet" href="../resource/css/import.css">
+	<link rel="stylesheet" href="../resource/css/icono.min.css">
+	<link rel="stylesheet" href="../resource/css/content.css">
+	<!-- <link rel="stylesheet" href="../resource/css/demo.css"> -->
+	<link rel="stylesheet" href="../resource/css/icono.min.css">
+	<script src="../resource/js/jquery-3.6.0.min.js"></script>
+	<script src="../resource/js/com_ui.js"></script>
+
+
+	
+
+</head>
+<body>
+
+<h1 class="H1_title">프로젝트 템플릿 가이드</h1>
+<div id="wrapper" class="guide_wrapper">
+	<header></header>
+
+	<!-- .aside -->
+	<aside class="guide_menu">
+		<ul>
+			<li><a href="#">Forms</a></li>
+			<li><a href="#">Buttons</a></li>
+			<li><a href="#">Tabs</a></li>
+			<li><a href="#">Title</a></li>
+			<li><a href="#">Text</a></li>
+			<li><a href="#">Table</a></li>
+			<li><a href="#">List</a></li>
+			<li><a href="#">Popup</a></li>
+		</ul>	
+	</aside>
+	<!-- //.aside -->
+	<div id="container" class="guide_container">
+
+
+		
+
+
+		<p class="font_300">프로젝트 템플릿 가이드_(Light : 300)_@@## BUTTON_TTABLE</p>
+		<p class="font_400">프로젝트 템플릿 가이드_(Regular : 400)_@@## BUTTON_TTABLE</p>
+
+		<div>
+			<div class="font_500">프로젝트 템플릿 가이드_(Medium : 500)_@@## BUTTON_TTABLE</div>
+		</div>
+
+		<div>
+			<div class="font_700 toolTips">
+				프로젝트 템플릿 가이드_(Bold : 700)_@@## BUTTON_TTABLE
+				<button type="button" class="click">
+					<label class="demo" onmouseup="focusIn(event)">
+						<i class="icono-exclamationCircle"></i>
+					</label>
+				</button>
+				<div class="layer">
+					<p>Call me back when you are free</p>
+				</div>
+			</div>
+		</div>
+
+		
+
+
+
+
+<br><br><br>
+<!-- Select 시작 -->
+
+<!-- 원본 셀렉트는 숨겨두고, 대신에 커스텀한 디자인의 요소를 만듭니다. -->
+<div class="custom-select">
+	<div class="select-selected">Select an option</div>
+	<div class="select-items select-hide">
+		<div>Option 1</div>
+		<div>Option 2</div>
+		<div>Option 3</div>
+	</div>
+</div>
+
+<style>
+/* 셀렉트를 스타일링합니다. */
+.custom-select {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+}
+
+.select-selected {
+	position: relative;
+	background-color: #f2f2f2;
+	padding: 8px 16px;
+	border: 1px solid #ccc;
+	cursor: pointer;
+}
+
+.select-selected:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+	border: 6px solid transparent;
+	border-color: #666 transparent transparent transparent;
+}
+
+.select-items div {
+	padding: 8px 16px;
+	cursor: pointer;
+}
+
+.select-items div:hover {
+  background-color: #f2f2f2;
+}
+
+.select-hide {
+  display: none;
+}
+</style>
+
+
+<script>
+// JavaScript로 동작을 추가합니다.
+document.addEventListener("DOMContentLoaded", function() {
+  var select = document.querySelector(".custom-select");
+  var selectSelected = select.querySelector(".select-selected");
+  var selectItems = select.querySelector(".select-items");
+  var options = select.querySelectorAll(".select-items div");
+
+  selectSelected.addEventListener("click", function() {
+    selectItems.classList.toggle("select-hide");
+  });
+
+  options.forEach(function(option) {
+    option.addEventListener("click", function() {
+      selectSelected.textContent = this.textContent;
+      selectItems.classList.add("select-hide");
+    });
+  });
+
+  // 다른 부분을 클릭하면 셀렉트가 닫히도록 설정합니다.
+  document.addEventListener("click", function(e) {
+    if (!select.contains(e.target)) {
+      selectItems.classList.add("select-hide");
+    }
+  });
+});
+</script>
+<!-- Select 끝 -->
+
+<br><br><br>
+<!-- INPUT -->
+		<h2 class="guide_title">Input[type="text"] : 휴대전화</h2>
+		<div class="ui_dv_input phone">
+			<select name="" id="">
+				<option value="010">010</option>
+				<option value="011">011</option>
+				<option value="010">010</option>
+				<option value="011">011</option>
+			</select>
+			<span class="sign">-</span>
+			<input type="number" id="" class="" nama="" placeholder="">
+			<!-- oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" -->
+			<span class="sign">-</span>
+			<input type="number" id="" class="" nama="" placeholder="">
+		</div>
+
+		<h2 class="guide_title">Input[type="text"] : 텍스트 + 삭제버튼</h2>
+		<div class="ui_dv_input">
+			<div class="ui_input_del">
+				<input type="text" class="textInput" placeholder="단어를 입력하세요">
+				<button type="button" class="deleteButton">삭제</button>
+			  </div>
+		</div>
+
+		<style>
+			
+		</style>
+
+		<script>
+		
+		</script>
+
+		<h2 class="guide_title">Input[type="text"]</h2>
+		<div class="ui_dv_input">
+			<input type="text" id="" class="" nama="" placeholder="">
+		</div>
+		
+		<h2 class="guide_title">Input[type="text"]:disabled</h2>
+		<div class="ui_dv_input">
+			<input type="text" id="" class="" nama="" placeholder="" disabled>
+		</div>
+		
+		<h2 class="guide_title">Input[type="text"]:readonly</h2>
+		<div class="ui_dv_input">
+			<input type="text" id="" class="" nama="" placeholder="" readonly>
+		</div>
+		
+		<h2 class="guide_title">Input[type="password"]</h2>
+		<div class="ui_dv_input">
+			<input type="password" id="" class="" nama="" placeholder="">
+		</div>
+		
+		<h2 class="guide_title">Input[type="number"]</h2>
+		<div class="ui_dv_input">
+			<input type="number" id="" class="" nama="" placeholder="">
+		</div>
+
+		<h2 class="guide_title">Input[type="checkbox"]</h2>
+		<div class="ui_dv_input">
+			<label for="ui_checked_1">
+				<input type="checkbox" id="ui_checked_1" class="ui_checked" nama="ui_checked_1" checked>
+				선택하나
+			</label>
+			<label for="ui_checked_2">
+				<input type="checkbox" id="ui_checked_2" class="ui_checked" nama="ui_checked_2">
+				선택둘
+			</label>
+			<label for="ui_checked_3">
+				<input type="checkbox" id="ui_checked_3" class="ui_checked" nama="ui_checked_3" disabled>
+				disabled
+			</label>
+		</div>
+
+		<h2 class="guide_title">Input[type="radio"]</h2>
+		<div class="ui_dv_input">
+			<label for="ui_radios_1">
+				<input type="radio" id="ui_radios_1" class="ui_radios" nama="ui_radios" checked>
+				선택함
+			</label>
+			<label for="ui_radios_2">
+				<input type="radio" id="ui_radios_2" class="ui_radios" nama="ui_radios">
+				선택안함
+			</label>
+			<label for="ui_radios_3">
+				<input type="radio" id="ui_radios_3" class="ui_radios" nama="ui_radios" disabled>
+				disabled
+			</label>
+		</div>
+
+
+<br><br><br>		
+
+
+
+	</div>
+	<button class="buttonTop">화면 상단으로 이동</button>
+	
+
+</div>
+
+<script type="text/javascript">
+    function focusIn(e){
+        if (e.target.nodeName === 'LABEL') {
+        var source = e.target;
+        }else{
+        var source = e.target.parentNode;
+        }
+        e.stopPropagation();
+        source.previousElementSibling.focus();
+        if(source.previousElementSibling.checked===true){
+        source.previousElementSibling.checked=false;
+        }else{
+        source.previousElementSibling.checked=true;
+        source.previousElementSibling.focus();
+        }
+    }
+    function selectAll(el) {
+        if (typeof window.getSelection != "undefined" && typeof document.createRange != "undefined") {
+        var range = document.createRange();
+        range.selectNodeContents(el);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        } else if (typeof document.selection != "undefined" && typeof document.body.createTextRange != "undefined") {
+        var textRange = document.body.createTextRange();
+        textRange.moveToElementText(el);
+        textRange.select();
+        }
+    }
+    function hide(el) {
+        el.style.display = 'none';
+    }
+</script>
+</body>
+</html>
+
+

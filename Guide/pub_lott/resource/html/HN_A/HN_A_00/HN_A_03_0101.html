@@ -1,0 +1,560 @@
+
+<!-- v0.9 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+        <title>하나은행</title>
+        <!-- 공통 css -->
+        <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+        <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+        <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+        <!-- 2022 상품몰 고도화 추가 -->
+        <link rel="stylesheet" href="../../../../resource/css/swiper.min.css" type="text/css">
+        <link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+    </head>
+
+<body>
+    <div id="wrap" class="wrap goods-layout-sec n22UI">
+        <!-- header -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면" data-ecrm="BAK1010"></button>
+            <h1 class="app-header__title">상품가입</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //header -->
+        <!-- Content -->
+        <div id="content" class="app-main progress">
+            <div class="ste-progress step-header">
+                <div class="stepper" role="img" aria-label="5단계 중 3단계">
+                    <ul>
+                        <!-- swiper-slide length + (약관1)만큼 생성해주세요 -->
+                        <li class="stepper__step stepper__step--current">1</li>
+                        <li class="stepper__step">2</li>
+                        <li class="stepper__step">3</li>
+                        <li class="stepper__step">4</li>
+                        <li class="stepper__step">5</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="inner-content-scroll">
+                <!--2022-08-09 | =======================
+                    * dev : 비활성화 시 .n22UI .underline-type .button-select__item에 클래스 .disabled 추가
+                    * placeholder 포커스 및 기입 활성화 시 색상 변경
+                -->    
+                <!--2022-08-09 | =======================
+                    활성화 관련 색상 변경사항
+                    * 선택 값 없음 - #000000, 밑줄 X, arrow X
+                    * 플레이스 홀더 - #757575, 밑줄 O, arrow O
+                -->   
+                <!--2022-08-16 | =======================
+                    셀렉트 버튼이 placeholder가 노출 되지 않는 readonly 케이스 일때 readonly 클래스 적용 
+                -->    
+ 
+
+                <div class="scroll-wrapper swiper-wrapper">
+                    <!-- step 01 얼마를 저축할까요 ======================================     -->
+                    <div class="swiper-slide step-screen-container">
+                        <!--2022-07-13 | 얼마를 저축할까요? -->
+                        <div class="tit-default">얼마를 저축할까요?</div>
+                        <div class="container">
+                            
+                            <div class="input native-readonly underline-type"><!-- 2022-07-25 price-inp-inline 클래스를 underline-type 로 모두 교체 -->
+                                <!--
+                                    * 오류시 class="input input--error"
+                                    * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                                     
+                                    2022-09-13 
+                                    * 입력제한 class="input readonly"  클래스 추가
+                                -->
+                                <div class="input__inner">
+                                    <div class="native-inner" role="button">
+                                        <!-- 2022-08-03 금액 입력폼 contenteditable속성 제거 -->
+                                        <!-- 2022-08-09 Simulation 값 미적용 시 텍스트 변경 -->
+                                        <!-- 2022-08-22 placeholder문구 변경 -->
+                                        <span id="inputText02" class="input__element" title="가입금액 입력" placeholder="최소 100만원"></span>
+                                    </div>
+                                    <span>을</span>
+                                    <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
+                                </div>
+                                <p class="input__error" aria-live="assertive">가입금액을 입력해 주세요.</p>
+                                <!-- 2022-09-06 최소가입금액 미만 입력시
+                                <p class="input__error" aria-live="assertive">최소 100만원 이상 가입 가능합니다.</p>
+                                 -->
+                            </div>
+                            
+                            <!-- 금액입력시 노출 
+                            <p class="note savings-amount-msg">10만원</p>
+                            -->
+                        </div>
+                        <!-- 2022-08-17 -->
+                        <div class="container">
+                            <div class="button-select underline-type inline">
+                                <!-- 2022-08-25 선택값이 1개밖에 없는경우 readonly 클래스 추가필요 -->
+                                <button type="button" class="button button-select__item" data-element="modal__open" data-target="#CCOM0015002_P02" id="dialOpenBtn">12개월</button>
+                                <p>만기로 저축</p>
+                            </div>
+                        </div>
+                        <!--
+                        <div class="container">
+                            <div class="button-select underline-type inline">
+                                <button type="button" class="button button-select__item" title="저축기간 선택" data-element="modal__open" data-target="#CCOM0015002_P02" aria-controls="#CCOM0015002_P02">2023년 10월 10일</button>
+                                <p>만기로 저축</p>
+                            </div>
+                        </div>
+                        -->
+                        <!-- 우대금리 있는 경우에만 노출// -->
+                        <div class="container">
+                            <div class="button-select underline-type inline">
+                                <!-- 2022-09-06 기본 문구 적용 -->
+                                <!-- 2022-09-13 place-holder 적용 기본 텍스트 제거 -->
+                                <button type="button" class="button button-select__item" title="우대금리 선택" data-element="modal__open" data-target="#combobox_1" aria-controls="#combobox_2"  placeholder="선택하세요"></button>
+                                <!-- 2022-08-22 적용하기 문구 추가 -->
+                                <!-- 2022-08-31 적용하기 태그 변경 -->
+                                <p>적용하기</p>
+                            </div>
+                            <!-- 2022-09-06 에러 문구 추가 에러시 block 추가 -->
+                            <p class="input__error block" aria-live="assertive">금리우대 쿠폰을 선택해 주세요.</p>
+                            
+                            <div class="emp-bubble">
+                                <p>적용할 수 있는 쿠폰이 있어요!</p>
+                            </div>
+                        </div>
+                        <!-- //우대금리 있는 경우에만 노출 -->
+
+                        <!-- 쿠폰이 있는 경우에만 노출
+                        <div class="container">
+                            <div class="button-select underline-type inline">
+                                <button type="button" class="button button-select__item" title="쿠폰 사용 여부 선택" data-element="modal__open" data-target="#combobox_1" aria-controls="#combobox_2">선택 안함</button>
+                            </div>
+                        </div>
+                        쿠폰이 있는 경우에만 노출 -->
+
+                        
+                        <!--2022-08-17 | 간격 수정 위한 financial-check-info 클래스 추가-->
+                        <div class="container financial-check-info">
+                            <div class="checkbox-wrap">
+                                <input type="checkbox" id="agreeChk" class="checkbox-wrap__check" name="agreeChk-check">
+                                <label for="agreeChk" class="checkbox-wrap__label">금융정보 조회 동의 <span>(비과세 종합저축용)</span></label>
+                            </div>
+
+                            <div class="limit-guide">
+                                <p class="text-guide-regular font-small guide-msg"> 
+                                    비과세종합저축으로 가입하려면 한도조회가 필요합니다.<br>
+                                    <button type="button" class="button-underline button-underline--right button-underline--green">한도안내</button>
+                                </p> 
+                            </div>
+                            <!-- 2022-09-13 마크업 변경 -->
+                            <div class="apply-limit">
+                                <div class="input native-readonly underline-type w100">
+                                    <!--
+                                        * 오류시 class="input input--error"
+                                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                                    -->
+                                    <em>적용한도</em><!-- 2022-08-22 띄어쓰기 제거 -->
+                                    <div class="input__inner">
+                                        <div class="native-inner" role="button">
+                                            <!-- 2022-08-03 금액 입력폼 contenteditable속성 제거 -->
+                                            <!-- 2022-09-13 placeholder 문구 변경-->
+                                            <span id="inputText03" class="input__element" title="상품가입금액 입력" placeholder="입력하세요"></span>
+                                        </div>
+                                        <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
+                                    </div>
+                                </div>
+                                <div class="limit-guide">
+                                    <p class="text-guide-regular font-small guide-msg"> 
+                                        비과세 종합저축 잔여한도는 <span>1,000만원</span>입니다.<br>
+                                        <button type="button" class="button-underline button-underline--right button-underline--green">한도안내</button>
+                                    </p> 
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 2022-08-29 기획변경
+                        <button type="button" class="step-screen-arrow">
+                            <img src="../../../images/C/n22_icon_step_screen_arrow_31x11.png" alt="step-screen-arrow-img">
+                        </button> 
+                        -->
+                    </div>
+
+
+                    <!-- step 02 어느 계좌에서 출금할까요 ======================================     -->
+                    <div class="step-screen-container">
+                        <!--2022-07-13 | 어느 계좌에서 출금할까요? -->
+                        <div class="tit-default">어느 계좌에서 출금할까요?</div>
+
+                        <!-- 출금계좌 선택전 -->
+                        <div class="container">
+                            <div class="button-select underline-type">
+                                <!-- 2022-09-13 출금계좌 선택전 문구 제거 및 placeholder추가 -->
+                                <button type="button" title="출금계좌 선택" class="button button-select__item" placeholder="출금계좌를 선택하세요"></button>
+                            </div>
+                        </div>
+                        
+                        <!-- 출금계좌 선택후 -->
+                        <div class="container">
+                            <div class="button-select">
+                                <!-- 2022-09-13 placeholder추가 -->
+                                <button type="button" title="출금계좌 선택" class="button button-select__item button-select__item--bank button-select__item--icon-bank" data-element="modal__open" data-target="#modalSlide1" aria-controls="#modalSlide1">
+                                    <img src="../../../../resource/images/C/icon_bank_list_hana.png" alt="하나은행">
+                                    <strong class="bank-name">하나입출금통장</strong>
+                                    <span class="bank-number mgt9">123-456789-89764</span>
+                                    <span class="withdraw-box">
+                                        <strong class="withdraw-box__title">출금가능금액 </strong>
+                                        <span class="withdraw-box__value"><span class="">2,020,000</span>원</span>
+                                    </span>
+                                </button>
+                            </div>
+                            <!-- 에러 문구 추가 에러시 block 추가 -->
+                            <!-- 2022-09-06 미선택 후 계속시 -->
+                            <p class="input__error" aria-live="assertive">출금계좌를 선택해 주세요.</p>
+                            <!-- 2022-09-06 계속 후 계좌 잔액 부족 시 -->
+                            <p class="input__error" aria-live="assertive">출금가능금액이 부족합니다.</p>
+                        </div>
+                        <div class="container">
+                            <div class="withdraw-account-wrap">
+                                <div class="withdraw-account other-account-list">
+                                <div class="withdraw-account__row">
+                                    <div role="button" class="withdraw-account-flex" data-ecrm="OPEG1010">
+                                        <div class="withdraw-account-title">
+                                            <strong>다른 금융계좌에서 출금하기</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--//2022-07-13 | 어느 계좌에서 출금할까요? -->
+
+                        <!-- 2022-08-29 기획변경
+                        <button type="button" class="step-screen-arrow">
+                            <img src="../../../images/C/n22_icon_step_screen_arrow_31x11.png" alt="step-screen-arrow-img">
+                        </button> 
+                        -->
+                    </div>
+
+
+                    <!-- step 03 이자는 어떻게 받을까요? ======================================     -->
+                    <!--2022-08-09 | 이자는 어떻게 받을까요 타이틀 텍스트 수정-->
+                    <!--2022-08-22 | 이자는 어떻게 할까요 타이틀 텍스트 수정-->
+                    <div class="step-screen-container">
+                        <div>
+                            <div class="tit-default">이자는 어떻게 받을까요?
+                                <div class="question-mark">
+                                    <button type="button" class="lp__open" aria-label="이자는 어떻게 할까요?"></button> 
+                                </div>
+                            </div>
+                            
+                            <div class="container">
+                                <div class="button-select underline-type inline selected">
+
+                                    <button type="button" class="button button-select__item" title="저축 방식 선택" data-element="modal__open" data-target="#combobox_1" aria-controls="#combobox_2">3개월</button>
+                                    <!-- 2022-09-13 띄어쓰기 추가 -->
+                                    <p>마다 금리 연동</p>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="button-select underline-type inline">
+                                    <button type="button" class="button button-select__item" title="저축기간 선택" data-element="modal__open" data-target="#CCOM0015002_P022" aria-controls="#CCOM0015002_P022">이자원가식</button>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="button-select underline-type inline selected">
+                                    <button type="button" class="button button-select__item" title="저축 방식 선택" data-element="modal__open" data-target="#combobox_1" aria-controls="#combobox_2">3개월</button>
+                                    <p>마다 받기</p>
+                                </div>
+                            </div>
+
+                            <!--2022-08-25 | 클래스 값 추가-->
+                            <div class="container">
+
+                                <!-- 2022-08-09 | 금리변동안내 2단으로 디자인 수정 / inter-change-info 클래스 추가 -->
+                                <div class="apply-limit inter-change-info">
+                                    <div class="input native-readonly underline-type">
+                                        <!-- 2022-09-13 문구 변경 -->
+                                        <em>금리 변경 안내</em>
+                                        <!-- 2022-08-09 | button-select, button w100 클래스 추가-->
+                                        <div class="button-select underline-type inline selected w100">
+                                            <button type="button" class="button button-select__item w100" title="저축 방식 선택" data-element="modal__open" data-target="#combobox_1" aria-controls="#combobox_2">이메일+문자메시지</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 2022-08-29 기획 삭제
+                            <button type="button" class="step-screen-arrow">
+                                <img src="../../../images/C/n22_icon_step_screen_arrow_31x11.png" alt="step-screen-arrow-img">
+                            </button>
+                            -->
+                        </div>
+                    </div>
+
+                    <!-- step 04 만기일이 되면 어떻게 할까요 ======================================     -->
+                    <div class="step-screen-container">
+                        <div>
+                            <!--2022-07-13 | 만기일이 되면 어떻게 할까요? -->
+                            <div class="tit-default">만기 시 어떻게 할까요? 
+                                <div class="tooltip" data-tooltip="paragraph">
+                                    <button type="button" class="tooltip__open" data-tooltip-button="open" aria-label="만기일 해지 안내 열기"></button>
+                                    
+                                    <div class="tooltip__panel" data-tooltip-panel="false">
+                                        <div class="tooltip__column">
+                                            <div class="tooltip__title" data-tooltip="focus">만기 설정 안내</div>
+                                            <div class="tooltip__title" data-tooltip="focus">직접해지</div>
+                                            <p class="tooltip__description">- 만기일에 ARS인증을 통해 손님이 직접해지해야 합니다. (만기일부터 만기 후 금리 적용)</p>
+                                            <div class="tooltip__title" data-tooltip="focus">자동해지</div>
+                                            <!-- 2022-09-14 띄어쓰기 추가 -->
+                                            <p class="tooltip__description">- 만기일에 자동으로 해지되며, (세후)원리금은 가입 시 등록한 출금계좌로 입금됩니다.</p>
+                                        </div>
+                                        <button class="tooltip__close" data-tooltip-button="close" aria-label="툴팁 닫기"></button>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="button-select underline-type inline">
+                                    <button type="button" class="button button-select__item" title="만기 임의지정 선택" data-element="modal__open" data-target="#combobox_5" aria-controls="#combobox_5">자동 해지</button>
+                                    <p>하기</p><!-- 2022-10-24 수정 -->
+                                </div>
+                                <div class="mgt42">
+                                    <!-- 자동 재예치(원금) 선택시 -->
+                                    <!-- 2022-10-24 띄어쓰기 추가 -->
+                                    <p class="text-guide-regular font-small guide-msg">해지 시까지 자동 재예치되며, 세후 이자는 가입 시 출금 계좌로 입금됩니다.</p>
+                                    <!-- 자동 재예치(원리금) 선택시
+                                    <p class="text-guide-regular font-small guide-msg">해지 시까지 원금과 세후 이자가 자동으로 재예치됩니다.</p>
+                                     -->
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="button-select underline-type inline">
+                                    <!-- 2022-09-13 placeholder 추가 -->
+                                    <button type="button" class="button button-select__item account-select" title="만기 입금 계좌 선택" data-element="modal__open" data-target="#combobox_6" aria-controls="#combobox_2" placeholder="만기 입금계좌 선택">
+                                        <div>
+                                            <!--2022-08-09 | 선택하기 -> 계좌로 수정-->
+                                            <i class="icon-account">
+                                                <img src="../../../../resource/images/C/icon_bank_hana.png" alt="하나은행">
+                                            </i>
+                                            <!-- 2022-09-13 마크업 변경 -->
+                                            <span>하나입출금통장</span>
+                                        </div>
+                                    </button>
+                                    <p>입금하기</p>
+                                </div>
+                                 <!-- 2022-09-13 미선택 시 -->
+                                <p class="input__error block" aria-live="assertive">만기 입금계좌를 선택해 주세요.</p>
+                            </div>
+                            <div class="container">
+                                <!-- 2022-08-09 | 앱 알림 만기 안내 전체 수정 및 툴팁 추가 -->
+                                <div class="apply-limit expir-info">
+                                    <div class="input native-readonly underline-type">
+                                        <!-- 2022-09-06 만기안내'는' 삭제 -->
+                                        
+                                        <em>만기 안내 받기 <!-- 2022-10-24 띄어쓰기 추가 -->
+                                            <div class="tooltip" data-tooltip="paragraph">
+                                                <button type="button" class="tooltip__open" data-tooltip-button="open" aria-label="앱 알림 전송 실패 시"></button>
+                                                
+                                                <div class="tooltip__panel" data-tooltip-panel="false">
+                                                    <div class="tooltip__column">
+                                                        <!-- 2022-09-13 문구 변경 -->
+                                                        <p class="tooltip__description">카카오 알림톡 전송 실패 시 문자메시지로 전송됩니다.</p>
+                                                    </div>
+                                                    <button class="tooltip__close" data-tooltip-button="close" aria-label="툴팁 닫기"></button>
+                                                </div> 
+                                            </div>
+                                        </em>
+                                        <!-- 2022-08-09 | button-select, button w100 클래스 추가 / 보내기 텍스트 삭제-->
+                                        <div class="button-select underline-type inline">
+                                            <button type="button" class="button button-select__item" title="알림수단 선택" data-element="modal__open" data-target="#combobox_7" aria-controls="#combobox_2">앱 알림</button>
+
+                                            <!-- 2022-08-09 | 말풍선 추가-->
+                                            <div class="emp-bubble">
+                                                <p>만기 7일 전에 알려드려요!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <!-- 마지막 스탭에서만 노출될 영역 // -->
+                        <div class="container">
+                            <div class="checkbox-wrap staff-find">
+                                <input type="checkbox" id="agreeChk2" class="checkbox-wrap__check" name="agreeChk-check2">
+                                <label for="agreeChk2" class="checkbox-wrap__label">
+                                    <!-- 2022-08-09 | 관리점 직원 찾기 텍스트 변경-->
+                                    <p>관리점/직원 찾기</p>
+                                </label>
+                                <!-- 2022-08-03 관리직원 이름 마크업 변경 -->
+                                <!-- 2022-08-09 | 부서 추가 정보 수정 staff-info-list 클래스 추가 -->
+                                <div class="staff-info">
+                                    <!-- 2022-09-14 비활성화시 readonly 클래스 추가 class="staff-info-list readonly" -->
+                                    <div class="staff-info-list readonly">
+                                        <span>김경훈(1010161)</span>
+                                        <button name="modifyCustBtn" type="button" class="button-square-small button-square-small--white">수정</button>
+                                    </div>
+                                    <!-- case2
+                                    <div class="staff-info-list">
+                                        <span>영업1부</span>
+                                        <button name="modifyCustBtn" type="button" class="button-square-small button-square-small--white">수정</button>
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //마지막 스탭에서만 노출될 영역 -->
+                    </div>
+                </div>
+                <!-- 2022-08-29 계속 버튼 추가 -->
+                <button type="button" class="step-screen-arrow">계속</button> 
+                <!-- //inner contents scroll -->
+                <!-- //Content -->
+                <!--  2022-10-24 footer 아이디 부여 -->
+                <div id="footer" class="progress-foot app-footer app-footer--button">
+                    <div class="button-wrap">
+                        <button type="button" class="button button--positive" data-ecrm="NET1010">다음</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+
+    <!--2022-08-11 | .wrap 전체 감싸는 하단 </div> 수정-->
+    </div>
+
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
+    <!-- 2022 상품몰 고도화 추가 -->
+    <script src="../../../../resource/library/swiper/swiper.min.js"></script>
+    <script src="../../../../resource/js/ui/common_n22UI.js"></script>
+
+    <script type="text/javascript">
+    hanaProdUI.savgJoinPageInit();
+
+    /*
+        2022-09-08
+        검증에러시 스크롤 제어 함수 추가
+        
+    */
+    var scrollCtrInit = function(){
+        var swiperInfo = hanaProdUI.getSwiperInfo();
+        var screenItems = $('.step-screen-container');
+        return {
+            top : function(){
+                screenItems.eq(swiperInfo.realIndex).scrollTop(0);
+            },
+            btm : function(){
+                screenItems.eq(swiperInfo.realIndex).scrollTop(9999);
+            }
+        }
+    }
+    var scrollCtr = scrollCtrInit();
+    /*
+        scrollCtr.top();//활성화된 섹션의 최상단으로 
+        scrollCtr.btm();//활성화된 섹션의 최하단으로
+    */
+
+    
+    /*
+    2022-09-08
+    #숫자키패드 스크롤관련 추가
+    숫자키패드 호출시 개발에서 아래 함수 같이 호출 필요합니다.
+
+    hanaProdUI.hanaRemoveDummyDiv();
+
+    */
+   
+    //2022-09-14 만기안내 말풍선 slide에서 옵션에 따라 텍스트 변경시 reset 함수
+    var responeBubble = function(_text){
+        var target =  $('#responeBubble');
+        target.addClass('emp-bubble-reset').removeClass('emp-bubble');
+        target.find('p').text(_text);
+        setTimeout(function(){
+            target.removeClass('emp-bubble-reset').addClass('emp-bubble');
+        },10);
+    }
+    // responeBubble("만기 7일 전에 알려드려요!");
+    // responeBubble("알림 차단 시 안내 받지 못할 수 있어요.");
+
+
+    $(document).ready(function(){
+        $('#dialOpenBtn').click(function(){
+            //멀티 다이얼 호출
+            var param = {
+                min : 6,
+                max : 60,
+                items : [{
+                    "code" : 1,
+                    "codeName" : "1개월"
+                },{
+                    "code" : 2,
+                    "codeName" : "2개월"
+                },{
+                    "code" : 3,
+                    "codeName" : "3개월"
+                }]
+            };
+            //console.log(typeof param.length)
+
+            hanaProdUI.dialSelect('#CCOM0015002_P02', param , function(ui){
+                console.log('callback', ui)
+            });
+        })
+
+        
+        $('#dialOpenBtn2').click(function(){
+            var param = [{
+                            "code" : 1,
+                            "codeName" : "1개월"
+                        },{
+                            "code" : 2,
+                            "codeName" : "2개월"
+                        },{
+                            "code" : 3,
+                            "codeName" : "3개월"
+                        },{
+                            "code" : 4,
+                            "codeName" : "4개월"
+                        }];
+
+            //싱글 다이얼 호출
+            hanaProdUI.dialSelect('#CCOM0015002_P03', param, function(ui){
+                console.log('callback', ui)
+            });
+        })
+
+        //2022-08-29 추가
+        $('.step-screen-arrow').on('click', function(){
+            var swiperInfo = hanaProdUI.getSwiperInfo();
+             /* 현재 인덱스값 정보
+            swiperInfo.realIndex
+
+
+            에러시 오류화면의 index number를 전달하면 해당 화면으로 이동하며,
+            인자값이 없을경우 다음화면으로 이동함.
+            hanaProdUI.validSwipeNext(index number) //slideTo
+            hanaProdUI.validSwipeNext() //next
+            */
+
+            hanaProdUI.validSwipeNext();
+        })        
+    })
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+/*-------------------------------------------------------------------
+ @ TEMPLATE UI : 2000.00.00 XXX
+-------------------------------------------------------------------*/
+
+/* Poppins */
+@font-face {
+    font-family: 'poppins';
+    src: url('../fonts/Poppins-Light.eot');
+    src: url('../fonts/Poppins-Light.woff') format('woff');
+    /* src: url('../fonts/Poppins-Light.woff2');    
+    src: url('../fonts/Poppins-Light.otf'); */
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'poppins-Regular';
+    src: url('../fonts/Poppins-Regular.eot');
+    src: url('../fonts/Poppins-Regular.woff') format('woff');
+    /* src: url('../fonts/Poppins-Regular.woff2');
+    src: url('../fonts/Poppins-Regular.otf'); */
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'poppins-Medium';
+    src: url('../fonts/Poppins-Medium.woff') format('woff');
+    /* src: url('../fonts/Poppins-Medium.woff2');
+    src: url('../fonts/Poppins-Medium.otf'); */
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'poppins-Bold';
+    src: url('../fonts/Poppins-Bold.woff') format('woff');
+    /* src: url('../fonts/Poppins-Bold.woff2');
+    src: url('../fonts/Poppins-Bold.otf'); */
+    font-weight: 700;
+    font-style: normal;
+  }
+
+
+/*-------------------------------------------------------------------
+ @Reset
+-------------------------------------------------------------------*/
+/*추가사항 있을 시, 추가할 것*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, input, textarea, button, select, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video,
+:after, :before { margin: 0; padding: 0; border: 0; outline: none; list-style: none; font-family: inherit; font-size: inherit; font-weight: inherit; font-style: normal; color: inherit; word-break: keep-all; vertical-align: baseline; } 
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; } 
+html { font-size: 62.5%; } /* 16px * 0.625 = 10px / 미사용 시, 삭제할 것 */
+button { background-color: transparent; cursor: pointer; outline: 0; } 
+b, strong { font-weight: normal;} 
+a { text-decoration: none; border: 0; outline: 0; color: inherit; display: block;} 
+table { width: 100%; border-spacing: 0; border-collapse: collapse; } 
+caption { overflow: hidden; width: 0; height: 0; font-size: 0; line-height: 0; } 
+.blind { clip: rect(0,0,0,0); overflow: hidden; position: absolute; width: 1px; height: 1px; margin: -1px; }
+
+body * {box-sizing: border-box; font-size: 1.4rem; line-height: 1.5; color: #000; font-family: 'poppins-Regular', 'roboto', 'NotoSansKR', 'AppeGothic', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Dotum', Arial, Helvetica, sans-serif; font-weight: 400;}
+
+
+
+#wrapper .buttonTop {
+    position:fixed;
+    bottom:0;right:0;
+    width:10rem;
+    height:10rem;
+    padding: 1rem;
+    background:#38c;
+    border-radius:50%;
+    color: white;
+    opacity:0;
+    transition-duration:0.5s;
+}
+#wrapper .buttonTop.active {opacity:1;}
+
+
+
+

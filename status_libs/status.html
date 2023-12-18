@@ -1,0 +1,447 @@
+<!DOCTYPE HTML>
+<html lang="ko-KR" class="no-js">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Cache-Control" content="no-cache; no-store; no-save">
+	<!--[if lte IE 8]><html class="no-js ie8" lang="ko"> <![endif]-->
+	<!--[if IE 9]><html class="no-js ie9" lang="ko"> <![endif]-->
+	<!--[if gte IE 9]><html class="no-js" lang="ko"> <![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<title>프로젝트 작업 현황 목록</title>
+	<!-- <link rel="shortcut icon" href="../../assets/img/favicon_32x32.png?v=1507137376" type="image/png"> -->
+	<link rel="stylesheet" href="./resource/css/worklist.css">
+	<link rel="stylesheet" href="./resource/plugins/fontawesome/css/all.min.css">
+	<script type="text/javascript" src="./resource/plugins/modernizr/modernizr.js"></script>
+	<script type="text/javascript" src="./resource/plugins/detectizr/detectizr.min.js"></script>
+	<script type="text/javascript" src="./resource/js/jquery-1.12.0.min.js"></script>
+	<script type="text/javascript" src="./resource/js/jquery.colorbox-min.js"></script>
+	<script type="text/javascript" src="./resource/js/jquery.quicksearch.js"></script>
+	<script type="text/javascript" src="./resource/js/worklist.util.js"></script>
+	<script type="text/javascript" src="./resource/js/worklist.include.js"></script>
+	<script type="text/javascript" src="./resource/js/worklist.js"></script>
+	<script type="text/javascript" src="./resource/js/contents_ui.js"></script>
+
+	
+	<script type="text/javascript">
+		/*
+		$(document).ready(function() {
+			$('.tobe_section').find('a').eq(0).addClass('active');
+		});
+		*/
+		// 클립보드로 복사하는 기능 생성
+		function copyToClipboard(elementId) {	
+			var aux = document.createElement("input");		
+			aux.setAttribute("value", document.getElementById(elementId).innerHTML);		
+			document.body.appendChild(aux);		
+			aux.select();		
+			document.execCommand("copy");		
+			document.body.removeChild(aux);		
+		}
+
+		$(function(){
+			$('[data-rel="popupEtc"]').layerOpen();
+		})
+	</script>
+	<style>
+		.tab_contents_wrap table .infoBullet {display: none;}
+	</style>
+	
+</head>
+<body>
+	<div id="wrap">
+		<h1>프로젝트 작업 현황 목록</h1>
+
+		<!-- header -->
+		<div class="header">
+			<!-- 1Depth : Tab Navigation -->
+			<div class="tab_nav">
+				<h2>IA.</h2>
+				<ul>
+					<li><a href="javascript:void(0);"><span>공통 & 가이드</span></a></li>
+					<li><a href="javascript:void(0);"><span>조회</span></a></li>
+					<li><a href="javascript:void(0);"><span>이체</span></a></li>
+					<li><a href="javascript:void(0);"><span>금융상품</span></a></li>
+					<li><a href="javascript:void(0);"><span>전체메뉴</span></a></li>
+				</ul>
+			</div>
+			<!-- //1Depth : IA Tab Navigation -->
+			<!-- info_section -->
+			<div class="info_section">
+				<div class="filter_box">
+					<script>inc_filter();</script>
+					<p id="searchResult" style="width:100px;height:50px"></p>
+				</div>
+			</div>
+			<script>
+				$(document).ready(function() {
+					$('#id_search').on('input', function() {
+						var searchTerm = $(this).val().toLowerCase(); // 입력된 검색어를 소문자로 변환
+						var count = 0;
+
+						$('.tab_contents_wrap').find('*').contents().each(function() {
+							if (this.nodeType === 3) { // 텍스트 노드인 경우에만 처리
+								var text = this.textContent.toLowerCase(); // 텍스트를 소문자로 변환
+								var regex = new RegExp(searchTerm, 'g'); // 검색어로 정규식 생성
+
+								if (regex.test(text)) {
+									count++;
+								}
+							}
+						});
+
+						// 검색 결과가 없는 경우 count를 0으로 설정
+						if (searchTerm === '') {
+							count = 0;
+						}
+
+						$('#searchResult').text('  ' + count + '');
+					});
+				});
+			</script>
+			<!-- //info_section -->
+		</div>
+		<!-- //header -->
+
+		<!-- content -->
+		<div id="content" style="min-width:1280px;">
+
+			<!-- --------------------------------------------------
+			// [ 공통 & 가이드 ]
+			-------------------------------------------------- -->
+			<div class="tab_contents_wrap">
+				<h3>공통 & 가이드</h3>
+				<table width="100%;">
+					<script>inc_IAHead();</script>
+					<body>
+						<tr class="">
+							<td class="depth2">가이드</td>
+							<td class="depth3"></td>
+							<td class="depth4"></td>
+							<td class="depth5"></td>
+							<td class="path">
+								<a class="link_view" href="../index.html" onclick="copyToClipboard('path_220000_1')"><span id="path_220000_1">index.html</span></a>
+							</td>
+							<td class="person">조광현</td>
+							<td class="rdate">2023-12-15</td>
+							<td class="mdate">
+							<td class="etc">
+								이슈 사항
+								<div id="20220804" class="pop_inconts">
+									<div>
+										세종대왕
+									</div>
+									<button type="button" class="popBtnClose">닫기</button>
+								</div>
+								<button data-rel="popupEtc" data-target="20220804">+ 더보기</button>
+							</td>
+						</tr>
+						<tr class="new">
+							<td class="depth2"></td>
+							<td class="depth3">버튼</td>
+							<td class="depth4"></td>
+							<td class="depth5"></td>
+							<td class="path">
+								<a href="http://naver.com" target="_blank" onclick="copyToClipboard('path_220000_1')"><span id="path_220000_1">index.html</span></a>
+							</td>
+							<td class="person">이순신</td>
+							<td class="rdate"></td>
+							<td class="mdate">
+							<td class="etc">
+								이슈 사항
+								<div id="20220804" class="pop_inconts">
+									<div>
+										세종대왕
+									</div>
+									<button type="button" class="popBtnClose">닫기</button>
+								</div>
+								<button data-rel="popupEtc" data-target="20220804">+ 더보기</button>
+							</td>
+						</tr>
+						<tr class="hold">
+							<td class="depth2"></td>
+							<td class="depth3">폼</td>
+							<td class="depth4"></td>
+							<td class="depth5"></td>
+							<td class="path">
+								<a href="http://naver.com" target="_blank" onclick="copyToClipboard('path_220000_1')"><span id="path_220000_1">_popup_.html</span></a>
+							</td>
+							<td class="person">저팔계</td>
+							<td class="rdate"></td>
+							<td class="mdate">
+							<td class="etc">
+								이슈 사항
+								<div id="20220804" class="pop_inconts">
+									<div>
+										을지문덕
+									</div>
+									<button type="button" class="popBtnClose">닫기</button>
+								</div>
+								<button data-rel="popupEtc" data-target="20220804">+ 더보기</button>
+							</td>
+						</tr>
+						<tr class="del">
+							<td class="depth2">메인</td>
+							<td class="depth3"></td>
+							<td class="depth4"></td>
+							<td class="depth5"></td>
+							<td class="path">
+								<a href="http://naver.com" target="_blank" onclick="copyToClipboard('path_220000_1')"><span id="path_220000_1">index.html</span></a>
+							</td>
+							<td class="person">세종대왕</td>
+							<td class="rdate"></td>
+							<td class="mdate">
+							<td class="etc">
+								이슈 사항
+								<div id="20220804" class="pop_inconts">
+									<div>
+										을지문덕
+									</div>
+									<button type="button" class="popBtnClose">닫기</button>
+								</div>
+								<button data-rel="popupEtc" data-target="20220804">+ 더보기</button>
+							</td>
+						</tr>
+					</body>
+				</table>
+			</div>
+
+			<!-- --------------------------------------------------
+			// [ 조회 ]
+			-------------------------------------------------- -->
+			<div class="tab_contents_wrap">
+				<h3>조회</h3>
+				<table width="100%;">
+					<script>inc_IAHead();</script>
+					<body>
+						<tr class="">
+							<td class="depth2">계좌조회</td>
+							<td class="depth3"></td>
+							<td class="depth4"></td>
+							<td class="depth5"></td>
+							<td class="path">
+								<a href="http://naver.com" target="_blank" onclick="copyToClipboard('path_220000_1')"><span id="path_220000_1">index.html</span></a>
+							</td>
+							<td class="person">조광현</td>
+							<td class="rdate"></td>
+							<td class="mdate">
+							<td class="etc">
+								이슈 사항
+								<div id="20220804" class="pop_inconts">
+									<div>
+										김유신
+									</div>
+									<button type="button" class="popBtnClose">닫기</button>
+								</div>
+								<button data-rel="popupEtc" data-target="20220804">+ 더보기</button>
+							</td>
+						</tr>
+						<tr class="">
+							<td class="depth2">거래내역조회</td>
+							<td class="depth3"></td>
+							<td class="depth4"></td>
+							<td class="depth5"></td>
+							<td class="path">
+								<a href="http://naver.com" target="_blank" onclick="copyToClipboard('path_220000_1')"><span id="path_220000_1">index.html</span></a>
+							</td>
+							<td class="person">강감찬</td>
+							<td class="rdate"></td>
+							<td class="mdate">
+							<td class="etc">
+								이슈 사항
+								<div id="20220804" class="pop_inconts">
+									<div>
+										이순신
+									</div>
+									<button type="button" class="popBtnClose">닫기</button>
+								</div>
+								<button data-rel="popupEtc" data-target="20220804">+ 더보기</button>
+							</td>
+						</tr>
+						<tr class="">
+							<td class="depth2">거래중지/휴면계좌조회</td>
+							<td class="depth3"></td>
+							<td class="depth4"></td>
+							<td class="depth5"></td>
+							<td class="path">
+								<a href="http://naver.com" target="_blank" onclick="copyToClipboard('path_220000_1')"><span id="path_220000_1">index.html</span></a>
+							</td>
+							<td class="person">세종대왕</td>
+							<td class="rdate"></td>
+							<td class="mdate">
+							<td class="etc">
+								이슈 사항
+								<div id="20220804" class="pop_inconts">
+									<div>
+										이순신
+									</div>
+									<button type="button" class="popBtnClose">닫기</button>
+								</div>
+								<button data-rel="popupEtc" data-target="20220804">+ 더보기</button>
+							</td>
+						</tr>
+					</body>
+				</table>
+			</div>
+
+			<!-- --------------------------------------------------
+			// [ 이체 ]
+			-------------------------------------------------- -->
+			<div class="tab_contents_wrap">
+				<h3>이체</h3>
+				<table width="100%;">
+					<script>inc_IAHead();</script>
+					<body>
+						<tr class="">
+							<td class="depth2">계좌이체</td>
+							<td class="depth3"></td>
+							<td class="depth4"></td>
+							<td class="depth5"></td>
+							<td class="path">
+								<a href="http://naver.com" target="_blank" onclick="copyToClipboard('path_220000_1')"><span id="path_220000_1">index.html</span></a>
+							</td>
+							<td class="person">세종대왕</td>
+							<td class="rdate"></td>
+							<td class="mdate">
+							<td class="etc">
+								이슈 사항
+								<div id="20220804" class="pop_inconts">
+									<div>
+										세종대왕
+									</div>
+									<button type="button" class="popBtnClose">닫기</button>
+								</div>
+								<button data-rel="popupEtc" data-target="20220804">+ 더보기</button>
+							</td>
+						</tr>
+						<tr class="">
+							<td class="depth2">자동이체</td>
+							<td class="depth3"></td>
+							<td class="depth4"></td>
+							<td class="depth5"></td>
+							<td class="path">
+								<a href="http://naver.com" target="_blank" onclick="copyToClipboard('path_220000_1')"><span id="path_220000_1">index.html</span></a>
+							</td>
+							<td class="person">세종대왕</td>
+							<td class="rdate"></td>
+							<td class="mdate">
+							<td class="etc">
+								이슈 사항
+								<div id="20220804" class="pop_inconts">
+									<div>
+										세종대왕
+									</div>
+									<button type="button" class="popBtnClose">닫기</button>
+								</div>
+								<button data-rel="popupEtc" data-target="20220804">+ 더보기</button>
+							</td>
+						</tr>
+						<tr class="">
+							<td class="depth2">예약이체</td>
+							<td class="depth3"></td>
+							<td class="depth4"></td>
+							<td class="depth5"></td>
+							<td class="path">
+								<a href="http://naver.com" target="_blank" onclick="copyToClipboard('path_220000_1')"><span id="path_220000_1">index.html</span></a>
+							</td>
+							<td class="person">세종대왕</td>
+							<td class="rdate"></td>
+							<td class="mdate">
+							<td class="etc">
+								이슈 사항
+								<div id="20220804" class="pop_inconts">
+									<div>
+										세종대왕
+									</div>
+									<button type="button" class="popBtnClose">닫기</button>
+								</div>
+								<button data-rel="popupEtc" data-target="20220804">+ 더보기</button>
+							</td>
+						</tr>
+					</body>
+				</table>
+			</div>
+
+			<!-- --------------------------------------------------
+			// [ 금융상품 ]
+			-------------------------------------------------- -->
+			<div class="tab_contents_wrap">
+				<h3>금융상품</h3>
+				<table width="100%;">
+					<script>inc_IAHead();</script>
+					<body>
+						<tr class="">
+							<td class="depth2">추천상품</td>
+							<td class="depth3"></td>
+							<td class="depth4"></td>
+							<td class="depth5"></td>
+							<td class="path">
+								<a href="http://naver.com" target="_blank" onclick="copyToClipboard('path_220000_1')"><span id="path_220000_1">index.html</span></a>
+							</td>
+							<td class="person">강감찬</td>
+							<td class="rdate"></td>
+							<td class="mdate">
+							<td class="etc">
+								이슈 사항
+								<div id="20220804" class="pop_inconts">
+									<div>
+										이순신
+									</div>
+									<button type="button" class="popBtnClose">닫기</button>
+								</div>
+								<button data-rel="popupEtc" data-target="20220804">+ 더보기</button>
+							</td>
+						</tr>
+						<tr class="">
+							<td class="depth2">ISA</td>
+							<td class="depth3">ISA소개/가입</td>
+							<td class="depth4"></td>
+							<td class="depth5"></td>
+							<td class="path">
+								<a href="http://naver.com" target="_blank" onclick="copyToClipboard('path_220000_1')"><span id="path_220000_1">index.html</span></a>
+							</td>
+							<td class="person">광개토대왕</td>
+							<td class="rdate"></td>
+							<td class="mdate">
+							<td class="etc">
+								이슈 사항
+								<div id="20220804" class="pop_inconts">
+									<div>
+										이순신
+									</div>
+									<button type="button" class="popBtnClose">닫기</button>
+								</div>
+								<button data-rel="popupEtc" data-target="20220804">+ 더보기</button>
+							</td>
+						</tr>
+						<tr class="">
+							<td class="depth2"></td>
+							<td class="depth3">ISA조회/변경</td>
+							<td class="depth4"></td>
+							<td class="depth5"></td>
+							<td class="path">
+								<a href="http://naver.com" target="_blank" onclick="copyToClipboard('path_220000_1')"><span id="path_220000_1">index.html</span></a>
+							</td>
+							<td class="person">광개토대왕</td>
+							<td class="rdate"></td>
+							<td class="mdate">
+							<td class="etc">
+								이슈 사항
+								<div id="20220804" class="pop_inconts">
+									<div>
+										광개토대왕
+									</div>
+									<button type="button" class="popBtnClose">닫기</button>
+								</div>
+								<button data-rel="popupEtc" data-target="20220804">+ 더보기</button>
+							</td>
+						</tr>
+					</body>
+				</table>
+			</div>
+
+
+		</div><!-- //content -->
+	</div><!-- //wrap -->
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Packery Grid Layout Example</title>
+
+<style>
+  * { box-sizing: border-box; }
+  .container { margin: 150px auto; max-width: 1200px; }
+.grid {
+  background: #DDD;
+  max-width: 1200px;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-item {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: #C09;
+  border: 2px solid hsla(0, 0%, 0%, 0.5);
+}
+
+.grid-item--width2 {width: 200px;}
+.grid-item--width3 {width: 300px;}
+.grid-item--width4 {width: 400px;}
+.grid-item--height2 {height: 200px;}
+.grid-item--height3 {height: 300px;}
+.grid-item--height4 {height: 400px;}
+
+.grid-item:hover {
+  border-color: hsla(0, 0%, 100%, 0.5);
+  cursor: move;
+}
+
+.grid-item.is-dragging,
+.grid-item.is-positioning-post-drag {
+  background: #C90;
+  z-index: 2;
+}
+
+.packery-drop-placeholder {
+  outline: 3px dashed hsla(0, 0%, 0%, 0.5);
+  outline-offset: -6px;
+  -webkit-transition: -webkit-transform 0.2s;
+          transition: transform 0.2s;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1></h1>
+<div class="grid">
+    <div class="grid-item grid-item--width2">1</div>
+    <div class="grid-item grid-item--height2">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item grid-item--width2 grid-item--height2">5</div>
+    <div class="grid-item grid-item--width2">6</div>
+    <div class="grid-item grid-item--width2">7</div>
+    <div class="grid-item grid-item--height2">8</div>
+    <div class="grid-item">9</div>
+    <div class="grid-item grid-item--width2">10</div>
+    <div class="grid-item grid-item--height2">11</div>
+    <div class="grid-item">12</div>
+    <div class="grid-item">13</div>
+    <div class="grid-item grid-item--width2 grid-item--height2">14</div>
+    <div class="grid-item">15</div>
+    <div class="grid-item grid-item--width2">16</div>
+    <div class="grid-item">17</div>
+    <div class="grid-item">18</div>
+    <div class="grid-item grid-item--width3">19</div>
+    <div class="grid-item">20</div>
+</div>
+
+<style>
+  .container {max-width: 100% !important;}
+  .grid {margin: auto;}
+  .grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align:center;
+    font-size: 3rem;
+    color: white;
+  }
+</style>
+
+
+
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<script src='https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.js'></script>
+<script src="dist/packery.pkgd.js"></script>
+<script>
+    var $grid = $('.grid').packery({
+    itemSelector: '.grid-item',
+    columnWidth: 100
+});
+
+  // collection of Draggabillies
+  var draggies = [];
+  var isDrag = false;
+
+  // make all grid-items draggable
+  $grid.find('.grid-item').each( function( i, gridItem ) {
+      var draggie = new Draggabilly( gridItem );
+      draggies.push( draggie );
+      // bind drag events to Packery
+      $grid.packery( 'bindDraggabillyEvents', draggie );
+  });
+</script>
+
+
+</body>
+</html>

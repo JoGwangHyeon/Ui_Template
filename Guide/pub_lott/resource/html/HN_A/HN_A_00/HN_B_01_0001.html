@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/jquery-ui.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap n22UI moneybox main">
+        <!-- HEADER -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <!-- 2022-08-24 | 헤더 텍스트 변경-->
+            <h1 class="app-header__title">머니박스 통장</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //HEADER -->
+
+        <!-- CONTENT -->
+        <div id="content" class="app-main moneybox-cont">
+             <!-- 2022-08-19 마크업 변경// -->
+             <div class="total-storage-box top-fixed">
+                <!-- 2022-08-19 | 버튼(.manage-btn)으로 수정 -->
+                <button type="button" class="manage-btn" title="머니박스 통장 관리 페이지 이동 버튼" data-ecrm="Adn1010">관리</button>
+                <div class="fixed-box">
+                    <!-- 2022-09-01 띄어쓰기 수정 -->
+                    <p class="total-storage-tit">내 통장금액</p>
+                    <span class="total-storage-amount">
+                        <!-- 2022-08-22 | 내 통장금액의 잔액 tap 시 계좌 거래내역으로 이동 / button 추가 -->
+                        <!--2022-9-19 text 원정렬위한 em 테그추가-->
+                        <button type="button" class="go-to-history" title="계좌 거래내역으로 이동 버튼" data-ecrm="Kep1010"><span>0<em>원</em></span> </button>
+                        <!--2022-9-19 text 원정렬위한 em 테그추가-->
+                        <!-- 2022-08-18 말풍선 추가 | 0원일때만 노출 -->
+                        <div class="moneybox-emp-bubble">
+                            <p>돈을 넣어주세요 🙂</p>
+                        </div>
+                    </span>
+                </div>
+            </div>
+            <!-- //2022-08-19 마크업 변경 -->
+
+             <!-- 항상노출 2022-08-30 -->
+             <div class="classifiable">
+                <em>분류 가능
+                    <div class="tooltip" data-tooltip="paragraph" data-options='{"position": "top"}'>
+                        <button type="button" class="tooltip__open" data-tooltip-button="open" aria-label="분류 가능 툴팁 열기"></button>
+                        <div class="tooltip__panel" data-tooltip-panel="false">
+                            <div class="tooltip__column"><!-- 2차 기획현행화 | 텍스트 수정 -->
+                                <!-- 2022-09-23 텍스트 수정 -->
+                                <p class="tooltip__description" data-tooltip="focus"> 내 통장금액에서 파킹, 소비, 챌린지
+                                    <br> 금액을 제외한 출금 가능한 금액이에요
+                                </p>
+                            </div>
+                            <button type="button" class="tooltip__close" data-tooltip-button="close" aria-label="툴팁 닫기"></button>
+                        </div>
+                    </div>
+
+                </em>
+                <p><button type="button" class="space-selection-btn" title="금액 보관 이동 대상 선택" data-element="modal__open" data-target="#spaceSelection" data-ecrm="Can1010">0</button> 원</p>
+            </div>
+            <div class="amount-change-box">
+                <div class="amount-change-tit">
+                    <em>파킹</em>
+                    <!-- 2022-09-30 금리변경 반영 -->
+                    <span>하루만 보관해도 연 3.0%</span>
+                </div>
+                <!-- 최초 (비활성화 상태)-->
+                <span class="total-storage-default">최대 <em>300</em><span>만원</span></span>
+
+                <!-- 사용중-->
+                <!--2022-08-22 | 버튼으로 수정 및 클래스 추가
+                <span class="total-storage-amount">
+                    <button type="button" class="go-to-parking-detail" title="파킹 상세 화면으로 이동"><span>1,500,000</span> 원</button> 
+                </span>
+                -->
+                <!---->
+                 <!--2022-08-26 | 이용중 시에 3point 노출 
+                    <button type="button" class="button three-point" title="three-point" data-element="modal__open" data-target="#combobox_1"   data-ecrm="Pag1020" style="display:none">
+
+                    </button>
+                     -->
+
+                <!-- 2022-08-24 더미 모션이미지 적용 -->
+                <div id="svgMoneyBoxArea01" class="icon-svg-area"></div>
+
+                <!-- 시작 버튼 -->
+                <button class="start-button" >시작하기</button>
+
+                <!--슬라이더
+                <div class="slider-controller-wrap">
+                    <div class="slider-minus"></div>
+                    <div class="slider">
+                        <div class="ui-slider-handle slider-controller"><div></div></div>
+                    </div>
+                    <div class="slider-plus"></div>
+                </div>
+                -->
+            </div>
+
+            <!--2022-08-22 | 소비 순서 변경시 배너도 고정되어 움직이기 위해 감싸둔 상태-->
+            <div class="main-consum-box-wrap">
+                <div class="amount-change-box main-consum-box">
+                    <div class="amount-change-tit">
+                        <em>소비</em>
+                        <span>체크카드 전용</span>
+                    </div>
+                    <!-- 최초 (비활성화 상태)-->
+                    <span class="total-storage-default">소비만 따로 관리</span>
+                    <!-- 사용중-->
+                    <!--2022-08-22 | 버튼으로 수정 및 클래스 추가
+                    <span class="total-storage-amount">
+                        <button type="button" class="go-to-consume-detail" title="소비 상세 화면으로 이동"><span>2,550,000 </span> 원</button>
+                    </span>
+                    -->
+
+
+                    <!-- 2022-08-24 더미 모션이미지 적용 -->
+                    <div id="svgMoneyBoxArea02" class="icon-svg-area"></div>
+                    
+                    <!-- 시작 버튼 -->
+                    <button type="button" class="start-button">시작하기</button>
+
+                    <!--슬라이더-->
+                    <div class="slider-controller-wrap" style="display:none">
+                        <div class="slider-minus"></div>
+                        <div class="slider">
+                            <div class="ui-slider-handle slider-controller"><div></div></div>
+                        </div>
+                        <div class="slider-plus"></div>
+                    </div>
+
+                    <!--2022-08-26 | 이용중 시에 3point 노출 
+                    <button type="button" class="button three-point" title="three-point" data-element="modal__open" data-target="#combobox_1"  data-ecrm="Spd1020" style="display:none">
+
+                    </button>
+                     -->
+                </div>
+
+                <!-- 2022-08-19 | button 태그 수정 -->
+                <!-- 2022-08-24 | go-to-account-book 클래스 추가 -->
+                <button type="button" class="detail-check go-to-account-book" title="가계부 상세 화면 이동 버튼" data-ecrm="Ler1010">
+                    <div class="detail-check-icon type01">
+                        <div>
+                            <em>수입과 지출 확인하려면</em>
+                            <p>가계부 바로가기</p>
+                        </div>
+                    </div>
+                </button>
+            </div>
+
+            <!-- to.DEV 2022-08-19 달성시 goal 클래스 추가 필요-->
+            <!--2022-08-24 | challenge에 goal 클래스 추가시 완료상태 트로피 등장-->
+            <div class="amount-change-box challenge">
+                <div class="amount-change-tit">
+                    <em>챌린지</em>
+                    <!-- 2022-08-24 | 텍스트 수정-->
+                    <!-- 챌린지 달성 시 - 말풍선 등장 -->
+                    <!-- <div class="moneybox-emp-bubble">
+                        <p>🎉  리워드를 받으세요!</p>
+                    </div> -->
+               
+                <!--
+                    <span>매일 10,000원/1주</span> -->
+
+                    <!-- 2022-08-24 | 텍스트 수정-->
+                    <span class="unsubsigned-txt">1일 1저축</span>
+                   
+                </div>
+                <!-- 미가입 시 -->
+                <span class="total-storage-amount">돈 모으고 혜택 받고</span>
+
+                <!-- 미가입 시(지난 이력 有 등장)-->
+                <button type="button" class="my-challenge" style="display: none;" title="">내 챌린지</button>
+
+               
+                <div class="challenging-process"  style="display: none;">
+                     <!--2022-08-22 | 버튼으로 수정 및 클래스 추가
+                    <span class="total-storage-amount">
+                        <button type="button" class="go-to-challenge-detail" title="챌린지 상세 화면으로 이동"><span>50,000</span> 원</button>     
+                    </span>
+                    -->
+                     <!-- 챌린지 진행 중 라벨-->
+                    <div class="challenge-label"><span>D-2</span></div>
+
+                    <!-- 챌린지 달성 라벨- 
+                    <div class="challenge-label success"><span>성공</span></div>
+-->
+                    <!-- 챌린지 실패 라벨- 
+                    <div class="challenge-label failed"><span>실패</span></div>
+-->
+                </div>
+
+                
+            <!-- 2022-08-24 더미 모션이미지 적용 -->
+            <div id="svgMoneyBoxArea03" class="icon-svg-area"></div>
+
+                <!-- 시작 버튼 -->
+                <button class="start-button" >도전하기</button>
+
+                <!-- 진행 중 -->
+                <ul style="display:none;">
+                    <li class="check"><i>6</i></li>
+                    <li class="check"><i>6</i></li>
+                    <li class="check"><i>6</i></li>
+                    <li class="check"><i>6</i></li>
+                    <li class="check"><i>6</i></li>
+                    <li><i>6</i></li>
+                    <li><i>6</i></li>
+
+                    <li class="trophy"><i></i></li>
+                </ul>
+
+                <!--2022-08-26 | 이용중 시에 3point 노출 
+                    <button type="button" class="button three-point" title="three-point" data-element="modal__open" data-target="#combobox_1"  data-ecrm="Che1020" style="display:none">
+
+                    </button>
+                     -->
+
+            </div>
+            <!-- 2022-08-19 | 이용안내 배너 button 태그 수정 / using-detail-info 클래스 추가 -->
+            <button class="detail-check using-detail-info" title="이용안내 팝업 노출 버튼" data-ecrm="Inn1010">
+                <div class="detail-check-icon type02">
+                    <div>
+                        <em>이용방법이 궁금하다면</em>
+                        <p>이용안내 보기</p>
+                    </div>
+                </div>
+            </button>
+
+            <!-- //CONTENT -->
+        </div>
+
+        <button class="top-button" data-ecrm="Top1010"></button>
+    </div>
+
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/ui/jquery-ui.js"></script>
+    <script src="../../../../resource/library/jquery/jquery.ui.touch-punch.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <!--  2022-08-08 lottie 플러그인 추가 -->
+    <script src="../../../../resource/library/lottie/lottie.min.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
+    <script src="../../../../resource/js/ui/common_n22UI.js"></script>
+    <script type="text/javascript">
+		var moneyBoxSlider = function(obj){
+			var slider = $(obj);
+            
+            // 2022-10-08 클릭영역 변경 요건으로 인한 이벤츠 추가.=====================
+            var moveFlag = false;
+
+            var initMotion = function(target){
+                var me = $(target).parents('.amount-change-box');
+                me.addClass('transition');
+                //console.log('금액조정팝업오픈')
+                setTimeout(function(){
+                    me.removeClass('transition');
+                },400);
+            }
+            $('.amount-change-box .slider-controller-wrap').on('touchstart', function(){
+                moveFlag = false;
+            })
+            $('.amount-change-box .slider-controller-wrap').on('touchmove', function(){
+                moveFlag = true;
+            })
+            $('.amount-change-box .slider-controller-wrap').on('touchend', function(){
+                if(moveFlag){
+                    initMotion(this);
+                }
+            })
+            function refreshSwatch(){
+                setTimeout(function(){
+                    moveFlag = true;
+                },10)
+                return false;
+            }
+
+            // ===================== 2022-10-08 클릭영역 변경 요건으로 인한 이벤츠 추가.
+            slider.slider({
+                orientation: "horizontal",
+                range: "min",
+                max: 255,
+                value: 127,
+                slide: refreshSwatch
+            })
+		}
+
+        //2022-08-29 추가
+        function moneyboxBubbleHide(){
+            var container = $('#wrap.moneybox.main');
+            var bubble = container.find('.moneybox-emp-bubble');
+            var windowHeight = window.innerHeight;
+            $('#wrap.moneybox.main').click(function(){
+                var scrTop = $(window).scrollTop();
+                bubble.each(function(){
+                    var me = $(this)
+                    var rectPos = this.getBoundingClientRect().y;
+                    if(windowHeight + scrTop > rectPos){
+                        me.addClass('hide');
+                    }
+                })
+            })
+        }
+
+        $(document).ready(function(){
+            moneyBoxSlider('.slider');
+            //2022-08-19 스크롤시 fixed영역 스크립트 적용
+            hanaprodMainUI.sticky('.classifiable');//2022-09-01 수정
+
+            //2022-08-18 TOP 버튼 스크립트 추가
+            $('.moneybox.main .top-button').on('click', function(){
+                $('html, body').animate({
+                    'scrollTop':0
+                }, 200, 'easeOutExpo')
+            })
+
+
+            //2022-10-08 추가 및 수정 영역 ===========================================================================
+            /*
+                function setSVGApply (){
+
+                }
+
+                2022-10-08 common_n22에 있는 setSVGApply 함수로 업데이트 해주세요.
+                2022-10-08 json파일명 변경 및 호출방식 변경 
+                        테마 1 ~ 9
+                        theme01.json  ~ theme09.json
+            */
+           /* 2022-10-11 테마변경전 기본 세팅 값 입니다.*/
+            setSVGApply('#svgMoneyBoxArea01', '/pub/resource/images/C/lottie/theme01.json', true, true);//j06
+            setSVGApply('#svgMoneyBoxArea02', '/pub/resource/images/C/lottie/theme02.json', true, true);//j15
+            setSVGApply('#svgMoneyBoxArea03', '/pub/resource/images/C/lottie/theme07.json', true, true);//j01
+            /*
+            setSVGApply('#svgMoneyBoxArea01', '/pub/resource/images/C/lottie/theme04.json',false, true);//j20
+            setSVGApply('#svgMoneyBoxArea01', '/pub/resource/images/C/lottie/theme05.json',false, true);//j19
+            setSVGApply('#svgMoneyBoxArea01', '/pub/resource/images/C/lottie/theme06.json',false, true);//j18
+            setSVGApply('#svgMoneyBoxArea01', '/pub/resource/images/C/lottie/theme07.json',false, true);//j16
+            setSVGApply('#svgMoneyBoxArea01', '/pub/resource/images/C/lottie/theme08.json',false, true);//j17
+            setSVGApply('#svgMoneyBoxArea01', '/pub/resource/images/C/lottie/theme09.json',false, true);//j21
+            */
+            
+            
+            function scrollMotion(){
+                $('.moneybox-cont .icon-svg-area').each(function(){
+                    var _this = $(this);
+                    var interactionPos = _this.get(0).getBoundingClientRect().top;
+                    var clientH = $('body').get(0).clientHeight;
+
+                    if(interactionPos+(_this.height()/2) > 0 && interactionPos+(_this.height()-20) < clientH){
+                        if(_this.data('lottie') && !_this.is('.playing')){
+                            _this.addClass('playing');
+                            _this.trigger('play');
+                        }
+                    }else{
+                        _this.trigger('reInit');
+                        _this.removeClass('playing');
+                    }
+                })
+            }
+
+            setTimeout(function(){
+                $(window).scroll(scrollMotion);
+            },20)
+            
+            //======================================================= 2022-10-08 추가 및 수정 영역 ========
+
+
+            //body event bindng
+            moneyboxBubbleHide();
+        })
+        
+
+    </script>
+
+</body>
+</html>

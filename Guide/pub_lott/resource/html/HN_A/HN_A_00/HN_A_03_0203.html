@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <!-- 2022 상품몰 고도화 추가 -->
+    <link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap">
+
+        <!-- header -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">헤더</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //header -->
+
+        <!--Content-->
+        <div id="content" class="app-main">
+
+            
+            <!--계좌선택버튼-->
+            <div class="container">
+                <div class="button-wrap">
+                    <!--
+                        기간 선택 스크롤이 화면상에 노출되는 시점에 호출해줘야합니다.
+                         hanaProdUI.multipleSelect('uiDialogMultiple1')
+                     -->
+                    <button
+                        type="button"
+                        class="button button--positive"
+                        data-element="modal__open"
+                        data-target="#CCOM0015002_P02"
+                        id="dialOpenBtn"
+                    >
+                        일자선택(3)
+                    </button>
+                </div>
+            </div>
+            <!--//계좌선택버튼-->
+
+            <!-- 싱글버튼 테스트 -->
+            <div class="container">
+                <div class="button-wrap">
+                    <!--
+                        기간 선택 스크롤이 화면상에 노출되는 시점에 호출해줘야합니다.
+                         hanaProdUI.multipleSelect('uiDialogMultiple1')
+                     -->
+                    <button
+                        type="button"
+                        class="button button--positive"
+                        data-element="modal__open"
+                        data-target="#CCOM0015002_P03"
+                        id="dialOpenBtn2"
+                    >
+                        일자선택(1)
+                    </button>
+                </div>
+            </div>
+            
+
+            <div class="container">
+                <div class="button-wrap">
+                    <!--
+                        기간 선택 스크롤이 화면상에 노출되는 시점에 호출해줘야합니다.
+                         hanaProdUI.multipleSelect('uiDialogMultiple1')
+                     -->
+                    <button
+                        type="button"
+                        class="button button--positive"
+                        data-element="modal__open"
+                        data-target="#CCOM0015002_P04"
+                        id="dialOpenBtn3"
+                    >
+                        직접선택만 있는 case
+                    </button>
+                </div>
+            </div>
+
+        
+            <!--계좌선택모달-->
+            <div id="CCOM0015002_P02" class="modal modal--slide multiple-date-slide" data-element="modal__element">
+                <div class="modal__container modal__container--interval" data-element="modal__element-container">
+                    <div class="modal__header modal__header--interval">
+                        <h1 class="modal__header--title">$Title</h1>
+                    </div>
+                    <div class="modal__contents modal__contents--inner-tab">
+                        <!-- 
+                            2022-08-10 간편설정이 없어야 하는경우 initIndex :1 로 설정하면 탭이 사라집니다.
+                        -->
+                        <div data-element="tab" data-options='{"initIndex":0}'>
+                            <div class="tab-wrap">
+                                <ul class="tab-wrap__menu">
+                                    <li class="tab-wrap__item" data-element="tab__list">
+                                        <a href="#" class="tab-wrap__button" data-element="tab__anchor">간편 설정</a>
+                                    </li>
+                                    <li class="tab-wrap__item" data-element="tab__list">
+                                        <a href="#" class="tab-wrap__button" data-element="tab__anchor">직접 설정</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pualugin-tab__panel" data-element="tab__panel">
+                                <!-- 2022-07-14 달력 컴포넌트 추가 --->
+                                <div class="modal__contents--multiple">
+                                    <div class="container__panel  col-1">
+                                        <div class="list-section">
+                                            <!-- 옵션 아이템 동적 생성 -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pualugin-tab__panel" data-element="tab__panel">
+                                <!-- 2022-07-14 달력 컴포넌트 추가 --->
+                                <div class="modal__contents--multiple">
+                                    <div class="container__panel col-3">
+                                        <div class="list-section">
+                                            <!-- 옵션 아이템 동적 생성 -->
+                                        </div>
+                                        <div class="list-section">
+                                            <!-- 옵션 아이템 동적 생성 -->
+                                        </div>
+                                        <div class="list-section">
+                                            <!-- 옵션 아이템 동적 생성 -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="button-fixed">
+                        <div class="button-wrap">
+                            <button type="button" class="button button--negative button--span3" data-element="modal__close">취소</button>
+                            <button type="button" class="button button--positive" data-element="modal__close">확인</button>
+                        </div>
+                    </div>
+
+                    <!--<button type="button" class="modal__btn--close" data-element="modal__close" title="닫기"></button>-->
+                </div>
+            </div>
+            <!--//계좌선택모달-->
+
+            <!-- 싱글 다이얼 테스트 -->
+                <div id="CCOM0015002_P03" class="modal modal--slide multiple-date-slide" data-element="modal__element">
+                <div class="modal__container modal__container--interval" data-element="modal__element-container">
+                    <div class="modal__header modal__header--interval">
+                        <h1 class="modal__header--title">$Title</h1>
+                    </div>
+                    <div class="modal__contents modal__contents--multiple">
+                        <div class="container__panel  col-1">
+                            <div class="list-section">
+                                <!-- 옵션 아이템 동적 생성 -->
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="button-fixed">
+                        <div class="button-wrap">
+                            <button type="button" class="button button--negative button--span3" data-element="modal__close">취소</button>
+                            <button type="button" class="button button--positive" data-element="modal__close">확인</button>
+                        </div>
+                    </div>
+
+                    <!--<button type="button" class="modal__btn--close" data-element="modal__close" title="닫기"></button>-->
+                </div>
+            </div>
+
+
+            <!-- 2022-08-10 직접선택만 있는 케이스 추가
+                 마크업 구조는 탭이 있는 케이스와 동일합니다. initidx 옵션값만 다름. 
+            -->
+            <div id="CCOM0015002_P04" class="modal modal--slide multiple-date-slide" data-element="modal__element">
+                <div class="modal__container modal__container--interval" data-element="modal__element-container">
+                    <div class="modal__header modal__header--interval">
+                        <h1 class="modal__header--title">$Title</h1>
+                    </div>
+                    <div class="modal__contents modal__contents--inner-tab">
+                        <!-- 
+                            2022-08-10 간편설정이 없어야 하는경우 initIndex :1 로 설정하면 탭이 사라집니다.
+                        -->
+                        <div data-element="tab" data-options='{"initIndex":1}'>
+                            <div class="tab-wrap">
+                                <ul class="tab-wrap__menu">
+                                    <li class="tab-wrap__item" data-element="tab__list">
+                                        <a href="#" class="tab-wrap__button" data-element="tab__anchor">간편 설정</a>
+                                    </li>
+                                    <li class="tab-wrap__item" data-element="tab__list">
+                                        <a href="#" class="tab-wrap__button" data-element="tab__anchor">직접 설정</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pualugin-tab__panel" data-element="tab__panel">
+                                <!-- 2022-07-14 달력 컴포넌트 추가 --->
+                                <div class="modal__contents--multiple">
+                                    <div class="container__panel  col-1">
+                                        <div class="list-section">
+                                            <!-- 옵션 아이템 동적 생성 -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pualugin-tab__panel" data-element="tab__panel">
+                                <!-- 2022-07-14 달력 컴포넌트 추가 --->
+                                <div class="modal__contents--multiple">
+                                    <div class="container__panel col-3">
+                                        <div class="list-section">
+                                            <!-- 옵션 아이템 동적 생성 -->
+                                        </div>
+                                        <div class="list-section">
+                                            <!-- 옵션 아이템 동적 생성 -->
+                                        </div>
+                                        <div class="list-section">
+                                            <!-- 옵션 아이템 동적 생성 -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="button-fixed">
+                        <div class="button-wrap">
+                            <button type="button" class="button button--negative button--span3" data-element="modal__close">취소</button>
+                            <button type="button" class="button button--positive" data-element="modal__close">확인</button>
+                        </div>
+                    </div>
+
+                    <!--<button type="button" class="modal__btn--close" data-element="modal__close" title="닫기"></button>-->
+                </div>
+            </div>
+
+
+        </div>
+        <!--//Content-->
+    </div>
+
+
+
+    <!-- 공통 script -->
+<script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+<script src="../../../../resource/js/ui/common_n22UI.js"></script>
+
+<script type="text/javascript">
+
+//퍼블 화면 확인용
+$(function(){
+    hanaProdUI.savgJoinPageInit();
+    $('#dialOpenBtn').click(function(){
+        //멀티 다이얼 호출
+        var param = {
+            min : 0,
+            max : 48,
+            /* 간편설정이 존재할경우 */
+            items : [{
+                "code" : 1,
+                "codeName" : "1개월"
+            },{
+                "code" : 2,
+                "codeName" : "2개월"
+            },{
+                "code" : 3,
+                "codeName" : "3개월"
+            }]
+        };
+
+        hanaProdUI.dialSelect('#CCOM0015002_P02', param , function(ui){
+            console.log('callback', ui)
+        });
+    })
+
+    
+    $('#dialOpenBtn2').click(function(){
+        var param = [{
+                        "code" : 1,
+                        "codeName" : "1개월"
+                    },{
+                        "code" : 2,
+                        "codeName" : "2개월"
+                    },{
+                        "code" : 3,
+                        "codeName" : "3개월"
+                    },{
+                        "code" : 4,
+                        "codeName" : "4개월"
+                    }];
+
+        //싱글 다이얼 호출
+        hanaProdUI.dialSelect('#CCOM0015002_P03', param, function(ui){
+            console.log('callback', ui)
+        });
+    })
+
+    //2022-08-10 직접 선택만 있는 케이스
+    $('#dialOpenBtn3').click(function(){
+        //멀티 다이얼 호출
+        var param = {
+            min : 6,
+            max : 48
+        };
+
+        hanaProdUI.dialSelect('#CCOM0015002_P04', param , function(ui){
+            console.log('callback', ui)
+        });
+    })
+});
+</script>
+</body>
+
+</html>

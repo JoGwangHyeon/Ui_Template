@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+
+<!-- 2022 상품몰 고도화 추가 -->
+<link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+
+<body>
+	<!-- 201012 이수인-펫사랑적금 -->
+    <div class="modal-full modal-full--button">
+        <div class="modal__header noCapture">
+            <h1 class="modal__header--title">사랑의서약서</h1>
+        </div>
+        <div class="modal__contents">
+            <div class="container">
+				<div class="petlove__wrap">
+					<img src="../../../images/C/n22_img_petlove_promise_mo.png" alt="사랑의 서약서">
+					<div class="petlove__inner">
+                        <h2>사랑의 서약서</h2>
+						<p class="petlove__promise">나 <strong class="owner__name" v-text="custNm">예금주</strong>는(은) <strong class="pet__name" v-text="petNm">반려동물이름</strong>을(를) 변치않는 마음으로 이해하고 사랑하며 평생을 책임질 것을 엄숙하게 서약합니다.</p>
+						<span class="promise__date" v-text='formatDate(curDate, ".")'>2022.06.23</span>
+					</div>
+					<div class="petlove__stamp">
+						<div class="stamp__inner">
+							<span v-text="custNm">예금주</span>
+							<span v-text="petNm">펫이름</span>
+						</div>
+					</div>
+				</div>
+            </div>
+        </div>
+        <div class="button-fixed noCapture">
+            <div class="button-wrap">
+                <button type="button" id="saveImage" class="button button--positive">이미지 저장</button>
+            </div>
+        </div>
+        <button type="button" class="modal__btn--close noCapture" data-element="modal__close" onclick="javascript:HanaClosePopup('','');" title="닫기"></button>
+    </div>
+	<!-- //201012 이수인-펫사랑적금 -->
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

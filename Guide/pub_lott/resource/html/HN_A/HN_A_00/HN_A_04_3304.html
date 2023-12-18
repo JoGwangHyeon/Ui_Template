@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap n22UI">
+        <!-- HEADER -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">전세대출</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //HEADER -->
+
+        <!-- CONTENT -->
+        <div id="content" class="app-main prodmall-detail-loans">
+            <div class="prodmall-section section-top">
+                <div>
+                    <em>원큐 다둥이전세론</em>
+                    <div class="tit-default">미성년 자녀 2명 이상이면<br>보증금의 90%까지</div>
+                </div>
+                <div class="content-wrap">
+                    <div class="main-desc">
+                        <em>최대한도</em>
+                        <strong><em>2억원</em></strong>
+                    </div>
+					<div class="half-cont">
+						<dl>
+							<dt>금리(2022.05.25 기준)</dt>
+							<dd>최저 연 3.620~최고 연 4.620%</dd>
+						</dl>
+					</div>
+                    <div class="util-btn-group finance-detail__button-wrap">
+                            <!-- 2022-08-10 활성화시 util-btn에 추가클래스 부여 is-active
+                            <button type="button" class="util-btn icon-favorite is-active">관심상품</button>
+                             -->
+                        <button type="button" class="util-btn icon-share" data-ecrm="SHE1010">공유하기</button>
+                        <button type="button" class="util-btn icon-favorite">
+                                <i class="icon-heart icon-heart--large" aria-hidden="true"></i>
+                            </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prodmall-section">
+                <div class="tit-default txt-bold">신청부터 실행까지<br>하나원큐로 간편하게</div>
+                <div class="interaction-area mt-30">
+                    <span class="bg-bar"></span>
+                        <!-- 2022-09-23 class five-steps 로 변경 -->
+                        <ul class="steps five-steps">
+                            <!-- 2022-09-14 class="other-action" 추가-->
+                            <!-- 2022-09-20 span 태그 추가, 클래스 thumb 추가, bg -> img로 변경-->
+                            <!-- 2022-09-22 span img -> bg로 변경-->
+                            <li class="one other-action">한도/금리 조회<span>ㅣ 손님</span></li>
+                            <li class="two other-action">대출 신청 및 서류 제출<span>ㅣ 손님</span></li>
+                            <!--2022-09-14 text수정-->
+                            <li class="three other-action">대출 심사 및 승인 안내<span>ㅣ 은행</span></li>
+                            <!--2022-09-14 text수정-->
+                            <li class="four other-action">대출 계약서 작성<span>ㅣ 손님</span></li>
+                            <!--2022-09-14 text수정-->
+                            <li class="five other-action">대출 실행 및 대출금 입금<span>ㅣ 손님</span></li>
+                        </ul>
+                </div>
+            </div>
+
+            <div class="prodmall-section pb-0">
+                <div class="tit-default">신청 전 확인해 주세요!</div>
+                <div class="finance-box-wrap prodmall-notice">
+                    <!-- 상품정보 -->
+                    <div class="white-box white-box--fund" data-element="toggle"><!-- 내용펼침 class: data-options="{&quot;isOpened&quot;:true}" -->
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">상품정보</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+                        <div class="white-box__content" data-element="toggle__panel" style="display: none;">
+                            
+                            <!-- custom사용 -->
+                             
+                            <div class="tit-small">대출대상</div>
+                            <div><p class="text-guide">주택임대차계약을 체결한 국민인 거주자로 아래의 조건을 모두 충족하는 손님</p>
+<div class="guide-wrap">
+  <ol class="agree-view__list fw-300 color-333">
+	<li class="agree-view__list__item" style="overflow:hidden"><p style="float:left">①</p><p style="padding-left:1.375rem">현재 미성년자(만 19세미만)인 자녀가 2명 이상인 손님</p></li>
+	<li class="agree-view__list__item" style="overflow:hidden"><p style="float:left">②</p><p style="padding-left:1.375rem">임차(전월세)보증금 7억원 이하(지방소재 가구는 5억원 이하)인 임대차계약을 체결한 손님</p></li>
+	<li class="agree-view__list__item" style="overflow:hidden"><p style="float:left">③</p><p style="padding-left:1.375rem">임차(전월세)보증금의 5% 이상 지급한 19세 이상의 세대주</p></li>
+	<li class="agree-view__list__item" style="overflow:hidden"><p style="float:left">④</p><p style="padding-left:1.375rem">세대주와 동일세대를 이루고 있는 세대원 중 다음 하나에 해당하 는 손님</p>
+	  <ul class="guide-sub-list" style="padding-left:1.375rem">
+		<li class="guide-sub-list__item">배우자</li>
+		<li class="guide-sub-list__item">직계존비속 및 그의 배우자 </li>
+		<li class="guide-sub-list__item">세대주 및 배우자의 형제 자매</li>
+		<li class="guide-sub-list__item">배우자의 직계존비속 및 그의 배우자</li>
+	  </ul>
+	</li>
+	<li class="agree-view__list__item" style="overflow:hidden"><p style="float:left">⑤</p><p style="padding-left:1.375rem">부동산중개업소를 통해 전세계약을 체결한 손님</p></li>
+	<li class="agree-view__list__item" style="overflow:hidden"><p style="float:left">⑥</p><p style="padding-left:1.375rem">스크래핑으로 재직 및 소득확인이 가능한 재직 1년 이상 근로소득자</p></li>
+	<li class="agree-view__list__item" style="overflow:hidden"><p style="float:left">⑦</p><p style="padding-left:1.375rem">기존 전세자금대출이 없는 손님<br>단, 이사하면서 기존 전세대출을 상환하는 경우는 가능
+    </p></li>
+  </ol>
+</div></div>
+                             
+                            <div class="tit-small">대상주택</div>
+                            <div><p class="text-guide">아파트, 연립/다세대주택, 단독/다가구주택, 주거용오피스텔</p>
+<div class="guide-wrap">
+	<ul class="guide-sub-list guide-sub-list--gray guide-sub-list--large">
+		<li class="guide-sub-list__item">미등기 주택, 다중주택, 제외</li>
+	</ul>
+</div></div>
+                             
+                            <div class="tit-small">대출한도</div>
+                            <div><p class="text-guide">최대 2억원 범위 내 아래 ①과 ② 중 적은 금액으로 함</p>
+<div class="guide-wrap">
+	<ol class="agree-view__list fw-300 color-333">
+		<li class="agree-view__list__item">① 임차(전월세)보증금의 90% 이내</li>
+		<li class="agree-view__list__item">② 신청인 연간소득의 최대 4.5배 이내</li>
+	</ol>
+</div></div>
+                             
+                            <div class="tit-small">대출기간</div>
+                            <div><p class="text-guide">임차계약만기일 범위 내 6개월 이상 2년 이내<br>(최대 20년까지 연장 가능)</p>
+<div class="guide-wrap">
+	<ul class="guide-sub-list guide-sub-list--gray guide-sub-list--large">
+		<li class="guide-sub-list__item">대출만기 시 자동연장 되지 않으며, 임대차계약내용 변경(종료) 및 신용도 및 주택 보유수, 주택가격에 따라 연장이 제한될 수 있으므로 반드시 만기 1개월 전에 대출 관리점으로 사전 상담 하시기 바랍니다.</li>
+	</ul>
+</div></div>
+                             
+                            <div class="tit-small">대출신청시기</div>
+                            <div><div class="guide-wrap">
+	<ul class="guide-list guide-list--large">
+		<li class="guide-list__item">신규 계약 : 임대차계약서 상 잔금일 기준 1개월 전부터 12영업일 이전까지 대출 신청 가능</li>
+		<li class="guide-list__item">갱신 계약 제외</li>
+	</ul>
+</div></div>
+                             
+                            <div class="tit-small">담보</div>
+                            <div><p class="text-guide">주택금융신용보증서(90% 담보)</p></div>
+                             
+                            <div class="tit-small">상환방식</div>
+                            <div><p class="text-guide">만기일시상환, 이자 매월 후취</p></div>
+                             
+                            <div class="tit-small">이자계산 방법</div>
+                            <div><div class="guide-wrap">
+	<ul class="guide-list guide-list--large">
+		<li class="guide-list__item">대출금에 연이율과 대출일수를 곱한 후 이를 365일(윤년인 경우 366일)로 나누어 산출하되 원단위 미만은 절사</li>
+		<li class="guide-list__item">원리금균등분할상환대출의 월별이자 계산은 대출원금에 연이율을 곱한 다음 12로 나누어 계산<br>일수계산은 여신당일로부터 기일 또는 상환일(일부상환 및 분할 상환 포함) 전일까지로 한다.(한편넣기)<br>위 내용에도 불구하고 다음의 여신은 여신당일부터 기일 또는 상환일까지로 한다.
+			<ul class="guide-sub-list guide-sub-list--gray">
+				<li class="guide-sub-list__item">대출 당일에 회수되는 대출금</li>
+				<li class="guide-sub-list__item">대외기관으로부터 자금을 차입하는 대출금으로서 이자를 상환일까지 지급하는 대출금</li>
+				<li class="guide-sub-list__item">연체기간이 1일인 연체대출채권 및 지급보증대지급금</li>
+				<li class="guide-sub-list__item">대여유가증권</li>
+			</ul>
+		</li>
+		<li class="guide-list__item">원금 균등분할상환대출 : 대출금액 x 대출이자율 x 이자일수 ÷ 365(윤년은 366일)</li>
+		<li class="guide-list__item">원리금 균등분할상환대출 : 대출금액 × 대출이자율 ÷ 12</li>
+	</ul>
+</div></div>
+                             
+                            <div class="tit-small">원금/이자의 상환시기 및 방법</div>
+                            <div><div class="guide-wrap">
+	<ul class="guide-list guide-list--large">
+		<li class="guide-list__item">건별대출(만기일시상환) : 원금은 만기에 일시상환, 이자는 일정주기(매1개월 등) 단위로 납부</li>
+		<li class="guide-list__item">한도대출(마이너스통장) : 원금은 만기에 일시상환, 이자는 일정주기(매1개월 등) 단위로 납부</li>
+		<li class="guide-list__item">분할상환대출 : 분할상환원금 및 이자를 일정주기(매1개월 등) 단위로 납부</li>
+		<li class="guide-list__item">대출실행 응당일/별도지정일에 대출금 입금계좌/자동등록계좌에서 자동이체 처리</li>
+		<li class="guide-list__item">손님이 선택하시는 대출방식 및 상품별로 원금/이자의  상환시기  및 방법이 일부 상이할 수 있으므로, 대출취급시 작성하시는 대출거래약정서의 상환방법 및 이자지급방법 내용을 참조하여 주시기 바랍니다. </li>
+	</ul>
+</div></div>
+                             
+                            <div class="tit-small">필요서류</div>
+                            <div><p class="text-guide">확정일자부 전·월세계약서(원본), 임차보증금의 5%이상을 지급한 영수증등<br>단, 대출심사에 필요 시 추가 서류를 요청할 수 있습니다.</p></div>
+                             
+                            <div class="tit-small">소득공제</div>
+                            <div><p class="text-guide">아래의 요건에 모두 해당하는 경우에는 소득공제 혜택이 있습니다.</p>
+<div class="guide-wrap">
+	<ul class="guide-list guide-list--large">
+		<li class="guide-list__item">무주택세대주인 근로소득자</li>
+		<li class="guide-list__item">국민주택규모 주택</li>
+		<li class="guide-list__item">입주 또는 전입일로부터 3개월 이내</li>
+		<li class="guide-list__item">임대인 계좌로 입금된 임차차입금</li>
+		<li class="guide-list__item">원리금상환액의 40% (월세 공제와 주택마련저축 공제 포함 3백만원 한도)</li>
+	</ul>
+	<ul class="guide-sub-list guide-sub-list--gray guide-sub-list--large">
+		<li class="guide-sub-list__item">소득공제의 기준 및 금액은 납세자의 상황 등에 따라 다르며, 향후 관련 법률의 변경에 따라 변동될 수 있습니다.</li>
+	</ul>
+</div></div>
+                             
+                            <div class="tit-small">대출관련비용</div>
+                            <div><div class="guide-wrap">
+	<ul class="guide-list guide-list--large">
+        <li class="guide-list__item">보증료(손님부담) - 한국주택금융공사 보증료 등 운용 규정에 따름</li>
+		<li class="guide-list__item">인지세</li>		
+	</ul>
+</div>
+<button type="button" onclick="pbk.mbp.cmsUtil.fncCallStampTaxPop();" class="button-arrow button-arrow--right mgt0">인지세 자세히 보기</button>
+<div class="guide-wrap">
+	<ul class="guide-sub-list guide-sub-list--gray guide-sub-list--large">
+		<li class="guide-sub-list__item">인지세법에 의해 대출약정 체결 시 납부하는 세금으로 대출금액에 따라 세액이 차등 적용되며, 은행과 고객이 각 50%씩 부담합니다.</li>
+	</ul>
+</div></div>
+                             
+                            <div class="tit-small">금리인하 요구권</div>
+                            <div><div class="guide-wrap">
+	<ul class="guide-list guide-list--large">
+		<li class="guide-list__item">본인의 신용상태가 개선되었다고 판단되는 경우(예 : 취업, 승진, 재산증가, 개인신용평점 상승) 증빙자료를 첨부한 금리인하신청서를 은행에 제출하여 금리인하를 요구할 수 있습니다.</li>
+		<li class="guide-list__item">금리인하 요구를 받은 날부터 10영업일 이내(고객에게 자료의 보완을 요구하는 날부터 자료가 제출되는 날까지의 기간은 포함되지 않습니다)에 금리인하요구 수용 여부를 통지해드립니다.</li>
+	</ul>
+	<p class="text-guide">※ 신용상태가 금리에 영향을 미치지 않는 상품은 금리인하요구 대상에서 제외되며 CSS(개인신용평가시스템) 평가결과, 은행 내부정책 등에 따라 금리인하요구가 수용되지 않을 수 있습니다.</p>
+</div></div>
+                             
+                            <div class="tit-small">대출계약 철회권</div>
+                            <div><div class="guide-wrap">
+	<ul class="guide-list guide-list--large">
+		<li class="guide-list__item">대출금 수령일로부터 14일(기간의 말일이 휴일인 경우 다음 영업일)까지 은행에 서면, 전화, 컴퓨터 통신으로 철회의사를 표시하고 원금, 이자 및 부대비용을 전액 반환한 경우 대출계약을 철회할 수 있습니다.</li>
+		<li class="guide-list__item">대출계약 철회권 남용 시 불이익: 당행에서 최근 1개월 내에 2회 이상 대출계약을 철회하는 경우, 신규대출·만기연장 거절, 대출한도 축소, 금리우대 제한 등 불이익이 발생할 수 있습니다.</li>
+	</ul>
+</div></div>
+                             
+                            <div class="tit-small">위법계약 해지권</div>
+                            <div><div class="guide-wrap">
+	<ul class="guide-list guide-list--large">
+		<li class="guide-list__item">은행이 「금융소비자 보호에 관한 법률」에서 정하는 적합성원칙, 적정성원칙 및 설명의무를 위반하였거나, 불공정영업행위 혹은 부당권유행위를 하여 대출계약을 체결한 경우, '법 위반사실을 안 날'부터 1년(계약체결일로부터 5년 이내의 범위에 있어야 합니다.) 이내에 해당 계약의 해지를 요구할 수 있습니다.</li>
+		<li class="guide-list__item">은행은 해지를 요구받은 날부터 10일 이내에 고객에게 수락여부를 통지하며, 거절할 때에는 그 사유를 함께 통지합니다.</li>
+	</ul>
+</div></div>
+                             
+                            <div class="tit-small">이용시간</div>
+                            <div><p class="text-guide">고객센터의 대출 이용시간 안내를 참조하시기 바랍니다.</p>
+<button type="button" onclick="HanaGoPage(MIAPS_DOMAIN+'/mbp/resource/html/BCUS/BCUS20/BCUS2001001_T02.html')" class="button-arrow button-arrow--right">바로가기</button></div>
+                                
+    
+                        </div>
+                        <!-- //white-box__content-->
+                    </div>
+                        
+                    <!-- 신청정보 -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">신청정보</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <div class="white-box__content" data-element="toggle__panel" style="display: none;">
+                            
+                            <div class="tit-small">서비스 운영시간</div>
+                            <div><div class="guide-wrap">
+	<ul class="guide-list guide-list--large">
+		<li class="guide-list__item">대출한도 조회, 대출신청 : 08:00~22:00</li>
+		<li class="guide-list__item">대출약정 : 24시간 365일</li>
+		<li class="guide-list__item">대출실행 : 10:00~15:00</li>
+	</ul>
+</div></div>
+                            <div class="tit-small">대출 진행 절차</div>
+                            <div><ol class="ordered-list ordered-list--circle ordered-list--large pdt0">
+	<li class="ordered-list__item">한도/금리 조회</li>
+	<li class="ordered-list__item">대출 신청 및 서류 제출</li>
+	<li class="ordered-list__item">대출 심사 및 승인통지</li>
+	<li class="ordered-list__item">대출 계약 진행</li>
+	<li class="ordered-list__item">대출 실행 및 대출금 송금</li>
+</ol></div> 
+                        </div>
+                        <!-- //white-box__content-->
+                    </div>
+
+                    <!-- 대출금리 -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">대출금리</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <div class="white-box__content" data-element="toggle__panel" style="display: none;">
+                                
+
+                                        
+                                         
+                            <div class="tit-small">금리</div>
+                            <div class="additional-button">
+                                <button type="button" class="button-underline button-underline--green" onclick="HanaGoPage(MIAPS_DOMAIN+'/mbp/resource/html/BLON/BLON02/BLON0204002.html')">가계대출기준금리 조회</button>
+                            </div>
+                            
+                            <div id="depRateArea"><div class="tit-small">
+                                <span class="table-header__unit text-guide">(2022-09-23 현재, 연이율)</span>
+                            </div>
+                            
+                            <!-- cms 표 표시 여부  -->
+                            
+                            
+                            
+                            <div class="table table-vertical table-vertical--narrow">
+                                <table>
+                                    <colgroup>
+                                        <col span="3">
+                                    </colgroup>
+                                    <!-- thead Title -->
+                                    <thead>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                        <tr>
+                                            <th scope="col" class="table-vertical__th">금리구분</th>
+                                            <th scope="col" class="table-vertical__th">금리변동주기</th>
+                                            <th scope="col" class="table-vertical__th">기본금리</th>
+                                        </tr>
+                                    
+                                    
+                                    </thead>
+                                    <!-- tbody Contents -->
+                                    <tbody>
+                                    
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                            
+                                                <tr>
+                                                    <td class="table-vertical__td">온라인 신청시 예금금리+1.0%(영업점 신청시 +1.20%)</td>
+                                                
+                                                    <td class="table-vertical__td">0 개월</td>
+                                                
+                                                    <td class="table-vertical__td">0.000%</td>
+                                                
+                                                </tr>
+                                            
+                                        
+                                    
+                                    </tbody>
+                                </table> 
+                                
+                            </div></div>
+                                <div class="tit-small">안내</div>
+                                <div><div class="guide-wrap">
+<ul class="guide-list guide-list--large">
+<li class="guide-list__item">원큐 다둥이전세론 기본금리는  대출금액 2억, 대출기간 2년, 신용등급 3등급인 손님에게 적용한 금리입니다.</li>
+<li class="guide-list__item">실제적용금리는 기본금리에 신용등급 및 거래조건에 따라 가산 또는 감면되어 결정되오니 자세한 금리는 하나은행 고객센터나 영업점에 문의하시기 바랍니다.</li>
+<li class="guide-list__item">상품 및 거래조건에 따른 가산 또는 감면금리는 아래와 같습니다.
+<div class="text-guide-regular mgt30 color-333">가산금리</div>
+<ul class="guide-sub-list guide-sub-list--gray guide-sub-list--large">
+    <li class="guide-sub-list__item">주택금융공사 주택 출연료 납부대상 0.21% 가산</li>
+</ul>
+<div class="text-guide-regular mgt30 color-333">감면금리(상품에 따라 상이할 수 있음)</div>
+<ul class="guide-sub-list guide-sub-list--gray guide-sub-list--large">
+    <li class="guide-sub-list__item">급여이체등 거래실적 종류에 따라 0.1%~0.6%우대<br>단, 매월 실적 체크하여 미 충족할 경우 해당금리만큼 조정됩니다.</li>
+</ul>
+</li>
+</ul>
+</div></div> 
+                            </div>
+                        <!-- //white-box__content-->
+                    </div>
+
+                    <!-- 해지 안내 -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">상품해지</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <div class="white-box__content" data-element="toggle__panel" style="display: none;">
+                                        
+    
+                                             
+                                             
+                            <div class="tit-small">계약해지 또는 갱신방법</div>
+                             
+                             
+                            
+                        
+                        <div><div class="guide-wrap">
+<ul class="guide-list guide-list--large">
+<li class="guide-list__item">건별대출 계약해지 : 고객이 대출금 전액을 상환한 때</li>
+<li class="guide-list__item">한도대출(마이너스통장방식) 계약해지 : 고객이 통장대출 약정에 대한 해지의사를 표시한 때</li>
+<li class="guide-list__item">계약갱신 : 대출금은 약정기일(만기일)에 상환이 원칙이나, 당행에서 정한 일정요건을 갖춘 경우 기간연장 가능</li>
+</ul>
+<ul class="guide-sub-list guide-sub-list--gray guide-sub-list--large">
+<li class="guide-sub-list__item">대출기간 만료시 은행이 정한 기준에 따라 기간연장 가능여부 심사후 승인을 득한 경우 계약갱신 가능하며, 손님의 신용도, 임대차계약변경여부 등에 따라 영업점 방문을 통해 연장 가능합니다.</li>
+</ul>
+</div></div>
+                        <div class="tit-small">중도상환 해약금</div>
+                        <div><p class="text-guide">중도상환해약금은 중도상환대출금액 x 중도상환해약금율 0.7% x (중도상환약정잔여일수 ÷ 중도상환약정기간)으로 하며, 최초 대출일로부터 3년(기한연장 포함)까지 적용합니다. (단, 대출잔여기간 3개월 이내 상환 시 면제합니다)</p><br>
+<p class="text-guide"><span class="bold">※ 중도상환해약금 한시적 우대 감면</span><br>
+우대내용 : 대출 全 기간 동안 대출 신규금액에 대해 상환시 100% 면제<br>
+우대기간 : 2022.12.31 까지(대출 신규 승인일 기준) 단, 2021.11.29 이후 신청건부터 적용
+</p></div> 
+                    </div>
+                        <!-- //white-box__content-->
+                    </div>
+                        
+                    <!-- 유의사항 -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">유의사항</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <div class="white-box__content" data-element="toggle__panel" style="display: none;">
+                                        
+                            <div class="tit-small">유의사항</div>
+                            <div><div class="guide-wrap">
+<ul class="guide-list guide-list--large">
+<li class="guide-list__item">손님의 신용도에 따라 대출한도와 대출금리가 차등 적용되며, 주택보유수, 고가주택 보유여부, 규제대상 주택 취득등 한국 주택금융공사 보증규정에 부적합 하거나 은행에서 정한 부적격자에 대하여 대출 취급이 제한될 수 있습니다.</li>
+<li class="guide-list__item">대출거래약정서에 별도로 정한 바가 없을 경우, 대출만기 도래 시 채무자의 신청 및 은행 내규 등에 따라 만기연장 여부가 결정되며 만기연장 조치 없이 대출금액을 상환하지 않을 경우에는 연체이자가 부과되며 채무자의 재산/신용상의 불이익(압류, 경매 등)이 발생 할 수 있으니 주의하시기 바랍니다.</li>
+<li class="guide-list__item">한국주택금융공사의 보증 업무 지침 위반시 기한의 이익 상실 등 손님께 불이익이 발생할 수 있으니 주의하시기 바랍니다.</li>
+<li class="guide-list__item">금융상품에 관한 계약을 체결하기 전에 금융상품 설명서 및 약관을 읽어 보시기 바랍니다.</li>
+<li class="guide-list__item">상환능력에 비해 대출금이 과도할 경우 귀하의 신용점수가 하락할 수 있습니다.</li>
+<li class="guide-list__item">신용등급 또는 개인신용평점의 하락으로 금융거래 관련 불이익을 받을 수 있습니다.</li>
+<li class="guide-list__item">원리금 연체 시 계약만료 기한 전에 모든 원리금을 변제해야 할 의무가 발생될 수 있습니다.</li>
+</ul>
+</div>
+<div class="guide-wrap">
+<ul class="guide-sub-list guide-sub-list--gray guide-sub-list--large">
+<li class="guide-sub-list__item">자세한 사항은 상품설명서를 참조하시거나, 하나은행 고객센터(1599-2222) 또는 영업점에 문의하시기 바랍니다.</li>
+</ul>
+</div></div> 
+                        </div>
+                        <!-- //white-box__content-->
+                    </div>
+                        
+                    <!-- 상품변경안내 -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">상품변경안내</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <div class="white-box__content" data-element="toggle__panel" style="display: none;">
+                                        
+                            <div><div class="changes-info" data-options="{&quot;isInitActive&quot;:true}" data-element="accordion" role="presentation"> 
+<div class="changes-info__item" data-element="accordion__item"> <button class="changes-info__anchor is-active" type="button" data-element="accordion__anchor" aria-expanded="true" role="button"> <span class="title">2022.03.04 변경</span> </button> 
+<div class="changes-info__panel is-active" data-element="accordion__panel" style=""> 
+<div class="tit-small">대출기간</div> <pre>변경 전
+전세계약만기일 범위 내 최장 2년<br>변경 후
+임차계약만기일 범위 내 6개월 이상 2년 이내</pre> <pre> ※ 기존 가입고객에 대한 적용여부 : 미적용 </pre> </div> </div></div>
+<div class="changes-info" data-element="accordion" role="presentation"> 
+<div class="changes-info__item" data-element="accordion__item"> <button class="changes-info__anchor" type="button" data-element="accordion__anchor" aria-expanded="false" role="button"> <span class="title">2021.11.29 변경</span> </button> 
+<div class="changes-info__panel" data-element="accordion__panel" style="display: none;"> 
+<div class="tit-small">감면금리</div> <pre>변경 전
+거래실적 종류에 따라 0.1%~0.9% 우대
+변경 후
+거래실적 종류에 따라 0.1%~0.6% 우대
+※ 기존 가입고객에 대한 적용여부 : 미적용</pre> 
+<div class="tit-small">대출신청시기</div> <pre>변경 전
+신규 계약 : 임대차계약서상 잔금지급일과 주민등록 전입일 중 빠른날로 부터 3개월 이내 (임대인계좌로 입금하는 경우만 가능)
+변경 후
+신규 계약 : 임대차계약서 상 잔금일 기준 1개월 전부터 12영업일 이전까지 대출 신청 가능
+※ 기존 가입고객에 대한 적용여부 : 미적용</pre> </div> </div></div>
+<div class="changes-info" data-element="accordion" role="presentation"> 
+<div class="changes-info__item" data-element="accordion__item"> <button class="changes-info__anchor" type="button" data-element="accordion__anchor" aria-expanded="false" role="button"> <span class="title">2022.01.03 변경</span> </button> 
+<div class="changes-info__panel" data-element="accordion__panel" style="display: none;"> 
+<div class="tit-small">대출대상</div> <pre>변경 전
+임차보증금 5억원 이하(지방소재가구는 3억원 이하)<br>변경 후
+임차보증금 7억원 이하(지방소재가구는 5억원 이하)</pre> <pre> ※ 기존 가입고객에 대한 적용여부 : 미적용 </pre> </div> </div></div>
+<div class="changes-info" data-element="accordion" role="presentation"> 
+<div class="changes-info__item" data-element="accordion__item"> <button class="changes-info__anchor" type="button" data-element="accordion__anchor" aria-expanded="false" role="button"> <span class="title">2021.11.29 변경</span> </button> 
+<div class="changes-info__panel" data-element="accordion__panel" style="display: none;"> 
+<div class="tit-small">감면금리</div> <pre>변경 전
+거래실적 종류에 따라 0.1%~0.9% 우대
+변경 후
+거래실적 종류에 따라 0.1%~0.6% 우대
+※ 기존 가입고객에 대한 적용여부 : 미적용</pre> 
+<div class="tit-small">대출신청시기</div> <pre>변경 전
+신규 계약 : 임대차계약서상 잔금지급일과 주민등록 전입일 중 빠른날로 부터 3개월 이내 (임대인계좌로 입금하는 경우만 가능)
+변경 후
+신규 계약 : 임대차계약서 상 잔금일 기준 1개월 전부터 12영업일 이전까지 대출 신청 가능
+※ 기존 가입고객에 대한 적용여부 : 미적용</pre> </div> </div></div>
+<div class="changes-info" data-element="accordion" role="presentation"> 
+<div class="changes-info__item" data-element="accordion__item"> <button class="changes-info__anchor" type="button" data-element="accordion__anchor" aria-expanded="false" role="button"> <span class="title">2021.06.24 변경</span> </button> 
+<div class="changes-info__panel" data-element="accordion__panel" style="display: none;"> 
+<div class="tit-small">대출대상</div> <pre>변경 전
+기존 전세자금대출이 없는 손님 <br>변경 후
+기존 전세자금대출이 없는 손님
+단, 이사하면서 기존 전세대출을 상환하는 경우는 가능
+※ 기존 가입고객에 대한 적용여부 : 미적용</pre> </div> </div></div>
+<div class="changes-info" data-element="accordion" role="presentation"> 
+<div class="changes-info__item" data-element="accordion__item"> <button class="changes-info__anchor" type="button" data-element="accordion__anchor" aria-expanded="false" role="button"> <span class="title">2021.04.01 변경</span> </button> 
+<div class="changes-info__panel" data-element="accordion__panel" style="display: none;"> 
+<div class="tit-small">중도상환해약금</div> <pre>변경 전
+면제<br>변경 후
+중도상환해약금율 0.7%
+※ 기존 가입고객에 대한 적용여부 : 미적용</pre> </div> </div></div>
+<div class="changes-info" data-element="accordion" role="presentation"> 
+<div class="changes-info__item" data-element="accordion__item"> <button class="changes-info__anchor" type="button" data-element="accordion__anchor" aria-expanded="false" role="button"> <span class="title">2020.08.21 변경</span> </button> 
+<div class="changes-info__panel" data-element="accordion__panel" style="display: none;"> 
+<div class="tit-small">대출대상</div> <pre>변경 전
+1. 1년이상 재직 근로자
+2. 신설
+변경 후
+1. 스크래핑으로 재직 및 소득확인이 가능한 재직 1년 이상 근로소득자
+2. 기존 전세자금대출이 없는 손님</pre> 
+<div class="tit-small">중도상환해약금</div> <pre>변경 전
+중도상환해약금율 0.7%
+변경 후
+면제</pre> 
+<div class="tit-small">대상주택</div> <pre>변경 전
+아파트, 연립주택, 다세대주택, 주거용오피스텔
+변경 후
+아파트, 연립/다세대주택, 단독/다가구주택, 주거용오피스텔
+(미등기 주택, 다중주택 제외)</pre> 
+<div class="tit-small">대출신청시기</div> <pre>변경 전
+신규 : 임대차계약서상 잔금지급일과 주민등록 전입일 중 빠른 날로부터 3개월 이내
+갱신 :전세보증금 증액이 있고 주민등록전입일로부터 3개월 이상 경과하고 계약갱신일로부터 3개월 이내(계약 갱신일 이전에도 보증신청 가능)
+변경 후
+신규계약 : 임대차계약서상 잔금지급일과 주민등록전입일 중 빠른 날로부터 3개월 이내
+갱신계약 제외</pre> 
+<div class="tit-small">대출한도</div> <pre>변경 전
+신청인(배우자포함) 연간소득의 최대 5.0배이내
+(단, 모바일로 대출취급건은 최대 4.5배이내)
+변경 후
+신청인(배우자포함) 연간소득의 최대 4.5배이내</pre> 
+<div class="tit-small">상환방법</div> <pre>변경 전
+일시상환, (부분)원금 균등분할상환
+변경 후
+일시상환
+※ 기존 가입고객에 대한 적용여부 : 미적용</pre> </div> </div></div>
+<div class="changes-info" data-element="accordion" role="presentation"> 
+<div class="changes-info__item" data-element="accordion__item"> <button class="changes-info__anchor" type="button" data-element="accordion__anchor" aria-expanded="false" role="button"> <span class="title">2019.04.02 변경</span> </button> 
+<div class="changes-info__panel" data-element="accordion__panel" style="display: none;"> 
+<div class="tit-small">대출한도</div> <pre>변경 전
+신청인(배우자포함) 연간소득의 최대 5.0배이내
+변경 후
+신청인(배우자포함) 연간소득의 최대 5.0배이내
+(단, 모바일로 대출취급건은 최대 4.5배이내)
+※ 기존 가입고객에 대한 적용여부 : 미적용</pre> </div> </div></div>
+<div class="changes-info" data-element="accordion" role="presentation"> 
+<div class="changes-info__item" data-element="accordion__item"> <button class="changes-info__anchor" type="button" data-element="accordion__anchor" aria-expanded="false" role="button"> <span class="title">2019.04.01 변경</span> </button> 
+<div class="changes-info__panel" data-element="accordion__panel" style="display: none;"> 
+<div class="tit-small">중도상환해약금</div> <pre>변경 전
+중도상환해약금율 0.8%
+변경 후
+중도상환해약금율 0.7%
+※ 기존 가입고객에 대한 적용여부 : 미적용</pre> </div> </div></div></div>
+                            
+                        </div>
+                        <!-- //white-box__content-->
+                    </div>
+                </div>
+                <!-- 2022-11-07 텍스트 수정 -->
+                <span class="notice">준법감시인 심의필 제2022-상품-1384호 (2022.11.04)<br>
+                    본 공시내용의 유효기간 : 2022.11.04 ~ 2024.11.03<br>기준일 : 2022년 11월 4일
+                </span>
+            </div>
+        </div>
+        <!-- //CONTENT -->
+
+        <!-- FOOTER -->
+        <div id="footer" class="app-footer app-footer--button app-footer--button-round-corner">
+            <div class="button-wrap">
+                <!-- 2022-10-31 버튼 속성 추가 -->
+                <button type="button" class="button button--positive round-corner" data-ecrm="STS1020" data-element="modal__open" data-target="#modalAlertSlim" aria-controls="#modalAlertSlim">확인</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+        </div>
+        <!-- //FOOTER -->
+    </div>
+
+
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
+    <!-- 상품상세 js 별도분기 -->
+    <script src="../../../../resource/library/lottie/lottie.min.js"></script>
+    <script src="../../../../resource/js/ui/prd_detail_n22UI.js"></script>
+
+    <!-- 2022-10-31 추가 -->
+    <div id="modalAlertSlim" class="modal modal--alert" data-element="modal__element" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal__container" data-element="modal__element-container">
+            <div class="modal__contents">
+                <div class="modal__description">
+                    <p class="align-center">
+                        한도 조회를 위해,<br>
+                        <span class="color-green">하나원큐전세대출로 이동</span>합니다.
+                    </p><br>
+                    <p class="align-center">
+                        <span class="color-green">내게 꼭 맞는 최적의 상품 확인</span>을 위해,<br>
+                        한도조회 절차가 <span class="color-green">필수</span>입니다.
+                    </p>
+                </div>
+            </div>
+            <div class="modal__button-wrap">
+                <button type="button" class="button button--positive" data-element="modal__close">확인</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

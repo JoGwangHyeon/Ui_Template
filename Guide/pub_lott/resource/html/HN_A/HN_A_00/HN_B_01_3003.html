@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap n22UI moneybox challenge-selection">
+            <!-- HEADER -->
+            <div id="header" class="app-header">
+                <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+                <h1 class="app-header__title">챌린지</h1>
+                <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+                <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+            </div>
+            <!-- //HEADER -->
+
+            <!-- CONTENT -->
+            <div id="content" class="app-main moneybox-cont">
+                <!-- 2022-09-01 띄어쓰기 수정 -->
+                <strong>얼마 동안 도전할까요?</strong>
+                <ul class="challenge-period-wrap">
+                    <!--2022-08-11 | 챌린지 기간 선택시 .selected 추가-->
+                    <li>
+                        <input type="radio" name="challengePeriod"/>
+                        <div class="challenge-period">
+                            <i class="challenge-icon">
+                                <img src="../../../images/C/n22_img_moneybox_gift01.png" alt="">
+                            </i>
+                            <p>1주</p>
+                        </div>
+                    </li> 
+                    <li>
+                        <input type="radio" name="challengePeriod"/>
+                        <div class="challenge-period">
+                            <i class="challenge-icon">
+                                <img src="../../../images/C/n22_img_moneybox_gift02.png" alt="">
+                            </i>
+                            <p>2주</p>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="radio" name="challengePeriod"/>
+                        <div class="challenge-period">
+                            <i class="challenge-icon">
+                                <img src="../../../images/C/n22_img_moneybox_gift03.png" alt="">
+                            </i>
+                            <p>3주</p>
+                        </div>
+                    </li> 
+                    <li>
+                        <input type="radio" name="challengePeriod"/>
+                        <div class="challenge-period">
+                            <i class="challenge-icon">
+                                <img src="../../../images/C/n22_img_moneybox_gift04.png" alt="">
+                            </i>
+                            <p>4주</p>
+                        </div>
+                    </li> 
+                </ul>
+
+
+                <div class="under-toggle">
+                    <em>챌린지 잊지 않게 알려 드려요!</em>
+                    <label class="switch" for="selectAuto1" data-input-selector="checkbox">
+                        <input type="checkbox" id="selectAuto1" data-input-name="checkbox-1" data-input-target="checkbox-section-1" aria-expanded="true" title="만기 시 SMS 알림 여부 선택" checked="">
+                        <span class="switch__toggle" aria-hidden="true" data-ecrm="Noc1010"></span>
+                        <!-- 2022-10-24 -->
+                        <div class="moneybox-bubble">
+                            <p>앱 알림을 켜주세요</p>
+                        </div>
+                    </label>
+                </div>
+
+                
+                
+            </div>
+            <!-- //CONTENT -->
+            <div id="footer" class="app-footer app-footer--button app-footer--button-round-corner">
+                <div class="button-wrap">
+                    <button type="button" class="button button--positive round-corner">다음</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+                </div>
+            </div>
+
+    </div>
+
+
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
+</body>
+</html>

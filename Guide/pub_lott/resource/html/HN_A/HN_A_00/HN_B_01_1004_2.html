@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap n22UI moneybox">
+        <!-- HEADER -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">파킹</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //HEADER -->
+
+        <!-- CONTENT -->
+        <div id="content" class="app-main moneybox-cont moneybox-detail">
+            <div class="parking-detail">
+                <div class="parking-graybox">
+                    <!-- 2022-09-24 HN_B_01_1004 와 동일처리 -->
+                    <p class="the-balance"><span class="the-balance-tit">잔액</span><em>23,000,000</em> <span class="unit">원</span></p>
+                
+                    <div class="parking-button-wrap"> 
+                        <button type="button" class="button" title="빼기" data-ecrm="Pag1020">빼기</button>
+                        <button type="button" class="button" title="더하기" data-ecrm="Pag1010">더하기</button>
+                    </div>
+
+                    
+                </div>
+
+                 <!--2022-08-22 | 띄어쓰기 수정-->
+                <!-- 2022-09-01 text 수정 -->
+                 <button class="detail-button interest-inquiry" title="머니박스 통장 이자 조회" data-ecrm="Pag1030">머니박스 통장 이자 조회</button>
+                 
+                <div class="pay-list">
+                    <div class="button-select underline-type inline selected">
+                        <!-- select 버튼에 추가 | data-element="modal__open" data-target="모달 레이어팝업 id 값 예)#combobox_1" -->
+                        <div class="the-amount">
+                            <!-- 2022-08-26 | 숫자, 문자 구분 span 태그 추가-->
+                            <button type="button" class="button button-select__item" title="저축 방식 선택" data-element="modal__open" data-target="#combobox_1" aria-controls="#combobox_2"><span>6</span>월 거래내역</button>
+                        </div>
+                    </div>
+
+                    <!--내역이 있을 때(리스트)-->
+                     <!--2022-08-24 | 각 색상 (+),(-) 추가 -->
+                    <!--2022-08-26 | 각 숫자 + - 뒤 띄어쓰기 제거-->
+                    <ul style="display:none;">
+                        <li>
+                            <div class="pay-list-left">
+                                <p class="calc">빼기</p>
+                                <span class="date">06.13(월) 16:01:51</span>
+                            </div>
+                            <div class="pay-list-right">
+                                <p class="minus-number">-1,000원</p>
+                                <span class="balance-cash">잔액 1,437,000원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pay-list-left">
+                                <p class="calc">더하기</p>
+                                <span class="date">06.13(월) 16:01:51</span>
+                            </div>
+                            <div class="pay-list-right">
+                                <p class="plus-number">+1,000원</p>
+                                <span class="balance-cash">잔액 1,437,000원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pay-list-left">
+                                <p class="calc">빼기</p>
+                                <span class="date">06.13(월) 16:01:51</span>
+                            </div>
+                            <div class="pay-list-right">
+                                <p class="minus-number">-1,000원</p>
+                                <span class="balance-cash">잔액 1,437,000원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pay-list-left">
+                                <p class="calc">더하기</p>
+                                <span class="date">06.13(월) 16:01:51</span>
+                            </div>
+                            <div class="pay-list-right">
+                                <p class="plus-number">+1,000원</p>
+                                <span class="balance-cash">잔액 1,437,000원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pay-list-left">
+                                <p class="calc">빼기</p>
+                                <span class="date">06.13(월) 16:01:51</span>
+                            </div>
+                            <div class="pay-list-right">
+                                <p class="minus-number">-1,000원</p>
+                                <span class="balance-cash">잔액 1,437,000원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pay-list-left">
+                                <p class="calc">더하기</p>
+                                <span class="date">06.13(월) 16:01:51</span>
+                            </div>
+                            <div class="pay-list-right">
+                                <p class="plus-number">+1,000원</p>
+                                <span class="balance-cash">잔액 1,437,000원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pay-list-left">
+                                <p class="calc">빼기</p>
+                                <span class="date">06.13(월) 16:01:51</span>
+                            </div>
+                            <div class="pay-list-right">
+                                <p class="minus-number">-1,000원</p>
+                                <span class="balance-cash">잔액 1,437,000원</span>
+                            </div>
+                        </li>
+                    </ul>
+                    
+
+                    <!--내역이 없을 때-->
+                    <!--2022-08-26 | 텍스트 수정-->
+                    <div class="no-history">조회 결과가 없어요.</div>
+                    
+                </div>
+
+                <!--내역이 있을 때(더보기 버튼)-->
+                <button type="button" class="view-more" title="더보기" style="display:none;" data-element="" data-target="" aria-controls="">더보기</button>
+            </div>
+        </div>
+        <!-- //CONTENT -->
+    </div>
+
+
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
+</body>
+</html>

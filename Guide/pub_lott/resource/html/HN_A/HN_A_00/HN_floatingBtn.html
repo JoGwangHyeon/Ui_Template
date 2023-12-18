@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body class="main-bg">
+    <!-- 2022-08-26  main-bg 클래스 추가 -->
+    <div id="wrap" class="wrap n22UI">
+        <!-- HEADER -->
+        <div id="header" class="app-header prodmall-main-header">
+            <h1 class="app-header__title">상품</h1>
+            <button class="app-header__button--cart" title="장바구니">
+                <!--2022-08-22 | 0건인 경우 표시안함-->
+                <span class="prod-count">100</span>
+            </button>
+        </div>
+        <!-- //HEADER -->
+
+        <!-- CONTENT 
+
+            2022-10-26
+            - inline style속성값들은 화면 구성을 위한 더미 코드 입니다.
+            - 해당 페이지에서 사용되는 폰트의 글꼴, 크기, 자간에 따라 keyframe내부의 너비값이 변경 되어야합니다.
+
+        -->
+
+        <div id="content" class="app-main" style="height:2000px;">
+
+            
+            <div class="main-section recommendation-prod" style="border:2px solid blue; margin-top:200px; height:500px;">
+                추천상품버튼 클릭시 포커싱 타겟 영역
+            </div>
+             
+            <!-- 추천상품보기 버튼 -->
+            <a href="#" class="btn-floating btn-recommendation-prod">
+                <span style="background:url(https://dev12-mbp.hanabank.com:18080/mbp/resource/images/C/n22_btn_main_view_prod_arrow.png) no-repeat 1.075rem center / 0.625rem 0.625rem;">추천상품 보기</span>
+            </a>
+        </div>
+        <!-- //CONTENT -->
+    </div>
+
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    
+
+
+    <style>
+        .btn-floating.btn-recommendation-prod {
+            position:fixed;
+            left: 50%;
+            bottom:-3rem;
+            width: 7.593rem;
+            transform: translateX(-50%);
+            border-radius: 1.125rem;
+            font-size: 0.8125rem;
+            background-color: #262b45;
+            opacity:1;
+        }
+        .btn-floating.btn-recommendation-prod span {
+            display: block;
+            height: 2.25rem;
+            line-height: 1.375rem;
+            white-space:nowrap;
+            padding: 0.4375rem 1.125rem 0.4375rem 2rem;
+            background: url(../images/C/n22_btn_main_view_prod_arrow.png) no-repeat 1.075rem center / 0.625rem 0.625rem;
+            color: #fff !important;
+            opacity: 0;
+        }
+        .motion-init .btn-floating.btn-recommendation-prod.hide {
+            animation: main-recommendation-motion-out 0.3s ease-out 0s forwards;
+        }
+
+        .motion-init .btn-floating.btn-recommendation-prod:not(.hide) { 
+            animation: main-recommendation-motion 0.3s ease-out 0.7s forwards;
+        }
+        .motion-init .btn-floating.btn-recommendation-prod:not(.hide) span { 
+            animation: main-recommendation-text 0.2s ease-out 0.9s forwards;
+        } 
+                
+        @keyframes main-recommendation-motion {
+            0% {
+                bottom: -48px;
+                width: 36px;
+                height: 36px;
+            }
+            50% {
+                bottom: 105px;
+                width: 36px;
+                height: 36px;
+            }
+            100% {
+                bottom: 105px;
+                width: 121px;
+            }
+        }
+
+        @keyframes main-recommendation-motion-out {
+            0% {
+                opacity:1;
+                bottom: 105px;
+                width: 121px;
+            }
+            50% {
+                opacity:0;
+                bottom: 105px;
+                width: 121px;
+            }
+            100% {
+                opacity:0;
+                bottom: -48px;
+                width: 36px;
+                height: 36px;
+            }
+        }
+
+        @keyframes main-recommendation-text {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('#content').addClass('motion-init');//모션을 시작해도 되는 타이밍에 motion-init 클래스 부여
+
+            //추천상품 클릭시 타겟의 위치로 스크롤
+            var previousScroll = 0;
+            function recommendationScroll(){
+                var targetObj = $('.main-section.recommendation-prod')//타겟 obj
+                    ,_gap = 25//추가적인 stop위치 거리 조절
+                    ,goTopos = Math.round(targetObj.offset().top)//소수점 제거
+                    ,headerHeight = $('.app-header').outerHeight()
+                    ,contentDivRealpaddingTop = 76 //실제 content가 가지고 있는 기본 padding-top수치 예) padding-top:calc(76px + env(safe-area-inset-top)) 일경우 76을 입력해주세요.
+                    ,safeAreaInsetTop = parseInt($('#content').css('padding-top')) - contentDivRealpaddingTop //ios 관련 safe-area-inset-top
+                    ,distance = headerHeight + _gap
+                    ,speed = 300;
+
+                    console.log(targetObj, headerHeight, safeAreaInsetTop)
+                $('html,body').stop().animate({
+                    scrollTop:goTopos - distance - safeAreaInsetTop
+                }, speed)
+            }
+            $('.app-main').on('click' ,'.btn-recommendation-prod', recommendationScroll);
+        });
+
+        $(window).scroll(function(){
+            var currentScroll = $(this).scrollTop();
+
+            if(currentScroll){//스크롤 top값이 0일경우에만 버튼 노출
+                $('.btn-recommendation-prod').addClass('hide');
+            }else{
+                $('.btn-recommendation-prod').removeClass('hide');
+            }
+            previousScroll = currentScroll;
+        });
+        
+        //============= 2022-10-08 수정
+    </script>
+</body>
+</html>

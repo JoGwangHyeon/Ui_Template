@@ -1,0 +1,941 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width<br> initial-scale=1.0<br> user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>하나은행 원큐플러스 구축 퍼블리싱 리스트</title>
+	<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		min-width: 980px;
+		padding: 0 20px 50px 20px;
+		font-family: 'Malgun Gothic', '맑은 고딕', AppleSDGothicNeo, Droid Sans, Roboto, sans-serif;
+		font-size: 12px;
+		font-weight: 600;
+	}
+	a:focus {
+		color:#e30101
+	}
+	/* a {
+		color: #444;
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: #444;
+	}
+
+	a:visited,
+	a:focus,
+	a:active {
+		color: #444;
+	} */
+
+	.list_header {
+		width: 100%;
+		padding: 20px;
+		background: #fff;
+		box-sizing: border-box;
+		position: relative;
+	}
+
+	h1 {
+		font-size: 30px;
+		margin: 20px 0 10px 0;
+		letter-spacing: -1px;
+		font-weight: 800;
+	}
+
+	h1 img {
+		height: 27px;
+		margin: 10px 5px 0 0;
+		vertical-align: top;
+	}
+
+	.info {
+		position: absolute;
+		right: 25px;
+		top: 40px;
+	}
+
+	.guide {
+		margin: 10px 0 5px 0;
+		text-align: right;
+	}
+
+	.red {
+		color: #e80000 !important
+	}
+
+    .green {
+		color: green !important
+	}
+
+	h2 {
+		padding: 10px 0 10px 15px;
+		font-size: 13px;
+		border: 1px solid #444;
+		border-bottom: none;
+		background: #595959;
+		color: #fff;
+		font-weight: 500;
+	}
+
+
+	caption {
+		display: none;
+	}
+
+    #wrap {
+        padding:0 20px;
+    }
+	div.cont {
+		border-top: 1px solid #444;
+	}
+
+	table {
+		border-collapse: collapse;
+		width: 100%;
+		border-spacing: 0;
+		margin-bottom: 30px;
+		table-layout:fixed;
+	}
+
+	table thead th {
+		padding: 7px 3px;
+		border: 1px solid #ccc;
+		background: #eee;
+		font-size: 13px;
+	}
+
+	table tbody td {
+		padding: 7px 3px;
+		background: #e5e5e5;
+		border: 1px solid #ccc;
+		text-align: left;
+		font-size: 11px;
+		color: #333;
+		padding: 0 10px;
+	}
+
+
+	table tbody td.left {
+		padding: 7px 10px;
+		text-align: left;
+	}
+
+	table tbody td.url {
+		padding: 7px 10px;
+		text-align: left;
+	}
+
+	table tbody tr.del td {
+		text-decoration: line-through;
+		color: #999;
+		background: #e9e9e9;
+	}
+
+	table tbody tr.del td a {
+		text-decoration: line-through;
+		color: #999;
+	}
+
+	table tbody tr td {
+		height: 30px;
+		box-sizing: border-box;
+		display: table-cell;
+		background: #fff;
+		color: #444;
+		transition: all 0.4s;
+        text-align:center;
+	}
+
+	table tbody tr:hover td {
+		background: #e9e9e9;
+	}
+	table tbody tr td:last-of-type {
+		text-align:left;
+	}
+
+	.proc_wrap {
+		margin: 0 0 20px;
+		text-align: left;
+	}
+
+	.proc_wrap strong {
+		color: #0d643a;
+		font-weight: bold;
+	}
+
+	/* tab */
+	.tab {
+		overflow: hidden;
+	}
+
+	.tab ul {
+		font-size: 0;
+		overflow: hidden;
+	}
+
+	.tab ul li {
+		display: inline-block;
+	}
+
+	.tab ul li a {
+		position: relative;
+		float: left;
+		padding: 10px 30px;
+		background: #eee;
+		border-right: 1px solid #fff;
+		font-size: 13px;
+		color: #666;
+		text-align: center;
+		transition: all 0.3s;
+		text-decoration: none;
+	}
+
+	.tab ul li:last-child a {
+		border: none;
+	}
+
+	.tab ul li a:hover {
+		background: #ccc;
+	}
+
+	.tab ul li.on a {
+		background: #1994da;
+		color: #fff;
+	}
+
+	.tab ul li.on a:hover {
+		background: #1994da;
+	}
+
+    table tr.gray td{
+        background:#e9e9e9;
+		color:gray;
+    }
+	table tr.gray td.url a {
+        background:#e9e9e9;
+		color:gray;
+    }
+
+	/* marker */
+	.marker {
+		position: relative;
+		text-align: right;
+		margin-bottom: 20px;
+	}
+
+	.marker li {
+		position: relative;
+		display: inline-block;
+		margin-right: 15px;
+		padding-left: 17px;
+		color: #666;
+		list-style: none;
+	}
+
+	.marker li.dep {
+		padding-right: 25px;
+	}
+
+	.marker li:before {
+		position: absolute;
+		left: 0;
+		top: 2px;
+		width: 12px;
+		height: 12px;
+		content: "";
+	}
+
+	.marker li.m1:before {
+		background: #999;
+	}
+
+	.marker li.s1:before {
+		background: #53b100;
+	}
+
+	.marker li.s2:before {
+		background: #0142b3;
+	}
+
+	.marker li.s3:before {
+		background: orange;
+		animation: over_a both linear infinite 3s;
+	}
+
+	.marker li.s4 {
+		text-decoration: line-through;
+	}
+
+	.marker li.s4:before {
+		background: #333;
+	}
+
+	.marker li.s5:before {
+		width: 10px;
+		height: 10px;
+		border: 2px solid #f68500;
+		border-radius: 100%;
+	}
+
+	.marker li.s6:before{
+		width: 14px;
+		height: 14px;
+		background: red;
+		border-radius: 100%;
+		animation: emer 1s linear infinite;
+	}
+
+	.marker:after {
+		display: block;
+		clear: both;
+		height: 0;
+		content: "";
+		overflow: hidden;
+	}
+
+	/* state */
+	.state {
+		padding-left: 10px;
+	}
+
+	.state i {
+		display: inline-block;
+		position: relative;
+		width: 12px;
+		height: 12px;
+		margin-right: 1px;
+		border-radius: 1px;
+		vertical-align: middle;
+	}
+
+	.state.ing i {
+		background: #0142b3;
+	}
+
+	.state.comp i {
+		background: #53b100;
+	}
+
+	.state.modi i {
+		background: orange;
+		animation: over_a both linear infinite 3s
+	}
+
+	.state.wait i {
+		background: #999;
+	}
+
+	.state.del i {
+		background: #333;
+	}
+	.state.em i {
+		background: blue;;
+		animation: emer 1s linear infinite;
+	}
+
+	.state.mc i {
+		width: 10px;
+		height: 10px;
+		border: 2px solid #f68500;
+		border-radius: 100%;
+	}
+
+	td.depa {
+		background:#b3e976 !important
+	}
+	td.date{
+		text-align: center;
+	}
+	.result{
+		position:relative;
+		font-size: 0;
+		margin: 10px 0 20px;
+		width: 1200px;
+		border-top: 1px solid #eaeaea;
+	}
+	.result:after{
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background: #eaeaea;
+	}
+	strong.complate{
+		font-weight: 700;
+		color: #53b100;
+	}
+	strong.percentage{
+		font-size: 16px;
+		color: blue;
+	}
+	.result li{
+		box-sizing: border-box;
+		display: inline-block;
+		width: 400px;
+		padding: 5px 10px;
+		list-style: none;
+		font-size: 14px;
+		color: #666;
+		border-bottom: 1px solid #eaeaea;
+	}
+	tr.emer td{
+		animation: emerColor .4s linear infinite;
+		background: #eee8aa55;
+	}
+	.result li span{
+		color: #000;
+	}
+	#total{
+		padding-left: 10px;
+		font-size: 20px;
+		color: #666;
+		letter-spacing: 1px;
+		font-weight: 700;
+	}
+	#total .total-count{
+		color: #000;
+	}
+	#total .total-complate{
+		color: #53b100;
+	}
+	#total .percent{
+		font-size: 22px;
+		color: blue;
+	}
+	tr.asap td{
+		background: aliceblue;
+	}
+	tr.asap.today td{
+		background: palegoldenrod;
+	}
+	.helper{
+		position: absolute;
+		left: 20px;
+		bottom: 20px;
+		font-size: 16px;
+	}
+	.helper .url{
+		text-transform: uppercase;
+		margin-right: 20px;
+	}
+	.lottie { width:80px; height:80px;}
+	@keyframes over_a {
+		0% {
+			opacity: 1;
+		}
+
+		40% {
+			opacity: 0.2;
+		}
+
+		60% {
+			opacity: 0.2;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@keyframes emer{
+		50% {
+			background: #ed1651;
+			color: #ed1651
+		}
+		75% {
+			background: #009591;
+			color: #009591
+		}
+	}
+	@keyframes emerColor{
+		50% {
+			color: #ed1651
+		}
+		75% {
+			color: #009591
+		}
+	}
+</style>
+	<style>
+	body{
+		padding: 0;
+	}
+	</style>
+</head>
+
+<body>
+    <div class="list_header">
+        <h1>하나은행 원큐플러스 상품몰 고도화 JSON 모션 List</h1>
+        <div class="proc_wrap">메인은 추후 용량이나 사이즈 변경이 가능하도록 별도 파일로 분기 되어있으며,<br>
+			개인화영역을 제외하고, 아래 파일이 파일명만 바뀐채 사용되고 있습니다.</div>
+    </div>
+	<!-- wrap -->
+	<div id="wrap">
+		<div class="cont">
+			<table>
+				<colgroup>
+					<col style="width:180px;">
+					<col style="width:300px;">
+					<col style="width:180px;">
+                    <col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">파일명</th>
+						<th scope="col">산출물 경로</th>
+						<th scope="col">정지프레임</th>
+                        <th scope="col">미리보기</th>
+					</tr>
+				</thead>
+                <tbody id="trIn"> </tbody>
+			</table>
+		</div>
+
+	</div>
+	<!-- //wrap -->
+
+	<script src="resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="resource/library/lottie/lottie.min.js"></script>
+    <script>
+        function setSVGApply(id, jsonUrl, isAutoplay, isLoop, impLoop, _stopFrame){
+            function fn(_target, idx){
+                if($(_target).is('.svg-init')){
+                    $(_target).trigger('_reInit');
+                    $(_target).trigger('play');
+                    return false;
+                }
+                var item = _target;
+                var wrapper = $('<div class="lottie"></div>').prependTo($(item)).get(0);
+                var autoplayflag = false;
+                var loopflag = false;
+                var motionImgTimerId;
+                var loopTimerId;
+                var repeatDelayTime = 5000;
+                var isMain = $('.prodmall-main').length;
+
+                if(typeof jsonUrl != "string"){//여로 이미지 모션 케이스 
+                    var target = $(item).find('.lottie');
+                    target.html($(jsonUrl.innerHtml));
+                    var onloadLen = 0;
+                    var printType = 'png';
+                    
+                    $.each(target.find('img'), function(){
+                        this.onload = function(){
+                            onloadLen++;
+                            if(onloadLen == target.find('img').length){
+                                $(item).addClass('motion-init')
+                            }
+                        }
+                    })
+                }else{
+                    var fileName = jsonUrl.split('/').reverse()[0].split('.')[0];
+                    var printType = jsonUrl.split('/').reverse()[0].split('.')[1];
+
+                    if(printType == 'png'){
+
+                        var target = $(item).find('.lottie');
+                        target.addClass('css-motion');
+                        var imgObj = new Image();
+                        imgObj.src = jsonUrl;
+                        imgObj.onload = function(){
+                            $(this).appendTo(target)
+                            $(item).addClass('motion-init')
+                        }
+                    }
+                }
+
+                if(typeof isAutoplay !== "undefined") {
+                    autoplayflag = isAutoplay;
+                }
+                if(typeof isLoop !== "undefined") {
+                    loopflag = isLoop;
+                }
+
+                if(printType == 'png'){ 
+                    var _this =  $(item);
+
+                    function _reInit() {
+                        _this.removeClass('motion-init');
+                        if(loopflag){
+                            //repeat
+                            clearInterval(motionImgTimerId);
+                        }
+                    }
+                    function _play() {
+                        _this.addClass('motion-init');
+                        if(loopflag){
+                            //repeat
+                            motionImgTimerId = setInterval(function(){
+                                _this.removeClass('motion-init');
+                                //delay
+                                setTimeout(function(){
+                                    _this.addClass('motion-init');
+                                },100)
+                            },repeatDelayTime);//2022-10-14 수정
+                        }
+                    }
+                    _this.unbind('reInit').bind('reInit',_reInit);
+                    _this.unbind('play').bind('play',_play);
+                    if(autoplayflag){
+                        _this.trigger('play');
+                    }
+                    return false;
+                }
+
+                
+                var stopFrame = 0;
+                switch(fileName){
+                    case 'J01' : 
+                    case 'recom_banner17' : 
+                    case 'theme03' : 
+                    case 'psBanner13' : 
+                        stopFrame = 35;
+                    break;
+                    case 'J02' : 
+                    case 'recom_banner01' : 
+                    case 'recom_banner02' : 
+                    case 'psBanner03' : 
+                        stopFrame = 28;
+                    break;
+                    case 'J03' : 
+                    case 'psBanner09' : 
+                        stopFrame = 0;
+                    break;
+                    case 'J04' : 
+                    case 'recom_banner16' : 
+                        stopFrame = 22;
+                    break;
+                    case 'J05' : 
+                    case 'recom_banner08' : 
+                        stopFrame = 42;
+                    break;
+                    case 'J06' : 
+                    case 'recom_banner10' : 
+                    case 'theme01' : 
+                        stopFrame = 42;
+                    break;
+                    case 'J07' : 
+                    case 'recom_banner14' : 
+                        stopFrame = 42;
+                    break;
+                    case 'J08' : 
+                        stopFrame = 43;
+                    break;
+                    case 'J09' : 
+                        stopFrame = 27;
+                    break;
+                    case 'J10' : 
+                    case 'recom_banner06' : 
+                    case 'psBanner14' : 
+                        stopFrame = 30;
+                    break;
+                    case 'J11' : 
+                    case 'psBanner12' : 
+                        stopFrame = 42;
+                    break;
+                    case 'J12' : 
+                        stopFrame = 42;
+                    break;
+                    case 'J13' : 
+                        stopFrame = 42;
+                    break;
+                    case 'J14' : 
+                        stopFrame = 26;
+                    break;
+                    case 'J15' : 
+                    case 'theme02' : 
+                        stopFrame = 34;
+                    break;
+                    case 'J16' : 
+                    case 'theme07' : 
+                        stopFrame = 32;
+                    break;
+                    case 'J17' : 
+                    case 'theme08' : 
+                        stopFrame = 34;
+                    break;
+                    case 'J18' : 
+                    case 'theme06' : 
+                        stopFrame = 42;
+                    break;
+                    case 'J19' : 
+                    case 'recom_banner07' : 
+                    case 'theme05' : 
+                    case 'psBanner02' : 
+                        stopFrame = 36;
+                    break;
+                    case 'J20' : 
+                    case 'theme04' : 
+                        stopFrame = 42;
+                    break;
+                    case 'J21' : 
+                    case 'theme09' : 
+                        stopFrame = 28;
+                    break;
+                    case 'J22' : 
+                        stopFrame = 42;
+                    break;
+                    case 'J24' : 
+                        stopFrame = 0;
+                    break;
+                    case 'J25' : 
+                    case 'psBanner05' : 
+                        stopFrame = 42;
+                    break;
+                    case 'J26' : 
+                        stopFrame = 17;
+                    break;
+                    case 'J27' : 
+                        stopFrame = 38;
+                    break;
+                    case 'J28' : 
+                    case 'recom_banner15' : 
+                        stopFrame = 34;
+                    break;
+                    case 'J29' : 
+                    case 'recom_banner09' : 
+                        stopFrame = 41;
+                    break;
+                    case 'J30' : 
+                        stopFrame = 42;
+                    break;
+                    case 'J31' : 
+                        stopFrame = 0;
+                    break;
+                    case 'J33' : 
+                        stopFrame = 42;
+                    break;
+                    case 'J34' : 
+                    case 'psBanner06' : 
+                        stopFrame = 30;
+                    break;
+                    case 'J35' : 
+                        stopFrame = 32;
+                    break;
+                    case 'J36' : 
+                        stopFrame = 33;
+                    break;
+                    case 'J37' : 
+                    case 'recom_banner11' : 
+                        stopFrame = 34;
+                    break;
+                    case 'J38' : 
+                        stopFrame = 36;
+                    break;
+                    case 'J40' : 
+                    case 'recom_banner12' : 
+                        stopFrame = 42;
+                    break;
+                    case 'J26' : 
+                    case 'psBanner02' : 
+                        stopFrame = 17;
+                    break;
+                    case 'J41' : 
+                    case 'psBanner07' : 
+                    case 'recom_banner13' : 
+                        stopFrame = 42;
+                    break;
+                    case 'J42' : 
+                        stopFrame = 33;
+                    break;
+                    case 'J44-green' : 
+                    case 'J44-pink' :
+                    case 'psBanner01' : 
+                    case 'psBanner04' : 
+                        stopFrame = 42;
+                    break;
+                    case 'J45' : 
+                        stopFrame = 38;
+                    break;
+                    case 'J46' : 
+                    case 'recom_banner05' : 
+                        stopFrame = 32;
+                    break;
+                    case 'J47' : 
+                        stopFrame = 28;
+                    break;
+                    case 'J48' : 
+                        stopFrame = 42;
+                    break;
+                    case 'J49' : 
+                        stopFrame = 42;
+                    break;
+                    case 'J50' : 
+                    case 'psBanner10' : 
+                        stopFrame = 42;
+                    break;
+                    case 'J51' : 
+                    case 'psBanner11' : 
+                        stopFrame = 42;
+                    break;
+                }
+                
+                $(item).addClass(fileName);
+                var isImpLoop = false;
+                if(typeof impLoop !== "undefined" && impLoop !== false) {
+                    isImpLoop = isLoop;
+                }
+                
+                //2022-10-17 운영 관련 stopframe변경 코드 추가
+                if(typeof _stopFrame !== "undefined") {
+                    stopFrame = _stopFrame;
+                }
+                
+                //메인은 오토플레이로
+                if(isMain){
+                    autoplayflag = true;
+                }
+                
+                var animData = {
+                    wrapper: wrapper, //pure element
+                    animType: 'svg',
+                    loop: isImpLoop,
+                    autoplay: false,
+                    path: jsonUrl,
+                    rendererSettings: {
+                        progressiveLoad:false
+                    },
+                };
+                var anim = bodymovin.loadAnimation(animData);
+
+                function dataReady(){
+                    $(item).addClass('svg-init');
+                    var interactionPos = item.getBoundingClientRect();
+                        
+                    if(!(interactionPos.x > $('body').get(0).clientWidth) && !(interactionPos.y > $('body').get(0).clientHeight)){
+                        if(autoplayflag){
+                            $(item).addClass('playing');
+                            _play();
+                        }
+                    }
+                }
+
+                function _reInit() {
+                    anim.stop();
+                    if(loopflag){
+                        //repeat
+                        clearInterval(loopTimerId);
+                    }
+                }
+                function _pause() {
+                    anim.pause();
+                    if(loopflag){
+                        //repeat
+                        clearInterval(loopTimerId);
+                    }
+                }
+                
+                function _play() {
+                    
+                    if(stopFrame){
+                        anim.playSegments([0, stopFrame], true);
+                    }else{
+                        anim.play();
+                    }
+                    
+                    if(loopflag){
+                        //repeat
+                        clearInterval(loopTimerId);
+                        loopTimerId = setInterval(function(){
+                            //delay
+                            anim.goToAndStop(0);
+                            if(stopFrame){
+                                anim.playSegments([0, stopFrame], true);
+                            }else{
+                                anim.play();
+                            }
+                        },repeatDelayTime);
+                    }
+
+                }
+                /*
+                function enterFrame(frame){
+                    
+                    $(item).data('currFrame',frame);
+                }
+                */
+                $(item).data('lottie',anim);
+                $(item).data('stopFrame', stopFrame);
+                anim.addEventListener('data_ready',dataReady);
+                //anim.addEventListener('enterFrame',enterFrame);
+                $(item).unbind('reInit').bind('reInit',_reInit);
+                $(item).unbind('pause').bind('pause',_pause);
+                
+                $(item).unbind('play').bind('play',_play); 
+            };
+            $(id).each(function(idx){
+                fn(this, idx);
+            })
+        }
+    </script>
+	<script>
+        $(document).ready(function(){
+            var svgPath = '/pub/resource/images/C/lottie/detail/';
+            var svgLen = new Array(48);
+            var templeate = '<tr>\
+                <td>{fileName}</td>\
+                <td>{path}</td>\
+                <td id="{id}stopFrame"></td>\
+                <td id="{id}"></td>\
+            </tr>';
+            var strtempleate = '';
+
+            for(var i=1; i<52; i++){
+                if(!(i == 23 | i == 32 | i == 39)){ 
+                    var x = i;
+                    if(i == 43){
+                        x = 44+'-green';
+                    }else if(i == 44){
+                        x = 44+'-pink';
+                    }
+                    var fileName = 'J'+((x)+'').padStart(2, "0");
+                    strtempleate += templeate.replace('{id}',fileName).replace('{id}',fileName).replace('{path}',svgPath).replace('{fileName}',fileName+'.json');
+                }
+            }
+            $(strtempleate).appendTo('#trIn');
+
+
+            for(var i=1; i<52; i++){
+                if(!(i == 23 | i == 32 | i == 39)){ 
+                    
+                    //
+                    var x = i;
+                    if(i == 43){
+                        x = 44+'-green';
+                    }else if(i == 44){
+                        x = 44+'-pink';
+                    }
+                    var fid = 'J'+((x)+'').padStart(2, "0");
+                    var fileName = fid+'.json';
+                    
+                    
+                    setSVGApply('#'+fid, svgPath + fileName, true, true);//2022-10-18
+
+					if($('#'+fid).data('stopFrame') == '0'){
+						$('#'+fid + 'stopFrame').text('끝까지 재생');	
+					}else{
+						$('#'+fid + 'stopFrame').text($('#'+fid).data('stopFrame'));
+					}
+					
+                }
+                
+            }
+            
+        })
+    </script>
+</body>
+
+</html>

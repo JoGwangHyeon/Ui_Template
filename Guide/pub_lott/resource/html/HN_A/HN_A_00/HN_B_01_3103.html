@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+	<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <!-- 2022 상품몰 고도화 추가 -->
+    <link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+
+<body>
+    <div class="modal-full modal-full--button modal-challenge-get-rewards">
+        <div class="modal__header">
+            <h1 class="modal__header--title"></h1>
+        </div>
+        <!-- 2022-09-27 마크업 변경 -->
+        <!-- 2022-09-27 비회원시 guest 클래스 추가해주세요. class="get-rewards guest" -->
+        <div class="get-rewards">
+            <!-- 비회원시 메시지 2022-11-03 변경
+                <em>챌린지를<br>달성했어요!</em>
+            -->
+            <em>챌린지 성공!</em>
+            <div>
+                <strong><span>00</span>원을 받았어요</strong>
+                <span class="go-to-coupon-box">잠시 후 적립될 거에요.</span>
+            </div>
+            <i></i>
+        </div>
+        
+
+        <div class="button-fixed">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive" onclick="javascript:HanaClosePopup('','');">확인</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+        </div>
+        <button class="modal__btn--close" type="button" title="닫기" onclick="javascript:HanaClosePopup('','');"></button>
+    </div>
+
+    <!--  2022-10-08 lottie 플러그인 추가 -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/lottie/lottie.min.js"></script>
+    <script src="../../../../resource/js/ui/common_n22UI.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            setSVGApply('.modal-challenge-get-rewards i', '/pub/resource/images/C/lottie/theme08.json', true, true);//j17
+        })
+    </script>
+    
+</body>
+</html>

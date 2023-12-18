@@ -1,0 +1,1174 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width<br> initial-scale=1.0<br> user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>하나은행 원큐플러스 구축 퍼블리싱 리스트</title>
+	<!-- 공통 css -->
+    <link rel="stylesheet" href="resource/css/common.css" type="text/css">
+    <link rel="stylesheet" href="resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="resource/css/bank.css" type="text/css">
+	<link rel="stylesheet" href="resource/css/prodmall.css" type="text/css">
+	<style type="text/css">
+		* { line-height:1.5;}
+		.doc-tit { font-weight:700; height:52px; font-size:14px; padding:14px 1.5rem; border-bottom:1px solid #e7e9ee; background:#fff;}
+		
+		#gWrap {
+			display:flex;
+			height:calc(100% - 52px);
+		}
+		#gGnb {
+			flex:0 1 auto;
+			min-width:360px;
+			padding:0 1.5rem;
+			text-align:center;
+		}
+		#gGnb h2 { position:relative; font-weight:700; font-size:26px; margin-top:60px;}
+		#gGnb a { color:blue; text-decoration:underline;}
+		#gGnb ul { margin-top:20px; background:#fff; border:1px solid #e7e9ee; border-radius:16px; box-shadow: 0.125rem 0.187rem 0.625rem 0 rgba(0, 0, 0, 0.06); overflow:hidden;}
+		#gGnb ul button {
+			width:100%;
+			padding:14px 0;
+			font-size:16px;
+			font-weight:500;
+			cursor:pointer;
+		}
+		
+		#gGnb ul button:hover {
+			background:rgba(0, 0, 0, 0.05);
+		}
+		#gGnb ul button:active {
+			background:rgba(0, 0, 0, 0.6);
+			color:#fff;
+		}
+		
+		#gGnb ul button.on {
+			background-color: #262b45;
+    		color: #fff;
+		}
+		#gContainer { flex:1 0 auto;}
+		#gContainer .intro {
+			padding:60px 1.5rem;
+		}
+
+		#gGnb .emp-bubble{position:absolute; top:-2.75rem; left:50%; z-index:5;}
+		#gGnb .emp-bubble p{ display:inline-block; padding:0.3125rem 0.75rem; background:#262b45; border-radius: 0.625rem; color:#fff; font-size:0.875rem; position:relative; font-weight:400;}
+		#gGnb .emp-bubble p:after{
+			content:'';
+			display:block;
+			width: 0px;
+			height: 0px;
+			border-top: 9px solid #262b45;
+			border-left: 6px solid transparent;
+			border-right: 6px solid transparent;
+			position:absolute;
+			top:100%;
+			left:20px;
+		}
+		#gGnb .button-wrap { margin-top:40px;}
+		#gGnb .button-wrap button { cursor:pointer;}
+
+		#gGnb .bottom-banner {
+			margin-top: 2rem;
+			background-color: #e6e5f6;
+			border-radius: 1.125rem;
+		}
+		#gGnb .bottom-banner .bottom-banner-cont {
+			display: flex;
+			align-items: center;
+			padding: 0 0 0 14px;
+			border-radius: 1.125rem;
+			text-align: left;
+			cursor:pointer;
+		}
+		#gGnb .bottom-banner .bottom-banner-cont .thumb {
+			position: relative;
+			width: 5.75rem;
+			height: 5.75rem;
+		}
+		#gGnb .bottom-banner .bottom-banner-cont dl {
+			margin-left: 20px;
+			text-align:left;
+		}
+		#gGnb .bottom-banner .bottom-banner-cont dl dt {
+			margin-bottom: 0.25rem;
+			font-size: 0.875rem;
+			line-height: 1.43;
+			color: #333;
+		}
+		#gGnb .bottom-banner .bottom-banner-cont dl dd {
+			font-size: 1rem;
+			font-weight: 700;
+			line-height: 1.38;
+			color: #333;
+		}
+		#content {
+			padding-top:calc(3.5rem + env(safe-area-inset-top));
+		}
+		#gWrap > .xmp { position:absolute; width:0; height:0; opacity:0; left:-500px; overflow:hidden;}
+		#gContainer {  height:100%; overflow:auto; padding-bottom:3.5rem;}
+		#gContainer .input {max-width:300px;}
+		#gContainer xmp { 
+			border:1px solid #262b45;
+			background-color: bisque;
+			font-family:'Roboto','notosans',sans-serif;
+			font-size:14px;
+			line-height:1.5;
+			padding:0 14px 14px 14px;
+		}
+		.modal.is-open { top:0;}
+		.n22UI { margin-top:40px;}
+		.privacy__item { border:1px solid #e7e9ee; background:#fff;}
+		.icon-svg-area { max-width:360px; position:relative;}
+		.prodmall-section { max-width:370px;}
+	</style>
+</head>
+<body>
+	<h1 class="doc-tit">2022 상품몰 고도화 템플릿 가이드</h1>
+    <div id="gWrap">
+		<div id="gGnb">
+			<h2>PATTERN
+				<div class="emp-bubble">
+					<p>템플릿 목록!</p>
+				</div>
+			</h2>
+			<ul id="gLink">
+				<li><button type="button" data-target="input">input[type=text]</button></li>
+				<li><button type="button" data-target="input2">input[type=checkbox | radio]</button></li>
+				<li><button type="button" data-target="input3">select</button></li>
+				<li><button type="button" data-target="pt2">레이어팝업</button></li>
+				<li><button type="button" data-target="pt3">3D 모션이미지</button></li>
+				<li><button type="button" data-target="pt4">레이아웃</button></li>
+				<li><button type="button" data-target="pt5">참고사항</button></li>
+			</ul>
+			
+			<div class="bottom-banner">
+				<button class="bottom-banner-cont" type="button">
+					<span class="thumb">
+						<img src="resource/images/C/n22_img_stack1_02.png" alt="">
+					</span>
+					<dl>
+						<dt>CMS현황판</dt>
+						<dd>화면이동후<br>금융상품 Tab!</dd>
+					</dl>
+				</button>
+			</div>
+
+			<div class="button-wrap">
+				<button id="asIs" type="button" class="button button--positive round-corner" data-url="https://dev12-mbp.hanabank.com:18080/pub/resource/html/CCOM/CCOM00/pattern.html">AS-IS 템플릿 현황판 이동</button>
+			</div>
+
+		
+		</div>
+        <div id="gContainer">
+			<div class="intro">
+				<div class="tit-default">#Intro</div>
+				<div class="container">
+					<p class="text-default">2022년 상품몰 고도화 프로젝트는<br>
+					초반 퍼블 진행시 기획서 상으로 as-is를 준용하며 일부만 변형하는 요건의 카테고리부터(가입프로세스) 시작되어,<br>
+					공통 템플릿은 모두 as-is를 가져와서 확장 시킨형태로 적용되어 있습니다.<br>
+
+					to-be에서 제작된 공통 템플릿에 대해서 가이드 화면 작성했습니다.<br>
+					본 가이드 화면에서 사용된 스타일은 모두 prodmall.css와 prodmall-main.css에 선언되어있는 것들을<br>
+					활용하였습니다.<br>
+					좌측 링크 클릭하시면 됩니다.
+					</p>
+				</div>
+				<div class="container">
+					<p class="text-default"># as-is 원큐플러스에 대한 현황판 주소이며 화면 이동후 상단 링크를 참조하시면 됩니다.<br>
+						<a href="https://dev12-mbp.hanabank.com:18080/pub/" target="_blank">https://dev12-mbp.hanabank.com:18080/pub/</a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+<div id="input" class="xmp">
+	<div class="tit-default">#input[type=text]</div>
+	<div class="tit-default">native 인풋 - as-is</div>
+	<div class="container">
+		<p class="text-default">네이티브 입력폼은 퍼블단에서는 포커스가 들어가지 않는게 정상이며,<br>
+			개발적용후 클릭시 네이티브 키패드가 호출되어 사용자가 입력한 값을 value값으로 적용하게 됩니다.
+		</p>
+	</div>
+	<div class="container">
+		<!-- 개발 | value 값이 들어가면 input--on 추가 -->
+		<div class="input native-readonly input--focus">
+			<!-- 개발 | 네이티브 키패스 활성화시 input-focus 클래스를 넣어주세요 -->
+			<!--
+				* 오류시 class="input input--error"
+				* 데이터가 초기에 자동으로 입력되어 있을때 class="input"
+			-->
+			<!--
+				* 데이터가 초기에 자동으로 입력되어 있을때 class="input"
+			-->
+			<div class="input__inner">
+				<div class="native-inner" role="button">
+					<input type="text" id="inputText01" class="input__element" title="금액" placeholder="최소 100만원" readonly>
+				</div>
+				<label for="inputText01" class="input__label" aria-hidden="true">금액 입력</label>
+				<button type="button" class="input__remove-button" aria-label="텍스트삭제"></button>
+			</div>
+			<!-- 에러 메시지 -->
+			<p class="input__error" aria-live="assertive">에러메시지</p>
+		</div>
+	      
+	</div>      
+	<div class="n22UI">
+		<div class="tit-default">native 인풋 -  입력전, 입력후, 에러노출, 변경불가 순 나열</div>
+		<div class="container">
+			<p class="text-default">
+				고도화시 대화형 입력폼으로 주로 사용되어 입력폼뒤에 텍스트가 붙는 케이스가 많아서<br>
+				as-is와 비교할때 마크업이나 클래스가 추가된 부분이 존재하지만 거의 동일합니다.<br>
+				금액입력, 추천번호 입력등에서 네이티브 키패드가 쓰였으며,<br>
+				해당 값을 입력하는 요소라면 가이드를 참고하여 적용이 필요합니다.<br>
+			</p>
+		</div>
+		<div class="container">
+								
+			<div class="input native-readonly underline-type">
+				<!--
+					* 오류시 class="input input--error"
+					* 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+				-->
+				<div class="input__inner">
+					<div class="native-inner" role="button">
+						<span id="inputText02" class="input__element" title="가입금액 입력" placeholder="최소 100만원"></span>
+					</div>
+					<span>을</span>
+					<button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
+				</div>
+				<p class="input__error" aria-live="assertive">가입금액을 입력해 주세요.</p>
+			</div>
+			<p class="note savings-amount-msg" style="display:none;">10만원</p>   
+		</div>
+		<div class="container">
+			<div class="input native-readonly underline-type">
+				<div class="input__inner">
+					<div class="native-inner" role="button">
+						<span id="inputText02" class="input__element" title="가입금액 입력" placeholder="최소 100만원">100만원</span>
+					</div>
+					<span>을</span>
+					<button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
+				</div>
+				<p class="input__error" aria-live="assertive">가입금액을 입력해 주세요.</p>
+			</div>
+			<p class="note savings-amount-msg">100만원</p>   
+		</div>
+		<div class="container">
+			<div class="input native-readonly underline-type input--error">
+				<div class="input__inner">
+					<div class="native-inner" role="button">
+						<span id="inputText02" class="input__element" title="가입금액 입력" placeholder="최소 100만원">100만원</span>
+					</div>
+					<span>을</span>
+					<button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
+				</div>
+				<p class="input__error" aria-live="assertive">가입금액을 입력해 주세요.</p>
+			</div>
+			<p class="note savings-amount-msg" style="display:none;">100만원</p>   
+		</div>
+		<div class="container">
+			<div class="input native-readonly underline-type readonly">
+				<div class="input__inner">
+					<div class="native-inner" role="button">
+						<span id="inputText02" class="input__element" title="가입금액 입력" placeholder="최소 100만원">100만원</span>
+					</div>
+					<span>을</span>
+					<button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
+				</div>
+				<p class="input__error" aria-live="assertive">가입금액을 입력해 주세요.</p>
+			</div>
+			<p class="note savings-amount-msg">100만원</p>   
+		</div>
+
+		<div class="tit-default">기본 인풋 - 입력전, 입력후, 에러 노출 순 나열</div>
+		<div class="container">
+			<p class="text-default">
+				as-is 공통 스크립트에서 입력폼에 스타일 구분이 필요한 지점에 대해 클래스 적용이 되고 있으며,<br>
+				input 클래스가 부여된 요소에<br>
+				포커스시 <span class="color-green">input--focus</span><br>
+				입력값이 있을시 <span class="color-green">input--on</span><br>
+				클래스들을 적용해주고 있습니다.
+			</p>
+		</div>
+		<div class="container">
+			<div class="input underline-type w100">
+				<div class="input__inner">
+					<input type="text" id="inputText03" class="input__element" title="반려동물 이름 입력" placeholder="반려동물 이름(최대 10자리)"/>
+					<button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
+				</div>
+				<!-- 에러메시지 -->
+				<p class="input__error" aria-live="assertive">반려동물 이름을 입력해 주세요.</p>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="input underline-type w100 input--on">
+				<div class="input__inner">
+					<input type="text" id="inputText03" class="input__element" title="반려동물 이름 입력" placeholder="반려동물 이름(최대 10자리)" value="멍멍이"/>
+					<button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
+				</div>
+				<!-- 에러메시지 -->
+				<p class="input__error" aria-live="assertive">반려동물 이름을 입력해 주세요.</p>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="input underline-type w100 input--error">
+				<div class="input__inner">
+					<input type="text" id="inputText03" class="input__element" title="반려동물 이름 입력" placeholder="반려동물 이름(최대 10자리)"/>
+					<button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
+				</div>
+				<!-- 에러메시지 -->
+				<p class="input__error" aria-live="assertive">반려동물 이름을 입력해 주세요.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="input2" class="xmp">
+	<div class="tit-default">#input[type=checkbox | radio]</div>
+	<div class="n22UI">
+		<div class="tit-default">기본 체크박스 - 기본, 활성, 변경불가 순 나열</div>
+		<div class="container">
+			<p class="text-default">
+				as-is와 동일한 마크업을 사용하였으며<br>
+				css로 사이즈와 배경이미지만 수정 되었습니다.
+				용도에 따라 바로 체크되지않는 버튼으로 제작된 타입이 추가로 존재합니다.
+			</p>
+		</div>
+		<div class="container">
+			<div class="checkbox-wrap flex" data-input-selector="checkbox">
+				<input type="checkbox" id="imptMttrBtn" class="checkbox-wrap__check" name="chk-info" data-input-name="chk-info">
+				<label for="imptMttrBtn" class="checkbox-wrap__label color-green underline">중요한 사항 내용 보기</label>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="checkbox-wrap flex" data-input-selector="checkbox">
+				<input type="checkbox" id="imptMttrBtn" class="checkbox-wrap__check" name="chk-info" data-input-name="chk-info" checked="">
+				<label for="imptMttrBtn" class="checkbox-wrap__label color-green underline">중요한 사항 내용 보기</label>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="checkbox-wrap flex" data-input-selector="checkbox">
+				<input type="checkbox" id="imptMttrBtn2" class="checkbox-wrap__check dischk" name="chk-info" data-input-name="chk-info" checked disabled>
+				<label for="imptMttrBtn2" class="checkbox-wrap__label color-green underline">중요한 사항 내용 보기</label>
+			</div>
+		</div>
+
+		<div class="tit-default">바로 체크 되지않는 체크박스</div>
+		<div class="container">
+			<p class="text-default">
+				약관보기 화면등에서 쓰이며<br>
+				특정 조건 만족시 체크되어야하는 경우<br>
+				개발에서 aria-checked 값을 true로 설정해주어야 체크표시가 활성화 됩니다.
+			</p>
+		</div>
+		
+		
+		<div class="container">
+			<div class="privacy__item">
+				<button type="button" class="privacy__icon" role="checkbox" aria-checked="false" aria-labelledby="agreeBtn02"></button>
+				<button type="button" class="privacy__detail" id="agreeBtn02">
+					[선택 동의]
+					<span>개인(신용)정보수집·이용 및 제공 동의(상품서비스안내 등)</span>
+				</button>
+			</div>
+		</div>
+		
+		<div class="tit-default">라디오 버튼 - 기본, 활성, 변경불가 순 나열</div>
+		<div class="container">
+			<p class="text-default">
+				as-is와 동일한 마크업을 사용하였으며<br>
+				css로 사이즈와 배경이미지만 수정 되었습니다.
+			</p>
+		</div>
+		<div class="container">
+			<span class="radio-wrap">
+				<input type="radio" id="rdo1-01" class="radio-wrap__radio" name="rdo1">
+				<label for="rdo1-01" class="radio-wrap__label">이메일</label>
+			</span>
+		</div>
+		<div class="container">
+			<span class="radio-wrap">
+				<input type="radio" id="rdo1-02" class="radio-wrap__radio" name="rdo1" checked="">
+				<label for="rdo1-02" class="radio-wrap__label">SMS</label>
+			</span>
+		</div>
+		<div class="container">
+			<span class="radio-wrap">
+				<input type="radio" id="rdo1-03" class="radio-wrap__radio" name="rdo2" disabled>
+				<label for="rdo1-03" class="radio-wrap__label">비활성</label>
+			</span>
+		</div>
+	</div>
+</div>
+
+<div id="input3" class="xmp">
+	<div class="tit-default">#select</div>
+	<div class="n22UI">
+		<div class="tit-default">셀렉트박스 - 선택전, 선택후, 에러 노출, 변경불가 순 나열</div>
+		<div class="progress">
+			<div class="container">
+				<p class="text-default">
+					as-is와 비교할때 마크업이나 클래스가 추가된 부분이<br>
+					존재하지만 거의 동일합니다.
+				</p>
+			</div>
+			<div class="container">
+				<!-- 시뮬레이션에서 넘겨졌을 때 각 .button-select 에 .selected 적용필요 -->
+				<div class="button-select underline-type inline">
+					<!-- select 버튼에 추가 | data-element="modal__open" data-target="모달 레이어팝업 id 값 예)#combobox_1" -->
+					<button type="button" class="button button-select__item" title="금리우대쿠폰 선택" placeholder="선택하세요"></button>
+				</div>
+				<p class="input__error" aria-live="assertive">금리우대 쿠폰을 선택해 주세요.</p>
+				<!-- 말풍선 적용
+				<div class="emp-bubble">
+					<p>적용할 수 있는 쿠폰이 있어요!</p>
+				</div>
+				 -->
+			</div>
+
+			<div class="container">
+				<!-- 시뮬레이션에서 넘겨졌을 때 각 .button-select 에 .selected 적용필요 -->
+				<div class="button-select underline-type inline">
+					<!-- select 버튼에 추가 | data-element="modal__open" data-target="모달 레이어팝업 id 값 예)#combobox_1" -->
+					<button type="button" class="button button-select__item" title="금리우대쿠폰 선택" placeholder="선택하세요">청년우대금리쿠폰</button>
+				</div>
+				<p class="input__error" aria-live="assertive">금리우대 쿠폰을 선택해 주세요.</p>
+			</div>
+			<div class="container">
+				<!-- 시뮬레이션에서 넘겨졌을 때 각 .button-select 에 .selected 적용필요 -->
+				<div class="button-select underline-type inline">
+					<!-- select 버튼에 추가 | data-element="modal__open" data-target="모달 레이어팝업 id 값 예)#combobox_1" -->
+					<button type="button" class="button button-select__item" title="금리우대쿠폰 선택" placeholder="선택하세요"></button>
+				</div>
+				<p class="input__error block" aria-live="assertive">금리우대 쿠폰을 선택해 주세요.</p>
+			</div>
+			
+			<div class="container">
+				<!-- 시뮬레이션에서 넘겨졌을 때 각 .button-select 에 .selected 적용필요 -->
+				<div class="button-select underline-type inline">
+					<!-- select 버튼에 추가 | data-element="modal__open" data-target="모달 레이어팝업 id 값 예)#combobox_1" -->
+					<button type="button" class="button button-select__item readonly" title="금리우대쿠폰 선택" placeholder="선택하세요">청년우대금리쿠폰</button>
+				</div>
+				<p class="input__error" aria-live="assertive">금리우대 쿠폰을 선택해 주세요.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="pt2" class="xmp">
+	<div class="tit-default">#레이어팝업</div>
+	<div class="n22UI">
+		<div class="tit-default">팝업</div>
+		<div class="container">
+			<p class="text-default">
+				슬라이드팝업과, 풀팝업, alert, confirm등 as-is팝업의 마크업과 기능이 그대로<br>
+				유지되었고, 스타일만 수정되었습니다.<br><br>
+				
+				그외 추가로 제작된 별도의 기능이 있는 팝업에 대한 가이드 입니다.<br><br>
+			</p>
+		</div>
+		<div class="tit-small">기간선택 팝업</div>
+		<div class="container">
+			<p class="text-default">
+				(안드로이드 기준)네이티브로 제작된 기간선택 피커와 디자인을 맞춰놓은상태이며,<br>
+				간편설정과 직접입력 메뉴가 둘다 존재하는 팝업인지,<br>
+				둘중하나만 존재하는 팝업인지 여부에 따라 3가지로 구분되며,<br>
+				관련 스크립트는 common_n22UI.js파일내에 hanaProdUI.dialSelect 함수 입니다.<br>
+				해당 함수는 개발에서 한번더 커스텀되어 적용되어있습니다.<br><br>
+				
+				개발에서 전달되는 값은 아래와 같습니다.
+			</p>
+		</div>
+		<div class="tit-small">기간선택 팝업 - 둘다 존재하는경우 </div>		
+		<div class="container">
+			<div class="button-wrap">
+				<!--
+					기간 선택 스크롤이 화면상에 노출되는 시점에 호출해줘야합니다.
+						hanaProdUI.multipleSelect('uiDialogMultiple1')
+					-->
+				<button
+					type="button"
+					class="button button--positive"
+					data-element="modal__open"
+					data-target="#CCOM0015002_P02"
+					id="dialOpenBtn"
+				>
+					일자선택(3)
+				</button>
+			</div>
+		</div>
+		<xmp>
+		var param = {
+			min : 0, //0개월 뒤부터
+			max : 48, //48개월까지 설정가능
+			/* 간편설정이 존재할경우 */
+			items : [{
+				"code" : 1,
+				"codeName" : "1개월"
+			},{
+				"code" : 2,
+				"codeName" : "2개월"
+			},{
+				"code" : 3,
+				"codeName" : "3개월"
+			}]
+		};
+		</xmp>
+
+		
+
+		<div class="tit-small">기간선택 팝업 - 간편설정만 존재하는 경우 </div>	
+		<div class="container">
+			<div class="button-wrap">
+				<!--
+					기간 선택 스크롤이 화면상에 노출되는 시점에 호출해줘야합니다.
+						hanaProdUI.multipleSelect('uiDialogMultiple1')
+					-->
+				<button
+					type="button"
+					class="button button--positive"
+					data-element="modal__open"
+					data-target="#CCOM0015002_P03"
+					id="dialOpenBtn2"
+				>
+					일자선택(1)
+				</button>
+			</div>
+		</div>	
+		<xmp>
+		var param = [{
+			"code" : 1,
+			"codeName" : "1개월"
+		},{
+			"code" : 2,
+			"codeName" : "2개월"
+		},{
+			"code" : 3,
+			"codeName" : "3개월"
+		},{
+			"code" : 4,
+			"codeName" : "4개월"
+		}];
+		</xmp>
+		<div class="tit-small">기간선택 팝업 - 직접선택만 존재하는 경우 </div>		
+		<div class="container">
+			<div class="button-wrap">
+				<!--
+					기간 선택 스크롤이 화면상에 노출되는 시점에 호출해줘야합니다.
+						hanaProdUI.multipleSelect('uiDialogMultiple1')
+					-->
+				<button
+					type="button"
+					class="button button--positive"
+					data-element="modal__open"
+					data-target="#CCOM0015002_P04"
+					id="dialOpenBtn3"
+				>
+					직접선택만 있는 case
+				</button>
+			</div>
+		</div>
+		<xmp>
+		var param = {
+			min : 6, //6개월뒤부터 
+			max : 48 //48개월까지 설정가능
+		};
+		</xmp>
+
+		
+		
+
+		<div class="tit-small">머니박스 순서변경 팝업</div>
+		<div class="container">
+			<p class="text-default">
+				as-is 원큐 메인의 계좌 순서 변경 기능을 그대로 참조하였습니다.
+			</p>
+		</div>
+		<div class="container">
+			<button
+					type="button"
+					class="button button--positive"
+					data-element="modal__open"
+					data-target="#combobox_1"
+					id="dialOpenBtn4"
+				>
+					공간 순서 바꾸기
+			</button>
+		</div>
+	
+
+		
+	</div>
+</div>
+
+<div id="pt3" class="xmp">
+	<div class="tit-default">#3D 모션이미지</div>
+	<div class="n22UI">
+		<div class="tit-default">모션 영역의 종류</div>
+		<div class="container">
+			<p class="text-default">
+				상품몰 고도화 프로젝트에서<br>
+				모션 영역이 3가지로 구분됩니다.<br><br>
+			</p>
+		</div>
+
+		<div class="tit-small">1. 이미지를 조각내서 css로 모션을 적용한 케이스</div>
+		<div class="prodmall-section">
+			<!--  motion-init 클래스는 실제 화면 반영시 스크립트로 적용되는 클래스입니다.-->
+			<div id="prd_detail_1470992_01" class="icon-svg-area motion-init" style="height: 12.5rem;">
+				<img class="motion01" src="resource/images/C/n22_img_ani_document01.png" alt="">
+				<img class="motion02" src="resource/images/C/n22_img_ani_document02.png" alt="">
+				<span class="motion03"></span>
+				<img class="motion04" src="resource/images/C/n22_img_ani_document04.png" alt="">
+				<img class="motion05" src="resource/images/C/n22_img_ani_document05.png" alt="">
+			</div>
+		</div>
+
+		<div class="tit-small">2. lottie용 json을 업체에서 전달받아 적용한 케이스</div>
+		<div class="prodmall-section">
+			<div id="prd_detail_1470992_02" class="icon-svg-area" style="height: 12.5rem;"></div>
+		</div>
+		<div class="tit-small">3. 1번과 2번을 섞어놓은 케이스</div>
+
+		<div class="prodmall-section">
+			<!--  motion-init 클래스는 실제 화면 반영시 스크립트로 적용되는 클래스입니다.-->
+			<div id="prd_detail_04_4203_01" class="icon-svg-area motion-init" style="height: 12.5rem;">
+				<img class="motion01" src="resource/images/C/n22_img_ani_school.png" alt="">
+			</div>
+		</div>
+
+		<div class="tit-default">모션 json 설정관련</div>
+		<div class="container">
+			<p class="text-default">
+				json파일의 경우 to-be 공통 함수에 정지 프레임이 설정되어있으며,<br>
+				추가로 전달된 파일에 정지 프레임을 설정하고자 할경우 아래와 같이 호출하면 됩니다.<br><br>
+
+				setSVGApply('#prd_detail_04_4203_01', '/pub/resource/images/C/lottie/detail/J49.json', false, false, false, 33);<br><br>
+
+				false로 선언된 부분들은 인수인계 문서에 가이드 되어있으며,<br>
+				33이라고 적혀진 부분이 정지 프레임값을 임의로 설정하는 곳입니다.
+
+			</p>
+		</div>
+
+		<div class="tit-default">모션 json 크기 관련</div>
+		<div class="container">
+			<p class="text-default">
+				json 파일들이 규격화 되어 제작 되지않아,<br>
+				같은 너비와 높이를 적용하여 화면에 노출시켜도 오브젝트의 크기가 다릅니다.<br>
+				해당 부분은 추후 개선되어야할 부분이며, <br>
+				오브젝트 변경시 주변 오브젝트와 사이즈를 맞춰주는 작업이 필요합니다.
+			</p>
+		</div>
+
+		<div class="tit-default">이벤트</div>
+		<div class="container">
+			<p class="text-default">
+				모션영역들은 스크롤 이벤트 발생시<br>
+				화면 노출여부에 따라 자동재생 또는 정지 되도록<br>
+				화면별로 스크립트가 정의되어있습니다.<br>(상품상세는 prd_detail_n22UI.js 파일내 hanaProdDetailUI.prdDetailPageInit 함수에 정의)
+
+				화면에 노출되는지 체크하여 있다면, 타겟 요소에 motion-init클래스가 적용되며 모션을 시작합니다.
+			</p>
+		</div>
+	</div>
+</div>
+
+<div id="pt4" class="xmp">
+	<div class="tit-default">#레이아웃</div>
+	<div class="n22UI">
+		<div class="container">
+			<p class="text-default">
+				대부분 as-is와 동일한 레이아웃을 사용하고 있으며,<br>
+				특별히 가이드가 필요한 부분은 대부분 없으나,<br>
+				메인, 상품몰 서브메인, 가입프로세스 정보입력 화면은 가이드가 필요할듯하여<br>
+				기록합니다.
+			</p>
+		</div>
+
+		<div class="tit-small">메인, 서브메인</div>
+		<div class="container">
+			<p class="text-default">
+				화면 진입시 hanaProdUI.sliderAutoplay 함수가<br>
+				#content 요소에 1초뒤 motion-init 함수를 적용하고,<br>
+				그후 2초뒤 hero-motion-finish 클래스를 적용합니다.<br><br>
+
+				motion-init 클래스가 적용되면 css로 모션을 진행하며,<br>
+				스크롤 시 요소마다 is-load 클래스가 부여되면 등장하는 <br>
+				모션의 speed나 easing은 원큐 메인과 싱크를 맞춘 상태입니다.
+			</p>
+		</div>
+
+		<div class="tit-small">가입프로세스 - 정보입력</div>
+		<div class="container">
+			<p class="text-default">
+				입출금전환을 제외하고 예금, 적금, 청약 모두 <br>
+				가입 프로세스의 단계별 화면이 swiper slide item으로 구성되어있습니다. <br>
+				사용자가 다음 화면으로 swipe 하기 위해서는 [계속] 버튼을 클릭하여야하며, <br>
+				마지막 스탭에서는 [계속] 버튼이 [다음] 버튼으로 변경됩니다. <br> <br>
+
+				개발에서 사용자가 입력한 데이터의 검증 처리후 화면이동이나 스크롤 이동등을 위해, <br>
+				개발에서 사용될 함수가 작성되어있으며, <br>
+				각 정보입력화면의 하단 소스와 주석을 참조하시면 됩니다.
+			</p>
+		</div>
+
+	</div>
+</div>
+
+<div id="pt5" class="xmp">
+	<div class="tit-default">참고사항</div>
+	<div class="n22UI">
+		<div class="tit-small">공통 css</div>
+		<div class="container">
+			<p class="text-default">
+				화면마다 공통으로 인클루드 되고있는<br>
+				resource/css/common.css<br>
+				resource/css/components.css<br>
+				resource/css/bank.css<br>
+				위 3개 파일은 원큐앱 공통이므로 수정하면 안됩니다.
+			</p>
+		</div>
+
+		<div class="tit-small">css상의 safe-area-inset-top 과 safe-area-inset-bottom</div>
+		<div class="container">
+			<p class="text-default">
+				원큐 iOS 앱으로 확인가능한<br>
+				safe-area-inset-top 과 safe-area-inset-bottom 영역으로인해<br>
+				스크립트에서도 해당 영역을 구하여<br>
+				스크롤시에 추가로 더하거나 빼며 연산하고 있으며,<br><br>
+				
+				css상에서도 <br>
+				top:calc(3.5rem + env(safe-area-inset-top))<br>
+				와 같이 선언하여 더하거나 빼서 안드로이드와 <br>
+				화면을 일치시키고 있습니다.<br><br>
+
+				G5기종에서는 해당 css 연산문구를 해석하지 못하여 속성 선언자체를 무시하므로,<br>
+				top:3.5rem; <br>
+				top:calc(3.5rem + env(safe-area-inset-top));<br>
+				와 같이 두번 선언해주어야합니다.
+			</p>
+		</div>
+
+		<div class="tit-small">최저 해상도 디바이스</div>
+		<div class="container">
+			<p class="text-default">
+				갤럭시 S5 (360 * 640) 기준입니다.
+			</p>
+		</div>
+
+		<div class="tit-small">https://dev1~ 로 시작되는 url</div>
+		<div class="container">
+			<p class="text-default">
+				외부, 내부 클라우드망에서도 동일하게 접속 가능합니다.
+			</p>
+		</div>
+	</div>
+</div>
+	<!-- 공통 script -->
+    <script src="resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="resource/library/slick/slick.js"></script>
+    <script src="resource/library/dnd/touch-dnd.js"></script>
+    <script src="resource/js/ui/pualugin.js"></script>
+	<script src="resource/library/sort/Sortable.js"></script>
+    <script src="resource/js/ui/common.js"></script>
+    <!-- 2022 상품몰 고도화 추가 -->
+	<script src="resource/library/lottie/lottie.min.js"></script>
+    <script src="resource/library/swiper/swiper.min.js"></script>
+    <script src="resource/js/ui/common_n22UI.js"></script>
+	<script src="resource/js/ui/prd_detail_n22UI.js"></script>
+
+	<!--멀티 다이얼 -->
+	<div id="CCOM0015002_P02" class="modal modal--slide multiple-date-slide" data-element="modal__element">
+		<div class="modal__container modal__container--interval" data-element="modal__element-container">
+			<div class="modal__header modal__header--interval">
+				<h1 class="modal__header--title">$Title</h1>
+			</div>
+			<div class="modal__contents modal__contents--inner-tab">
+				<!-- 
+					2022-08-10 간편설정이 없어야 하는경우 initIndex :1 로 설정하면 탭이 사라집니다.
+				-->
+				<div data-element="tab" data-options='{"initIndex":0}'>
+					<div class="tab-wrap">
+						<ul class="tab-wrap__menu">
+							<li class="tab-wrap__item" data-element="tab__list">
+								<a href="#" class="tab-wrap__button" data-element="tab__anchor">간편 설정</a>
+							</li>
+							<li class="tab-wrap__item" data-element="tab__list">
+								<a href="#" class="tab-wrap__button" data-element="tab__anchor">직접 설정</a>
+							</li>
+						</ul>
+					</div>
+					<div class="pualugin-tab__panel" data-element="tab__panel">
+						<!-- 2022-07-14 달력 컴포넌트 추가 --->
+						<div class="modal__contents--multiple">
+							<div class="container__panel  col-1">
+								<div class="list-section">
+									<!-- 옵션 아이템 동적 생성 -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pualugin-tab__panel" data-element="tab__panel">
+						<!-- 2022-07-14 달력 컴포넌트 추가 --->
+						<div class="modal__contents--multiple">
+							<div class="container__panel col-3">
+								<div class="list-section">
+									<!-- 옵션 아이템 동적 생성 -->
+								</div>
+								<div class="list-section">
+									<!-- 옵션 아이템 동적 생성 -->
+								</div>
+								<div class="list-section">
+									<!-- 옵션 아이템 동적 생성 -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="button-fixed">
+				<div class="button-wrap">
+					<button type="button" class="button button--negative button--span3" data-element="modal__close">취소</button>
+					<button type="button" class="button button--positive" data-element="modal__close">확인</button>
+				</div>
+			</div>
+
+			<!--<button type="button" class="modal__btn--close" data-element="modal__close" title="닫기"></button>-->
+		</div>
+	</div>
+	<!--//멀티 다이얼 -->
+
+	<!-- 싱글 다이얼 테스트 -->
+	<div id="CCOM0015002_P03" class="modal modal--slide multiple-date-slide" data-element="modal__element">
+		<div class="modal__container modal__container--interval" data-element="modal__element-container">
+			<div class="modal__header modal__header--interval">
+				<h1 class="modal__header--title">$Title</h1>
+			</div>
+			<div class="modal__contents modal__contents--multiple">
+				<div class="container__panel  col-1">
+					<div class="list-section">
+						<!-- 옵션 아이템 동적 생성 -->
+					</div>
+				</div>
+			</div>
+
+
+			<div class="button-fixed">
+				<div class="button-wrap">
+					<button type="button" class="button button--negative button--span3" data-element="modal__close">취소</button>
+					<button type="button" class="button button--positive" data-element="modal__close">확인</button>
+				</div>
+			</div>
+
+			<!--<button type="button" class="modal__btn--close" data-element="modal__close" title="닫기"></button>-->
+		</div>
+	</div>
+
+
+	<!-- 직접선택만 있는 케이스 -->
+	<div id="CCOM0015002_P04" class="modal modal--slide multiple-date-slide" data-element="modal__element">
+		<div class="modal__container modal__container--interval" data-element="modal__element-container">
+			<div class="modal__header modal__header--interval">
+				<h1 class="modal__header--title">$Title</h1>
+			</div>
+			<div class="modal__contents modal__contents--inner-tab">
+				<!-- 
+					2022-08-10 간편설정이 없어야 하는경우 initIndex :1 로 설정하면 탭이 사라집니다.
+				-->
+				<div data-element="tab" data-options='{"initIndex":1}'>
+					<div class="tab-wrap">
+						<ul class="tab-wrap__menu">
+							<li class="tab-wrap__item" data-element="tab__list">
+								<a href="#" class="tab-wrap__button" data-element="tab__anchor">간편 설정</a>
+							</li>
+							<li class="tab-wrap__item" data-element="tab__list">
+								<a href="#" class="tab-wrap__button" data-element="tab__anchor">직접 설정</a>
+							</li>
+						</ul>
+					</div>
+					<div class="pualugin-tab__panel" data-element="tab__panel">
+						<!-- 2022-07-14 달력 컴포넌트 추가 --->
+						<div class="modal__contents--multiple">
+							<div class="container__panel  col-1">
+								<div class="list-section">
+									<!-- 옵션 아이템 동적 생성 -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pualugin-tab__panel" data-element="tab__panel">
+						<!-- 2022-07-14 달력 컴포넌트 추가 --->
+						<div class="modal__contents--multiple">
+							<div class="container__panel col-3">
+								<div class="list-section">
+									<!-- 옵션 아이템 동적 생성 -->
+								</div>
+								<div class="list-section">
+									<!-- 옵션 아이템 동적 생성 -->
+								</div>
+								<div class="list-section">
+									<!-- 옵션 아이템 동적 생성 -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="button-fixed">
+				<div class="button-wrap">
+					<button type="button" class="button button--negative button--span3" data-element="modal__close">취소</button>
+					<button type="button" class="button button--positive" data-element="modal__close">확인</button>
+				</div>
+			</div>
+
+			<!--<button type="button" class="modal__btn--close" data-element="modal__close" title="닫기"></button>-->
+		</div>
+	</div>
+	<!-- 순서변경 레이어 -->
+	<div id="combobox_1" class="modal modal--slide modal--select-value moneybox-sp order-change" data-element="modal__element">
+		<div class="modal__container modal__container--interval" data-element="modal__element-container">
+			<div class="modal__header modal__header--border">
+				<h1 class="modal__header--title">공간 순서 바꾸기</h1>
+			</div>
+			<div class="modal__contents modal__contents--no-spacer">
+				<div class="container">
+					<strong class="modal-guide-txt">공간을 길게 눌러 원하는 순서로 변경할 수 있어요.</strong>
+					<div class="list-section" id="listsection2">
+
+						<ul id="moneyBoxSort" class="list-wrap list-wrap--line">
+							<li class="ui-state-default list-wrap__item list-button-wrap list-button-wrap--small">
+								<div class="list-wrap__anchor">
+									<span class="list-wrap__box">
+										<strong class="list-wrap__title list-wrap__title--value">파킹</strong>
+										<i></i>
+									</span>
+								</div>
+							</li>
+							<li class="ui-state-default list-wrap__item list-button-wrap list-button-wrap--small">
+								<div class="list-wrap__anchor">
+									<span class="list-wrap__box">
+										<strong class="list-wrap__title list-wrap__title--value">소비</strong>
+										<i></i>
+									</span>
+								</div>
+							</li>
+							<li class="ui-state-default list-wrap__item list-button-wrap list-button-wrap--small">
+								<div class="list-wrap__anchor">
+									<span class="list-wrap__box">
+										<strong class="list-wrap__title list-wrap__title--value">챌린지</strong>
+										<i></i>
+									</span>
+								</div>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+			</div>
+			<button type="button" class="modal__btn--close" data-element="modal__close" title="닫기"></button>
+			<div class="button-fixed">
+				<div class="button-wrap">
+					<button type="button" class="button button--negative button--span3" data-element="modal__close">취소</button>
+					<button type="button" class="button button--positive" data-element="modal__close">저장</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		var moneyBoxSortable = function(obj){
+            //2022-10-20 수정
+
+            if($('#moneyBoxSort').length){
+                var sortAble = new Sortable(moneyBoxSort, {
+                    items : 'li.ui-state-default',
+					handle: '.ui-state-default', // handle's class
+                    animation: 150, 
+					delay:150
+                });
+            }
+		}
+
+		var readyFn = function(){
+
+			/****************************
+				Hana Bank JS as-is 화면에서 공통으로 호출하는 함수들
+			*****************************/
+
+			/* Common UI */
+			hanaUI.header('.app-header, .modal__header, .main__header'); //헤더공통
+			//hanaUI.resizeDelay(id, time, callback) //윈도우 리사이즈 딜레이
+			hanaUI.inputField('.input'); //인풋필드 기능
+			//hanaUI.applyReadonly(target); 네이티브 키패드 호출후 readonly 제거, target은 .apply-readonly 가 있는 엘레멘트 셀렉터 ex) '.selector'
+			hanaUI.textArea('.txtareawrap, .textarea'); //텍스트영역 기능
+			hanaUI.placeholder('[data-element=placeholder__textarea]'); //플레이스홀더
+			//hanaUI.slidePosition('.modal--slide .input__element'); //슬라이드팝업 좌표값 교정
+			//hanaUI.dimmed('[data-element=dimmed__list]', '[data-element=dimmed__dim]'); //카드 리스트 딤드 (딤드 리스트, 딤드 레이어)
+
+
+			hanaUI.customSelector('[data-selector]'); //커스텀 checkbox & radio
+			hanaUI.inputSelector(); //checkbox & radio 기능
+			hanaUI.jobSelector('[data-job=wrap]'); //직업선택
+
+			hanaUI.toggleMore(); //펼치기 토글
+			hanaUI.toggleEllipsis('.my-account'); //생략 토글
+			hanaUI.toggleSelector1('[data-element=toggle-selector]', '[data-element=toggle-selector__trigger]', 'expand') //클래스 토글 (object, toggle button, toggle class)
+			hanaUI.toggleSwitch('[data-element=toggle-switch]') //스위치 토글
+
+			hanaUI.tooltip(); //툴팁
+			hanaUI.regExp('[data-auto-complete]'); //자바스크립트 정규식
+			hanaUI.privacy('.privacy__item'); //약관동의 접근성
+			hanaUI.sticky('[data-sticky=normal]'); //고정메뉴
+			hanaUI.stickyBanner('[data-sticky=banner]'); //오퍼가 있는 고정메뉴
+			hanaUI.tabInit('.tab-wrap'); //탭 접근성 초기화
+			hanaUI.floatingMenu('[data-element=floating]'); //플로팅 메뉴
+			hanaUI.hiddenList('[data-element=hidden-list]'); //펼치기 목록
+			hanaUI.swipeDelete.motion('[data-element=swipe-delete]'); //스와이프 리스트 삭제
+			hanaUI.ariaHidden('hr'); //aria-hidden="true"
+			hanaUI.tabindex('[role=img]'); //tabindex="0"
+			hanaUI.buttonType('button'); //button type="button"
+			hanaUI.offer('.offer'); //오퍼
+			hanaUI.native.bottomInit(); //스크린리더 접근시 하단 버튼 고정 풀기
+			hanaUI.customAccordion('[data-element=accordion][data-title]') //커스텀 아코디언
+			hanaUI.cardCrop('[data-element=card-crop]') //카드 배경이미지 크롭
+			hanaUI.roleText('label') //role="text"
+
+
+			//hanaUI.coinDrop('.coindrop') //코인드랍 애니메이션
+			//hanaUI.native.bottomUnfixed(); //하단 고정 버튼&레이어 숨김
+			//hanaUI.native.bottomFixed(); //하단 고정 버튼&레이어 노출
+
+
+			/* Slider */
+			hanaUI.sliderDot1('[data-slider=dot1]'); //인디케이터 타입1
+			hanaUI.sliderDotCustom1('[data-slider=dotCustom1]'); //커스텀 인디케이터 타입1
+			hanaUI.sliderArrow1('[data-slider=arrow1]'); //좌우버튼 타입1
+			hanaUI.sliderTabDot1('[data-slider=sliderDot1]', '[data-slider=sliderTab1]'); //탭 & 인디케이터 타입1, 인디케이터 이벤트 제거
+			//hanaUI.sliderTab1('[data-slider=panel1]', '[data-slider=tab1]', 0); //탭 타입1, html 에서 실행함수 동작 (slide selector, tab selector, initial index) (비동기)
+			hanaUI.sliderTab2('[data-slider=panel2]', '[data-slider=tab2]'); //탭 타입2
+			//hanaUI.sliderTab3('[data-slider=panel3]', '[data-slider=tab3]'); //탭 타입3 (비동기)
+			hanaUI.sliderTab4('[data-slider=panel4]', '[data-slider=tab4]'); //탭 타입4, 메인페이지
+			hanaUI.sliderDotinTab1('[data-slider=sliderinTab]'); //탭 마다 슬라이더, 인디케이터 타입1
+			hanaUI.sliderDotinTab2('[data-slider=sliderinTab2]'); //해쉬태크 탭 마다 슬라이더, 인디케이터 타입2
+			//hanaUI.sliderDotinTab3('[data-slider=sliderinTab3]'); //탭 마다 슬라이더, 인디케이터 타입3 (비동기)
+
+			//hanaUI.sliderStack1('[data-slider=stack1]'); //계층 슬라이더1
+			//hanaUI.sliderStack2('[data-slider=stack2]'); //계층 슬라이더2
+
+
+			/* Drag and Drop */
+			hanaUI.sortable1('[data-element=sortable]', '[data-element=sortable-type]');
+
+
+			//아래는 가이드 화면용 샘플 코드입니다.
+			$('#dialOpenBtn').click(function(){
+				//멀티 다이얼 호출
+				var param = {
+					min : 0,
+					max : 48,
+					/* 간편설정이 존재할경우 */
+					items : [{
+						"code" : 1,
+						"codeName" : "1개월"
+					},{
+						"code" : 2,
+						"codeName" : "2개월"
+					},{
+						"code" : 3,
+						"codeName" : "3개월"
+					}]
+				};
+
+				hanaProdUI.dialSelect('#CCOM0015002_P02', param , function(ui){
+					console.log('callback', ui)
+				});
+			})
+
+			
+			$('#dialOpenBtn2').click(function(){
+				var param = [{
+								"code" : 1,
+								"codeName" : "1개월"
+							},{
+								"code" : 2,
+								"codeName" : "2개월"
+							},{
+								"code" : 3,
+								"codeName" : "3개월"
+							},{
+								"code" : 4,
+								"codeName" : "4개월"
+							}];
+
+				//싱글 다이얼 호출
+				hanaProdUI.dialSelect('#CCOM0015002_P03', param, function(ui){
+					console.log('callback', ui)
+				});
+			})
+
+			//2022-08-10 직접 선택만 있는 케이스
+			$('#dialOpenBtn3').click(function(){
+				//멀티 다이얼 호출
+				var param = {
+					min : 6,
+					max : 48
+				};
+
+				hanaProdUI.dialSelect('#CCOM0015002_P04', param , function(ui){
+					console.log('callback', ui)
+				});
+			})
+
+			$('#dialOpenBtn4').click(function(){
+				$('body').data('plugin_modal').open('#combobox_1');
+				setTimeout(function(){
+					moneyBoxSortable('#moneyBoxSort');
+				},100)
+				
+			})
+			
+			hanaProdDetailUI.prdDetailPageInit();
+			
+			setSVGApply('#prd_detail_1470992_02', '/pub/resource/images/C/lottie/detail/J15.json', true, false);
+			setSVGApply('#prd_detail_04_4203_01', '/pub/resource/images/C/lottie/detail/J49.json', true, false);
+			
+		};
+		$(document).ready(function(){
+			$('#gLink').on('click', 'button', function(){
+				var _this = $(this);
+				var target = _this.data('target');
+				var contents = $('#'+target).html();
+				var appendTarget = $('#gContainer');
+				appendTarget.html('')
+				$('<div id="content"></div>').appendTo(appendTarget);
+				$('#content').html(contents);
+				readyFn();
+			});
+
+			$('.bottom-banner-cont').click(function(){
+				window.open('https://dev12-mbp.hanabank.com:18080/cont/preview/preview_cmsList.html')	
+			})
+			$('#asIs').click(function(){
+				window.open('https://dev12-mbp.hanabank.com:18080/pub/')	
+			})
+			
+
+			
+		})
+	</script>
+</body>
+</html>

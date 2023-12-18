@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+        <!-- 공통 css -->
+        <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+        <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+        <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+        <!-- 2022 상품몰 고도화 추가 -->
+        <link rel="stylesheet" href="../../../../resource/css/swiper.min.css" type="text/css">
+        <link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap n22UI">
+
+        <!-- header -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">헤더</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //header -->
+
+        <!--Content-->
+        <div id="content" class="app-main">
+
+            
+            <!--계좌선택버튼-->
+            <div class="container">
+                <div class="button-wrap">
+                    <button
+                        type="button"
+                        class="button button--positive"
+                        data-element="modal__open"
+                        data-target="#CCOM0015002_P02"
+                    >
+                        상단에 탭이 있는 슬라이드
+                    </button>
+                </div>
+            </div>
+            <!--//계좌선택버튼-->
+            
+        
+            <!--계좌선택모달-->
+            <div id="CCOM0015002_P02" class="modal modal--slide" data-element="modal__element">
+                <div class="modal__container modal__container--interval" data-element="modal__element-container">
+                    <div class="modal__header modal__header--interval">
+                        <h1 class="modal__header--title">전환계좌 선택</h1>
+                    </div>
+                    <div class="modal__contents modal__contents--inner-tab">
+                        <div data-element="tab" data-options='{"initIndex":0}'>
+                            <div class="pualugin-tab__panel" data-element="tab__panel">
+                                <div class="container">
+                                    <div class="list-section">
+                                        <ul class="list-wrap list-wrap--line">
+                                            <li class="list-wrap__item list-button-wrap">
+                                                <button type="button" class="list-wrap__anchor list-wrap__anchor--icon">
+                                                    <i class="list-wrap__icon">
+                                                        <!-- 접근성 및 디자인현행화 -->
+                                                        <img src="../../../../resource/images/C/icon_bank_list_woori.png" alt="우리은행">
+                                                        <!-- //접근성 및 디자인현행화 -->
+                                                    </i>
+                                                    <span class="list-wrap__box">
+                                                        <strong class="list-wrap__title list-wrap__title--value">행복knowhow통장</strong>
+                                                        <span class="list-wrap__sub-text eng">123-456789-89764</span>
+                                                    </span>
+                                                </button>
+                                            </li>
+                                            <li class="list-wrap__item list-button-wrap">
+                                                <button type="button" class="list-wrap__anchor list-wrap__anchor--icon">
+                                                    <i class="list-wrap__icon">
+                                                        <!-- 접근성 및 디자인현행화 -->
+                                                        <img src="../../../../resource/images/C/icon_bank_list_woori.png" alt="우리은행">
+                                                        <!-- //접근성 및 디자인현행화 -->
+                                                    </i>
+                                                    <span class="list-wrap__box">
+                                                        <strong class="list-wrap__title list-wrap__title--value">행복knowhow통장</strong>
+                                                        <span class="list-wrap__sub-text eng">123-456789-89764</span>
+                                                    </span>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- 다른 금융기관 계좌가 없을때  -->
+                                <!--
+                                <div class="no-accout">
+                                    <div class="no-accout__title">등록된 계좌가 없습니다.</div> 
+                                    <div class="no-accout__text">다른 금융기관 계좌를 등록 후 이용하세요.</div>
+                                    <button type="button" id="" class="button-underline button-underline--green">다른금융기관 계좌 등록</button>
+                                </div>
+                                -->
+                                <!--//다른 금융기관 계좌가 없을때  -->
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <button type="button" class="modal__btn--close" data-element="modal__close" title="닫기"></button>
+                </div>
+            </div>
+            <!--//계좌선택모달-->
+        </div>
+        <!--//Content-->
+    </div>
+
+
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+<!-- 다운로드 애니메이션 스크립트 -->
+<script>
+$("#modalDown_btn").on('click', function(){
+	setTimeout(function(){
+		$('.downWrap .p1').addClass('on').delay(500);
+	}, 500);
+	setTimeout(function(){
+		$('.downWrap .p2').addClass('on').delay(1000);
+	}, 1000);
+});
+$("#modalDownpop .modal__btn--close, .button--negative").on('click', function(){
+	$('.downWrap .p1, .downWrap .p2').removeClass('on');
+});
+</script>
+<!-- //다운로드 애미메이션 스크립트 -->
+</body>
+
+</html>

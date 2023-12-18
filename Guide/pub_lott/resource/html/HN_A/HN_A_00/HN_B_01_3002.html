@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <!-- 2022-10-12 swiper 추가 -->
+    <link rel="stylesheet" href="../../../../resource/css/swiper.min.css" type="text/css">
+    <!-- 2022 상품몰 고도화 추가 -->
+  <link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap n22UI moneybox challenge-main">
+        <!-- HEADER -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">챌린지</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //HEADER -->
+
+        <!-- CONTENT -->
+        <div id="content" class="app-main moneybox-cont moneybox-detail">
+
+            <!--2022-08-04 | -->
+            <div class="parking-graybox">
+                <div class="chal-tit-wrap">
+                    <div class="chal-tit">
+                        <em>1주 챌린지</em>
+                        <!-- 챌린지 진행 중 라벨-->
+                        <div class="challenge-label"><span>D-2</span></div>
+
+                        <!-- 챌린지 달성 라벨-
+                        <div class="challenge-label success"><span>성공</span></div>
+                        -->
+                        <!-- 챌린지 실패 라벨
+                        <div class="challenge-label failed"><span>실패</span></div>
+                        - -->
+                    </div>    
+
+                    <div class="util-btn-group finance-detail__button-wrap">
+                        <button type="button" class="util-btn icon-share">공유하기</button>
+                    </div>
+                </div>
+                <p>2022.07.19~2022.07.25</p>
+                <!-- 2022-08-18 기획 제거 
+                <div class="challenging-num">10,000명 도전 중</div>
+                -->
+
+                <div class="challenge-whitebox">
+                    <em>매일 <span>10,000원</span>씩 모으기</em>
+                    <!-- 2022-08-18 
+                        스와이퍼 적용으로 인한 마크업 변경 
+
+                        ==== 2주차 이상일경우 아래 속성 적용 필요
+                        data-slider="challenge-state-list"
+
+                        === 챌린지 달성시 goal 클래스 추가 필요
+                        <div class="challenge-slide slick-banner-list goal" data-slider="challenge-state-list">    
+                    -->
+                    <div class="challenge-slide slick-banner-list" data-slider="challenge-state-list">
+                        <!-- 2022-10-12 swiper-wrapper 추가-->
+                        <div class="swiper-wrapper">
+                            <!-- 2022-10-12 class="slide-item" 추가 -->
+                            <a href="#" class="slide-item" role="button">
+                                <ul class="challenge-goal">
+                                    <!--
+                                        #상태에 따른 클래스 변경 필요 (트로피 는 대기와 성공만 존재함.)
+                                        - 실패시 failed
+                                        - 성공시 check
+                                        - 입금대기 ing-num
+                                    -->
+                                    <li class="check"><i>1</i></li>
+                                    <li class="check"><i>2</i></li>
+                                    <li class="check"><i>3</i></li>
+                                    <!-- 2022-09-14 -->
+                                    <li class="failed"><i>4</i></li>
+                                    <li class="ing-num"><i>5</i></li>
+                                    <li><i>6</i></li>
+                                    <li><i>7</i></li>
+                                </ul>
+                            </a>
+                            <!-- 2022-10-12 class="slide-item" 추가 -->
+                            <a href="#" class="slide-item" role="button">
+                                <ul class="challenge-goal">
+                                    <li><i>8</i></li>
+                                    <li><i>9</i></li>
+                                    <li><i>10</i></li>
+                                    <li><i>11</i></li>
+                                    <li><i>12</i></li>
+                                    <li><i>13</i></li>
+                                    <li><i>14</i></li>
+                                    <!-- 2022-08-18  마지막 주차에는 아래 요소 추가 -->
+                                    <li><i>goal</i></li>
+                                </ul>
+                            </a>
+                        </div>
+                        <!-- 2022-10-12 swiper-pagenation 추가 -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <!-- 2022-09-16 class="mb32" 추가 -->
+                    <div class="plus-info-wrap mb32">
+                        <div>
+                            <em>목표금액</em>
+                            <p>70,000원</p>
+                        </div>
+                        <div>
+                            <em>현재금액</em>
+                            <p class="color-green">40,000원</p>
+                        </div>
+                    </div>
+                    <!--
+                        2022-08-18 추가 
+                        회원체크후 get-random에 
+                        회원일경우 get-random member 클래스 부여
+                        비회원일경우 get-random non-member 클래스 부여
+                        예 ) <div class="get-random member">
+                    -->
+                    <!-- 2022-09-23 tagging 관련 마크업 수정 case-grouping 추가 -->
+                    <div class="case-grouping">
+                        <div class="get-random">
+                            <div class="get-random-icon">
+                                <!-- 대기중일경우 -->
+                                <div class="article-loading is-loading">
+                                    <i class="status--loading"></i>
+                                </div>
+                            </div>    
+                        </div>
+
+                        <a href="#" class="get-random" style="display:none;" data-ecrm="Che1010">
+                            <div class="get-random-icon">
+                                <div>
+                                    <em>획득 하나머니<br><span>7,000P</span></em>
+                                </div>
+                            </div>    
+                        </a>
+
+                        <!-- 2022-09-23 비회원일경우 분리 -->
+                        <a href="#" class="get-random" style="display:none;">
+                            <div class="get-random-icon">
+                                <div>
+                                    <em>하나머니 가입하고<br><span>랜덤 하나머니 받기</span></em>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!--2022-09-22 div테그 a테그로 변경-->
+                </div>
+
+                <!-- 220818 .button-wrap에 'active' class를 넣어야 활성화 -->
+                <div class="button-wrap active">
+                    <button type="button" class="button button--positive" data-ecrm="Che1060">바로 입금하기</button>
+                </div>
+                
+                <div class="button-wrap quit">
+                    <div class="moneybox-emp-bubble">
+                        <p>새로운 챌린지에 도전해 보세요.</p>
+                    </div>
+                    <button type="button" class="button button--positive" data-ecrm="Che1030">챌린지 끝내기</button>
+                </div>
+
+            </div>
+
+            
+            <div class="pay-list">
+                <div class="pay-list-tit">
+                    <em>챌린지 입금내역</em>
+                    <button class="more-list">더보기</button>
+                </div>
+                <ul>
+                    <li>
+                        <div class="pay-list-left">
+                            <p class="pay-list-left-num">4회차</p>
+                            <!-- 2022-09-01 띄어쓰기 수정 -->
+                            <span class="date">7.22(금)</span>                            
+                        </div>
+                        <div class="pay-list-right">
+                            <p class="pay-list-amount plus-number">+1,000원</p>
+                            <span class="balance-cash">80,000원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pay-list-left">
+                            <p class="pay-list-left-num">3회차</p>
+                            <!-- 2022-09-01 띄어쓰기 수정 -->
+                            <span class="date">7.22(금)</span>                            
+                        </div>
+                        <div class="pay-list-right">
+                            <p class="pay-list-amount plus-number">+1,000원</p>
+                            <span class="balance-cash">80,000원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pay-list-left">
+                            <p class="pay-list-left-num">2회차</p>
+                            <!-- 2022-09-01 날짜 표기방식, 띄어쓰기 수정 -->
+                            <span class="date">7.22(금)</span>                            
+                        </div>
+                        <div class="pay-list-right">
+                            <p class="pay-list-amount plus-number">+1,000원</p>
+                            <span class="balance-cash">80,000원</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="achieve-status-wrap">
+                <div class="pay-list-tit">
+                    <em>챌린지 현황</em>
+                </div>
+                <div class="parking-graybox">
+
+                    <div class="plus-info-wrap">
+                        <div>
+                            <!--2022-08-24 | 띄어쓰기 수정-->
+                            <em>달성횟수</em>
+                            <p>15개</p>
+                        </div>
+                        <div>
+                            <!--2022-08-24 | 띄어쓰기 수정-->
+                            <em>누적금액</em>
+                            <p>5,000,000<span>원</span></p>
+                        </div>
+                        <div>
+                            <em>챌린지기간</em>
+                            <p>2022.01.01 - 2022.12.31</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- 2022-08-18 말풍선 추가(마크업 변경), moneybox-emp-bubble에 'active' class 넣어야 활성화  -->
+                <div class="status-list-wrap  status-brief">
+                    <ul class="">
+                        <li>
+                            <div class="moneybox-emp-bubble">
+                                <p>달성금액 700,000원</p>
+                            </div>
+                            <div class="ready challenging-star">
+                                <p>도전 중</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="moneybox-emp-bubble">
+                                <p>달성금액 700,000원</p>
+                            </div>
+                            <div class="ready">
+                                <span>4/24</span>
+                                <p>1주</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="moneybox-emp-bubble">
+                                <p>달성금액 700,000원</p>
+                            </div>
+                            <div class="ready">
+                                <span>4/24</span>
+                                <p>1주</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="moneybox-emp-bubble">
+                                <p>달성금액 700,000,000원</p>
+                            </div>
+                            <div class="ready">
+                                <span>4/24</span>
+                                <p>1주</p>
+                            </div>
+                            
+                        </li>
+                        <li>
+                            <div class="moneybox-emp-bubble">
+                                <p>달성금액 700,000원</p>
+                            </div>
+                            <div class="ready">
+                                <span>4/24</span>
+                                <p>1주</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="moneybox-emp-bubble">
+                                <p>달성금액 700,000원</p>
+                            </div>
+                            <div class="ready">
+                                <span>4/24</span>
+                                <p>1주</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="moneybox-emp-bubble">
+                                <p>달성금액 700,000원</p>
+                            </div>
+                            <div class="ready">
+                                <span>4/24</span>
+                                <p>1주</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="moneybox-emp-bubble">
+                                <p>달성금액 700,000,000원</p>
+                            </div>
+                            <div class="ready">
+                                <span>4/24</span>
+                                <p>1주</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="challenge-total-view-wrap">
+                        <!-- 2022-10-26 문구 수정 -->
+                        <button class="challenge-total-view">전체보기(최근 1년)</button>
+                    </div>
+                </div>
+                
+                    
+            </div>
+
+            <button class="finished-challenge" title="챌린지 끝내기" data-ecrm="Che1020">챌린지 끝내기</button>
+
+        </div>
+        <!-- //CONTENT -->
+    </div>
+
+
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
+    <!-- 2022-10-12 swiper 추가 -->
+    <script src="../../../../resource/library/swiper/swiper.min.js"></script>
+    <script src="../../../../resource/js/ui/common_n22UI.js"></script>
+    
+    <script type="text/javascript">
+        //2022-09-21 수정 ====================================== 
+        function moneboxInfoGuideSwiper(){
+            var swiperOptions = {
+                resistanceRatio: 0,
+                slidesPerView: 'auto',
+                effect:'slide',
+                threshold:20,
+                spaceBetween: 0,
+                speed: 300,
+                slideClass : 'slide-item',
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true
+                },
+            }
+            var swiperSection = new Swiper('.challenge-slide', swiperOptions);
+
+            //swiperSection.slideTo(1)
+        }
+
+		$(document).ready(function(){
+            moneboxInfoGuideSwiper();
+
+             //2022-08-22 챌린지 현황 말풍선
+             $('.status-list-wrap li').on('click', function(){
+                $(this).siblings().find('.moneybox-emp-bubble').removeClass('active');
+                $(this).find('.moneybox-emp-bubble').addClass('active');
+            })
+        })
+        //=========================2022-09-21 수정 =
+    </script>
+</body>
+</html>

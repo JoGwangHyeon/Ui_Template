@@ -1,0 +1,92 @@
+
+<!-- v0.9 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/prodmall-main.css" type="text/css">
+</head>
+
+<body>
+    <!--2022-07-12 모달 작업-->
+    <div id="wrap" class="wrap">
+        <!-- Content -->
+        <div id="content" class="app-main">
+        
+
+            <div class="container">
+                <div class="button-select">
+                    <button type="button" class="button button-select__item" title="연락처 식별번호 선택" data-element="modal__open" data-target="#combobox_1">내게 맞는 상담을 선택해보세요</button>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- //Content -->
+
+        <!-- Modal layer -->
+        <div id="combobox_1" class="modal modal--slide modal--select-value main-sp counsel" data-element="modal__element">
+            <div class="modal__container modal__container--interval" data-element="modal__element-container">
+                <div class="modal__header modal__header--border">
+                    <h1 class="modal__header--title">내게 맞는 상담을 선택해보세요</h1>
+                </div>
+                <div class="modal__contents modal__contents--no-spacer">
+                    <div class="container">
+                        <div class="list-section">
+                            <ul class="list-wrap list-wrap--line">
+                                <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                    <button type="button" class="list-wrap__anchor">
+                                        <span class="list-wrap__box">
+                                            <strong class="list-wrap__title list-wrap__title--value chat-counsel">채팅상담</strong>
+                                        </span>
+                                    </button>
+                                </li>
+                                <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                    <button type="button" class="list-wrap__anchor">
+                                        <span class="list-wrap__box">
+                                            <strong class="list-wrap__title list-wrap__title--value remote-counsel">화상상담</strong>
+                                        </span>
+                                    </button>
+                                </li>
+                                <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                    <button type="button" class="list-wrap__anchor">
+                                        <span class="list-wrap__box">
+                                            <strong class="list-wrap__title list-wrap__title--value ai-counsel">AI챗봇</strong>
+                                        </span>
+                                    </button>
+                                </li>
+                                <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                    <button type="button" class="list-wrap__anchor">
+                                        <span class="list-wrap__box">
+                                            <strong class="list-wrap__title list-wrap__title--value tel-counsel">전화상담</strong>
+                                        </span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="modal__btn--close" data-element="modal__close" title="닫기"></button>
+            </div>
+        </div>
+        <!--// Modal layer -->
+    </div>
+    <!--//2022-07-12 모달 작업-->
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../resource/css/common.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="../resource/css/components.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="../resource/css/bank.css" type="text/css" />
+    <style type="text/css">
+      .guide-header {
+        line-height: 1.5;
+        font-size: 22px;
+      }
+
+      .n22UI .container:not(.as-is) .button {
+        border-radius: 5px;
+      }
+
+      .container {
+        position: relative;
+        border-top: 2px solid #000;
+        margin-top: 30px;
+      }
+
+      .container.as-is {
+        border-top: 0;
+      }
+
+      .container:before {
+        content: "TO-BE";
+        background: rgba(0, 0, 0, 0.2);
+      }
+
+      .container.as-is:before {
+        content: "AS-IS";
+        background: rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- s : wrap -->
+    <div id="wrap" class="wrap n22UI">
+      <!-- header -->
+      <div id="header" class="app-header">
+        <button
+          class="app-header__button app-header__button--back"
+          title="이전 화면"
+        ></button>
+        <h1 class="app-header__title">변경/추가된 템플릿 모음</h1>
+        <button
+          class="app-header__button app-header__button--home"
+          title="메인 화면"
+        ></button>
+        <button
+          class="app-header__button app-header__button--hamburger"
+          title="전체 메뉴"
+        ></button>
+      </div>
+      <!-- //header -->
+      <!-- Content -->
+      <div id="content" class="app-main app-main--without-footer">
+        <div class="background-gray">
+          <!-- as-is// -->
+          <div class="container as-is">
+            <!-- template// -->
+            <p>
+              * 변경된 템플릿은 아래와 같이 AS-IS 와 TO-BE를 모두 볼수있도록
+              코드를 추가 해주세요.
+            </p>
+            <h2 class="text-head2 guide-header">progress 버튼</h2>
+            <div class="button-wrap">
+              <button type="button" class="button button--positive">
+                활성 버튼
+              </button>
+              <!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+              <button type="button" class="button button--disabled">
+                비활성 버튼
+              </button>
+              <!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+            <!-- //template -->
+          </div>
+          <!-- //as-is -->
+
+          <!-- to-be// -->
+          <div class="container">
+            <h2 class="text-head2 guide-header">progress 버튼</h2>
+            <div class="button-wrap">
+              <button type="button" class="button button--positive">
+                활성 버튼
+              </button>
+              <!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+              <button type="button" class="button button--disabled">
+                비활성 버튼
+              </button>
+              <!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+          </div>
+          <!-- //to-be -->
+        </div>
+      </div>
+      <!-- //Content -->
+
+      <!-- footer -->
+      <div id="footer" class="app-footer app-footer--button">
+        <div class="button-wrap">
+          <button type="button" class="button button--positive">
+            플로팅 버튼
+          </button>
+          <!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+        </div>
+      </div>
+      <!-- //footer -->
+    </div>
+    <!-- e: wrap -->
+    <!-- 공통 script -->
+    <script src="../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../resource/library/slick/slick.js"></script>
+    <script src="../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../resource/js/ui/pualugin.js"></script>
+    <script src="../resource/js/ui/common.js"></script>
+  </body>
+</html>

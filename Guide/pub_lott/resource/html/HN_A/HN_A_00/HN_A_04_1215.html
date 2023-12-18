@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap n22UI">
+        <!-- HEADER -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">적금</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //HEADER -->
+
+        <!-- CONTENT -->
+        <div id="content" class="app-main prodmall-detail-savings">
+            <div class="prodmall-section section-top">
+                <div>
+                    <!-- 2022-09-15 상품명 수정 -->
+                    <em>하나 나눔 적금</em>
+                    <div class="tit-default">
+                        작은 실천으로<br>
+                        따뜻한 마음 나누기</div>
+                </div>
+                <div class="content-wrap">
+                    <div class="main-desc">
+                        <em>최대금리(세전, 1년)</em>
+                        <!-- 2022-09-06 'desc-percent' class 추가 -->
+                        <strong><span>연</span><em class="desc-percent">4.00%</em></strong>
+                    </div>
+                    <div class="half-cont">
+                        <dl>
+                            <dt>가입기간</dt>
+                            <dd>1년</dd>
+                        </dl>
+                        <dl>
+                            <dt>가입금액</dt>
+                            <dd>1만원~30만원</dd>
+                        </dl>
+                    </div>
+                    <div class="section-top-buttons">
+                        <button type="button" class="btn-line line-white"><i class="btn-icon download"></i>상품 비교함</button>
+                        <div class="util-btn-group finance-detail__button-wrap">
+                            <!-- 2022-08-10 활성화시 util-btn에 추가클래스 부여 is-active
+                            <button type="button" class="util-btn icon-favorite is-active">관심상품</button>
+                             -->
+                            <button type="button" class="util-btn icon-share" data-ecrm="SHE1010">공유하기</button>
+                            <button type="button" class="util-btn icon-favorite">
+                                <i class="icon-heart icon-heart--large" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prodmall-section">
+                <div class="tit-default txt-bold">사랑 나눔 서약으로 금리 받기</div>
+                <p>서약서 작성으로 마음도 나누고 우대금리도 받으세요.</p>
+                <div id="prd_detail_1484965_01" class="icon-svg-area" style="height: 12.5rem;">
+                    <img class="motion01" src="../../../images/C/n22_img_ani_document01.png" alt="">
+                    <img class="motion02" src="../../../images/C/n22_img_ani_document02.png" alt="">
+                    <span class="motion03"></span>
+                    <img class="motion04" src="../../../images/C/n22_img_ani_document04.png" alt="">
+                    <img class="motion05" src="../../../images/C/n22_img_ani_document05.png" alt="">
+                </div>
+            </div>
+
+            <div class="prodmall-section">
+                <div class="tit-default txt-bold">로그인으로 금리 올리기</div>
+                <p>월 0.10%씩 연 1.20%까지 우대금리 챙기고 마음도 채워 보세요.</p>
+                <div id="prd_detail_1484965_02" class="icon-svg-area" style="height: 12.5rem;"></div>
+            </div>
+
+            <!-- 2022-08-19 시뮬레이션 영역 클래스 변경 "prodmall-section simulation-area" -->
+            <div class="prodmall-section simulation-area">
+                <div class="tit-default txt-bold">나의 예상 혜택</div>
+                <div data-element="tab" class="my-benefit-cont">
+                    <div class="tab-wrap tab-wrap--option box-type">
+                        <ul class="tab-wrap__menu" role="tablist">
+                            <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                                <a href="#" class="tab-wrap__button" data-element="tab__anchor" role="tab" aria-selected="false" data-ecrm="TAB1010">얼마를 모을까</a>
+                            </li>
+                            <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                                <a href="#" class="tab-wrap__button is-active" data-element="tab__anchor" role="tab" aria-selected="true" data-ecrm="TAB1020">얼마를 넣을까</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pualugin-tab__panel" data-element="tab__panel" role="tabpanel">
+                        <div class="gray-box">
+                            <!-- 2022-09-02 세전 위치 변경 관련 마크업 변경 -->
+                            <!-- 2022-09-07 세전 text 변경 -->
+                            <dl>
+                                <dt>만기금액<span>세전</span></dt>
+                                <!-- 2022-09-07 '원'에 em 추가 -->
+                                <dd>1,200,000<em>원</em></dd>
+                            </dl>
+                            <dl>
+                                <dt>적용금리
+                                    <!-- 2022-09-08 기본/우대 금리 띄어쓰기 수정 -->
+                                    <span>기본 / 우대 금리</span>
+                                </dt>
+                                <!-- 2022-08-22 | 디자인 고려 em태그 텍스트 수정 및 span태그 추가 / span 텍스트 수정 -->
+                                <dd>
+                                    <em>연 <span>4.00 %</span></em>
+                                    <span>연 2.50% /  연 1.50%</span>
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <div class="cont">
+                            <div class="button-select underline-type inline">
+                                <button type="button" class="button button-select__item readonly" title="수익률 높은순 선택" data-element="modal__open" data-target="#combobox_1" aria-controls="#combobox_2" data-ecrm="SET1010">1년</button>동안
+                            </div>
+                            <div class="input native-readonly underline-type" data-native="focus">
+                                <!--
+                                    * 오류시 class="input input--error"
+                                    * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                                -->
+                                <div class="input__inner">
+                                    <span class="every">매월</span>
+                                    <div class="native-inner" role="button">
+                                        <span id="inputText02" class="input__element" title="가입금액 입력" placeholder="100,000원" data-ecrm="SET1020"></span>
+                                    </div>
+                                    <span>씩 적립하기</span>
+                                    <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
+                                </div>
+                            
+                                <!-- 에러메시지-->
+                                <p class="input__error" aria-live="assertive">출금가능금액이 부족합니다.</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="pualugin-tab__panel is-active" data-element="tab__panel" role="tabpanel">
+                        <div class="gray-box">
+                            <dl>
+                                <dt>적립금액</dt>
+                                <dd><em>매월 </em>818,998<em>원</em></dd>
+                            </dl>
+                            <!-- 2022-10-13 마크업 수정 -->
+                            <dl>
+                                <dt>적용금리
+                                    <span>기본 / 우대 금리</span>
+                                </dt>
+                                <dd>
+                                    <em>연 <span>4.00 %</span></em>
+                                    <span>연 2.50% /  연 1.50%</span>
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <div class="cont">
+                            <div class="button-select underline-type inline">
+                                <button type="button" class="button button-select__item" title="수익률 높은순 선택" data-element="modal__open" data-target="#combobox_1" aria-controls="#combobox_2" data-ecrm="SET1010">12개월</button>동안
+                            </div>
+                            <div class="input native-readonly underline-type" data-native="focus">
+                                <!--
+                                    * 오류시 class="input input--error"
+                                    * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                                -->
+                                
+                                <div class="input__inner">
+                                    
+                                    <div class="native-inner" role="button">
+                                        <span id="inputText02" class="input__element" title="가입금액 입력" placeholder="1,200,000원" data-ecrm="SET1020"></span>
+                                    </div>
+                                    
+                                    
+                                    <span> 모으기</span>
+                                    <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
+                                </div>
+
+                                <!-- 에러메시지-->
+                                <p class="input__error" aria-live="assertive">출금가능금액이 부족합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+                
+                <div class="guide-wrap" data-element="toggle">
+                    <div class="title-xsmall">
+                        <!-- 2022-09-07 우대항목 예상 금리 띄어쓰기 수정 -->
+                        <button type="button" class="pualugin__button button-arrow" data-element="toggle__anchor" data-ecrm="SET1030">우대항목 예상금리</button>
+                    </div>
+                    <div class="guide-wrap__list guide-wrap__list--small" data-element="toggle__panel">
+                        <ul class="select-item-group">
+                            <li>
+                                <div class="checkbox-wrap">
+                                    <input type="checkbox" id="ratesChk01-01" class="checkbox-wrap__check" name="ratesChk01">
+                                    <label for="ratesChk01-01" class="checkbox-wrap__label">하나원큐 로그인</label>
+        
+                                    
+                                    <div class="tooltip" data-tooltip="paragraph">
+                                        <button type="button" class="tooltip__open" data-tooltip-button="open" aria-label="급여이체 정보 툴팁 닫기" aria-hidden="true"></button>
+                                        <!-- 2022-09-19 내용 변경 -->
+                                        <div class="tooltip__panel" data-tooltip-panel="false">
+                                            상품 가입일부터 만기 전날까지 매월 1회 이상 하나원큐 로그인을 하면, 해당월 우대금리 연 0.10%가 적용됩니다.
+                                            <button class="tooltip__close" data-tooltip-button="close" aria-label="툴팁 닫기" type="button"></button>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <span class="txt-medium">연 1.20%</span>
+                            </li>
+                            <li>
+                                <div class="checkbox-wrap">
+                                    <input type="checkbox" id="ratesChk01-02" class="checkbox-wrap__check" name="ratesChk01">
+                                    <label for="ratesChk01-02" class="checkbox-wrap__label">사랑 나눔 서약</label>
+        
+                                    <div class="tooltip" data-tooltip="paragraph">
+                                        <button type="button" class="tooltip__open" data-tooltip-button="open" aria-label="온라인가입 또는 만기재예치 정보 툴팁 닫기" aria-hidden="true"></button>
+                                        <!-- 2022-09-19 내용 변경 -->
+                                        <div class="tooltip__panel" data-tooltip-panel="false">
+                                            상품 가입일(재예치일) 다음달 말일까지 ‘하나합’ 서비스 가입 및 다른 금융기관을 1개 이상 연결하고, 적금을 만기 전전월 말일까지 유지한 경우 적용됩니다.
+                                            <button class="tooltip__close" data-tooltip-button="close" aria-label="툴팁 닫기" type="button"></button>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <span class="txt-medium">연 0.10%</span>
+                            </li>
+                            <li>
+                                <div class="checkbox-wrap">
+                                    <input type="checkbox" id="ratesChk01-03" class="checkbox-wrap__check" name="ratesChk01">
+                                    <!-- 2022-09-09 띄어쓰기 수정 -->
+                                    <label for="ratesChk01-03" class="checkbox-wrap__label">마케팅 동의</label>
+        
+                                    
+                                    <div class="tooltip" data-tooltip="paragraph">
+                                        <button type="button" class="tooltip__open" data-tooltip-button="open" aria-label="청년응원특별금리 정보 툴팁 닫기" aria-hidden="true"></button>
+                                        <!-- 2022-09-19 내용 변경 -->
+                                        <div class="tooltip__panel" data-tooltip-panel="false">
+                                            상품 가입 전, 하나은행 상품/서비스 마케팅 동의 항목에 모두 동의한 경우 적용됩니다.
+                                            <button class="tooltip__close" data-tooltip-button="close" aria-label="툴팁 닫기" type="button"></button>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <span class="txt-medium">연 0.10%</span>
+                            </li>
+                            <li>
+                                <div class="checkbox-wrap">
+                                    <input type="checkbox" id="ratesChk01-04" class="checkbox-wrap__check" name="ratesChk01">
+                                    <!-- 2022-09-07 띄어쓰기 수정 -->
+                                    <label for="ratesChk01-04" class="checkbox-wrap__label">앱 알림 동의</label>
+        
+                                    
+                                    <div class="tooltip" data-tooltip="paragraph">
+                                        <button type="button" class="tooltip__open" data-tooltip-button="open" aria-label="청년응원특별금리 정보 툴팁 닫기" aria-hidden="true"></button>
+                                        <!-- 2022-09-19 내용 변경 -->
+                                        <div class="tooltip__panel" data-tooltip-panel="false">
+                                            상품 가입(재예치) 전, 하나원큐 앱(Push) 알림에 동의한 경우 적용됩니다.
+                                            <button class="tooltip__close" data-tooltip-button="close" aria-label="툴팁 닫기" type="button"></button>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <span class="txt-medium">연 0.10%</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="interest-rate-info">
+                    <!-- 2022-09-26 띄어쓰기 수정 -->
+                    예상금리는 현재 상황으로 예상한 결과이며, 실제금리는 조건 충족 여부에 따라 달라질 수 있습니다.
+                </p>
+            </div>
+
+            <div class="prodmall-section pb-0">
+                <div class="tit-default">가입 전 확인해 주세요!</div>
+                <div class="finance-box-wrap prodmall-notice">
+                    <!-- 상품내용 -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">상품정보</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+                        <div class="white-box__content" data-element="toggle__panel" style="display: none;">
+                            <!-- 9월말 내용 수급가능 -->
+                        </div><!-- //white-box__content-->
+                    </div><!-- //toggle-->
+                    
+                    
+                    
+
+                    
+                    <!-- 기본금리안내 -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">기본금리</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+                        <div class="white-box__content" data-element="toggle__panel" style="display: none;">
+                            <!-- 9월말 내용 수급가능 -->
+                        </div><!-- //white-box__content-->
+                    </div><!-- //toggle-->
+                    
+
+
+
+
+                    
+                    
+                    
+                
+
+
+
+
+            
+
+
+                
+                
+
+                    
+                    
+
+                    
+                    
+                    <!-- 해지 안내 -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">상품해지</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+                        <div class="white-box__content" data-element="toggle__panel" style="display: none;">
+                            <!-- 9월말 내용 수급가능 -->
+                        </div><!-- //white-box__content-->
+                    </div><!-- //toggle-->
+                    
+
+                    
+                    
+                    <!-- 해지 안내 -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    
+                                    <strong class="title">유의사항</strong>
+                                    
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+                        <div class="white-box__content" data-element="toggle__panel" style="display: none;">
+                            <!-- 9월말 내용 수급가능 -->
+                        </div><!-- //white-box__content-->
+                    </div><!-- //toggle-->
+                    
+
+                    
+                    <!-- 상품내용변경에 관한 사항 -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">상품변경안내</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+                        <div class="white-box__content" data-element="toggle__panel" style="display: none;">
+                            <!-- 9월말 내용 수급가능 -->
+                        </div><!-- //white-box__content-->
+                    </div><!-- //toggle-->
+
+
+                    
+                    
+                    <!-- 약관 및 상품설명서-->
+                    <div class="white-box white-box--fund" data-element="toggle" >
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">약관 및 상품설명서</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+                        <div class="white-box__content" data-element="toggle__panel" style="display: none;">
+                            <!-- 9월말 내용 수급가능 -->
+                        </div><!-- //white-box__content-->
+                    </div>
+                </div>
+                <!-- 2022-11-07 텍스트 수정 -->
+                <span class="notice">준법감시인 심의필 제2022-상품-1414호 (2022.11.04)<br>
+                    본 공시내용의 유효기간 : 2022.11.04 ~ 2024.11.03<br>기준일 : 2022년 11월 4일
+            </div>
+        </div>
+        <!-- //CONTENT -->
+
+        <!-- FOOTER -->
+        <div id="footer" class="app-footer app-footer--button app-footer--button-round-corner">
+            <div class="button-wrap">
+                <!-- <button type="button" class="button button--positive-dark round-corner">전환</button> -->
+                <button type="button" class="button button--positive round-corner" data-ecrm="JON1010">가입 시작하기</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+        </div>
+        <!-- //FOOTER -->
+    </div>
+
+
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
+    <!-- 상품상세 js 별도분기 -->
+    <script src="../../../../resource/library/lottie/lottie.min.js"></script>
+    <script src="../../../../resource/js/ui/prd_detail_n22UI.js"></script>
+
+
+    <!-- 2022-10-08 추가 -->
+    <script>
+        $(document).ready(function(){
+            setSVGApply('#prd_detail_1484965_02', '/pub/resource/images/C/lottie/detail/J27.json', false, false);
+        });
+    </script>
+</body>
+</html>

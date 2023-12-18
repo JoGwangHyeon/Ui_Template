@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<title>샘플 테스트</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="description" content="프로젝트 설명">
+	<meta name="keywords" content="키워드1, 키워드2, 키워드3">
+	<!-- 안드로이드 홈화면추가시 상단 주소창 제거 -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<!-- ios홈화면추가시 상단 주소창 제거 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link type="text/css" rel="stylesheet" href="resource/css/import.css">
+	<link type="text/css" rel="stylesheet" href="resource/css/content.css">
+	<script src="resource/js/jquery-3.6.0.min.js"></script>
+	<script src="resource/js/com_ui.js"></script>
+
+<!-- 텍스트 흐름 -->
+<link type="text/css" rel="stylesheet" href="news-ticker-controls-acme/assets/css/style.css">
+<script type="text/javascript" src="news-ticker-controls-acme/assets/js/acmeticker.js"></script>
+
+
+<!-- 썸네일 -->
+<link type="text/css" rel="stylesheet" href="Gallery/css/index.css">
+<script defer src="Gallery/js/gallery.js" ></script>
+
+<!-- 달력 -->
+<link type="text/css" rel="stylesheet" href="datepicker/css/jquery-ui.css">
+<script src="datepicker/js/jquery-ui.js"></script>
+
+
+<!-- 그래프 -->
+<link type="text/css" rel="stylesheet" href="test/al-range-slider.css">
+<script src="test/al-range-slider.js"></script>
+
+<style>
+	pre {
+	display: block;
+    padding: 10px;
+    margin: 50px 0 10px;
+    font-size: 15px;
+    line-height: 30px;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre;
+    white-space: pre-wrap;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+	}
+	#ui-datepicker-div {
+		display: block !important;
+		position: absolute; top: 835px; left: 896.719px; z-index: 1;
+	}
+</style>
+<script>
+	// jQuery 인크루드
+	$(document).ready(function() {
+		$("#ID").load("FILE.html");
+		$(".guide_menu").load("aside.html");
+	});
+  </script>
+
+</head>
+<body>
+
+<h1 class="H1_title">프로젝트 템플릿 가이드</h1>
+<div id="wrapper" class="guide_wrapper">
+	
+	<!-- .aside -->
+	<aside class="guide_menu"></aside>
+	<!-- //.aside -->
+
+	<div id="container" class="guide_container">
+
+
+<pre style="margin-top:0;">&#60;&#60;&#60; 테스트 코드  &#62;&#62;&#62;</pre>
+
+
+<input type="color" class="aa">
+<input type="date" class="aa">
+<input type="time" class="aa">
+
+
+<br><br>
+<p id="displayText" style="white-space: pre-line;"></p>
+<textarea id="inputText" placeholder="여러 줄을 추가해보세요" oninput="saveText(this.value)"></textarea>
+
+
+<script>
+	
+	window.onload = function() {
+		var savedText = localStorage.getItem('savedInput');
+
+		if (savedText) {
+			document.getElementById('inputText').value = savedText;
+			displayText(savedText);
+		}
+	};
+	
+	function saveText(value) {
+		document.getElementById('displayText').innerText = value;
+		localStorage.setItem('savedInput', value);
+	}
+
+
+</script>
+
+<style lang="">
+	#displayText {
+		min-height: 10rem;
+	}
+	#inputText {
+		min-height: 10rem;
+	}
+	.aa {
+		border: 1px solid black;
+		vertical-align: middle;
+	}
+</style>
+
+<br><br><br><br>
+
+
+<pre>&#60;&#60;&#60; 텍스트 흐름 &#62;&#62;&#62;</pre>
+		<div class="acme-news-ticker">
+			<div class="acme-news-ticker-label">jQueryScript News</div>
+			<div class="acme-news-ticker-box">
+				<ul class="my-news-ticker-1">
+					<li><a href="#">가나다라마바사 아자차카타파하 1</a></li>
+					<li><a href="#">가나다라마바사 아자차카타파하 2</a></li>
+					<li><a href="#">가나다라마바사 아자차카타파하 3</a></li>
+					<li><a href="#">가나다라마바사 아자차카타파하 4</a></li>
+					<li><a href="#">가나다라마바사 아자차카타파하 5</a></li>
+					<li><a href="#">가나다라마바사 아자차카타파하 6</a></li>
+					<li><a href="#">가나다라마바사 아자차카타파하 7</a></li>
+					<li><a href="#">가나다라마바사 아자차카타파하 8</a></li>
+				</ul>
+			</div>
+			<div class="acme-news-ticker-controls acme-news-ticker-horizontal-controls">
+				<span class="acme-news-ticker-arrow acme-news-ticker-prev"></span>
+				<span class="acme-news-ticker-pause"></span>
+				<span class="acme-news-ticker-arrow acme-news-ticker-next"></span>
+			</div>
+		</div>
+	
+		<div class="acme-news-ticker">
+			<div class="acme-news-ticker-label">Marquee</div>
+			<div class="acme-news-ticker-box">
+				<ul class="my-news-ticker-2" style="white-space: nowrap;">
+					<li><a href="#">가나다라마바사 아자차카타파하 1</a></li>
+					<li><a href="#">가나다라마바사 아자차카타파하 2</a></li>
+					<li><a href="#">가나다라마바사 아자차카타파하 3</a></li>
+					<li><a href="#">가나다라마바사 아자차카타파하 4</a></li>
+					<li><a href="#">가나다라마바사 아자차카타파하 5</a></li>
+					<li><a href="#">가나다라마바사 아자차카타파하 6</a></li>
+					<li><a href="#">가나다라마바사 아자차카타파하 7</a></li>
+					<li><a href="#">가나다라마바사 아자차카타파하 8</a></li>
+				</ul>
+			</div>
+			<div class="acme-news-ticker-controls acme-news-ticker-horizontal-controls">
+				<span class="acme-news-ticker-pause"></span>
+			</div>
+		</div>
+	
+		<div class="acme-news-ticker">
+			<div class="acme-news-ticker-label">Horizontal News</div>
+			<div class="acme-news-ticker-box">
+				<ul class="my-news-ticker-3">
+					<li><a href="#">가나다라마바사 아자차카타파하 1</a></li>
+					<li><a href="#">가나다라마바사 아자차카타파하 2</a></li>
+					<li><a href="#">가나다라마바사 아자차카타파하 3</a></li>
+					<li><a href="#">가나다라마바사 아자차카타파하 4</a></li>
+					<li><a href="#">가나다라마바사 아자차카타파하 5</a></li>
+					<li><a href="#">가나다라마바사 아자차카타파하 6</a></li>
+					<li><a href="#">가나다라마바사 아자차카타파하 7</a></li>
+					<li><a href="#">가나다라마바사 아자차카타파하 8</a></li>
+				</ul>
+			</div>
+			<div class="acme-news-ticker-controls acme-news-ticker-horizontal-controls">
+				<span class="acme-news-ticker-arrow acme-news-ticker-prev"></span>
+				<span class="acme-news-ticker-pause"></span>
+				<span class="acme-news-ticker-arrow acme-news-ticker-next"></span>
+			</div>
+		</div>
+	
+		<div class="acme-news-ticker">
+			<div class="acme-news-ticker-label">Vertical News</div>
+			<div class="acme-news-ticker-box">
+				<ul class="my-news-ticker-4">
+					<li><a href="#">가나다라마바사 아자차카타파하 1</a></li>
+					<li><a href="#">가나다라마바사 아자차카타파하 2</a></li>
+					<li><a href="#">가나다라마바사 아자차카타파하 3</a></li>
+					<li><a href="#">가나다라마바사 아자차카타파하 4</a></li>
+					<li><a href="#">가나다라마바사 아자차카타파하 5</a></li>
+					<li><a href="#">가나다라마바사 아자차카타파하 6</a></li>
+					<li><a href="#">가나다라마바사 아자차카타파하 7</a></li>
+					<li><a href="#">가나다라마바사 아자차카타파하 8</a></li>
+				</ul>
+			</div>
+			<div class="acme-news-ticker-controls acme-news-ticker-vertical-controls">
+				<span class="acme-news-ticker-arrow acme-news-ticker-prev"></span>
+				<span class="acme-news-ticker-pause"></span>
+				<span class="acme-news-ticker-arrow acme-news-ticker-next"></span>
+			</div>
+		</div>  
+
+
+
+<pre>&#60;&#60;&#60; 캘린더 &#62;&#62;&#62;</pre>
+		<div>
+			<p style="color: #000;padding: 1rem 0 1rem;">기간을 선택해주세요.</p>
+			<div class="ui_datepicker">
+				<div class="ui_data">
+					<input type="text" id="datepicker1">
+				</div>
+				<span class="sign">-</span>
+				<div class="ui_data">
+					<input type="text" id="datepicker2">
+				</div>
+			</div>	
+		</div>
+
+
+<pre>&#60;&#60;&#60; 댓글 &#62;&#62;&#62;</pre>		
+		<div class="textarea">
+			<textarea id="inputText" cols="30" rows="10" style="height: 10rem;" oninput="countBytes()">가나다라마바사 아자차카타파하</textarea>
+			<div id="byteCount"><span>0/100 bytes</span></div>
+		</div>
+
+
+<pre>&#60;&#60;&#60; 그래프 &#62;&#62;&#62;</pre>
+		<div class="basic"></div>
+		<script>
+			$('.basic').alRangeSlider();
+			const options = {
+				range: { min: -100, max: 100, step: 1 },
+				initialSelectedValues: { from: -50, to: 50 },
+				grid: { minTicksStep: 1, marksStep: 5 },
+				theme: "pink",
+			};
+		</script>
+
+<pre>&#60;&#60;&#60; 아코디언  &#62;&#62;&#62;</pre>
+		<div id="accordion">
+			<ul class="accordion">
+				<li class="on">
+					<p class="tit_click">Section 1</p>
+					<div class="conts" style="display: block;">
+						가나다라마바사 아자차카타파하 1
+					</div>
+				</li>
+				<li>
+					<p class="tit_click">Section 2</p>
+					<div class="conts">
+						가나다라마바사 아자차카타파하 2
+					</div>
+				</li>
+				<li>
+					<p class="tit_click">Section 3</p>
+					<div class="conts">
+						가나다라마바사 아자차카타파하 3
+					</div>
+				</li>
+			</ul>
+		</div>
+
+
+<pre>&#60;&#60;&#60; 썸네일 &#62;&#62;&#62;</pre>
+		<section id="gallery-con">
+			<section id="gallery-main">
+				<img src="Gallery/images/content/001.jpg" />
+			</section>
+			<section id="gallery-hidden">
+				<img src="Gallery/images/content/001.jpg" />
+				<img src="Gallery/images/content/002.jpg" />
+				<img src="Gallery/images/content/003.jpg" />
+				<img src="Gallery/images/content/004.jpg" />
+				<img src="Gallery/images/content/005.jpg" />
+				<img src="Gallery/images/content/006.jpg" />
+				<img src="Gallery/images/content/007.jpg" />
+			</section>
+			<section id="thumbnails">
+				<div id="playtoggle" class="ui-button"><div class="icon icon-pause"></div></div>
+				<div id="left-arrow" class="ui-button"><div class="icon icon-arrow-left"></div></div>
+				<div id="thumbcon"></div>
+				<div id="right-arrow" class="ui-button"><div class="icon icon-arrow-right"></div></div>
+			</section>
+			<section id="progressbar"></section>
+		</section>
+
+
+<pre>&#60;&#60;&#60; 탭 &#62;&#62;&#62;</pre>
+		<div id="tabs">
+			<div class="tabs">
+				<button class="tab on" type="button">TAB_________1</button>
+				<button class="tab" type="button">TAB_________2</button>
+				<button class="tab" type="button">TAB_________3</button>
+			</div>
+			<div class="tabpanel on">
+				1
+			</div>
+			<div class="tabpanel">2</div>
+			<div class="tabpanel">3</div>
+		</div>
+
+
+<pre>&#60;&#60;&#60; 버튼 &#62;&#62;&#62;</pre>
+		<div class="ui_dv_button">
+			<button type="button" class="ui_button_basics">기본</button>
+		</div>
+
+		<div class="ui_dv_button">
+			<button type="button" class="ui_button_true">확인/신청</button>
+		</div>
+
+		<div class="ui_dv_button">
+			<button type="button" class="ui_button_false">취소/해지</button>
+		</div>
+
+		<div class="ui_dv_button">
+			<button type="button" class="ui_button_true">확인/신청</button>
+			<button type="button" class="ui_button_false">취소/해지</button>
+		</div>
+
+		<div class="ui_dv_button">
+			<button type="button" class="ui_button_basics">기본</button>
+			<button type="button" class="ui_button_true">확인/신청</button>
+			<button type="button" class="ui_button_false">취소/해지</button>
+		</div>
+		
+
+	</div>
+
+
+
+
+
+</body>
+</html>
+

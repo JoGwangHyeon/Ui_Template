@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap n22UI">
+        <!-- HEADER -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">공동인증서</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //HEADER -->
+
+        <!-- CONTENT -->
+        <!--2022-08-04 ======================================================
+                    * certi-service class 추가
+                    * 간격 수정을 위한 li a 내부 p태그 추가
+                -->
+        <div id="content" class="app-main n22ui-pg-security certi-service">
+            <!-- 2022-09-29 title없는 케이스  none-title 추가 -->
+            <div class="section-n22ui none-title"> <!-- 보안서비스 | 로그인시에만 노출-->
+                <ul class="white-box-n22ui">
+                    <li><a href="#"><p>인증서 발급/재발급</p></a></li>
+                    <li><a href="#"><p>타행/타기관 인증서 등록</p></a></li>
+                    <li><a href="#"><p>타행/타기관 인증서 등록해지</p></a></li>
+                    <li><a href="#"><p>PC에서 인증서 가져오기</p></a></li>
+                    <li><a href="#"><p>폰에서 인증서 가져오기</p></a></li>
+                    <li><a href="#"><p>인증서 내보내기</p></a></li>
+                    <li><a href="#"><p>인증서 갱신</p></a></li>
+                    <li><a href="#"><p>인증서 폐기</p></a></li>
+                    <li><a href="#"><p>인증서 관리</p></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- //CONTENT -->
+    </div>
+
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,505 @@
+
+<!-- v0.9 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+        <!-- 공통 css -->
+        <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+        <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+        <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+        <link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap n22UI compare-product-page">
+        <!-- HEADER -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">상품 비교함</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //HEADER -->
+
+
+        <!-- Content -->
+        <div id="content" class="app-main prodmall-detail-savings compare">
+            <div class="prodmall-section compare-box-wrap">
+                <div class="compare-box">
+                    <div class="compare-product">
+                        <!--2022-08-24 | 상품을 선택할 시 selected-product 클래스 추가-->
+                        <div class="selected-product">
+                            <span class="compare-product-img">
+                                <button class="x-circle"></button>
+                            </span>
+                            <em>급여하나 월복리적금</em>
+                            <!-- 2022-09-07 띄어쓰기 수정 -->
+                            <p>최대금리(세전, 1년)</p>
+                            <span>연 4.50%</span>
+                            <button type="button" title="상세보기" class="detail-view">상세보기</but>
+                        </div>
+                        <!--2022-08-24 | 상품을 추가해야할 시 no-selected-product 클래스 추가 -->
+                        <div class="no-selected-product" style="display:none">
+                            <!--2022-08-25 | 버튼으로 수정-->
+                            <button class="plus-circle" type="button" title="비교상품 추가 버튼"></button>
+                            <em>비교상품 추가</em>
+                        </div>
+                    </div>
+                    <div class="compare-product">
+                        <!--2022-08-24 | 상품을 선택할 시 selected-product 클래스 추가-->
+                        <div class="selected-product"   style="display:none">
+                            <span class="compare-product-img">
+                                <button class="x-circle"></button>
+                            </span>
+                            <em>급여하나월복리적금</em>
+                            <p>최대금리(세전,1년)</p>
+                            <span>연 4.50%</span>
+                            <button type="button" title="상세보기" class="detail-view">상세보기</but>
+                        </div>
+                        <!--2022-08-24 | 상품을 추가해야할 시 no-selected-product 클래스 추가 -->
+                        <div class="no-selected-product">
+                            <!--2022-08-25 | 버튼으로 수정-->
+                            <button class="plus-circle" type="button" title="비교상품 추가 버튼"></button>
+                            <em>비교상품 추가</em>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <!-- 비교할 상품을 추가 안한 경우 or 상품 1개만 담은 경우 노출-->
+            <!-- 2022-08-24 | add-product-img-wrap 클래스 추가 -->
+            <div class="add-product">
+                    <!-- 2022-08-30 마크업 변경 -->
+                    <span class="add-product-img-wrap"></span>
+                    <p class="">비교할 상품을 추가해 주세요.</p>
+            </div>
+
+            <!-- 상품 2개 담은 경우 -->
+            <div class="compare-button">
+                <button type="button" class="button">비교하기</button>
+            </div>
+
+            
+            <!--
+                2022-09-29 
+                data-element="accordion" - > data-element="toggle"
+                data-element="accordion__anchor" - > data-element="toggle__anchor"
+                data-element="accordion__panel" - > data-element="toggle__panel"
+
+            -->
+                <ul class="accodion-list compare-list">
+                    <li>
+                        <div class="accordion" data-element="toggle" data-options='{ "isInitActive": true }'>
+                            <div data-element="toggle__item">
+                                <button type="button" title="더보기" class="accordion__title" data-element="toggle__anchor" aria-expanded="true">
+                                    <span class="title-name">상품정보(요약)</span>
+                                    <span class="accordion__button">
+                                        <i class="icon-arrow" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                                <!-- accordion__inner  -->
+                                <div class="accordion__panel" data-element="toggle__panel"> 
+                                    <!-- 컨텐츠 영역-->
+                                    <div class="accordion__inner compare-item__detail">
+                                    	<div class="container container--full">
+						                    <div class="white-box white-box--divider white-box--noline-divider">
+						                   		<!-- 비교상품 담아있는 상태  compare-select 클래스 추가 /title 안에 <span>1</span> 변경-->
+						                        <div class="white-box__content">
+						                            <ul class="guide-wrap__list">
+			                                            <li class="guide-wrap__item">
+			                                            	<div class="tit-small">상품특징</div>
+                                                            <div><p class="text-guide">급여이체 하나로 우대금리가 제공되는 월복리 적금</p></div>
+                                                            <div class="tit-small">가입금액</div>
+                                                            <div><p class="text-guide">1만원 이상~300만원 이하(원 단위) (단, 청년응원특별금리 등록시 1만원이상 150만원 이하)</p></div>
+                                                                <div class="tit-small">적립한도</div>
+                                                            <div><p class="text-guide">1만원 이상~300만원 이하(분기한도, 원단위)
+                                                                (단, 청년응원특별금리 적용기간은 분기당  1만원이상 150만원 이하)
+                                                                제휴 여행사를 통해 여행하는 경우 우대하고 여행 
+                                                                자금마련을 위한 상품</p></div>
+			                                            </li>
+			                                        </ul>
+						                        </div>
+						                        <div class="white-box__content">
+						                        	<ul class="guide-wrap__list">
+			                                            <li class="guide-wrap__item">
+                                                                <div class="tit-small">판매기간</div>
+                                                            <div><p class="text-guide">2023년4월30일까지
+                                                                가입 가능</p></div>
+                                                                <div class="tit-small">가입금액</div>
+                                                            <div><p class="text-guide">매월 1만원 이상 100만원 이하(원단위)</p></div>
+			                                            </li>
+			                                        </ul>
+						                        </div>
+						                    </div>
+						                </div>
+                                    </div>
+                                    <!--// 컨텐츠 영역 -->
+                                </div>
+                                <!--// accordion__inner -->
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="accordion" data-element="toggle">
+                            <div data-element="toggle__item">
+                                <button type="button" title="더보기" class="accordion__title" data-element="toggle__anchor">
+                                    <span class="title-name">가입대상</span>
+                                    <span class="accordion__button">
+                                        <i class="icon-arrow" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                                <!-- accordion__inner  -->
+                                <div class="accordion__panel" data-element="toggle__panel">
+                                    <!-- 컨텐츠 영역-->
+                                    <div class="accordion__inner compare-item__detail">
+                                    	<div class="container container--full">
+						                    <div class="white-box white-box--divider white-box--noline-divider">
+						                   		<!-- 비교상품 담아있는 상태  compare-select 클래스 추가 /title 안에 <span>1</span> 변경-->
+						                        <div class="white-box__content">
+						                            <ul class="guide-wrap__list">
+			                                            <li class="guide-wrap__item"></li>
+			                                        </ul>
+						                        </div>
+						                        <div class="white-box__content">
+						                        	<ul class="guide-wrap__list">
+			                                            <li class="guide-wrap__item"></li>
+			                                        </ul>
+						                        </div>
+						                    </div>
+						                </div>
+                                    </div>
+                                    <!--// 컨텐츠 영역 -->
+                                </div> 
+                                <!--// accordion__inner -->
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="accordion" data-element="toggle">
+                            <div data-element="toggle__item">
+                                <button type="button" title="더보기" class="accordion__title" data-element="toggle__anchor">
+                                    <span class="title-name">계약기간</span>
+                                    <span class="accordion__button">
+                                        <i class="icon-arrow" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                                <!-- accordion__inner  -->
+                                <div class="accordion__panel" data-element="toggle__panel">
+                                    <!-- 컨텐츠 영역-->
+                                    <div class="accordion__inner compare-item__detail">
+                                    	<div class="container container--full">
+						                    <div class="white-box white-box--divider white-box--noline-divider">
+						                   		<!-- 비교상품 담아있는 상태  compare-select 클래스 추가 /title 안에 <span>1</span> 변경-->
+						                        <div class="white-box__content">
+						                            <ul class="guide-wrap__list">
+			                                            <li class="guide-wrap__item" ></li>
+			                                        </ul>
+						                        </div>
+						                        <div class="white-box__content">
+						                        	<ul class="guide-wrap__list">
+			                                            <li class="guide-wrap__item"></li>
+			                                        </ul>
+						                        </div>
+						                    </div>
+						                </div>
+                                    </div>
+                                    <!--// 컨텐츠 영역 -->
+                                </div>
+                                <!--// accordion__inner -->
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="accordion" data-element="toggle">
+                            <div data-element="toggle__item">
+                                <button type="button" title="더보기" class="accordion__title" data-element="toggle__anchor">
+                                    <span class="title-name">최대금리</span>
+                                    <span class="accordion__button">
+                                        <i class="icon-arrow" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                                <!-- accordion__inner  -->
+                                <div class="accordion__panel" data-element="toggle__panel"> 
+                                    <!-- 컨텐츠 영역-->
+                                    <div class="accordion__inner compare-item__detail">
+                                    	<div class="container container--full">
+						                    <div class="white-box white-box--divider white-box--noline-divider">
+						                   		<!-- 비교상품 담아있는 상태  compare-select 클래스 추가 /title 안에 <span>1</span> 변경-->
+						                        <div class="white-box__content">
+						                            <ul class="guide-wrap__list">
+			                                            <li class="guide-wrap__item">
+			                                            	<span> - </span>
+			                                            </li>
+			                                        </ul>
+						                        </div>
+						                        <div class="white-box__content">
+						                        	<ul class="guide-wrap__list">
+			                                            <li class="guide-wrap__item">
+			                                            	<span> - </span>
+			                                            </li>
+			                                        </ul>
+						                        </div>
+						                    </div>
+						                </div>
+                                    </div>
+                                    <!--// 컨텐츠 영역 -->
+                                </div>
+                                <!--// accordion__inner -->
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="accordion" data-element="toggle"> 
+                            <div data-element="toggle__item">
+                                <button type="button" title="더보기" class="accordion__title" data-element="toggle__anchor">
+                                    <span class="title-name">기본금리</span>
+                                    <span class="accordion__button">
+                                        <i class="icon-arrow" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                                <!-- accordion__inner  -->
+                                <div class="accordion__panel" data-element="toggle__panel">
+                                    <!-- 컨텐츠 영역-->
+                                    <div class="accordion__inner compare-item__detail">
+                                    	<div class="container container--full">
+						                    <div class="white-box white-box--divider white-box--noline-divider">
+						                   		<!-- 비교상품 담아있는 상태  compare-select 클래스 추가 /title 안에 <span>1</span> 변경-->
+						                        <div class="white-box__content">
+						                           <ul class="guide-wrap__list">
+			                                            <li class="guide-wrap__item">
+			                                            	<span> - </span>
+			                                            </li>
+			                                        </ul>
+						                        </div>
+						                        <div class="white-box__content">
+						                        	<ul class="guide-wrap__list">
+			                                            <li class="guide-wrap__item">
+			                                            	<span> - </span>
+			                                            </li>
+			                                        </ul>
+						                        </div>
+						                    </div>
+						                </div>
+                                    </div>
+                                    <!--// 컨텐츠 영역 -->
+                                </div>
+                                <!--// accordion__inner -->
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="accordion" data-element="toggle">
+                            <div data-element="toggle__item">
+                                <button type="button" title="더보기" class="accordion__title" data-element="toggle__anchor">
+                                    <span class="title-name">우대금리</span>
+                                    <span class="accordion__button">
+                                        <i class="icon-arrow" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                                <!-- accordion__inner  -->
+                                <div class="accordion__panel" data-element="toggle__panel">
+                                    <!-- 컨텐츠 영역-->
+                                    <div class="accordion__inner compare-item__detail">
+                                    	<div class="container container--full">
+						                    <div class="white-box white-box--divider white-box--noline-divider">
+						                   		<!-- 비교상품 담아있는 상태  compare-select 클래스 추가 /title 안에 <span>1</span> 변경-->
+						                        <div class="white-box__content">
+						                           <ul class="guide-wrap__list">
+			                                            <li class="guide-wrap__item">
+			                                            	<span> - </span>
+			                                            </li>
+			                                        </ul>
+						                        </div>
+						                        <div class="white-box__content">
+						                        	<ul class="guide-wrap__list">
+			                                            <li class="guide-wrap__item">
+			                                            	<span> - </span>
+			                                            </li>
+			                                        </ul>
+						                        </div>
+						                    </div>
+						                </div>
+                                    </div>
+                                    <!--// 컨텐츠 영역 -->
+                                </div>
+                                <!--// accordion__inner -->
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="accordion" data-element="toggle">
+                            <div data-element="toggle__item">
+                                <button type="button" title="더보기" class="accordion__title" data-element="toggle__anchor">
+                                    <span class="title-name">우대금리 조건</span>
+                                    <span class="accordion__button">
+                                        <i class="icon-arrow" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                                <!-- accordion__inner  -->
+                                <div class="accordion__panel" data-element="toggle__panel">
+                                    <!-- 컨텐츠 영역-->
+                                    <div class="accordion__inner compare-item__detail">
+                                    	<div class="container container--full">
+						                    <div class="white-box white-box--divider white-box--noline-divider">
+						                   		<!-- 비교상품 담아있는 상태  compare-select 클래스 추가 /title 안에 <span>1</span> 변경-->
+						                        <div class="white-box__content">
+						                           <ul class="guide-wrap__list">
+			                                            <li class="guide-wrap__item">
+                                                            <!-- 2022-10-18 우대금리조건 상세보기-->
+                                                            <div class="align-center">
+                                                                <button type="button" title="우대금리 상세보기" class="button-square button-square--border">상세보기</button>
+                                                            </div>
+			                                            </li>
+			                                        </ul>
+						                        </div>
+						                        <div class="white-box__content">
+						                        	<ul class="guide-wrap__list">
+			                                            <li class="guide-wrap__item">
+			                                            	<!-- 2022-10-18 우대금리조건 상세보기-->
+                                                            <div class="align-center">
+                                                                <button type="button" title="우대금리 상세보기" class="button-square button-square--border">상세보기</button>
+                                                            </div>
+			                                            </li>
+			                                        </ul>
+						                        </div>
+						                    </div>
+						                </div>
+                                    </div>
+                                    <!--// 컨텐츠 영역 -->
+                                </div>
+                                <!--// accordion__inner -->
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+
+<!--
+                <div class="button-select">
+                    <button type="button" class="button button-select__item" title="연락처 식별번호 선택" data-element="modal__open" data-target="#compare-box-modal">+</button>
+                </div>
+                -->
+            </div>
+
+        </div>
+        <!-- //Content -->
+
+        <!-- Modal layer -->
+        <div id="compare-box-modal" class="modal modal--slide modal--select-value" data-element="modal__element">
+            <div class="modal__container modal__container--interval" data-element="modal__element-container">
+                <div class="modal__header modal__header--border">
+                    <h1 class="modal__header--title">적금청약</h1>
+                </div>
+                <div class="modal__contents modal__contents--no-spacer">
+                    <div class="container">
+                        <div class="list-section">
+                            <ul class="list-wrap list-wrap--line">
+                                <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                    <button type="button" class="list-wrap__anchor">
+                                        <div class="list-wrap__box-wrap">
+                                            <span class="list-wrap__box">
+                                                <strong class="list-wrap__title list-wrap__title--value">내 집마련 더블업 적금</strong>
+                                            </span>
+                                            <div class="list-wrap__box-plus-info">
+                                                <span>최대</span>
+                                                <p>연 5.00%</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                    <button type="button" class="list-wrap__anchor">
+                                        <div class="list-wrap__box-wrap">
+                                            <span class="list-wrap__box">
+                                                <strong class="list-wrap__title list-wrap__title--value">에너지 챌린지 적금</strong>
+                                            </span>
+                                            <div class="list-wrap__box-plus-info">
+                                                <span>최대</span>
+                                                <p>연 4.60%</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                    <button type="button" class="list-wrap__anchor">
+                                        <div class="list-wrap__box-wrap">
+                                            <span class="list-wrap__box">
+                                                <strong class="list-wrap__title list-wrap__title--value">하나의 여행 적금</strong>
+                                            </span>
+                                            <div class="list-wrap__box-plus-info">
+                                                <span>최대</span>
+                                                <p>연 5.00%</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                    <button type="button" class="list-wrap__anchor">
+                                        <div class="list-wrap__box-wrap">
+                                            <span class="list-wrap__box">
+                                                <strong class="list-wrap__title list-wrap__title--value">도전 365 적금</strong>
+                                            </span>
+                                            <div class="list-wrap__box-plus-info">
+                                                <span>최대</span>
+                                                <p>연 3.25%</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                    <button type="button" class="list-wrap__anchor">
+                                        <div class="list-wrap__box-wrap">
+                                            <span class="list-wrap__box">
+                                                <strong class="list-wrap__title list-wrap__title--value">하나 타이밍 적금</strong>
+                                            </span>
+                                            <div class="list-wrap__box-plus-info">
+                                                <span>최대</span>
+                                                <p>연 2.70%</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                    <button type="button" class="list-wrap__anchor">
+                                        <div class="list-wrap__box-wrap">
+                                            <span class="list-wrap__box">
+                                                <strong class="list-wrap__title list-wrap__title--value">주택청약종합저축</strong>
+                                            </span>
+                                            <div class="list-wrap__box-plus-info">
+                                                <span>최대</span>
+                                                <p>연 1.80%</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="modal__btn--close" data-element="modal__close" title="닫기"></button>
+            </div>
+        </div>
+        <!--// Modal layer -->
+    </div>
+    <!--//2022-07-12 모달 작업-->
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
+    <!-- 상품상세 js 별도분기 -->
+    <script src="../../../../resource/library/lottie/lottie.min.js"></script>
+    <script src="../../../../resource/js/ui/prd_detail_n22UI.js"></script>
+</body>
+
+</html>

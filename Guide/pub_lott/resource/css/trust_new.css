@@ -1,0 +1,667 @@
+@charset "UTF-8";
+
+
+/*공통 */
+.mgl2 {margin-left:2px}
+.bg-finance06,
+.bg-finance08,
+.bg-finance12 {background: #c55a11 !important; border: 1px solid #c55a11 !important; color:#fff !important}
+.trust-renewal .join-new {padding-top:3.5rem; padding-top: calc(3.5rem + constant(safe-area-inset-top)); padding-top: calc(3.5rem + env(safe-area-inset-top));background-color:#fff;}
+.trust-renewal .app-header{position:fixed !important}
+.trust-renewal .join-new.gray {background-color:#f9f9fb !important}
+.trust-renewal .guide-wrap .guide-sub-list__item.reference,
+.trust-renewal .text-guide-sub.reference {padding-left:1.2rem; position:relative;font-size:0.8125rem; line-height:1rem}
+.trust-renewal .text-guide-sub.reference.f14 {font-size:0.875rem}
+.trust-renewal .text-guide-sub.reference.type2 {font-size:0.875rem; font-weight:400; line-height:1.25rem}
+.trust-renewal .guide-wrap .guide-sub-list__item.reference:before,
+.trust-renewal .text-guide-sub.reference:before { position:absolute; top:0; left:0; display:inline-block; content:'※'; width:14px; height:20px; background:none } 
+.trust-renewal .icon_information {padding-left:1.25rem; display: block; background: url(../../resource/images/C/icon_information.png) no-repeat left center; background-size: 1rem auto; font-size:0.875rem; font-weight:300; color:#333 } 
+.trust-renewal .icon_information + .guide-sub-list,
+.trust-renewal .icon_information + .guide-sub-list {margin-left:1.354rem}
+.trust-renewal .icon_information + .guide-sub-list > li,
+.trust-renewal .text-guide-sub.reference + .guide-sub-list > li{font-weight:300}
+.trust-renewal.bg-white .app-header {background-color:#fff}
+.trust-renewal .trust-top {background-color:#fff;padding: 1.5rem;}
+.trust-renewal .trust-top .tit-default {display:flex;margin:0;padding-top:0 !important;font-size:1.25rem; font-weight:500}
+.trust-renewal.bg-gray .modal__header {background-color:#fff !important}
+.trust-renewal .new_prod.app-footer__round-box {padding-top:1.5rem}
+.trust-renewal .new_prod .step-header + div {padding-top:0}
+.trust-renewal .app-main > .tab-wrap:first-child {margin-top:0}
+.trust-renewal .icon-wrap {padding-top:2.708rem;margin-bottom:2rem;}
+.trust-renewal .icon-wrap .icon-wrap__description {margin-top:1rem; line-height:1.625rem}
+.trust-renewal .etf_sell_ratio .list-wrap__item .input__optional {padding-top:0.875rem}
+.trust-renewal .additional-item .button-square-small{margin:0}
+.trust-renewal .additional-item .button-square-small:first-child{margin-left:0}
+.trust-renewal .additional-item .button-square-small:last-child{margin-right:0}
+
+
+/*** 신탁형 ISA - 가입신규 ***/
+/* 가입안내 - FTRS0807001.html */
+.trust-renewal .join-new.pd-type {padding-top: calc(1.25rem + 3.5rem); padding-top: calc(1.25rem + 2rem + constant(safe-area-inset-top)); padding-top: calc(1.25rem + 2rem + env(safe-area-inset-top));}
+.trust-renewal .join-new.pd-type .bg-gray .tit-default:first-child {padding-top:1.875rem; margin-bottom:1.5rem; line-height:1.5rem}
+.trust-renewal .join-new.pd-type .banner-fund {color:#333;border-top:1px solid #e3e4e8; border-bottom:1px solid #e3e4e8;background-color:transparent; padding:0; margin:4px 1.5rem 0 1.5rem}
+.trust-renewal .join-new.pd-type .banner-fund:before{/*background-size:80%; */left:0; width:1.458rem; height:1.25rem}
+.trust-renewal .join-new.pd-type .banner-fund .banner-fund__text {padding-right:0; left:1.75rem}
+.trust-renewal .join-new.pd-type .bg-gray .container {}
+.trust-renewal .join-new.pd-type .font-default + .container {padding-top:0 !important}
+.trust-renewal .join-new.pd-type .font-default + .container .ordered-list {margin-top:0}
+.trust-renewal .join-new.pd-type .ordered-list .ordered-list__item {color:#333}
+.trust-renewal .join-new.pd-type .ordered-list .ordered-list__item .guide-sub-list > li {color:#666; font-weight:300}
+.trust-renewal .join-new.pd-type .guide-wrap .guide-list__item {line-height:1.25rem; color:#333; font-weight:400}
+.trust-renewal .join-new.pd-type .guide-wrap .guide-sub-list__item {color:#333; font-weight:400}
+.trust-renewal .join-new.pd-type .guide-wrap .guide-sub-title {margin-bottom:0.25rem}
+.trust-renewal .join-new.pd-type .guide-wrap .guide-list + .guide-sub-title {margin-top:0.75rem}
+.trust-renewal .join-new.pd-type .guide-wrap .guide-list__item > p {padding-bottom:0.25rem}
+.trust-renewal .join-new.pd-type .table-horizontal--narrow .table-horizontal__tr--single .table-horizontal__th {font-size:0.875rem}
+.trust-renewal .join-new.pd-type .table-horizontal--narrow .table-horizontal__td {text-align:left}
+.trust-renewal .join-new.pd-type .table-horizontal--narrow .table-horizontal__td .guide-wrap .guide-list__item ~ .guide-list__item {margin-top:0}
+.trust-renewal .join-new.pd-type .table + .guide-sub-title {margin-top:1.5rem;}
+.trust-renewal .join-new.pd-type .guide-wrap .guide-list__item.none-bullet{padding-left:0}
+.trust-renewal .join-new.pd-type .guide-wrap .guide-list__item.none-bullet:before {display:none}
+.trust-renewal .join-new.pd-type .list-wrap__box--button.right {transform:rotate(-90deg); width:1.375rem; height:1.5rem; margin-top:-0.75rem; background-position:50% 75%;}
+
+/*상품안내 - FTRS0807001_P03_T01.html */
+.isa-info {padding-top:0}
+.isa-info .bg-isa{padding:3.75rem 2.7rem 2.291rem 2.7rem;background: #f1f1f1 url(../../resource/images/C/img_trust_icon.png) no-repeat 85% 3.33rem; background-size:9.666rem auto;}
+.bg-isa .title {font-size:1.7rem; font-weight:500; line-height:2.8rem}
+.bg-isa .title > span {display:block; font-size:2.5rem}
+.bg-isa .isa-list{margin-top:3.6rem;}
+.isa-list li{background: #f1f1f1 url(../../resource/images/C/icon_trust_check.png) no-repeat left 8px; background-size:0.4166rem auto; padding-left:0.8rem;font-size:1rem; color:#666;letter-spacing:-0.8px;}
+.isa-list li + li {margin-top:1.2rem; }
+.bg-isa + .container {margin-top:2.083rem; padding:0 0.7291rem;}
+.bg-isa + .container .guide-wrap {margin-left:0.5208rem}
+.isa-info .guide-list li {font-size:1rem; color:#666;}
+.isa-info .guide-list .guide-list__item ~ .guide-list__item {margin-top:0.5rem}
+.isa-info .guide-list .guide-list__item:before {top:0.6175rem; background-color:#6e6e7a}
+.isa-info .text-guide-sub.reference {font-size:0.875rem; line-height:1.2rem; margin-top:0.416rem}
+.isa-info .trust-sub-title {background: url(../../resource/images/C/icon_trust_title.png) no-repeat left center; background-size:2.125rem auto; padding-left:2.58rem;font-size:1.25rem; color:#000; font-weight:500}
+.modal-full .isa-info  .tab {margin-top:2.7rem; border-top:1px solid #e5e5e5}
+.isa-info .tab .tab__panel .container{ margin-top:1.875rem !important}
+.isa-info .tab__panel .guide-sub-title {font-size:1.25rem; font-weight:500; color:#000}
+.isa-info .tab .tab__panel .guide-wrap.container > .guide-list li { line-height:1.375rem}
+.isa-info .tab .tab__panel .guide-wrap.container .guide-sub-title ~ .guide-sub-title {margin-top:2rem}
+.trust-renewal .guide-wrap.info .guide-sub-title ~ .guide-sub-title {margin-top:1.2rem}
+.isa-info .table-vertical--narrow {border-top:1px solid #333}
+.trust-renewal .table-horizontal.table-vertical th {text-align:center; padding-left:0; color:#000; font-weight:400; line-height:1rem}
+.trust-renewal .table-horizontal.table-vertical td{ text-align:left; padding:0.375rem; font-size:0.8125rem; color:#333;line-height:1rem; vertical-align:top}
+.trust-renewal .table-horizontal.table-vertical td li {font-size:0.8125rem; }
+.trust-renewal .table-horizontal.table-vertical td.center {text-align:center; vertical-align:middle}
+.trust-renewal .table-horizontal.table-vertical td .guide-sub-title {font-size:0.8125rem;color:#666; margin-bottom:0; font-weight:300; padding-top:0}
+.trust-renewal .table-horizontal--narrow .table-horizontal__th {background-color:#fff}
+.isa-info .table-horizontal.table-vertical .guide-list .guide-list__item{padding-left:0.3875rem;line-height:1.25rem; margin-top:0}
+.isa-info .table-horizontal.table-vertical .guide-list .guide-list__item:before{content:'-'; width:0; height:0; background:none; top:0; }
+.isa-info .table-horizontal.table-vertical td .text-guide-sub {font-size:0.75rem; margin-top:0.1rem; line-height:1rem; padding-left:0.8rem}
+.isa-info .table-horizontal.table-vertical td .text-sign{padding-left:0.9rem; text-indent:-0.9rem}
+
+/* 가입유형 선택 - FTRS0807002.html */
+.trust-renewal .join-new .exclam_mark {padding-left: 1.5rem; font-size: 1rem; color: #333; /*letter-spacing: -1.5px; */background: url(../../resource/images/C/icon_exclam_gray_new.png) no-repeat left 49%; background-size:1rem auto; font-weight:500}
+.trust-renewal .join-new .question_mark {padding-left: 1.5rem; font-size: 1rem; color: #333; /*letter-spacing: -1.5px; */background: url(../../resource/images/C/icon_question_gray_new.png) no-repeat left 49%; background-size:1rem auto; font-weight:500}
+.trust-renewal .join-new .bg-gray + .container.border {position:relative; margin-top:0; padding-top:2rem}
+.trust-renewal .join-new .bg-gray + .container.border:before {content:''; display:block; position:absolute; left:-1.5rem; right:-1.5rem; top:0; height:0.625rem; background-color:#eff0f3}
+.trust-renewal .join-new .bg-gray:not(.input-area) .container {padding:1.458rem 0 1.875rem}
+.trust-renewal .join-new .white-box.radio-wrap .text-default {padding-bottom:0.5rem;font-size:0.875rem; color:#333; font-weight:500}
+.trust-renewal .join-new .white-box.radio-wrap  {border:0}
+.trust-renewal .join-new .white-box.radio-wrap .table tr:first-child th,
+.trust-renewal .join-new .white-box.radio-wrap .table tr:first-child td {font-weight:400}
+.trust-renewal .join-new .white-box.radio-wrap .table .table-horizontal__th {color:#333;font-weight:300; line-height:1.25rem;}
+.trust-renewal .join-new .white-box.radio-wrap .table .table-horizontal__td {text-align:right; color:#333}
+.radio-desc  {margin-top:1.458rem}
+.radio-desc .button-wrap {margin-top:1.791rem}
+.trust-renewal .join-new  .list-style li{margin-top:0.2rem;color:#333; font-weight:300; font-size:0.875rem}
+.trust-renewal .join-new  .list-style li strong {font-weight:400; font-size:1rem}
+.trust-renewal .join-new .finance-box-wrap .list-style li:first-child {margin-top:0}
+.trust-renewal .join-new .finance-box-wrap .list-style li {margin-top:0.6rem}
+
+/* 자산선택 - FTRS0807004.html */
+.trust-renewal .join-new .bg-gray .container + .container:not(.no-tit){padding-top:0;margin-top:0}
+.trust-renewal .join-new .bg-gray .container + .container.no-tit {margin-top:2.5rem}
+.trust-renewal .join-new .bg-gray .etf-box-list .box {padding-bottom:0.5rem}
+.trust-renewal .join-new .bg-gray .list-box {padding-top:1.875rem !important; border-top:1px solid #e3e4e8}
+.trust-renewal .join-new .list-box .text-guide-sub.reference {font-size:0.875rem; margin:1.25rem 0 0.625rem}
+.trust-renewal .join-new .bg-gray .list-box .no-data {padding:0 0 1.875rem 0; border-bottom:1px solid #e3e4e8}
+.trust-renewal .join-new .container.border .white-box:not(.white-box--fund){border-radius:0.3333rem}
+.trust-renewal .join-new .list-wrap__item--arrow .list-wrap__box {-webkit-box-flex:1;flex:1}
+.trust-renewal  .cheak-area {margin-top:0}
+.trust-renewal  .cheak-area .white-box {border-radius:0; border-left:0; border-right:0}
+.trust-renewal  .finance-box-wrap .white-box__header {padding:1rem}
+.trust-renewal .cheak-area .list-wrap__item .checkbox-wrap__label {color:#000; font-weight:400}
+
+/* 운용자산설명 및 자금운용 방법 지정 - FTRS0807005.html*/
+/* .trust-renewal .join-new .bg-gray.input-area {margin-top:1.875rem} */
+.trust-renewal .join-new .bg-gray.input-area .tit-default {padding-top:1.875rem; margin-top:0}
+.trust-renewal .join-new .bg-gray.input-area  .container + .tit-default {margin-top:0.625rem}
+
+/* 가입정보 입력 - FTRS0807006.html*/
+.trust-renewal .join-new .button-secondary--green {background-color:transparent}
+
+/* 약관동의 - FTRS0807007.html */
+.trust-renewal .agree-area .container {margin:0.875rem 1.5rem 0; padding:0 !important }
+.trust-renewal .join-new .bg-gray.agree-area .container + .container.no-tit {margin-top:0.875rem}
+
+/*** // 신탁형 ISA - 가입신규 ***/
+
+/*** 신탁형 ISA - 추가운용지시 ***/
+/* 상품상세 */
+.trust-renewal .stock-value--fund {padding:0; margin-top:0}
+.trust-renewal .stock-value--fund .text-guide-xsmall {color:#000}
+
+/* 운용자산 즉시매수 - BTRS0401001*/
+/* .trust-renewal .app-header.bg-white {border-bottom:1px solid #e7e9ee} */
+body.bg-white .trust-renewal .app-main {padding-top: calc(1.25rem + 3.5rem); padding-top: calc(1.25rem + 3.5rem + constant(safe-area-inset-top)); padding-top: calc(1.25rem + 3.5rem + env(safe-area-inset-top)); }
+/*.trust-renewal .trust-tit {margin:1.8rem 1.5rem 0}*/
+.trust-renewal .trust-tit + .container {margin-top:1.25rem}
+.trust-renewal .guide-wrap__item {letter-spacing:-1.2px; line-height:1.375rem}
+.trust-renewal .finance-box-wrap {letter-spacing:-1px}
+.trust-renewal .finance-box-wrap .white-box__content {padding:1.25rem 0.75rem;}
+.trust-renewal .finance-box-wrap .ordered-list__item,
+.trust-renewal .finance-box-wrap .guide-sub-list__item {color:#666}
+.trust-renewal .finance-box-wrap .guide-sub-list__item {font-weight:300}
+.trust-renewal .ordered-list__item {font-size:0.875rem}
+.trust-renewal .ordered-list__item ~ .ordered-list__item {margin-top:0.83rem}
+.trust-renewal .white-box__content .ordered-list__item:before {top:0.175rem}
+.trust-renewal .ordered-list--circle .ordered-list__item:before {top:0;}
+.trust-renewal .white-box__content .finance-box-wrap .guide-list.color-green .guide-list__item + .guide-list__item {font-weight:400; margin-top:1.125rem}
+/* .trust-renewal .list-wrap__title {color:#000} */
+
+/*매수이어하기 - BTRS0100001_P03*/
+.trust-pop .modal__header {background-color:#f9f9fb; border-top-left-radius:0.875rem; border-top-right-radius:0.875rem}
+.trust-pop .modal__header + .title {color:#333;padding-left:1.5rem;padding-bottom:0.85rem;font-size:0.875rem; background-color:#f9f9fb;}
+.trust-pop .modal__contents {border-top:0.6458rem solid #eff0f3;background-color:#fff}
+.buying-list .border-box {position:relative; padding:1rem 0}
+.buying-list .border-box:first-child {border-top:0}
+.buying-list .border-box + .border-box {border-top:0}
+.buying-list .title .color-green {font-weight:500}
+.buying-list .border-box .box-title {margin-bottom:0.5rem;}
+.buying-list .checkbox-wrap .checkbox-wrap__check + .checkbox-wrap__label {color:#333;font-weight:500; padding-left:2rem}
+.buying-list .checkbox-wrap .checkbox-wrap__check:checked + .checkbox-wrap__label span{color:#009591; }
+.buying-list .remove-button {position: absolute; top: 0.625rem;  right: -0.625rem;  padding: 0.625rem; font-size: 0;  z-index: 10;}
+.buying-list .remove-button:before{content: ''; display: block;  width: 0.625rem;  height: 0.625rem;  background: url(../../resource/images/C/btn_close_medium_gray.png) 0 0 no-repeat; background-size: 100% auto;}
+.buying-list .list-wrap__item {padding:0.125rem 0 0.125rem 2rem;font-size:0.875rem}
+.buying-list .list-wrap__item .list-wrap__box {width:70%}
+.buying-list .list-wrap__item .list-wrap__box + .list-wrap__box {width:30%}
+.buying-list .list-wrap__title,
+.buying-list .list-wrap__text {font-size:0.875rem}
+.buying-list .list-wrap__title--value{overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.buying-list .list-wrap__text {font-weight:300; color:#666}
+
+/* 자산 매수 - BTRS0100001_P04.html */
+.trust-renewal .list-section {width:100%}
+.trust-renewal .list-wrap {border-bottom:0; padding-bottom:0}
+.trust-renewal .list-wrap + .list-wrap {padding-top:0}
+.trust-renewal .line-box__inner-content:first-child {max-width:100%;padding-right:0}
+.trust-renewal .product-list__accbtn .line-box__inner-content {max-width:90%}
+.trust-renewal .line-box__inner-wrap .line-box__title {font-weight:400; max-width:100%}
+.trust-renewal .app-footer--round{box-shadow: 0rem -0.1312rem 1.125rem 0 rgba(0, 0, 0, 0.19);}
+.trust-renewal.modal-full .modal__contents .tab {margin-top:0}
+.trust-renewal .modal__contents.round-footer {padding-bottom: calc(9.3125rem + 4.5rem) !important;padding-bottom: calc(9.3125rem + 4.5rem + constant(safe-area-inset-bottom)) !important;padding-bottom: calc(9.3125rem + 4.5rem + env(safe-area-inset-bottom)) !important;}
+.trust-renewal .trust-style1  {margin:0 1.375rem 0.25rem; padding-bottom:0.4rem;align-items:center; border-bottom:1px solid #e3e4e8}
+.trust-renewal .trust-style1 .list-wrap__title {font-size:1.125rem; color:#000;}
+.trust-renewal .trust-style1 .list-wrap__text {font-size:1.375rem; color:#009591}
+.trust-renewal .trust-style1 .list-wrap__text .eng{font-weight:500}
+.trust-renewal .tab__panel .tit-small:first-child {margin-top:1.875rem !important;}
+.trust-renewal .trust-tab-cont .tab .tab__panel .container {margin-top:0.875rem !important}
+
+/* 자산 선택 - BTRS0401002_P01T01.html */
+.trust-renewal .modal__contents.new_prod{padding-top:0}
+.trust-renewal .tab__panel > .bg-gray .guide-wrap.mgt0 {margin-top:0 !important}
+.trust-renewal .tab__panel > .bg-gray .guide-wrap .icon_information{padding:1rem 1rem 1rem 1.25rem !important;}
+.trust-renewal .box-green {padding:0.479rem 0.625rem; background-color:#eff9f9;color:#333; font-weight:300; font-size:0.8125rem; border-radius: 9px}
+.trust-tab-cont .tab-wrap + div > .container {margin-top:0 !important;}
+.trust-tab-cont .tab-wrap + div .guide-wrap__list {padding:1.45rem 0}
+.trust-tab-cont .fund-search2 {padding:0}
+.trust-tab-cont .fund-search2 .fund-search2__form {border-bottom:1px solid #999}
+.trust-tab-cont .fund-search2 .fund-search2__button:before{width: 1.125rem; height: 1.125rem; margin-left: auto; background: url(../../resource/images/C/icon_search_fund.png) 0 0 no-repeat; background-size: 100% auto;}
+.trust-tab-cont .tit-small {font-weight:400;}
+.trust-tab-cont .tit-small .eng {padding-left:5px}
+.trust-tab-cont .additional-item {display:flex; align-items:center;}
+.trust-tab-cont .additional-item .button-small {min-width:5rem;padding:0 0.25rem !important; margin-right:0.8rem; font-size:0.875rem; padding:0;line-height: 1.6667rem;}
+.trust-tab-cont .additional-item .button-small:last-child {margin-right:0}
+.trust-box-list {margin-top:1.25rem}
+.trust-box-list > li + li {margin-top:0.8333rem}
+.trust-box-list li .box .btn-link {position:relative; width:100%; height:100%;padding:0.8rem 1.875rem 0.8rem 2rem;}
+.trust-box-list li .box .btn-link:after{content: ''; position: absolute; top: 50%; right: 0.75rem; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 0.4375rem; height: 0.6875rem; background: url(../images/C/arrow_product_right.png) 0 0 no-repeat; background-size: 100% auto;}
+.trust-box-list.type1 li .box .btn-link{display:flex; justify-content:space-between; align-items:center}
+.trust-box-list.type1 li .box .btn-link .line-box__inner-wrap {margin-top:0}
+.trust-box-list li .box:not(.more) {position: relative; background: #fff; border:1px solid #e3e4e8;border-radius:0.5rem;}
+.trust-box-list li .box.on {border:1px solid #009591;}
+.trust-box-list li .box .checkbox-wrap--text {position:absolute;top:0; left:0;z-index:10; width:calc(100% - 1.875rem); height:100%;}
+.trust-box-list li .box .checkbox-wrap--text.full-check {width: 100%;}
+.trust-box-list li .box .checkbox-wrap--text.under-slide {width: 100%; height: calc(100% - 2.375rem);}
+.trust-box-list li .box .checkbox-wrap--text label {font-size:0;padding-left:0; width:2rem; height:2rem;margin-top:0.5208rem;margin-left:0.2708rem}
+.trust-box-list li .checkbox-wrap--text .checkbox-wrap__check + .checkbox-wrap__label:before {top:50%; left:50%; margin-left:-0.5rem; margin-top:-0.35rem}
+.trust-box-list li .box .line-box__inner-content:first-child {max-width:100%;position:relative;z-index:2; padding-left:0.2083rem}
+.trust-box-list li .box .label-line__text {line-height:1.9rem}
+.trust-box-list li.nodata .box {padding:2rem 1rem !important;text-align:center;border-radius:10px;}
+.trust-box-list li .box .line-box__inner-content .line-box__title {position:relative;z-index:2; text-align:left;}
+.trust-box-list li .line-box__inner-wrap--interval {margin:0;font-size:0.875rem;line-height:1.3rem;color:#666;align-items:center;justify-content:flex-end;font-weight:300;}
+.trust-box-list li .line-box__inner-wrap--interval span{ font-size:0.75rem}
+.trust-box-list li .line-box__inner-wrap--interval strong {padding-left:0.8rem;font-size:1rem;font-weight:500;font-family:"roboto"}
+.trust-box-list li.line-box__inner-wrap--interval strong.minus {color:#2083ea}
+.trust-box-list li .line-box__inner-wrap--interval strong.plus {color:#ed1651}
+.trust-box-list li .line-box__inner-wrap--interval .text-guide-xsmall {margin-right:auto;font-size:0.75rem;line-height:1.3rem}
+.trust-renewal .trust-tab-scroll .tab-wrap,
+.trust-renewal.trust-tab-scroll .tab-wrap{position: fixed; left: 0; top: calc(3.5rem + env(safe-area-inset-top)); width: 100%; z-index: 11; background-color: #fff;}
+.trust-renewal .trust-tab-scroll,
+.trust-renewal.trust-tab-scroll{padding-top: calc(6.5rem + env(safe-area-inset-top));}
+
+/* 자산매수(매수비율/금액입력) - BTRS0401003.html */
+.trust-style .select-item .etf-prod {font-size:1rem; color:#000}
+.trust-renewal .trust-style1 .etf_ratio_war {display:flex; align-items:center; justify-content:flex-end}
+.trust-renewal .trust-style1 .etf_ratio_war .sum {font-weight:300; font-size:1.125rem; color:#757575; padding-left:0.5rem}
+.trust-renewal .trust-style1 .etf_ratio_war .present{font-weight:500; font-size:1.375rem; color:#009591}
+.trust-renewal .app-footer__round-box .trust-style1.type2 .list-wrap__item.sub .list-wrap__title {font-size:1rem; color:#666}
+.trust-renewal .app-footer__round-box .trust-style1.type2 .list-wrap__item.sub .list-wrap__text {font-size:1.125rem; color:#666; font-weight:300}
+.trust-renewal .app-footer__round-box .trust-style1.type2 .list-wrap__item.sub .list-wrap__text .eng {font-weight:300}
+/* .trust-renewal .trust-style1.sub {border-bottom:0; margin-bottom:0; padding-bottom:0}
+.trust-renewal .trust-style1.sub + .trust-style1 {padding-top:0; margin-top:-0.2rem}
+.trust-renewal .trust-style1.sub + .trust-style1 strong{color:#666}
+.trust-renewal .trust-style1.sub + .trust-style1 .list-wrap__title{font-size:1rem;}
+.trust-renewal .trust-style1.sub + .trust-style1 .list-wrap__text{font-size:1.125rem; font-weight:300 !important}
+.trust-renewal .trust-style1.sub + .trust-style1 .list-wrap__text .eng {font-weight:300 !important} */
+
+/* 자산매수(설명의무이행및 정보확인) - BTRS0401005.html */
+.trust-renewal.pension-renewal .trust-top + .bg-white {position:initial}
+.trust-renewal .light-style {margin:0 1.5rem 0;padding:1.8541rem 0 0;font-weight:400; font-size:1.125rem}
+.trust-renewal .white-box.check {padding:0.8333rem}
+.trust-renewal .white-box.check .checkbox-wrap__label {font-size:0.875rem; font-weight:300; color:#333}
+.trust-renewal .total-lookup .product-list__sub-items {padding-top:0.2rem; margin-top:0.8333rem;border-top:1px solid #e3e4e8}
+.trust-renewal .total-lookup .product-list__accbtn:after {top:initial; bottom:0.6rem; margin-top:0}
+
+/* 매도자산 선택 - BTRS0402002_P01.html*/
+.trust-box-list.type2 li .box{padding: 0.8rem 1.25rem 0.8rem 2rem;}
+.trust-box-list .list-section + .button-simple--right {margin-top:0.4rem}
+.trust-box-list .list-section + .button-simple--right.is-active {color:#009591}
+.trust-box-list .list-section + .button-simple--right.is-active:after {background-image: url(../images/C/arrow_up_xsmall_green.png);}
+
+/* 매도금액/수량/비율 입력 - BTRS0402003.html*/
+.trust-renewal .new_prod .etf-box-list li .box {padding:1.5rem}
+.trust-renewal .new_prod .etf-box-list li .box .button-delete {top:1.5rem; right:1.5rem}
+.trust-renewal .etf-box-list .list-section .list-wrap__item + .list-wrap__item {margin-top:0.25rem}
+.trust-renewal .etf-box-list .etf_sell_ratio {}
+.trust-renewal .etf-box-list.trust .etf_sell_ratio {margin:0.5rem 0}
+.trust-renewal .etf-box-list .etf_sell_ratio .list-wrap__item--input{width:100%}
+.select-button.tab-style .select-button__box ~ .select-button__box {margin-left:0;}
+.select-button.tab-style .select-button__box ~ .select-button__box .select-button__item:before {border-left:0;/* border-left:0;border-top-left-radius:0; border-bottom-left-radius:0;*/ }
+.select-button.tab-style .select-button__input:checked + .select-button__item:before {background-color:#009591;}
+.select-button.tab-style .select-button__input:checked + .select-button__item {font-weight:400;color:#fff}
+.select-button.tab-style .select-button__input:disabled + .select-button__item { background-color:#f3f4f5; color:#888}
+.select-button.tab-style .select-button__item:before {border:1px solid #e3e4e8; border-radius:0}
+.select-button.tab-style .select-button__box:first-child .select-button__item:before {border-top-left-radius:0.25rem; border-bottom-left-radius:0.25rem}
+.select-button.tab-style .select-button__box:last-child .select-button__item:before {border-top-right-radius:0.25rem; border-bottom-right-radius:0.25rem}
+.select-button.tab-style .select-button__box + .select-button__box .select-button__item:before {}
+.trust-renewal .app-footer__round-box .trust-style1.type2 {}
+.trust-renewal .app-footer__round-box .trust-style1.type2 .list-wrap {border:0}
+.trust-renewal .app-footer__round-box .trust-style1.type2 .list-wrap__item {padding:0}
+.trust-renewal .app-footer__round-box .trust-style1.type2 .list-wrap__title {font-size:1.125rem; font-weight:400}
+.trust-renewal .app-footer__round-box .trust-style1.type2 .list-wrap__text {font-size:1.375rem; color:#000}
+.trust-renewal .app-footer__round-box .trust-style1.type2 .list-wrap__text .eng {font-weight:500}
+.trust-renewal .app-footer__round-box .trust-style1.type2 .list-section .list-wrap__box {flex:auto}
+.trust-renewal .app-footer__round-box .trust-style1.type2 .list-section .list-wrap__box:first-child {max-width:inherit}
+
+
+/* 정기예금 만기재예치 금지 (거래종류선택) - BTRS0404002_P01.html */
+.trust-slide .modal__container--interval .modal__btn--close {top:0.875rem}
+.trust-slide .modal__header--title {font-size: 1.125rem !important;}
+.trust-slide .modal__contents { padding: 2.5rem 1.375rem 3.79167rem; padding: 2.5rem 1.375rem calc(3.79167rem + constant(safe-area-inset-bottom)); padding: 2.5rem 1.375rem calc(3.79167rem + env(safe-area-inset-bottom));}
+.btn-trust-area {display:flex;justify-content:space-around; padding:0.5rem 0 2rem}
+.btn-trust-area button {height:7rem;padding-top:3rem; font-size:1.125rem; color:#666; border:1px solid #e3e4e8; border-radius:1rem}
+.btn-trust-area button.on {border-color:#009591; color:#333}
+.btn-trust-area .btn-buy {background :url(../../resource/images/C/icon_trust_btn01.png) center 1.375rem no-repeat; background-size:2.0625rem auto;}
+.btn-trust-area .btn-cash {background: url(../../resource/images/C/icon_trust_btn02.png)center 1.375rem no-repeat;background-size:2.4166rem auto;}
+
+/*** 신탁형 ISA - 추가입금 ***/
+.trust-renewal .radio-cont {margin-top:1.5rem}
+.trust-renewal .text-type > p {font-size:1rem; line-height:1.5rem}
+.trust-renewal .close-today{ position: absolute; display: -webkit-inline-box; display: inline-flex; top: -2.34rem; margin-left: 1.375rem; color: #fff; }
+.trust-renewal .close-today__check { position: absolute; width: 100%; height: 100%; margin: 0; padding: 0; border: 0; opacity: 0; }
+.trust-renewal .close-today__check + .close-today__label { display: -webkit-inline-box; display: inline-flex; padding-left: 1.75rem; font-size: 0.875rem; color: #fff; -webkit-box-align: center; align-items: center; position: relative; }
+.trust-renewal .close-today__check + .close-today__label:before { content: ''; display: block; position: absolute; top: 0; left: 0; width: 20px; height: 20px;  background: url(../../resource/images/C/icon_day_close.png) no-repeat 0 0; background-size: 20px;}
+.trust-renewal .close-today__check:checked + .close-today__label:before{border-radius:100%; background-color:#009591; background-image:url(../../resource/images/C/icon_day_close_check.png);}
+/*** //신탁형 ISA - 추가입금 ***/
+ 
+.inp_eft_cate .input__remove-button {margin-left:auto;}
+.eft_recommand_text {display:none; background:#f0f0f4; border:1px solid #dddee4; border-top:none; border-radius:0 0 0.375rem 0.375rem;}
+.eft_recommand_text li {color:#666; font-size:1.125rem; padding:1.041rem 0.8125rem;}
+ 
+
+/* 해외 신탁  */
+.box-line-wrap .white-box {padding: 1rem; box-shadow:0 5px 10px -5px rgba(91, 120, 132, 0.22)}
+.box-line-wrap .white-box + .white-box {margin-top: 0.9375rem;}
+.box-line-wrap .white-box.on::before {content:''; position:absolute; top:0; left:0; width:100%; height:100%; border:0.1875rem solid #009591; border-radius:0.7rem; } 
+.box-line-wrap .radio-wrap__radio {width: 0.0625rem; height: 0.0625rem;}
+.box-line-wrap .checkbox-wrap--text .checkbox-wrap__check {left: 0; top: 0;}
+.box-line-wrap.flex .white-box + .white-box {margin-top: 0; margin-left: 0.6666rem;}
+.box-line-wrap.flex .checkbox-wrap--text .checkbox-wrap__check + .checkbox-wrap__label {color: #000;}
+.box-line-wrap.flex .checkbox-wrap--text .checkbox-wrap__label + .txt-sub {margin-top: 0.5625rem;  font-size: 0.875rem; color: #333;}
+.box-line-wrap .checkbox-wrap--text.disabled {background-color: #f3f4f5;}
+.box-line-wrap .checkbox-wrap--text.disabled .checkbox-wrap__check + .checkbox-wrap__label,
+.box-line-wrap .checkbox-wrap--text.disabled .checkbox-wrap__label + .txt-sub  {color: #666;}
+.box-line-wrap .radio-wrap--tooltip .tooltip {top: -0.0625rem; margin-left: 0.41667rem;}
+
+
+/* 추가운용지시 > 거래취소 */
+body.bg-white .background-gray + .container.multi-check-box {margin-top: -0.625rem;}
+.container.multi-check-box {margin: 0 1.5rem 1.5rem ;}
+.multi-check-box .title {padding-top: 1.25rem; display: flex; justify-content: space-between; font-weight: 500;}
+.multi-check-box .title .text {color: #009591;}
+.multi-check-box .con {margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid #e3e4e8;}
+.multi-check-box .con .sub-title {font-size: 0.875rem; font-weight: 700;}
+.multi-check-box .con .sub-title + .checkbox-list-wrap {margin-top: 1.25rem;}
+
+.checkbox-list-wrap {display: flex; justify-content: space-between;}
+.checkbox-list-wrap + .checkbox-list-wrap {margin-top: 0.9375rem;}
+.checkbox-list-wrap .checkbox-wrap {width: 65%;}
+.checkbox-list-wrap .checkbox-wrap__label {display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; white-space: normal; -webkit-line-clamp: 2;}
+.container.multi-check-box .button-contained-wrap {margin-top: 1.25rem;}
+
+.trust-cancel-wrap .cancel-list li {display: flex; justify-content: space-between;}
+.trust-cancel-wrap .cancel-list li .text {width: 65%; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; white-space: normal; -webkit-line-clamp: 2; color: #333; font-weight: 300;}
+.trust-cancel-wrap .cancel-list li + li {margin-top: 0.9375rem;}
+.multi-check-box .con .sub-title + .trust-cancel-wrap {margin-top: 1.25rem;}
+
+.pop-trust-cancel {padding: 1.16666rem 0 2rem;}
+.pop-trust-cancel > .title {display: flex; font-size: 0.875rem;}
+.pop-trust-cancel > .title strong {margin-left: 0.41666rem; color: #009591; font-weight: 500;}
+.pop-trust-cancel .cancel-list-wrap {margin-top: 1rem; padding-top: 1.65rem; border-top: 1px solid #e3e4e8;}
+.pop-trust-cancel .cancel-list-wrap .title {font-size: 0.875rem; font-weight: 700;}
+.pop-trust-cancel .cancel-list {margin-top: 1.5rem;}
+.pop-trust-cancel .cancel-list li {display: flex; justify-content: space-between;}
+.pop-trust-cancel .cancel-list li .text {width: 65%; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; white-space: normal; -webkit-line-clamp: 2;}
+.pop-trust-cancel .cancel-list li + li {margin-top: 0.9375rem;}
+
+/* 금현물 신탁 > 상품가입 */
+.finance-box-wrap.single .white-box {border-radius: 0.33333rem 0.33333rem;}
+.finance-box-wrap.single .white-box .title {font-size: 0.875rem;}
+.finance-box-wrap.single .list-wrap__item--arrow .list-wrap__box:first-child {flex: auto; -webkit-box-flex: auto;}
+.finance-box-wrap.single .label-line__item--invest5 {font-weight: 500;}
+.finance-box-wrap.type01 {margin-top: 0;}
+.finance-box-wrap.type01 .white-box__content {padding: 1.25rem 0.8125rem;}
+.label-title-wrap .label-line, .laebl-title-wrap .label-line__item {margin: 0;}
+.label-title-wrap .title {margin-top: 0.875rem; font-size: 1.375rem; color: #000; font-weight: 500; line-height: 1;}
+.label-title-wrap .txt-sub {margin-top: 0.8125rem;}
+
+.goldspot-per-wrap {padding: 1.8125rem 0; background: url(../../resource/images/C/bg_goldspot.png) right 0.125rem no-repeat; background-size: 10.0625rem 8.52083rem;}
+.goldspot-per-wrap .per {font-size: 2.08333rem; color: #009591; line-height: 1;}
+.goldspot-per-wrap .per .num {font-size: 2.5rem; font-weight: 500;}
+.goldspot-per-wrap .month {display: block; font-size: 0.875rem; color: #666666; font-weight: 300;}
+.goldspot-per-wrap .button-contained-wrap {margin-top: 1rem;}
+.goldspot-icon-wrap .icon-list {margin-top: 1.0625rem; display: flex; justify-content: space-around;}
+.goldspot-icon-wrap .icon-list .img-wrap {display: flex; min-height: 3.375rem; justify-content: center; align-items: center;}
+.goldspot-icon-wrap .icon-list .img-wrap .icon01 {width: 3.77083rem; height: 3.02083rem;}
+.goldspot-icon-wrap .icon-list .img-wrap .icon02 {width: 3.27083rem; height: 3.375rem;}
+.goldspot-icon-wrap .icon-list .img-wrap .icon03 {width: 3.64583rem; height: 2.5625rem;} 
+.goldspot-icon-wrap .icon-list .txt {margin-top: 0.77083rem; text-align: center; line-height: 1.25;}
+
+/* 금현물 신탁 > 투자방식 */
+.banner-wrap {border-radius: 2.25rem; background-color: rgba(91, 120, 132, 0.22); box-shadow: 0px 13px 27px -5px rgba(91, 120, 132, 0.22), 0 6px 10px -5px rgba(91, 120, 132, 0.22);}
+
+/* 자문형 신탁 > 상품목록 */
+.tooltip-green-box {text-align: center;}
+.tooltip-green-box .tooltip[data-tooltip="paragraph"] {top: 0; margin: 0;}
+.tooltip-green-box .btn_tooltip_green {display: inline-block; width: 9.64583rem; height: 2.20833rem; color: #009591; border: 1px solid #009591; border-radius: 1.1875rem; text-align: center;}
+.tooltip-green-box .tooltip[data-tooltip="paragraph"] .tooltip__panel {top: 2.20833rem;}
+
+.finance-list__product .text-company {display: flex;}
+.finance-list__product .text-company .text {margin-left: 0.5rem; font-size: 0.875rem; color: #666666;}
+.finance-list__product .text-company .text .name {margin-left: 0.52083rem; font-weight: 500;}
+.finance-list__product .text-company > img {display: block;}
+.finance-list__product .text-company .icon_quantec {width: 1.125rem; height: 1.125rem;}
+.finance-list__product .text-company .icon_kpia {width: 2.25rem; height: 1.04166rem;}
+
+/* 자문형 신탁 > 상품상세 */
+.finance-detail .sub-txt {font-size: 0.8125rem; color: #666; font-weight: 500;}
+.btn-introduce-wrap {margin-top: 1.875rem; text-align: center;}
+.btn-introduce-wrap .btn_green {display: inline-block; width: 18.33333rem; height: 2.35416rem; color: #009591; border: 1px solid #009591; border-radius: 1.1875rem; text-align: center; font-weight: 500;}
+.btn-introduce-wrap .btn_green .in_con {display: flex; justify-content: center; align-items: center;}
+.btn-introduce-wrap .btn_green .in_con img {margin-right: 0.54167rem;}
+.btn-introduce-wrap .btn_green .logo_quantec {width: 6.125rem; height: 1.125rem;}
+.btn-introduce-wrap .btn_green .logo_kpia {width: 8.2625rem; height: 1.35416rem;}
+/* .icon_company {display: flex; justify-content: center; align-items: center; height: 3rem; margin-bottom: 0.8125rem;} */
+.finance-icon.detail .icon-image {display: flex; justify-content: center; align-items: center; min-height: 3rem; width: auto;}
+.finance-icon.detail .icon-image .won {width: 3.33333rem; height: 2.95833rem;}
+.finance-icon.detail .icon-image .risk {width: 3rem; height: 3rem;}
+.finance-icon.detail .icon-image .icon_quantec_large {width: 2.75rem; height: 2.75rem;}
+.finance-icon.detail .icon-image .icon_kpia_large {width: 4.33333rem; height: 2.02083rem;}
+
+
+/* 자산변경 > 설명의무 이행 및 정보확인 */
+.trust-renewal .title_small {margin: 2.5rem 1.5rem 0; font-size: 1rem; font-weight: 700;}
+.trust-renewal .title_small:after {content:''; display:block; clear:both}
+.trust-renewal .title_small + .total-lookup {padding-bottom: 0;}
+.trust-renewal .title_small .tooltip {float:right; margin-right:0}
+.trust-renewal .list-wrap.bdb_line {padding-bottom: 0.625rem; border-bottom: 1px solid #e7e9ee;}
+
+/* 신탁형ISA > 계좌 해지 신청 */
+.trust-notice-wrap {margin-top: 2.5rem;}
+.trust-notice-wrap .title-notice {font-size: 1rem; font-weight: 500;}
+.trust-notice-wrap .ordered-list {margin-top: 0.5rem;}
+.trust-notice-wrap .ordered-list .ordered-list__item {font-size: 1rem;}
+.finance-box-wrap.single .white-box .title.font-default {font-size: 1rem;}
+
+/* 자문형 신탁 > 투자성향분석 */
+.white-box.small .white-box__header {padding: 0.8125rem;}
+.white-box.small .white-box__content {padding: 0.8125rem 0.875rem; font-size: 0.875rem; color: #333; font-weight: 300;}
+.white-box.small .white-box__content .ordered-list__item {font-size: 0.875rem; color: #333}
+.button-contained-wrap.border-green {margin: 1.5625rem 0 0.75rem;}
+.button-contained-wrap.border-green .button-contained--white {padding: 0 2.125rem; height: 2.375rem; font-size: 0.875rem; color: #009591; border: 1px solid #70ccc8; border-radius: 1.125rem;}
+.container.border-line-top {border-top: 1px solid #e3e4e8;}
+.radio-flex-wrap > .title {padding-top: 1.875rem; font-size: 1rem; font-weight: 500;}
+.radio-flex-list {display: flex; padding: 1rem 0;}
+.radio-flex-list .radio-wrap__radio + .radio-wrap__label {height: auto; min-height: 1.625rem; padding-top: 0.1875rem; font-size: 0.875rem;}
+.radio-flex-list .radio-wrap__radio + .radio-wrap__label .text-sub {font-size: 0.8125rem; font-weight: 300;}
+
+/* 자문형 신탁 > 상품안내 */
+.consult-title-wrap {background: url(../../resource/images/C/bg_trust01.png) right 0.5625rem no-repeat; background-size: 9.72917rem 8.5625rem;}
+.consult-title-wrap .title {font-size: 1.25rem; line-height: 1.47917rem; color: #000; font-weight: 500;}
+.consult-title-wrap .txt-sub {margin-top: 0.8125rem; font-weight: 300;}
+
+.product-icon-wrap {margin-top: 3rem;}
+.product-icon-wrap .icon-list {display: flex; justify-content: space-around;}
+.product-icon-wrap .icon-list .img-wrap {display: flex; min-height: 3.0625rem; justify-content: center; align-items: center;}
+.product-icon-wrap .icon-list .img-wrap .icon01 {width: 2.5625rem; height: 2.29166rem;}
+.product-icon-wrap .icon-list .img-wrap .icon02 {width: 3.83333rem; height: 3.0625rem;}
+.product-icon-wrap .icon-list .img-wrap .icon03 {width: 2.85416rem; height: 2.85416rem;} 
+.product-icon-wrap .icon-list .txt {margin-top: 1rem; text-align: center; line-height: 1.25;}
+
+.table-simple-wrap {border-top: 1px solid #333333;}
+.table-simple-wrap table th {padding: 0.375rem; font-size: 0.8125rem; color: #333; border-bottom: 1px solid #e7e9ee; vertical-align: middle; text-align: center;}
+.table-simple-wrap table td {padding: 0.4375rem; font-size: 0.8125rem; color: #333; text-align: center; word-break: break-all; vertical-align: middle; border-bottom: 1px solid #e7e9ee;}
+
+.table-row-wrap {border-top: 1px solid #333333;}
+.table-row-wrap th,
+.table-row-wrap td {padding: 0.75rem 0.5rem 0.625rem; font-size: 0.875rem; font-weight: 300; border-bottom: 1px solid #e3e4e8; vertical-align: middle;}
+.table-row-wrap th {border-right: 1px solid #e3e4e8; text-align: left; vertical-align: top;}
+.table-row-wrap td .guide-wrap__item {margin-top: 0; font-size: 0.875rem; color: #333;}
+
+.table-row-wrap.small {margin-top: 1.20833rem;}
+.table-row-wrap.small th,
+.table-row-wrap.small td {padding: 0.5rem 0.41667rem 0.4375rem; font-size: 0.75rem; font-weight: 400;}
+.table-row-wrap.small th {color: #666;}
+
+.table-small-wrap {margin-top: 1.75rem; border-top: 1px solid #333333;}
+.table-small-wrap th,
+.table-small-wrap td {padding: 0.75rem 0.41667rem 0.625rem; font-size: 0.75rem; color: #444; border-left: 1px solid #e3e4e8; border-bottom: 1px solid #e3e4e8; vertical-align: middle;}
+.table-small-wrap th:first-child,
+.table-small-wrap td:first-child {border-left: none;}
+.table-small-wrap td {text-align: right;}
+.table-small-wrap thead th {padding: 0.75rem 0 0.625rem; font-weight: 500; text-align: center; word-break: break-all;}
+.table-small-wrap thead th:first-child {padding: 0.75rem 0.41667rem 0.625rem; text-align: left;}
+.table-small-wrap tbody th {color: #666; text-align: left;}
+.table-small-wrap .border-point {border-left: 1px solid #f26100; border-right: 1px solid #f26100; background-color: #fdebde;}
+.table-small-wrap .border-point.top {border-top: 1px solid #f26100;}
+.table-small-wrap .border-point.bottom {border-bottom: 1px solid #f26100;}
+
+.guide-wrap.gap .guide-list__item ~ .guide-list__item {margin-top: 0.75rem;}
+
+.consult-img-wrap {margin: 0 -0.8125rem;}
+.consult-img-wrap .img-blind {overflow:hidden; position:absolute; width:1px; height:1px; margin:-1px; border:0; clip:rect(1px, 1px, 1px, 1px);}
+.consult-img-wrap .consult-img01 {margin: 1.375rem auto 0; padding-top: 11.375rem; max-width: 19.0625rem; background: url(../../resource/images/C/img_consult_01.jpg) 0 0 no-repeat; background-size: 100% 11.375rem;}
+.consult-img-wrap .consult-img02 {margin: 2.3125rem auto 0; padding-top: 18.85417rem; max-width: 19.1875rem; background: url(../../resource/images/C/img_consult_02.jpg) 0 0 no-repeat; background-size: 100% 18.85417rem;}
+.consult-img-wrap .consult-img02.other {background: url(../../resource/images/C/img_consult_02_01.png) 0 0 no-repeat; background-size: 100% 18.85417rem;}
+
+.consult-q-box {padding: 0.875rem 0.625rem; font-size: 0.875rem; border: 1px solid #d9d9d9; background-color: #f9f9fb; border-radius: 0.5rem 0.5rem;}
+.consult-answer-box {position: relative; margin-top: 0.77083rem; padding: 0.875rem 0.625rem; font-size: 0.875rem; color: #fff; border: 1px solid #009591; background-color: #009591; border-radius: 0.5rem 0.5rem;}
+.consult-answer-box:before {content: ''; display: block; position: absolute; left: 1.625rem; top: -0.4375rem; width: 0.66667rem; height: 0.4375rem; background: url(../../resource/images/C/icon_answer.png) 0 0 no-repeat; background-size: 100% 100%;}
+
+.img-emp-graph {margin-top: 2.5rem;}
+
+/* 공통 */
+.checkbox-wrap.check-green .checkbox-wrap__check:checked + .checkbox-wrap__label:before {border-color: #009591;background-color: #fff;background-image: url(../../resource/images/C/icon_check_green.png);}
+.checkbox-wrap.check-green .checkbox-wrap__label {color: #666; font-weight: 300;}
+.checkbox-wrap.check-green .checkbox-wrap__check:checked + .checkbox-wrap__label {color: #333;}
+
+.select-type__input:disabled + .select-type__label .select-type__radio {border-color: #ececec; background-color: #ececec;}
+.select-type__input:disabled + .select-type__label .select-type__radio:before {border-color: #e5e5e5; background-color: #e5e5e5;}
+.select-type__input:disabled + .select-type__label .list-wrap__title,
+.select-type__input:disabled + .select-type__label .guide-wrap__item {color: #aaa !important;}
+
+.flex-none {display: block;}
+
+
+
+/* ==============================================================================
+	트레이딩형 신탁 - 운용지시
+ ==============================================================================*/
+ body.bg-white .trading .background-gray {padding-bottom:inherit}
+.trading a.etf_prod_text {display:inline-block;}
+.trading .bg-gray .tit-default {padding:1.5rem 0; margin-bottom:0}
+.trust-box-list.no-check .box {padding-left:1.25rem !important;}
+ 
+.trust-renewal .my-chart__area--row .my-chart__label dl {display:inline-block}
+.trust-renewal .my-chart__area--row .my-chart__label {display:flex; justify-content:center}
+.trust-renewal .my-chart__area--row .my-chart__label dl {width:inherit}
+.trust-renewal .my-chart__area--row .my-chart__label dl dt + dt {margin-left:0}
+
+.trust-renewal .white-box--noline-divider {border-top:1px solid #e3e4e8}
+.trust-renewal .white-box--noline-divider:first-child {border-top:0}
+.trust-renewal .white-box--noline-divider .white-box__header {padding:1.25rem 0; }
+.trust-renewal .white-box--noline-divider .list-wrap__box {line-height:1.2rem}
+.trust-renewal .white-box--noline-divider .list-wrap__box .sub-txt {display:block;font-size:0.8125rem; }
+.trust-renewal .white-box--noline-divider .list-wrap__box .sub-txt.blue {color:#5573e2}
+.trust-renewal .white-box--noline-divider .white-box__header .list-wrap__item {justify-content :space-between}
+.trust-renewal .white-box--noline-divider .list-wrap__item--arrow .list-wrap__box:first-child {flex:auto}
+.trust-renewal .white-box--noline-divider .list-wrap__item--arrow .list-wrap__box.right {align-self:center;text-align:right}
+.trust-renewal .white-box--noline-divider .list-wrap {border-top:0; padding-bottom:0.625rem}
+.trust-renewal .white-box--noline-divider .white-box__content .list-wrap__item {margin-top:0.25rem; font-size:0.875rem}
+.trust-renewal .white-box--noline-divider .white-box__content .list-wrap__title { font-size:0.875rem}
+
+.trading .accordion--list-panel .accordion__panel-list.accordion__panel-list--toggle .accordion__sub-list {margin-top:0}
+.trading .accordion--list-panel .accordion__item + .accordion__item{    border-top: 1px solid #f4f4f4;} 
+.trading .stock-value {background-color:#fff; border-radius:inherit;margin-top:1rem;}
+.trading .text-guide-sub {line-height:1.2rem}
+
+.trading .card-white__content .additional-amount {font-size:0.875rem}
+.trading .input.readonly .input__no-label + .input__optional {color:#666; margin-top:0.15rem}
+
+.trading-tbl {height:150px; overflow-y:auto}
+.trading-tbl .table-vertical__th {line-height:0.875rem; position:sticky; top:0; left:0; z-index:10; width:100%}
+.trading-tbl .table-vertical__td {text-align:right; line-height:0.875rem}
+.trading-tbl td:first-child {text-align:left;padding:0.4375rem}
+.trading-tbl td:first-child button {text-align:left; max-width:100%;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;display:block }
+.trading-tbl .table-vertical__th, .trading-tbl .table-vertical__td {border-left:0}
+.trading-tbl .tooltip[data-tooltip="paragraph"] {margin-left:0;display:block}
+
+.scroll-tbl {overflow-x:auto}
+.scroll-tbl .table-vertical__th {line-height:0.875rem;}
+.scroll-tbl .table-vertical__td {text-align:center; /*line-height:0.875rem*/}
+.scroll-tbl td:first-child {padding:0.4375rem}
+.scroll-tbl td .ellipsis {display:block;text-align:left; max-width:100%;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;display:block }
+.scroll-tbl .table-vertical__th, .scroll-tbl .table-vertical__td {border-left:0}
+.scroll-tbl .checkbox-wrap--text.big .checkbox-wrap__check + .checkbox-wrap__label:before {left:50%; margin-left:-0.5rem;}
+.scroll-tbl tr.on .table-vertical__td {background-color:#eee}
+
+.modal--slide .modal__contents.trading-style {padding:0 2.5rem 5.79167rem; padding: 0 2.5rem calc(5.79167rem + constant(safe-area-inset-bottom)); padding: 0 2.5rem calc(5.79167rem + env(safe-area-inset-bottom));}
+.trading-style .list-wrap__item {padding-bottom:0.5rem; }
+.trading-style .list-wrap__item .list-wrap__title {color:#000;font-size:1rem;font-weight:500}
+.trading-style .list-wrap__item .list-wrap__box--unit {font-size:1rem;font-weight:500}
+.trading-style .table th,
+.trading-style .table td {font-size:0.875rem;}
+.trading-style .table th {padding-left:0; border-left:0}
+.trading-style .table td  {border-left:0;padding-right:0}
+
+.modal-full.trading .trust-tab-cont .tab-wrap + div > .container{margin-top:1.5rem !important}
+.modal-full.trading .trust-tab-cont .guide-wrap__list {padding: 1.45rem 1.5rem;}
+.modal-full.trading .trust-tab-cont .line-box__inner-wrap + .line-box__inner-wrap {margin-top:0.8rem}
+.modal-full.trading .trust-tab-cont .line-box__inner-wrap .list-section {width:100%}
+.modal-full.trading .trust-tab-cont .line-box__inner-wrap .list-section .list-wrap {border-bottom:0;padding-bottom:0}
+.modal-full.trading .trust-tab-cont .line-box__inner-wrap .list-section .list-wrap__title,
+.modal-full.trading .trust-tab-cont .line-box__inner-wrap .list-section .list-wrap__text {font-size:0.875rem; display:inline-block}
+.modal-full.trading .trust-tab-cont .line-box__inner-wrap .list-section .list-wrap__text {line-height:1.2rem}
+.modal-full.trading .list-wrap__box .button-small--border.red {color:#ed1651; border:1px solid #ed1651; height:1.6rem; min-width:6rem}
+
+.continue-trading {position:fixed; bottom:0.7rem;left:0; right:0; z-index:100;padding:0}
+.continue-trading.offer button:first-child{text-align:left;padding:0 2.5rem}
+.continue-trading .offer__close{z-index:105}
+
+.trust-renewal .modal__header.non-flex h1 {text-align:left; width:100% !important}
+.trust-renewal .modal__header.non-flex h1 span {display:block; font-size:0.875rem}
+.trust-renewal .trading-style .scroll {height:136px; overflow-y:auto}
+.trust-renewal .trading-style .scroll td button {display:block}
+.trust-renewal .modal__btn--close.right {left:initial; right:1.5rem}
+
+.trading .accordion-style .product-list__item  .button-delete{position:absolute; right:1rem; top:1rem; z-index:10}
+.trading .accordion-style .product-list__item .list-wrap__item {padding:0;width:100%;} 
+.trading .accordion-style .product-list__sub-items + .etf_sell_ratio {margin-top:1rem}
+.trading .accordion-style .etf_sell_ratio .list-wrap__title--value {font-weight:300}
+.trading .accordion-style .list-section {border-bottom: 1px solid #e3e4e8;padding-bottom: 0.8333rem;}
+ /* //트레이딩형 신탁 - 운용지시=============================================================*/
+
+
+
+/* 트레이딩형 신탁_신규가입 */
+.tit-default.tit-flex {display: flex; justify-content: space-between;}
+.tit-default.tit-flex .tit-second {width: 4.9375rem;}
+
+.flex-filter-wrap {display: flex; justify-content: space-between;}
+.flex-filter-wrap .additional-item + .additional-item {margin-left: 1rem;}
+.flex-filter-wrap .sort-wrap .additional-item + .additional-item {margin-left: 0.5rem;}
+.flex-filter-wrap .sort-wrap .button-select-arrow__icon {padding-right: 0.75rem;}
+
+.radio-wrap.small .radio-wrap__radio + .radio-wrap__label:before {width: 1.125rem; height: 1.125rem; background-size: 0.5rem 0.5rem;}
+.radio-wrap.small .radio-wrap__radio:checked + .radio-wrap__label:before { background-size: 0.5rem 0.5rem;}
+.radio-wrap.small .radio-wrap__radio + .radio-wrap__label {padding-left: 1.35rem; font-size: 0.875rem;}
+
+.finance-list-flex {display: flex; justify-content: space-between;}
+.finance-list-flex .txt {width: 70%; font-size: 1.125rem;}
+.finance-list-flex .per {color: #ff2c00;}
+
+.pop-trading-wrap .modal__contents.top-none {padding-top: 0;}
+.pop-trading-wrap .box-gray {padding: 1.60417rem 0; background-color: #f9f9fb;}
+
+.full-label.check-list-wrap li + li {margin-top: 0.8333rem;}
+.full-label.check-list-wrap .checkbox-wrap__check + .checkbox-wrap__label {display: block; font-size: 1rem; color: #000; font-weight: 400;}
+.full-label.check-list-wrap .checkbox-wrap__check:checked + .checkbox-wrap__label { font-weight: 400;}
+.full-label.check-list-wrap .card-white--interval .card-white__name {display: flex; justify-content: space-between; font-size: 1rem;}
+.full-label.check-list-wrap .card-white--interval .card-white__name .name {width: 70%;}
+.full-label.check-list-wrap .card-white--interval .card-white__name .per {color: #ff2c00;}
+.full-label.check-list-wrap .card-white--interval .card-white__name .per.minus {color: #423cbd;}
+.full-label.check-list-wrap .card-white {position: relative;}
+.full-label.check-list-wrap .card-white.on {border: 1px solid #009591;}
+.full-label.check-list-wrap .card-white .button-delete {position: absolute; right: 0.75rem; top: 0.75rem; background-size: 0.6rem auto;}
+.full-label.check-list-wrap.btn-delete .card-white--interval {padding-right: 2.5rem;}
+
+.total_per_wrap {margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid #dddee4; display: flex; justify-content: space-between; align-items: center;}
+.total_per_wrap .title {font-size: 1.125rem; line-height: 1.3125rem; font-weight: 500;}
+.total_per_wrap .flex-input-wrap {width: 50%}
+.total_per_wrap .flex-input-wrap .input__inner.error {color: #ed1651;}
+
+.confirm-info-title {font-weight: 500;}
+.confirm-info-con {margin-top: 0.875rem; display: flex; justify-content: space-between;}
+.confirm-info-con .title {flex: 1; font-weight: 300; color: #666;}
+.confirm-info-con .unit {flex: 1; text-align: right; font-weight: 400; letter-spacing: -0.1px !important;}
+
+.pop-add-item .modal__header--title {padding-left: 4rem; text-align: left; white-space: normal;}
+.pop-add-item .con {padding-bottom: 2.5rem;}
+.pop-add-item .complete-list-wrap {border-top: 1px solid #888; border-bottom: 1px solid #888;}
+.pop-add-item .complete-list-wrap li {padding: 0.625rem; display: flex; justify-content: space-between; align-items: center;}
+.pop-add-item .complete-list-wrap li + li {border-top: 1px solid #e7e9ee;}
+.pop-add-item .complete-list-wrap li .title {width: 65%;}
+.pop-add-item .complete-list-wrap li .complete {font-size: 0.875rem; font-weight: 300;}
+.pop-add-item .bul-small-star {margin-top: 0.625rem; position: relative; padding-left: 0.8125rem; font-size: 0.8125rem;}
+.pop-add-item .bul-small-star:before {content: '*'; display: block; position: absolute; left: 0; top:0.05rem;}
+
+.consult-title-wrap.bg-trading {padding-bottom: 1rem; background: url(../../resource/images/C/bg_trading01.png) right 0 no-repeat; background-size: 9.54167rem 10rem;}
+.product-icon-wrap.trading {margin-top: 2rem;}
+.product-icon-wrap.trading .icon-list .img-wrap .icon01 {width: 2.833333rem; height: 2.833333rem;}
+.product-icon-wrap.trading .icon-list .img-wrap .icon02 {width: 2.833333rem; height: 2.833333rem;}
+.product-icon-wrap.trading .icon-list .img-wrap .icon03 {width: 3.1875rem; height: 2.833333rem;}

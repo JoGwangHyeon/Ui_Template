@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/prodmall-main.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap n22UI">
+        <!-- HEADER -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">상품찾기</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //HEADER -->
+
+        <!-- CONTENT -->
+        <div id="content" class="app-main prodmall-main find-prod">
+            <!-- 2022-09-07 검색영역 위치 변경 -->
+            <div class="find-prod-header">
+                <div class="main-section">
+                    <div class="input">
+                        <div class="input__inner">
+                            <!-- 2022-09-05 placeholder 문구 변경 -->
+                            <input type="search" id="inputSrch" placeholder="어떤 상품을 찾으세요?" value="" autocomplete="off" class="input__element input__element--search key">
+                            <button type="button" title="텍스트삭제" class="input__remove-button" style="display: none;"></button>
+                            <button type="button" title="검색" id="btnSrch" class="input__search-button" data-ecrm="SEH1010"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //2022-09-07 검색영역 위치 변경 -->
+            <div class="main-section guide-wrap" data-element="toggle">
+                <div class="title-xsmall">
+                    <!-- 2022-09-20 문구 변경 -->
+                    <button type="button" class="pualugin__button button-arrow" data-element="toggle__anchor">무엇을 검색할지 모르겠다면?</button>
+                </div>
+                <div class="guide-wrap__list guide-wrap__list--small" data-element="toggle__panel">
+                    <strong class="sub-title">대상</strong>
+                    <!-- 2022-09-20 태그 기획 수정 -->
+                    <div class="hashtag-area">
+                        <button>청년</button><!--
+                        --><button>시니어</button><!--
+                        --><button>전문직</button><!--
+                        --><button>직장인</button>
+                    </div>
+                    <strong class="sub-title">관심/특징</strong>
+                    <!-- 2022-09-20 태그 기획 수정 -->
+                    <div class="hashtag-area">
+                        <button>급여</button><!--
+                        --><button>연금</button><!--
+                        --><button>카드</button><!--
+                        --><button>공과금</button><!--
+                        --><button>자산관리</button><!--
+                        --><button>수수료우대</button><!--
+                        --><button>환율우대</button><!--
+                        --><button>외화결제</button><!--
+                        --><button>공모주</button><!--
+                        --><button>투자</button><!--
+                        --><button>내집마련</button><!--
+                        --><button>자동차</button><!--
+                        --><button>추천</button><!--
+                        --><button>복리</button><!--
+                        --><button>간편</button>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- 검색결과 존재할 경우 -->
+
+            <!-- 2022-09-08 검색결과 존재할경우 result-wrap 래핑 -->
+            <div class="result-wrap">
+                <!-- 2022-09-22 개발요청 마크업 변경 -->
+                <div class="main-section result-text">검색결과 <em>7</em>건</div>
+                <!-- 적금 검색결과 존재할 경우 -->
+                <div class="main-section"> <!-- 적금 -->
+                    <div class="savings-tit-wrap">
+                        <strong class="sub-title"><span class="cate-name">적금</span><em>2</em></strong>
+                        <button type="button" class="button-arrow" data-element="toggle__anchor">추천순</button>
+                    </div>
+                    <div class="main-white-box">
+                        <ul class="prod-list item-sim">
+                            <li><button type="button" class="arrow-none">
+                                <dl class="item-tit">
+                                    <!-- 2022-09-22 개발요청 마크업 변경-->
+                                    <dt><span class="prd-name">하나 타이밍 적금</span><span class="status-label new">신상품</span></dt>
+                                </dl>
+                                <div class="item-amount">
+                                    <span>최대</span>
+                                    <em class="amount">2.00%</em>
+                                </div>
+                            </button></li>
+                            <li><button type="button" class="arrow-none">
+                                <dl class="item-tit">
+                                    <!-- 2022-09-22 개발요청 마크업 변경-->
+                                    <dt><span class="prd-name">에너지 챌린지 적금</span><span class="status-label event">이벤트</span></dt>
+                                    <dd>급여 하나로 우대금리 가능 </dd>
+                                </dl>
+                                <div class="item-amount">
+                                    <span>최대</span>
+                                    <em class="amount">2.00%</em>
+                                </div>
+                            </button></li>
+                            <li><button type="button" class="arrow-none">
+                                <dl class="item-tit">
+                                    <!-- 2022-09-22 개발요청 마크업 변경-->
+                                    <dt><span class="prd-name">도전365 적금</span><span class="status-label use">보유중</span></dt>
+                                    <dd>급여 하나로 우대금리 가능</dd>
+                                </dl>
+                                <div class="item-amount">
+                                    <span>최대</span>
+                                    <em class="amount">2.00%</em>
+                                </div>
+                            </button></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 청약 검색결과 존재할 경우 -->
+                <div class="main-section"> <!-- 청약 -->
+                    <strong class="sub-title"><span class="cate-name">청약</span><em>2</em></strong>
+                    <div class="main-white-box">
+                        <ul class="prod-list item-sim">
+                            <li><button type="button" class="arrow-none">
+                                <dl class="item-tit">
+                                    <!-- 2022-09-22 개발요청 마크업 변경-->
+                                    <dt><span class="prd-name">연금하나 월복리적금</span><span class="status-label new">신상품</span></dt>
+                                </dl>
+                                <div class="item-amount">
+                                    <span>최대</span>
+                                    <em class="amount">0.00%</em>
+                                </div>
+                            </button></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 예금 검색결과 존재할 경우 -->
+                <div class="main-section"> <!-- 예금 -->
+                    <strong class="sub-title"><span class="cate-name">예금</span><em>2</em></strong>
+                    <div class="main-white-box">
+                        <ul class="prod-list item-sim">
+                            <li><button type="button" class="arrow-none">
+                                <dl class="item-tit">
+                                    <!-- 2022-09-22 개발요청 마크업 변경-->
+                                    <dt><span class="prd-name">하나의 정기예금</span><span class="status-label event">이벤트</span></dt>
+                                    <dd>조건, 고민없이 하나로 끝!</dd>
+                                </dl>
+                                <div class="item-amount">
+                                    <span>최대</span>
+                                    <em class="amount">1.80%</em>
+                                </div>
+                            </button></li>
+                            <li><button type="button" class="arrow-none">
+                                <dl class="item-tit">
+                                    <!-- 2022-09-22 개발요청 마크업 변경-->
+                                    <dt><span class="prd-name">369 정기예금</span></dt>
+                                    <dd>주택청약종합저축과 금리가 두배</dd>
+                                </dl>
+                                <div class="item-amount">
+                                    <span>최대</span>
+                                    <em class="amount">1.80%</em>
+                                </div>
+                            </button></li>
+                            <li><button type="button" class="arrow-none">
+                                <dl class="item-tit">
+                                    <!-- 2022-09-22 개발요청 마크업 변경-->
+                                    <dt><span class="prd-name">하나의 정기예금</span></dt>
+                                    <dd>기간도 금액도 자유롭게</dd>
+                                </dl>
+                                <div class="item-amount">
+                                    <span>최대</span>
+                                    <em class="amount">1.80%</em>
+                                </div>
+                            </button></li>
+                            <li><button type="button" class="arrow-none">
+                                <dl class="item-tit">
+                                    <!-- 2022-09-22 개발요청 마크업 변경-->
+                                    <dt><span class="prd-name">369 정기예금</span></dt>
+                                    <dd>급할 때도 금리 챙겨주는 예금</dd>
+                                </dl>
+                                <div class="item-amount">
+                                    <span>최대</span>
+                                    <em class="amount">1.80%</em>
+                                </div>
+                            </button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 펀드, 신탁, ISA, 퇴직연금 검색시// -->
+            <div class="main-section is-fund">
+                <div>
+                    <!--2022-09-16 마크업변경-->
+                    <strong class="sub-title">김하나님</strong>
+                    <!-- 2022-09-16 띄어쓰기 추가 -->
+                    <p class="desc-text"><em>펀드 상품</em>을 찾아 보세요!</p>
+                    <!--2022-09-16 마크업변경-->
+                </div>
+                <!-- 2022-08-29 추가 -->
+                <div class="desc-guide">투자와 관련된 상품을 추천해 드릴께요!</div>
+
+                <div class="main-gray-box">
+                    <ul class="prod-list item-sim">
+                        <li><button type="button">
+                                <dl class="item-tit">
+                                    <!-- 2022-09-22 개발요청 마크업 변경-->
+                                    <dt><span class="prd-name">펀드(Fun#)</span></dt>
+                                </dl>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="main-gray-box">
+                    <ul class="prod-list item-sim">
+                        <li><button type="button">
+                                <dl class="item-tit">
+                                    <!-- 2022-09-22 개발요청 마크업 변경-->
+                                    <dt><span class="prd-name">신탁</span></dt>
+                                </dl>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="main-gray-box">
+                    <ul class="prod-list item-sim">
+                        <li><button type="button">
+                                <dl class="item-tit">
+                                    <!-- 2022-09-22 개발요청 마크업 변경-->
+                                    <dt><span class="prd-name">ISA</span></dt>
+                                </dl>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="main-gray-box">
+                    <ul class="prod-list item-sim">
+                        <li><button type="button">
+                                <dl class="item-tit">
+                                    <!-- 2022-09-22 개발요청 마크업 변경-->
+                                    <dt><span class="prd-name">퇴직연금</span></dt>
+                                </dl>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //펀드, 신탁, ISA, 퇴직연금 검색시 -->
+
+            <!-- 2022-08-29 검색결과 없을시 -->
+            <p class="main-section result-text">
+                <span class="no-data">
+                    검색 결과가 없어요<br>
+                    정확한 검색어가 맞는지 확인해 주세요
+                </span>
+            </p>
+
+            <!-- 2022-08-29 검색결과 없을시 기본 노출// -->
+            <div class="main-section default-banner">
+                <div>
+                    <!--2022-09-16 마크업변경-->
+                    <strong class="sub-title">김하나님</strong>
+                    <!-- 2022-09-16 띄어쓰기 추가 -->
+                    <p class="desc-text"><em>적금 상품</em>을 찾아 보세요!</p>
+                    <!--2022-09-16 마크업변경-->
+                </div>
+                
+                <!-- 2022-09-06 문구 변경 -->
+                <a href="#" class="no-data-banner" data-ecrm="SEH1020">내 조건에 맞는 <em>적금 찾기</em></a>
+            </div>
+            <!-- //검색결과 없을시 기본 노출 -->
+        </div>
+        <!-- //CONTENT -->
+    </div>
+
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
+</body>
+</html>

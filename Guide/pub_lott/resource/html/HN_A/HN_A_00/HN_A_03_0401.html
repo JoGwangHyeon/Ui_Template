@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+        <link rel="stylesheet" href="../../../../resource/css/swiper.min.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+<body>
+    <div id="wrap" class="wrap goods-layout-sec n22UI">
+        <!-- header -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면" data-ecrm="BAK1010"></button>
+            <!-- 2020-05-27 수정 -->
+            <h1 class="app-header__title">상품가입</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //header -->
+        <!-- Content -->
+        <!--2022-08-09 | =======================
+                    * dev : 비활성화 시 .n22UI .underline-type .button-select__item에 클래스 .disabled 추가
+                    * placeholder 포커스 및 기입 활성화 시 색상 변경
+        -->    
+        <!--2022-08-09 | =======================
+                    활성화 관련 색상 변경사항
+                    * 선택 값 없음 - #000000, 밑줄 X, arrow X
+                    * 플레이스 홀더 - #757575, 밑줄 O, arrow O
+        -->    
+        <!--2022-08-16 | =======================
+                    셀렉트 버튼이 placeholder가 노출 되지 않는 readonly 케이스 일때 readonly 클래스 적용 
+                -->   
+        <div id="content" class="app-main progress">
+            <div class="ste-progress step-header">
+                <div class="stepper" role="img" aria-label="5단계 중 3단계">
+                    <ul>
+                        <!-- to 개발 | 현재 단계의 경우 stepper__step--current class 추가-->
+                        <li class="stepper__step stepper__step--current">1</li>
+                        <li class="stepper__step">2</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="default-container">
+                <div class="tit-default">
+                    상품전환을 시작할게요
+                    <div class="tooltip" data-tooltip="paragraph">
+                        <button type="button" class="tooltip__open" data-tooltip-button="open" aria-label="자동이체 신청 툴팁 열기"></button>
+                        <div class="tooltip__panel" data-tooltip-panel="false">
+                            <div class="tooltip__column"><!-- 2차 기획현행화 | 텍스트 수정 -->
+                                저축예금계좌만 전환할 수 있습니다. 특정 사유로 인해 전환이 안될 경우, 하나은행 고객센터(1599-1111)로 문의해 주세요.
+                            </div>
+                            <button class="tooltip__close" data-tooltip-button="close" aria-label="툴팁 닫기"></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 출금계좌 선택전 케이스 추가 2022-09-13 -->
+                <div class="container">
+                    <div class="button-select underline-type">
+                        <button type="button" title="출금계좌 선택" class="button button-select__item" placeholder="전환할 계좌를 선택하세요"></button>
+                    </div>
+                    <!-- 에러메시지 2022-09-13 추가 -->
+                    <p class="input__error block" aria-live="assertive">전환할 계좌를 선택해 주세요.</p>
+                </div>
+                
+                <!-- 출금계좌 선택후 -->
+                <div class="container">
+                    <div class="button-select">
+                        <button type="button" class="button button-select__item button-select__item--bank button-select__item--icon-bank" data-element="modal__open" data-target="#CCOM0015002_P02" title="전환가능계좌 선택">
+                            <img src="../../../../resource/images/C/icon_bank_list_hana.png" alt="하나은행">
+                            <strong class="bank-name">하나멤버스주거래통장</strong>
+                            <span class="bank-number eng">123-456789-89764</span>
+                            <span class="withdraw-box">
+                                <strong class="withdraw-box__title">출금가능금액 </strong>
+                                <span class="withdraw-box__value"><span class="eng">2,020,000</span>원</span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="interaction">
+                        <span class="arrow-down"></span>
+                    </div>
+
+                    <div class="switch-account">
+                        <div class="switch-account__change">
+                            <strong>급여하나 통장</strong>
+                            <!--
+                            <img src="../../../../resource/images/C/icon_bank_list_hana.png" alt="하나은행">
+                            <strong>주거래 하나 통장</strong>
+                            -->
+                        </div>
+                    </div>
+                </div>
+                <!-- 2022-08-25 | 간격에 따른 클래스 변경-->
+                <div class="container mgt36">
+                    <p class="text-guide-regular font-small guide-msg">급여, 연금 등 주거래 이체실적에 따라 수수료 우대 
+                        서비스를 받을 수 있습니다.</p>
+                </div>
+                
+                <div class="tit-default salary-date-tit">급여/연금일 지정</div>
+                <div class="container">
+                    <div class="button-select underline-type inline">
+                        <button type="button" class="button button-select__item" data-element="modal__open" data-target="#combobox_1" title="적금주기 선택" placeholder="선택하세요">25일</button>
+                    </div>
+                     <!--
+                        * 오류시 block 클래스 추가 <p class="input__error block"
+                    -->
+                    <!-- 에러메시지 2022-09-13 수정 -->
+                    <p class="input__error block" aria-live="assertive">급여(연금)일을 선택해 주세요.</p>
+                </div>
+
+                <div class="container last-content">
+                    <div class="guide-wrap" data-element="toggle">
+                        <div class="title-xsmall">
+                            <button type="button" class="pualugin__button button-arrow font-small" data-element="toggle__anchor" aria-expanded="false">이용안내</button>
+                        </div>
+                        <ul class="guide-wrap__list" data-element="toggle__panel" style="display: block;">
+                            <!-- 영하나플러스 통장 -->
+                            <li class="guide-wrap__item font-smal fw-300">본인 명의의 하나카드 결제계좌 또는 다른 사람으로부터 월 10만원 이상 입금된 경우, 수수료 우대 서비스가 제공됩니다.</li>
+                            <li class="guide-wrap__item font-smal fw-300">상품 가입/전환 후, 만 35세가 되는 시점의 다음달 첫 영업일에 주거래하나통장으로 자동 전환됩니다. 단, 이미 동일한 상품을 보유한 경우 저축예금으로 전환됩니다.</li>
+                            <li class="guide-wrap__item font-smal fw-300">자세한 내용은 상품 상세정보 및 상품설명서를 확인해 주세요.</li>
+
+                            <!-- 급여하나 통장 -->
+                            <li class="guide-wrap__item font-smal fw-300">급여이체 인정조건 및 주거래 이체실적 관련 자세한 내용은 상품 상세정보 및 상품설명서를 확인해 주세요.</li>
+                            <li class="guide-wrap__item font-smal fw-300">상품을 전환한 달은 기존 통장의 수수료 면제 잔여횟수를 적용하며, 다음달부터는 전환 통장의 수수료 우대 서비스에 따른 수수료 면제 혜택이 제공됩니다.</li>
+
+                            <!-- 주거래하나 통장 -->
+                            <li class="guide-wrap__item font-smal fw-300">급여이체 인정조건 및 주거래 이체실적 관련 자세한 내용은 상품 상세정보 및 상품설명서를 확인해 주세요.</li>
+                            <li class="guide-wrap__item font-smal fw-300">상품을 전환한 달은 기존 통장의 수수료 면제 잔여횟수를 적용하며, 다음달부터는 전환 통장의 수수료 우대 서비스에 따른 수수료 면제 혜택이 제공됩니다.</li>
+                            <li class="guide-wrap__item font-smal fw-300">기타연금㈜으로 연금실적을 인정받으려면 영업점 또는 고객센터를 통해 연금입금일 등록을 요청해 주세요.<br>
+                                - 기타연금㈜ : 보험사명 또는 ‘연금’으로 건별 20만원 이상 입금되는 경우</li>
+
+                            <!-- 연금하나 통장 일 경우 노출-->
+                            <li class="guide-wrap__item font-smal fw-300">연금입금 인정조건 및 주거래 이체실적 관련 자세한 내용은 상품 상세정보 및 상품설명서를 확인해 주세요.</li>
+                            <li class="guide-wrap__item font-smal fw-300">상품을 전환한 달은 기존 통장의 수수료 면제 잔여횟수를 적용하며, 다음달부터는 전환 통장의 수수료 우대 서비스에 따른 수수료 면제 혜택이 제공됩니다.</li>
+                            <li class="guide-wrap__item font-smal fw-300">기타연금㈜으로 연금실적을 인정받으려면 영업점 또는 고객센터를 통해 연금입금일 등록을 요청해 주세요.<br>
+                            - 기타연금㈜ : 보험사명 또는 ‘연금’으로 건별 20만원 이상 입금되는 경우</li>  
+                            <!-- 2022-09-16 이용안내 추가 머니박스 통장 일 경우 노출-->
+                            <li class="guide-wrap__item font-smal fw-300">급여 입금 시 파킹공간 잔액에 대해 우대금리를 제공합니다.<br>
+                                ※ 우대금리 제공조건<br>
+                                ①급여일 등록 후 건별 50만원이상 급여 입금 또는 ②소득을 의미하는 적요의 입금 월 합산액이 50만원 이상인 경우<br>(①번은 급여일 등록 필수, ②번은 원하는 날짜 지정 가능)
+                            </li>
+                            <li class="guide-wrap__item font-smal fw-300">자세한 내용은 상품특약및 상품설명서를 환인해 주세요.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //Content -->
+        <!-- 
+        footer -->
+        <div id="footer" class="app-footer app-footer--button">
+            <!-- 2022-08-19 <div class="progress-button">-->
+                <div class="button-wrap">
+                    <button type="button" class="button button--positive" data-ecrm="NET1010">다음</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+                </div>
+            <!-- </div> -->
+        </div>
+    <!--2022-08-11 | .wrap 전체 감싸는 하단 </div> 수정-->
+    </div>
+
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
+    <!-- 2022 상품몰 고도화 추가 -->
+    <script src="../../../../resource/library/swiper/swiper.min.js"></script>
+    <script src="../../../../resource/js/ui/common_n22UI.js"></script>
+
+    <script type="text/javascript">
+    
+    </script>
+
+<!--계좌선택모달-->
+<div id="CCOM0015002_P02" class="modal modal--slide" data-element="modal__element">
+    <div class="modal__container modal__container--interval" data-element="modal__element-container">
+        <div class="modal__header modal__header--interval">
+            <h1 class="modal__header--title">전환계좌 선택</h1>
+        </div>
+        <div class="modal__contents modal__contents--inner-tab">
+            <div data-element="tab" data-options='{"initIndex":0}'>
+                <div class="pualugin-tab__panel" data-element="tab__panel">
+                    <div class="container">
+                        <div class="list-section">
+                            <ul class="list-wrap list-wrap--line">
+                                <li class="list-wrap__item list-button-wrap">
+                                    <button type="button" class="list-wrap__anchor list-wrap__anchor--icon">
+                                        <i class="list-wrap__icon">
+                                            <!-- 접근성 및 디자인현행화 -->
+                                            <img src="../../../../resource/images/C/icon_bank_list_woori.png" alt="우리은행">
+                                            <!-- //접근성 및 디자인현행화 -->
+                                        </i>
+                                        <span class="list-wrap__box">
+                                            <strong class="list-wrap__title list-wrap__title--value">행복knowhow통장</strong>
+                                            <span class="list-wrap__sub-text eng">123-456789-89764</span>
+                                        </span>
+                                    </button>
+                                </li>
+                                <li class="list-wrap__item list-button-wrap">
+                                    <button type="button" class="list-wrap__anchor list-wrap__anchor--icon">
+                                        <i class="list-wrap__icon">
+                                            <!-- 접근성 및 디자인현행화 -->
+                                            <img src="../../../../resource/images/C/icon_bank_list_woori.png" alt="우리은행">
+                                            <!-- //접근성 및 디자인현행화 -->
+                                        </i>
+                                        <span class="list-wrap__box">
+                                            <strong class="list-wrap__title list-wrap__title--value">행복knowhow통장</strong>
+                                            <span class="list-wrap__sub-text eng">123-456789-89764</span>
+                                        </span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 다른 금융기관 계좌가 없을때  -->
+                    <!--
+                    <div class="no-accout">
+                        <div class="no-accout__title">등록된 계좌가 없습니다.</div> 
+                        <div class="no-accout__text">다른 금융기관 계좌를 등록 후 이용하세요.</div>
+                        <button type="button" id="" class="button-underline button-underline--green">다른금융기관 계좌 등록</button>
+                    </div>
+                    -->
+                    <!--//다른 금융기관 계좌가 없을때  -->
+                </div>
+                
+            </div>
+        </div>
+        <button type="button" class="modal__btn--close" data-element="modal__close" title="닫기"></button>
+    </div>
+</div>
+<!--//계좌선택모달-->
+
+<!-- 급여일 -->
+<div id="combobox_1" class="modal modal--slide modal--select-value" data-element="modal__element">
+    <div class="modal__container modal__container--interval" data-element="modal__element-container">
+        <div class="modal__header modal__header--border">
+            <h1 class="modal__header--title">날짜 선택</h1>
+        </div>
+        <div class="modal__contents modal__contents--no-spacer">
+            <div class="container">
+                <div class="list-section">
+                    <ul class="list-wrap list-wrap--line">
+                        <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                            <button type="button" class="list-wrap__anchor">
+                                <span class="list-wrap__box">
+                                    <strong class="list-wrap__title list-wrap__title--value">1일</strong>
+                                </span>
+                            </button>
+                        </li>
+                        <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                            <button type="button" class="list-wrap__anchor">
+                                <span class="list-wrap__box">
+                                    <strong class="list-wrap__title list-wrap__title--value">2일</strong>
+                                </span>
+                            </button>
+                        </li>
+                        <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                            <button type="button" class="list-wrap__anchor">
+                                <span class="list-wrap__box">
+                                    <strong class="list-wrap__title list-wrap__title--value">3일</strong>
+                                </span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="modal__btn--close" data-element="modal__close" title="닫기"></button>
+    </div>
+</div>
+<!--// Modal layer -->
+
+
+
+</body>
+
+</html>

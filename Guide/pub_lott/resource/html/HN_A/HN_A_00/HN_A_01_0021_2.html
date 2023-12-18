@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/prodmall-main.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap n22UI">
+        <!-- HEADER -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <!-- 2022-09-15 띄어쓰기 수정 -->
+            <h1 class="app-header__title">적금찾기</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //HEADER -->
+
+        <!-- CONTENT -->
+        <div id="content" class="app-main prodmall-main find-savings">
+            <div class="main-section"> <!-- 검색조건 -->
+                <div class="search-condition">
+                    <strong class="sub-title">검색조건</strong>
+                    <div class="main-white-box">
+                        <ul class="condition-list">
+                            <li>
+                                <dl class="condition-tit">
+                                    <dt>기간</dt>
+                                </dl>
+                                <div class="condition-amount">
+                                    <span><em class="amount">1</em> 년</span>
+                                </div>
+                            </li>
+                            <li>
+                                <dl class="condition-tit">
+                                    <dt>금액</dt>
+                                </dl>
+                                <div class="condition-amount">
+                                    <span><em class="amount">200,000</em> 원</span>
+                                </div>
+                            </li>
+                            <li>
+                                <dl class="condition-tit">
+                                    <dt>적립방식</dt>
+                                </dl>
+                                <div class="condition-amount">
+                                    <span>만기일시지급식</span>
+                                </div>
+                            </li>
+                            <li>
+                                <dl class="condition-tit">
+                                    <dt>우대항목<em>2</em></dt>
+                                </dl>
+                                <!-- 2022-09-26 etc 클래스 추가 -->
+                                <div class="condition-amount etc">
+                                    <!-- 2022-09-05 마크업 변경 -->
+                                    <span>급여</span><span>연금이체</span><span>공과금 이체</span><span>아파트 관리비</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="control-btn">
+                            <button class="control-fold">접기</button>
+                            <button class="control-expand clicked">펼치기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-section"> <!-- 검색결과 -->
+                <div class="savings-tit-wrap">
+                    <strong class="sub-title">검색결과<em>18</em><span class="unit">건</span></strong>
+                    <button type="button" class="button-arrow no-arrow" data-element="toggle__anchor">추천순</button>
+                </div>
+                <div class="main-white-box">
+                    <ul class="prod-list item-sim">
+                        <li><button type="button" class="arrow-none">
+                            <dl class="item-tit">
+                                <dt><span class="prd-name">급여 하나 월복리 적금</span></dt>
+                            </dl>
+                            <div class="item-amount">
+                                <span>최대</span>
+                                <em class="amount">0.00%</em>
+                            </div>
+                        </button></li>
+                        <li><button type="button" class="arrow-none">
+                            <dl class="item-tit">
+                                <dt><span class="prd-name">주거래 하나 월복리 적금</span><span class="status-label use">보유중</span></dt>
+                            </dl>
+                            <div class="item-amount">
+                                <span>최대</span>
+                                <em class="amount">0.00%</em>
+                            </div>
+                        </button></li>
+                        <li><button type="button" class="arrow-none">
+                            <dl class="item-tit">
+                                <dt><span class="prd-name">아이꿈 하나 적금</span></dt>
+                            </dl>
+                            <div class="item-amount">
+                                <span>최대</span>
+                                <em class="amount">1천만원</em>
+                            </div>
+                        </button></li>
+                        <li><button type="button" class="arrow-none">
+                            <dl class="item-tit">
+                                <dt><span class="prd-name">함께하는 사랑 적금</span></dt>
+                            </dl>
+                            <div class="item-amount">
+                                <span>최대</span>
+                                <em class="amount">1억원</em>
+                            </div>
+                        </button></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 2022-09-22 검색결과 없을시 추가 -->
+            <div class="main-section result-text">
+                <span class="no-data">
+                    검색조건에 맞는 상품이 없어요.
+                </span>
+            </div>
+
+            <!-- 2022-09-22 추가 -->
+            <div class="main-section">
+                <strong class="sub-title">다른 손님들이 많이 검색하는 조건이에요!</strong>
+                <div class="main-white-box">
+                    <ul class="condition-list">
+                        <li>
+                            <dl class="condition-tit">
+                                <dt>기간</dt>
+                            </dl>
+                            <div class="condition-amount">
+                                <span><em class="amount">1</em> 년</span>
+                            </div>
+                        </li>
+                        <li>
+                            <dl class="condition-tit">
+                                <dt>금액</dt>
+                            </dl>
+                            <div class="condition-amount">
+                                <span><em class="amount">200,000</em> 원</span>
+                            </div>
+                        </li>
+                        <li>
+                            <dl class="condition-tit">
+                                <dt>적립방식</dt>
+                            </dl>
+                            <div class="condition-amount">
+                                <span>자유적립식</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- //CONTENT -->
+        
+    </div>
+
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
+    <script>
+        //2022-08-29 수정
+        function toggleFoldUp(){
+            $(".control-btn button").click(function(){
+                $(".condition-list:eq(0)").toggleClass("fold-up");//2022-10-17
+            })
+        }
+        $(document).ready(function(){
+            toggleFoldUp();
+        })
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+ <!-- 0.83 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+<!-- 2022 상품몰 고도화 추가 -->
+<link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap n22UI">
+        <div class="content">
+            <div class="container">
+                <div class="button-wrap">
+                    <button type="button" class="button button--positive" data-element="modal__open" data-target="#modalSlide" data-ecrm="NET1010">다음</button><!-- 접근성 및 디자인현행화 | class전에 띄워쓰기 추가 -->
+                </div>
+            </div>
+            <!-- 모달레이어 - 슬라이드 -->
+            <!--2022-08-16 | n22UI-modal 클래스 추가 -->
+            <!--2022-08-18 ===================================================================
+            * 가입정보확인 모달 join-info-check 클래스 추가
+            * 가입정보확인SP 타이틀 텍스트 변경
+            * 각 내용 폰트 수정사항에 의한 span 클래스 추가(bracket, info-check-num)
+        -->
+            <div id="modalSlide" class="modal modal--slide n22UI-modal  join-info-check" data-element="modal__element">
+                <div class="modal__container modal__container--sentence" data-element="modal__element-container"><!-- 접근성 및 디자인현행화 | 클래스 수정 -->
+                    <div class="modal__header">
+                        <h1 class="modal__header--title bold">
+                            <span>이대로 가입하시겠어요?</span>
+                        </h1>
+                    </div>
+                    <div class="modal__contents modal__contents--modi">
+                        <!-- 접근성 및 디자인현행화 | div.list-section을 div.container container--full로 감쌈  -->
+                        <div class="container container--full">
+                            <div class="list-section">
+                                <ul class="list-wrap">
+                                    <!-- 외화 출금계좌 선택시  -->
+                                    <!-- 2022-09-13 마크업 변경 
+                                        info-check-num 이 포함된 항목만 info-num가 li에 부여되어있음.
+                                    -->
+                                    <li class="list-wrap__item info-num">
+                                        <div class="list-wrap__box">
+                                            <strong class="list-wrap__title list-wrap__title--value">가입금액</strong>
+                                        </div>
+                                        <div class="list-wrap__box list-wrap__box--unit">
+                                            <strong class="list-wrap__text list-wrap__text--value"><span class="info-check-num">10,000</span>원</strong>
+                                        </div>
+                                    </li>
+                                    <li class="list-wrap__item info-num">
+                                        <div class="list-wrap__box">
+                                            <strong class="list-wrap__title list-wrap__title--value">가입기간</strong>
+                                        </div>
+                                        <div class="list-wrap__box list-wrap__box--unit">
+                                            <strong class="list-wrap__text list-wrap__text--value"><span class="info-check-num">12</span>개월</strong>
+                                        </div>
+                                    </li>
+                                    <!-- 2022-08-25 | 자유적립식 추가-->
+                                    <li class="list-wrap__item">
+                                        <div class="list-wrap__box">
+                                            <strong class="list-wrap__title list-wrap__title--value">적립방법</strong>
+                                        </div>
+                                        <div class="list-wrap__box list-wrap__box--unit">
+                                            <strong class="list-wrap__text list-wrap__text--value">자유적립식</strong>
+                                        </div>
+                                    </li>
+                                    <li class="list-wrap__item info-num">
+                                        <div class="list-wrap__box">
+                                            <strong class="list-wrap__title list-wrap__title--value">현재적용금리
+                                                <!--2022-08-18 | 텍스트 수정-->
+                                                <span class="include-pr">(우대금리포함)</span>
+                                            </strong>
+                                        </div>
+                                        <div class="list-wrap__box list-wrap__box--unit">
+                                            <strong class="list-wrap__text list-wrap__text--value"><span class="info-check-num">2.4%</span></strong>
+                                        </div>
+                                    </li>
+                                    <li class="list-wrap__item">
+                                        <div class="list-wrap__box">
+                                            <strong class="list-wrap__title list-wrap__title--value">자동이체</strong>
+                                        </div>
+                                        <div class="list-wrap__box list-wrap__box--unit">
+                                            <strong class="list-wrap__text list-wrap__text--value">매월 23 일
+                                                (10,000 원)</strong>
+                                        </div>
+                                    </li>
+                                    <li class="list-wrap__item info-num">
+                                        <div class="list-wrap__box">
+                                            <strong class="list-wrap__title list-wrap__title--value">출금계좌</strong>
+                                        </div>
+                                        <div class="list-wrap__box list-wrap__box--unit">
+                                            <strong class="list-wrap__text list-wrap__text--value">하나은행<br>
+                                                <span class="info-check-num">123-456789-01234</span></strong>
+                                        </div>
+                                    </li>
+                                    <!--// 외화 출금계좌 선택시  -->
+                                </ul>
+                                <!-- <p class="text-guide">
+                                    출금계좌가 원화계좌인 경우 외화예매가 발생하며,외화예금이 가입 완료되면 취소가 불가능합니다.
+                                </p> -->
+                            </div>
+                        </div>
+                        <!-- //접근성 및 디자인현행화 | div.list-section을 div.container container--full로 감쌈  -->
+
+                        <!-- 2020-06-04 수정 -->
+                        <!--2022-08-10 | * 표시 수정-->
+                        <div class="guide-wrap">
+                            <ul class="guide-wrap__list guide-wrap__list--small">
+                                <li class="guide-wrap__item">만기 시점에 확정된 우대금리에 따라 최종 적용금리는 달라질 수 있습니다.</li>
+                                <!-- 2022-09-06 문구 추가 -->
+                                <li class="guide-wrap__item">현재 적용 금리는 금리쿠폰 우대가 반영된 금리입니다.</li>
+                                <!-- 당행 출금 -->
+                                <li class="guide-wrap__item">신규 비밀번호는 출금계좌 비밀번호와 동일하게 설정됩니다.</li>
+                                <!-- 타행 출금 -->
+                                <li class="guide-wrap__item">신규 비밀번호는 만기입금계좌 비밀번호와 동일하게 설정됩니다.</li>
+                            </ul>
+                        </div>
+
+                        <!-- 2020-06-04 수정 -->
+                    </div>
+                    
+                    <!-- 2022-08-25 | 가입 버튼 추가 / x버튼 추가 / 취소 버튼 삭제-->
+                    <div class="button-fixed">
+                        <div class="button-wrap">
+                            <button type="button" class="button button--positive" data-ecrm="JON1010">가입</button>
+                        </div>
+                    </div>
+                    <button type="button" class="modal__btn--close" data-element="modal__close" title="닫기" data-ecrm="CLE1010"></button>
+                    
+                </div>
+            </div>
+            <!-- //모달레이어 - 슬라이드 -->
+            <!-- //Content Here -->
+        </div>
+    </div>
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

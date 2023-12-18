@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap n22UI">
+        <!-- HEADER -->
+        <div id="header" class="app-header">
+            <!-- <button class="app-header__button app-header__button--back" title="이전 화면"></button> -->
+            <h1 class="app-header__title">상품전환</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //HEADER -->
+
+        <!-- CONTENT -->
+        <div id="content" class="app-main prodmall-join">
+            <div class="icon-wrap">
+                <i class="icon-wrap__icon icon-wrap__icon--check" aria-hidden="true"></i>
+                <!-- 2022-08-25 | 텍스트 수정-->
+                <span class="icon-wrap__icon-word"><span class="name">상품명</span>으로<br> 전환했어요</span>
+            </div>
+            <div class="container">
+                <div class="list-section">
+                    <ul class="list-wrap" data-element="toggle-list" style="display:none">
+                        <!-- 2차디자인현행화 | 항목순서변경 -->
+                        <!-- 2022-09-13 마크업 변경 
+                            info-check-num 이 포함된 항목만 info-num가 li에 부여되어있음.
+                        -->
+                        <li class="list-wrap__item info-num">
+                            <div class="list-wrap__box">
+                                <strong class="list-wrap__title list-wrap__title--value">상품 전환일</strong>
+                            </div>
+                            <div class="list-wrap__box list-wrap__box--unit">
+                                <strong class="list-wrap__text list-wrap__text--value"><span class="info-check-num">2022-06-15</span></strong>
+                            </div>
+                        </li>
+                        <li class="list-wrap__item info-num">
+                            <div class="list-wrap__box">
+                                <strong class="list-wrap__title list-wrap__title--value">전환계좌</strong>
+                            </div>
+                            <div class="list-wrap__box list-wrap__box--unit">
+                                <strong class="list-wrap__text list-wrap__text--value"><span class="info-check-num">123-456789-01234</span></strong>
+                            </div>
+                        </li>
+                        <li class="list-wrap__item">
+                            <div class="list-wrap__box">
+                                <strong class="list-wrap__title list-wrap__title--value">예금주</strong>
+                            </div>
+                            <div class="list-wrap__box list-wrap__box--unit">
+                                <strong class="list-wrap__text list-wrap__text--value">김하나</strong>
+                            </div>
+                        </li>
+                        <li class="list-wrap__item info-num">
+                            <div class="list-wrap__box">
+                                <strong class="list-wrap__title list-wrap__title--value">예금잔액</strong>
+                            </div>
+                            <div class="list-wrap__box list-wrap__box--unit">
+                                <strong class="list-wrap__text list-wrap__text--value"><span class="info-check-num">123,586,742</span>원</strong>
+                            </div>
+                        </li>
+                        <li class="list-wrap__item info-num">
+                            <div class="list-wrap__box">
+                                <strong class="list-wrap__title list-wrap__title--value">급여일</strong>
+                            </div>
+                            <div class="list-wrap__box list-wrap__box--unit">
+                                <strong class="list-wrap__text list-wrap__text--value"><span class="info-check-num">25</span>일</strong>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="container container--full">
+                     <!-- 2022-08-25 | 텍스트 수정-->
+                    <button type="button" class="button-simple button-simple--right" data-element="toggle-btn">
+                        상세정보 <span class="off">보기</span> <span class="on">닫기</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- //CONTENT -->
+
+        <!-- FOOTER -->
+        <div id="footer" class="app-footer app-footer--button app-footer--button-round-corner">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive round-corner" data-ecrm="COM1010">확인</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+        </div>
+        <!-- //FOOTER -->
+    </div>
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
+    <script src="../../../../resource/js/ui/common_n22UI.js"></script>
+</body>
+</html>

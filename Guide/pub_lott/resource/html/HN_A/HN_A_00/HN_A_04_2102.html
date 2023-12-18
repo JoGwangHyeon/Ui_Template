@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap n22UI">
+        <!-- HEADER -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">ELF 상품</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //HEADER -->
+
+        <!-- CONTENT -->
+        <div id="content" class="app-main prodmall-detail-investment">
+            <div class="prodmall-section section-top">
+                <div>
+                    <div class="tit-default">메리츠지수연계증권투자<br>신탁 SNE–13호<br>(ELS-파생형)AE</div>
+                </div>
+                <span class="text-badge">원금손실가능 상품</span>
+                <div class="content-wrap">
+                    <div class="main-desc">
+                        <em>위험등급</em>
+                        <strong><em>최고위험</em></strong>
+                    </div>
+                    <div class="half-cont">
+                        <dl>
+                            <dt>조건 충족 시 연 수익률</dt>
+                            <dd>세전 5.00%</dd>
+                        </dl>
+                        <dl>
+                            <dt>조건 미충족 시 최대손실률</dt>
+                            <dd>-100.00%</dd>
+                        </dl>
+                    </div>
+                    
+                    <div class="section-top-buttons">
+                        <div class="invest-manual">
+                            <button type="button" class="btn-line line-white">요약제안서</button>
+                            <!-- 2022-09-13 기획 변경으로 '핵심설명서' 버튼 삭제 -->
+                        </div>
+
+                        <div class="util-btn-group">
+                            <!-- 2022-08-10 활성화시 util-btn에 추가클래스 부여 is-active
+                            <button type="button" class="util-btn icon-favorite is-active">관심상품</button>
+                            -->
+                            <button type="button" class="util-btn icon-favorite">관심상품</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prodmall-section underlying-asset sect-bg-white">
+                <div class="tit-default txt-bold">기초자산</div>
+                <strong>KOSPI 200 / S&P 500 / EUROSTOXX 50</strong>
+                <p>위 기초자산을 기준가 설정일과 평가일 기준으로 비교해 일정 조건을 충족하면 수익이 확정됩니다.</p>
+
+                <strong class="repayment-ex-tit">1차 수익 상환 예시</strong>   
+                <div class="trust-contents">
+                    <div class="repayment-ex">
+                        <p><em>2023년 1월 5일에</em> 기초자산이 모두</p>
+                        <p><em>75%</em> 이하로 하락하지만 않으면</p>
+                        <p><em><span>연 </span>5.00%</em> 수익률 기준으로 조기 상환됩니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prodmall-section value-based sect-bg-white">
+                <div class="tit-default txt-bold">기준가 설정일</div>
+                    <div class="decision-date">
+                        <p>2022.06.03</p>
+                    </div>
+            </div>
+
+            <div class="prodmall-section repayment-terms sect-bg-white">
+                <div class="tit-default txt-bold">조기/만기 상환조건</div>
+                <div>
+                    <div class="table table-vertical table-vertical--narrow">
+                        <table>
+                            <colgroup>
+                                <!-- 2022-10-04 수정 -->
+                                <col style="width:20%"/>
+                                <col style="width:20%"/>
+                                <col style="width:30%"/>
+                                <col style="width:30%"/>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="table-vertical__th">구분</th>
+                                    <th scope="col" class="table-vertical__th">배리어</th>
+                                    <th scope="col" class="table-vertical__th">평가일</th>
+                                    <th scope="col" class="table-vertical__th">지급일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="table-vertical__td">1차</td>
+                                    <td class="table-vertical__td">75</td>
+                                    <td class="table-vertical__td">2023-01-05</td>
+                                    <td class="table-vertical__td">2023-01-10</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-vertical__td">2차</td>
+                                    <td class="table-vertical__td">75</td>
+                                    <td class="table-vertical__td">2023-07-05</td>
+                                    <td class="table-vertical__td">2023-07-10</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-vertical__td">3차</td>
+                                    <td class="table-vertical__td">75</td>
+                                    <td class="table-vertical__td">2024-01-05</td>
+                                    <td class="table-vertical__td">2024-01-10</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-vertical__td">4차</td>
+                                    <td class="table-vertical__td">75</td>
+                                    <td class="table-vertical__td">2024-07-05</td>
+                                    <td class="table-vertical__td">2024-07-10</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-vertical__td">5차</td>
+                                    <td class="table-vertical__td">70</td>
+                                    <td class="table-vertical__td">2025-01-07</td>
+                                    <td class="table-vertical__td">2025-01-10</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-vertical__td">만기</td>
+                                    <td class="table-vertical__td">65</td>
+                                    <td class="table-vertical__td">2025-07-07</td>
+                                    <td class="table-vertical__td">2025-07-10</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- 220823 상환 회차 6회 초과인 경우 추가 -->
+                    <div class="table table-vertical table-vertical--narrow" style="display: none">
+                        <table>
+                            <colgroup>
+                                <col span="3">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="table-vertical__th">구분</th>
+                                    <th scope="col" class="table-vertical__th">배리어</th>
+                                    <th scope="col" class="table-vertical__th">평가일</th>
+                                    <th scope="col" class="table-vertical__th">지급일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="table-vertical__td">1차</td>
+                                    <td class="table-vertical__td">75</td>
+                                    <td class="table-vertical__td">2023-01-05</td>
+                                    <td class="table-vertical__td">2023-01-10</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-vertical__td">2차</td>
+                                    <td class="table-vertical__td">75</td>
+                                    <td class="table-vertical__td">2023-07-05</td>
+                                    <td class="table-vertical__td">2023-07-10</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-vertical__td">3차</td>
+                                    <td class="table-vertical__td">75</td>
+                                    <td class="table-vertical__td">2024-01-05</td>
+                                    <td class="table-vertical__td">2024-01-10</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-vertical__td">:</td>
+                                    <td class="table-vertical__td">:</td>
+                                    <td class="table-vertical__td">:</td>
+                                    <td class="table-vertical__td">:</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-vertical__td">17차</td>
+                                    <td class="table-vertical__td">70</td>
+                                    <td class="table-vertical__td">2024-07-05</td>
+                                    <td class="table-vertical__td">2024-07-10</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-vertical__td">만기</td>
+                                    <td class="table-vertical__td">65</td>
+                                    <td class="table-vertical__td">2025-01-07</td>
+                                    <td class="table-vertical__td">2025-01-10</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="prodmall-section pb-0">
+                <div class="tit-default">가입 전 확인해 주세요!</div>
+                <div class="finance-box-wrap prodmall-notice">
+                    <!-- 2022-09-14 기획 변경으로 아코디언 추가 및 수정 -->
+                     <!-- 상품개요-->
+                    <!-- 2022-08-23 | CMS -->
+                    <div class="white-box white-box--fund" data-element="toggle"><!-- 내용펼침 class: data-options="{&quot;isOpened&quot;:true}" -->
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">상품개요</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+                        <div class="white-box__content" data-element="toggle__panel">
+                            <div class="tit-small">기초자산</div>
+                            <div>
+                                <p class="text-guide">KOSPI200 / S&P 500 / EYROSTOXX50</p>
+                            </div>
+                            <div class="tit-small">상환구조</div>
+                            <div>
+                                <p class="text-guide">(노낙인) 75/75/75/75/70/65</p>
+                            </div>
+                            <div class="tit-small">손익구조</div>
+                            <div>
+                                <p class="text-guide">세전 연 3.80%(최대손실률 -100%)</p>
+                            </div>
+                            <div class="tit-small">자산설정일</div>
+                            <div>
+                                <p class="text-guide">2022년 06월 03일</p>
+                            </div>
+                            <div class="tit-small">최초기준가격 결정일</div>
+                            <div>
+                                <p class="text-guide">2022년 06월 03일</p>
+                            </div>
+                            <div class="tit-small">조기/만기 상환조건</div>
+                            <div>
+                                <div class="table table-vertical table-vertical--narrow">
+                                    <table>
+                                        <colgroup>
+                                            <col span="3">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" class="table-vertical__th">구분</th>
+                                                <th scope="col" class="table-vertical__th">배리어</th>
+                                                <th scope="col" class="table-vertical__th">평가일</th>
+                                                <th scope="col" class="table-vertical__th">지급일</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="table-vertical__td">1차</td>
+                                                <td class="table-vertical__td">75</td>
+                                                <td class="table-vertical__td">2023-01-05</td>
+                                                <td class="table-vertical__td">2023-01-10</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-vertical__td">2차</td>
+                                                <td class="table-vertical__td">75</td>
+                                                <td class="table-vertical__td">2023-07-05</td>
+                                                <td class="table-vertical__td">2023-07-10</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-vertical__td">3차</td>
+                                                <td class="table-vertical__td">75</td>
+                                                <td class="table-vertical__td">2024-01-05</td>
+                                                <td class="table-vertical__td">2024-01-10</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-vertical__td">4차</td>
+                                                <td class="table-vertical__td">75</td>
+                                                <td class="table-vertical__td">2024-07-05</td>
+                                                <td class="table-vertical__td">2024-07-10</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                        
+                    <!-- 매입/환매(중도해지) -->
+                    <!-- 2022-09-14 | CMS -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">매입/환매(중도해지)</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <div data-element="toggle__panel" class="white-box__content" style="display: block;">
+                            <div data-element="accordion__panel" class="changes-info__panel is-active">
+                                <p class="text-guide">예시) 평가금액 1200만원, 세금 30만원, 환매수수료 0원</p>
+                                <div class="tit-small">■ 환매 시 받을 수 있는 예상금액 </div>
+                                <p class="text-guide">
+                                    평가금액 - 세금 - 환매수수료<br>=  1,200만원 - 30만원 - 0원<br>= 1,170만원</p>
+                                    <p class="line-h142 mgt16 fs13 color-666 txt_caution01">
+                                        <span class="unit">※</span>
+                                        실제 환매금액 예상조회는 “상품관리 &gt; 펀드조회/관리 &gt; 주요메뉴 &gt; 환매(예약)/취소”에서 “환매예상조회”를 클릭하세요.
+                                    </p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 보수/수수료 -->
+                    <!-- 2022-09-14 | CMS -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">보수/수수료</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <div data-element="toggle__panel" class="white-box__content" style="display: block;">
+                            <div class="list-section">
+                                <ul class="list-wrap border--none pd-all0">
+                                    <li class="list-wrap__item">
+                                        <div class="list-wrap__box">
+                                            <strong class="list-wrap__title inline-block">선취수수료</strong>
+                                            <div data-tooltip="paragraph" class="tooltip">
+                                                <button type="button" data-tooltip-button="open" aria-label="수익률 정보 툴팁 열기" class="tooltip__open"></button>
+                                                <div data-tooltip-panel="false" class="tooltip__panel">
+                                                    <div class="tooltip__column">
+                                                        <p data-tooltip="focus" class="tooltip__description">투자자가 펀드 매입 시, 판매회사에 일회적으로 지불하는 수수료입니다. 이는 상품에 대한 취득 권유 및 설명, 투자설명서 제공 등에 수반되는 비용을 포함하고 있습니다.</p>
+                                                    </div>
+                                                    <button data-tooltip-button="close" aria-label="툴팁 닫기" type="button" class="tooltip__close"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-wrap__box list-wrap__box--unit">
+                                            <strong class="list-wrap__text list-wrap__text--value">납입금액의 0.2%</strong>
+                                        </div>
+                                    </li>
+                                    <li class="list-wrap__item">
+                                        <div class="list-wrap__box">
+                                            <strong class="list-wrap__title inline-block">총보수</strong>
+                                            <div data-tooltip="paragraph" class="tooltip">
+                                                <button type="button" data-tooltip-button="open" aria-label="수익률 정보 툴팁 열기" class="tooltip__open"></button>
+                                                <div data-tooltip-panel="false" class="tooltip__panel">
+                                                    <div class="tooltip__column">
+                                                        <p data-tooltip="focus" class="tooltip__description">투자신탁의 운용 및 관리와 관련된 비용입니다. 다시 말해 재산을 운용 및 관리해준 대가로 고객이 지불하는 비용입니다. 이는 통상 연율로 표시되며, 신탁보수에는 집합투자업자보수, 판매회사보수, 신탁업자보수, 일반사무관리회사보수 등이 있습니다. 보수율은 상품마다 다르게 책정되는 것이 일반적입니다.</p>
+                                                    </div> 
+                                                    <button data-tooltip-button="close" aria-label="툴팁 닫기" type="button" class="tooltip__close"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-wrap__box list-wrap__box--unit">
+                                            <strong class="list-wrap__text list-wrap__text--value">연 0.44%</strong>
+                                        </div>
+                                        <div class="list-wrap__box--block block w100">
+                                            <strong class="list-wrap__text list-wrap__text--value">(판매 <span class="eng"></span>0.20%, 운용 <span class="eng"></span>0.20%, 수탁 <span class="eng"></span>0.02%,<br>사무 <span class="eng"></span>0.02%)</strong>
+                                        </div>
+                                    </li>
+                                    <li class="list-wrap__item">
+                                        <div class="list-wrap__box">
+                                            <strong class="list-wrap__title inline-block">환매수수료</strong>
+                                            <div data-tooltip="paragraph" class="tooltip">
+                                                <button type="button" data-tooltip-button="open" aria-label="수익률 정보 툴팁 열기" class="tooltip__open"></button>
+                                                <div data-tooltip-panel="false" class="tooltip__panel">
+                                                    <div class="tooltip__column">
+                                                        <p data-tooltip="focus" class="tooltip__description">계약 기간 이전 중도에 펀드를 환매할 시 일정한 벌칙금 형식으로 투자자에게 일회적으로 부과하는 수수료입니다. 이는 펀드 운용의 안정성과 펀드 환매 시 소요되는 여러 비용을 감안하여 책정되며 부과된 수수료는 다시 펀드 재산에 편입되게 됩니다.</p>
+                                                    </div>
+                                                    <button data-tooltip-button="close" aria-label="툴팁 닫기" type="button" class="tooltip__close"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-wrap__box list-wrap__box--unit">
+                                            <strong class="list-wrap__text list-wrap__text--value"></strong>
+                                            <strong class="list-wrap__text list-wrap__text--value">1일 이상 90일 미만<br>이익금의 70%</strong>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="guide-wrap guide-wrap--black">
+                                <ul class="guide-wrap__list">
+                                    <li class="guide-wrap__item color-red">증권거래비용, 성과보수 등이 추가로 발생할 수 있습니다.</li>
+                                    <li class="guide-wrap__item color-red">재간접펀드인 경우 피투자펀드보수가 발생하며, 자세한 내용은 투자설명서를 참고하십시요.</li>
+                                </ul>
+                            </div>
+                            <div data-element="accordion" data-options="{&quot;isInitActive&quot;:true}" role="presentation" class="changes-info">
+                                <div data-element="accordion__item" class="changes-info__item">
+                                    <button type="button" data-element="accordion__anchor" aria-expanded="true" role="button" class="changes-info__anchor is-active"><span class="title" style="padding-right: 2rem;">투자자 부담비용을 예시로 알아볼까요?</span></button>
+                                    <div data-element="accordion__panel" class="changes-info__panel is-active">
+                                        <div class="tit-small">[예시] 투자자 부담 비용</div>
+                                        <div class="tit-small text-detail-box__tit fw-300">▶ 가정</div>
+                                        <div class="gray-box fw-300 mgt24">
+                                            3년간 1,000만원을 거치식으로 투자.
+                                                                        연간투자수익률은 5%, 이익금은 모두 재투자, 
+                                                                        선취판매수수료 및 총보수∙비용은 일정함  
+                                        </div>
+                                        <pre>   
+                                        ▶ 투자자가 부담하는 총비용 
+                                        총비용 = 선취수수료 + 총보수비용
+                                        <span class="fs13">(피투자 집합투자기구 보수 및 비용 등 포함)</span>
+
+                                        ① AE클래스 : 선취수수료 0.5%, 총보수∙비용 연0.3176% 
+                                        → AE클래스는 1년 8만원, 2년 11.6만원, 3년 15.2만원 비용 발생
+                                        
+                                        ② CE클래스 : 선취수수료 없음,  총보수∙비용 연0.6776%
+                                        → CE클래스는 1년 7만원, 2년 14.2만원, 3년 21.8만원 비용 발생
+
+                                        </pre>
+                                        <p class="line-h142 mgt16 fs13 color-666 txt_caution01">
+                                            <span class="unit">※</span>
+                                            본 예시는 가정조건에 따라 나온 결과이며, 실제 추가납입여부, 보수율의 변경 등에 따라 결과는 달라질 수 있습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        
+                        
+                    <!-- 클래스비교(내게 맞는 클래스 찾기) -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">클래스비교(내게 맞는 클래스 찾기)</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <div data-element="toggle__panel" class="white-box__content classadd" style="display: block;">
+                            <p class="text-guide-sub text-sign color-light-blue">※ 해당 클래스를 클릭하시면 상세내용 확인이 가능합니다.</p>
+                            <div class="container container--full">
+                                <div class="table table-vertical table-vertical--narrow">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width: 20%;">
+                                            <col style="width: 28%;">
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" class="table-vertical__th">클래스</th>
+                                                <th scope="col" class="table-vertical__th">가입채널<br>/신규여부</th>
+                                                <th scope="col" class="table-vertical__th">총보수(연)<br>선취판매수수료<br>환매수수료부과 </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="guide-wrap">
+                                <ul class="guide-list">
+                                    <li class="guide-list__item">비용적 측면에서 거치식으로 투자하였을때, 통상적으로 단기투자자의 경우 선취판매수수료가 없는 클래스가 유리하고,
+                                        3년 이상의 중장기 투자자는 선취수수료가 있는 클래스가 유리할 수 있습니다.
+                                    </li>
+                                    <li class="guide-list__item">펀드적립유형(거치식,적립식)과 기간에 따라 손님께 더 적합한 클래스는 달라질 수 있으니
+                                         자세한 내용은 해당펀드의 투자설명서를 참고하여주시기 바랍니다.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                        
+                    <!-- 수익률(기간/구간) -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">수익률(기간/구간)</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <div data-element="toggle__panel" class="white-box__content" style="display: block;">
+                            <div class="tit-small mgt0">기간수익률 (2022-08-11 기준)
+                                <span class="table-header__unit fw-300">(단위: %)</span>
+                            </div>
+                            <div class="table table-vertical table-vertical--narrow">
+                                <table>
+                                    <colgroup>
+                                        <col span="5">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="table-vertical__th">구분</th>
+                                            <th scope="col" class="table-vertical__th">1개월</th> 
+                                            <th scope="col" class="table-vertical__th">3개월</th> 
+                                            <th scope="col" class="table-vertical__th">6개월</th> 
+                                            <th scope="col" class="table-vertical__th">1년</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                            <div class="tit-small">기간수익률 추이</div>
+                            <div class="select-button">
+                                <div class="select-button__box">
+                                    <input type="radio" id="selectType11" name="selectType1" value="01" onclick="javascript:FFPM0503010.fnDrawRateLineChartReadyHandler('01');" class="select-button__input"> 
+                                    <label for="selectType11" class="select-button__item">1개월</label>
+                                </div>
+                                <div class="select-button__box">
+                                    <input type="radio" id="selectType12" name="selectType1" value="03" onclick="javascript:FFPM0503010.fnDrawRateLineChartReadyHandler('03');" checked="checked" class="select-button__input">
+                                    <label for="selectType12" class="select-button__item">3개월</label>
+                                </div>
+                                 <div class="select-button__box">
+                                    <input type="radio" id="selectType13" name="selectType1" value="06" onclick="javascript:FFPM0503010.fnDrawRateLineChartReadyHandler('06');" class="select-button__input">
+                                    <label for="selectType13" class="select-button__item">6개월</label>
+                                </div>
+                                <div class="select-button__box"><input type="radio" id="selectType14" name="selectType1" value="12" onclick="javascript:FFPM0503010.fnDrawRateLineChartReadyHandler('12');" class="select-button__input"> 
+                                    <label for="selectType14" class="select-button__item">12개월</label>
+                                </div>
+                            </div>
+                            <div id="rateLineChart" class="mgt42" style="width: 100%; height: 250px;">
+                            </div> 
+                            <div class="tit-small">연도별 수익률
+                                <span class="table-header__unit fw-300">(단위: %)</span>
+                            </div>
+                             <div class="table table-vertical table-vertical--narrow">
+                                <table>
+                                    <colgroup>
+                                        <col span="5">
+                                    </colgroup> 
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="table-vertical__th">구분</th>
+                                            <th scope="col" class="table-vertical__th">펀드</th>
+                                            <th scope="col" class="table-vertical__th">유형평균</th>
+                                            <th scope="col" class="table-vertical__th">벤치마크</th>
+                                            <th scope="col" class="table-vertical__th">%순위</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                            <div class="tit-small">월별 수익률
+                                <span class="table-header__unit fw-300">(단위: %)</span>
+                            </div>
+                             <div class="table table-vertical table-vertical--narrow">
+                                <table>
+                                    <colgroup>
+                                        <col span="5">
+                                    </colgroup> 
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="table-vertical__th">구분</th>
+                                            <th scope="col" class="table-vertical__th">펀드</th>
+                                            <th scope="col" class="table-vertical__th">유형평균</th>
+                                            <th scope="col" class="table-vertical__th">벤치마크</th>
+                                            <th scope="col" class="table-vertical__th">%순위</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                        
+
+                    <!-- 펀드 보유자산 -->
+                    <!-- 2022-08-19 | 기존 아코디언은 전부 닫힌 상태 data-options="{&quot;isOpened&quot;:true} 삭제 -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">펀드 보유자산</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <!-- as-is 
+                            <div data-element="toggle__panel" class="white-box__content" style="display: block;"><div class="guide-wrap guide-wrap--black"><ul class="guide-wrap__list"><li class="guide-wrap__item">
+                                        포트폴리오 현황 등 보유내역 정보는 기준일 이전 2개월 정보가 제공됩니다.
+                                    </li></ul></div> <div class="tit-small">자산구성(기준)</div> <div id="ratePieChart" class="graph-wrap" style="width: 100%; height: 200px;"></div> <div class="table table-vertical table-vertical--narrow"><table><colgroup><col span="3"></colgroup> <thead><tr><th scope="col" class="table-vertical__th">자산구분</th> <th scope="col" class="table-vertical__th">금액(백만)</th> <th scope="col" class="table-vertical__th">비중(%)</th></tr></thead> <tbody><tr><th scope="row" class="table-vertical__th"><span class="chart-color chart-color--stock">
+                                                    주식
+                                                </span></th> <td class="table-vertical__td table-vertical__td--right"></td> <td class="table-vertical__td table-vertical__td--right"></td></tr> <tr><th scope="row" class="table-vertical__th"><span class="chart-color chart-color--bond">
+                                                    채권
+                                                </span></th> <td class="table-vertical__td table-vertical__td--right"></td> <td class="table-vertical__td table-vertical__td--right"></td></tr> <tr><th scope="row" class="table-vertical__th"><span class="chart-color chart-color--cash">현금</span></th> <td class="table-vertical__td table-vertical__td--right"></td> <td class="table-vertical__td table-vertical__td--right"></td></tr> <tr><th scope="row" class="table-vertical__th"><span class="chart-color chart-color--etc">기타</span></th> <td class="table-vertical__td table-vertical__td--right"></td> <td class="table-vertical__td table-vertical__td--right"></td></tr></tbody></table></div> <div class="tit-small" style="display: none;">주식 섹터비중</div> <div class="tit-small" style="display: none;">섹터비중</div> <div class="tit-small" style="display: none;">섹터비중 및 만기분포</div> <div class="select-button" style="display: none;"><div class="select-button__box"><input type="radio" id="selectType21" name="selectType2" onclick="javascript:FFPM0503010.menuCtrl(1);" checked="checked" class="select-button__input"> <label for="selectType21" class="select-button__item">주식</label></div> <div class="select-button__box"><input type="radio" id="selectType22" name="selectType2" onclick="javascript:FFPM0503010.menuCtrl(3);" class="select-button__input"> <label for="selectType22" class="select-button__item">채권</label></div></div> <div class="select-button" style="display: none;"><div class="select-button__box"><input type="radio" id="selectType31" name="selectType3" onclick="javascript:FFPM0503010.menuCtrl(3);" checked="checked" class="select-button__input"> <label for="selectType31" class="select-button__item">섹터</label></div> <div class="select-button__box"><input type="radio" id="selectType32" name="selectType3" onclick="javascript:FFPM0503010.menuCtrl(5);" class="select-button__input"> <label for="selectType32" class="select-button__item">만기</label></div></div> <div id="menu1Div" class="table table-vertical table-vertical--narrow mgt42"><table><colgroup><col style="width: 35%;"> <col style="width: 40%;"> <col style="width: 25%;"></colgroup> <thead><tr><th scope="col" colspan="2" class="table-vertical__th">섹터구분</th> <th scope="col" class="table-vertical__th">비중(%)</th></tr></thead> <tbody><tr><th scope="row" rowspan="4" class="table-vertical__th">경기순환</th> <td class="table-vertical__td">기초소재</td> <td class="table-vertical__td table-vertical__td--right"></td></tr> <tr><td class="table-vertical__td">순환소재</td> <td class="table-vertical__td table-vertical__td--right"></td></tr> <tr><td class="table-vertical__td">금융</td> <td class="table-vertical__td table-vertical__td--right"></td></tr> <tr><td class="table-vertical__td">부동산</td> <td class="table-vertical__td table-vertical__td--right"></td></tr> <tr><th scope="row" rowspan="3" class="table-vertical__th">경기방어</th> <td class="table-vertical__td">방어소비재</td> <td class="table-vertical__td table-vertical__td--right"></td></tr> <tr><td class="table-vertical__td">헬스케어</td> <td class="table-vertical__td table-vertical__td--right"></td></tr> <tr><td class="table-vertical__td">유틸리티</td> <td class="table-vertical__td table-vertical__td--right"></td></tr> <tr><th scope="row" rowspan="4" class="table-vertical__th">경기민감</th> <td class="table-vertical__td">통신서비스</td> <td class="table-vertical__td table-vertical__td--right"></td></tr> <tr><td class="table-vertical__td">에너지</td> <td class="table-vertical__td table-vertical__td--right"></td></tr> <tr><td class="table-vertical__td">산업재</td> <td class="table-vertical__td table-vertical__td--right"></td></tr> <tr><td class="table-vertical__td">정보기술</td> <td class="table-vertical__td table-vertical__td--right"></td></tr></tbody></table></div> <div id="menu3Div" class="table table-vertical table-vertical--narrow mgt42"><table><colgroup><col span="2"></colgroup> <thead><tr><th scope="col" class="table-vertical__th" style="width: 70%;">섹터구분</th> <th scope="col" class="table-vertical__th">비중(%)</th></tr></thead> <tbody><tr><td class="table-vertical__td table-vertical__td--left">국채</td> <td class="table-vertical__td table-vertical__td--right"></td></tr> <tr><td class="table-vertical__td table-vertical__td--left">회사채</td> <td class="table-vertical__td table-vertical__td--right"></td></tr> <tr><td class="table-vertical__td table-vertical__td--left">증권화</td> <td class="table-vertical__td table-vertical__td--right"></td></tr> <tr><td class="table-vertical__td table-vertical__td--left">지방채</td> <td class="table-vertical__td table-vertical__td--right"></td></tr> <tr><td class="table-vertical__td table-vertical__td--left">현금 및 현금등가물</td> <td class="table-vertical__td table-vertical__td--right"></td></tr> <tr><td class="table-vertical__td table-vertical__td--left">파생상품</td> <td class="table-vertical__td table-vertical__td--right"></td></tr></tbody></table></div> <div id="menu5Div" class="table table-vertical table-vertical--narrow mgt42"><table><colgroup><col span="2"></colgroup> <thead><tr><th scope="col" class="table-vertical__th" style="width: 70%;">섹터구분</th> <th scope="col" class="table-vertical__th">비중(%)</th></tr></thead> <tbody><tr><td class="table-vertical__td table-vertical__td--left">1년 미만</td> <td class="table-vertical__td table-vertical__td--right"></td></tr> <tr><td class="table-vertical__td table-vertical__td--left">1년 ~ 3년</td> <td class="table-vertical__td table-vertical__td--right"></td></tr> <tr><td class="table-vertical__td table-vertical__td--left">3년 ~ 5년</td> <td class="table-vertical__td table-vertical__td--right"></td></tr> <tr><td class="table-vertical__td table-vertical__td--left">5년 ~ 7년</td> <td class="table-vertical__td table-vertical__td--right"></td></tr> <tr><td class="table-vertical__td table-vertical__td--left">7년 ~ 10년</td> <td class="table-vertical__td table-vertical__td--right"></td></tr> <tr><td class="table-vertical__td table-vertical__td--left">10년 ~ 15년</td> <td class="table-vertical__td table-vertical__td--right"></td></tr> <tr><td class="table-vertical__td table-vertical__td--left">15년 ~ 20년</td> <td class="table-vertical__td table-vertical__td--right"></td></tr> <tr><td class="table-vertical__td table-vertical__td--left">20년 ~ 30년</td> <td class="table-vertical__td table-vertical__td--right"></td></tr> <tr><td class="table-vertical__td table-vertical__td--left">30년 이상</td> <td class="table-vertical__td table-vertical__td--right"></td></tr></tbody></table></div> <div class="tit-small" style="display: none;">주식 TOP10 종목</div> <div id="changeTit" class="tit-small" style="display: none;">주식 TOP5종목</div> <div class="tit-small" style="display: none;">채권 Top10 종목</div>  <div id="menu2Div" class="table table-vertical table-vertical--narrow mgt42"><table><colgroup><col span="3"></colgroup> <thead><tr><th scope="col" class="table-vertical__th" style="width: 10%;">NO</th> <th scope="col" class="table-vertical__th">종목명</th> <th scope="col" class="table-vertical__th" style="width: 20%;">비중(%)</th></tr></thead> <tbody></tbody></table></div> <div id="menu4Div" class="table table-vertical table-vertical--narrow mgt42"><table><colgroup><col span="3"></colgroup> <thead><tr><th scope="col" class="table-vertical__th" style="width: 10%;">NO</th> <th scope="col" class="table-vertical__th">종목명</th> <th scope="col" class="table-vertical__th" style="width: 20%;">비중(%)</th></tr></thead> <tbody></tbody></table></div></div>
+
+                        -->
+                        <div class="white-box__content" data-element="toggle__panel">
+                            <div class="tit-small">주식 국가별 투자비중</div>
+                            <span class="notice text-align-right">기준일 2022.04.01, 단위: %</span>
+                            <div>
+                                <div class="table table-vertical table-vertical--narrow">
+                                <table>
+                                    <colgroup>
+                                        <col span="2">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="table-vertical__th">국가</th>
+                                            <th scope="col" class="table-vertical__th">비중(%)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="table-vertical__td">미국</td>
+                                            <td class="table-vertical__td">89.60</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-vertical__td">영국</td>
+                                            <td class="table-vertical__td">4.21</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-vertical__td">프랑스</td>
+                                            <td class="table-vertical__td">89.60</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-vertical__td">독일</td>
+                                            <td class="table-vertical__td">4.21</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-vertical__td">베트남</td>
+                                            <td class="table-vertical__td">89.60</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-vertical__td">중국</td>
+                                            <td class="table-vertical__td">4.21</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-vertical__td">인도</td>
+                                            <td class="table-vertical__td">89.60</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-vertical__td">브라질</td>
+                                            <td class="table-vertical__td">4.21</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-vertical__td">그리스</td>
+                                            <td class="table-vertical__td">89.60</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-vertical__td">호주</td>
+                                            <td class="table-vertical__td">4.21</td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        
+                    <!-- 금융소비자 권리 -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">금융소비자 권리</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <div data-element="toggle__panel" class="white-box__content" style="display: block;">
+                            <div class="tit-small">위법계약 해지권</div>
+                            <p class="text-guide">
+                                「금융소비자 보호에 관한 법률 」제47조에 의거하여 투자상품 계약체결 시 동법 상의 적합성 ▪적정성원칙, 설명의무 위반 또는 금지되는 불공정영업행위, 부당권유행위의 발생 사실이 존재하는 경우, <span class="color-red">위법사실을 안 날로부터 1년 (단, 계약 체결일로부터 5년이내)</span> 이내에 서면 등으로 계약의 해지를 요구할 수 있습니다. <span class="color-red">위법계약해지를 요구받은 날로부터 10일 이내에 수락여부 및 그 사유를 통지</span>하며, 만약 투자자의 요구가 정당한 것으로 판단될 경우 수수료 등 계약해지와 관련한 추가 비용 부담없이 계약해지가 가능합니다.
+                            </p>
+                            <div class="tit-small">민원 처리 및 분쟁조정 절차</div>
+                            <p class="text-guide">문의사항 또는 민원 상담이 필요하신 경우 <span class="color-red">영업점, 고객센터(1599-1111) 및 홈페이지(www.kebhana.com)로 문의</span>할 수 있으며, 분쟁이 발생할 경우 금융소비자보호법 제36조 1항에 따라 <span class="color-red">금융감독원(1332)등에 도움</span>을 요청하실 수 있습니다.</p>
+                            <div class="tit-small">숙려제도 및 숙려확인콜 제도 안내</div>
+                            <div class="guide-wrap">
+                                <ul class="guide-list guide-list--large">
+                                    <li class="guide-list__item">
+                                    「자본시장과 금융투자업에 관한 법률」및 관련 규정이 정하는 바에 따라 <span class="color-red">개인인 일반투자자의 경우 고난도 금융투자상품 또는 65세 이상 고령자가 가입하는 적정성 원칙 적용 대상 투자성삼품</span>
+                                    에 대해서는 해당 금융투자상품의 상품 구조 및 투자위험을 충분히 숙지한 후, 투자를 결정할 수 있도록 <span class="color-red">신규 익영업일로부터 2영업일의 숙려기간을 부여하고 3영업일에 최종적으로 계약체결 의사를 확인합니다.</span>
+                                    </li>
+                                    <li class="guide-list__item">
+                                    계약체결 의사확인은 청약 시 등록된 휴대폰 번호로 통화 또는 알림톡(SMS)으로 이루어지고 확인 당일자 17시 까지 청약 확정의 의사표시를 하셔야 하며, 청약확정의 의사표시가 없는 경우 청약은 자동 취소되고 투자원금 및 운용 수익은 연결계좌로 입금됩니다.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tit-small">청약철회권</div>
+                            <div class="guide-wrap">
+                                <ul class="guide-list guide-list--large">
+                                    <li class="guide-list__item">
+                                        「금융소비자 보호에 관한 법률」에 따라 <span class="color-red">개인인 일반금융소비자는 모집기간이 있는 고난도금융투자상품에 대해 계약체결일 (숙려의사 확인일) 다음날 부터 7일 이내, 법인인 일반금융소비자는 계약서류를 제공받은 날 다음날 부터 7일 이내</span>
+                                        에 서면, 전자적 의사표시, 전화 및 우편/팩스 발송 후 전화로 확인 등의 방법으로 청약 철회의 의사를 표시 할 수 있으며, 청약이 철회된 경우 은행이 받은 금전, 재화 등은 반환 됩니다.
+                                    </li>
+                                    <li class="guide-list__item">
+                                        일반금융소비자가 신규 과정에서 '예탁한 금전 등을 즉시 운용하는데 동의' 하면 위 청약철최에 관한 사항에도 불구하고 「금융소비자보호에 관한 법률 시행령」 제37조 및 관련 규정이 정하는 바에 따라 청약철회원 행사는 불가능합니다.<br>
+                                        ※주의 : 청약철회권 행사는 계약체결일 다음날부터 7일째인 설정일 전 영업일 17시 까지 가능하며, 대기시간 및 전산 조작에 소용되는 시간으로 인해 해당 시간이 경과되면 청약철회권 행사는 불가능합니다. [단, 외화로 투자되는 펀드 상품은 16시까지]
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tit-small">자료열람요구권</div> 
+                            <div class="guide-wrap">
+                                <ul class="guide-list guide-list--large">
+                                    <li class="guide-list__item">
+                                        금융소비자는 분쟁조정 또는 소송의 수행 등 권리구제를 위한 목적으로 은행이 기록 및 유지·관리하는 다음의 자료에 대한 열람(사본 및 청취 포함)을 요구할 수 있습니다.(계약체결에 관한 자료, 계약의 이행에 관한 자료, 금융상품 등에 관한 광고 자료, 금융소비자의 권리행사에 관한 자료, 내부통제기준의 제정 및 운영 등에 관한 자료, 업무 위탁에 관한 자료)
+                                    </li> 
+                                    <li class="guide-list__item">
+                                        은행은 법령, 제3자의 이익 침해, 영업비밀의 침해 등의 사유가 있는 경우 이를 금융소비자에게 알리고 자료 열람을 제한하거나 거절할 수 있습니다.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 투자위험 -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">투자위험</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <div data-element="toggle__panel" class="white-box__content" style="display: block;">
+                            <div class="tit-small">주요투자위험</div>
+                            <div class="table table-vertical table-vertical--narrow mgt12">
+                                <table>
+                                    <caption>주요투자위험</caption>
+                                    <colgroup>
+                                        <col span="2">
+                                    </colgroup>
+                                    <tbody class="txt_l">
+                                        <tr>
+                                            <th scope="row" class="table-vertical__th bg_gray" style="width: 70px;">원금손실 위험</th>
+                                            <td class="table-vertical__td">실적배당상품으로 <font color="red">투자원금 전액이 보장 또는 보호되지 않습니다.</font> 따라서 투자원본의 전부 또는 일부에 대한 손실의 위험이 존재합니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="table-vertical__th bg_gray">예금자<br>비보호</th>
+                                            <td class="table-vertical__td">예금자보호법의 적용을 받는 은행의 예금과 달리 실적에 따른 수익을 취득하므로 은행 등에서 판매하는 경우에도 <font color="red">예금보험공사 등의 보호를 받지 못합니다.</font></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="table-vertical__th bg_gray">자기책임원칙</th>
+                                            <td class="table-vertical__td"><font color="red">투자금액의 손실 내지 감소의 위험은 전적으로 투자자가 부담</font>하며, 집합투자업자나 판매회사 등 어떤 당사자도 투자손실에 대하여 책임을 지지 아니합니다.</td>
+                                        </tr> 
+                                        <!----> <!----> <!----> <!---->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 유의사항 -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">유의사항</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <div data-element="toggle__panel" class="white-box__content" style="display: block;">
+                            <div class="guide-wrap">
+                                <ul class="guide-list guide-list--large">
+                                    <li class="guide-list__item">
+                                        본 상품은 펀드운용결과에 따라 실적이 변동되며 원금에 손실을 가져올 수도 있습니다.
+                                    </li> 
+                                    <li class="guide-list__item">
+                                        가입하시기 전에 (투자대상, 환매방법 및 보수 등에 관하여) 투자설명서를 반드시 읽어보시기 바랍니다.
+                                    </li> 
+                                    <li class="guide-list__item">
+                                        하나은행은 본 상품의 판매회사로 그 수익이나 원금을 보장하지 않습니다.
+                                    </li> 
+                                    <li class="guide-list__item bold color-red">
+                                        집합투자증권은 운용결과에 따라 투자원금의 손실이 발생할 수 있으며, 그 손실은 투자자에게 귀속됩니다. 또한 과거의 운용실적이 미래의 수익을 보장하는 것은 아닙니다.
+                                    </li> 
+                                    <li class="guide-list__item">
+                                        외화표시자산에 투자하는 상품은 환율변동에 따라 투자자산의 가치가 변동될 수 있습니다.
+                                    </li> 
+                                    <li class="guide-list__item">
+                                        월지급식 상품의 경우 운용결과에 따라 월 분배금이 변동될 수 있으며, 이익금을 초과하여 분배하는 경우 투자원금이 감소할 수 있습니다. 또한 투자성과가 부진할 경우 월 분배금 지급이 조기에 중단될 수 있으며, 상환시점에 원금의 손실이 발생할 수 있습니다.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 투자설명서/규약/운용보고서 -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">투자설명서/규약/운용보고서</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <div data-element="toggle__panel" class="white-box__content" style="display: block;">
+                            <div class="button-content">
+                                <div class="button-content__inner">
+                                    <button type="button" aria-label="집합투자규약 열기" onclick="javascript:FFPM0503010.fncViewFundPDF('1');" class="pdf-button">
+                                        <i aria-hidden="true" class="pdf-button__icon">
+                                            <img src="../../../../resource/images/C/icon_pdf.png" alt="집합투자규약">
+                                        </i>
+                            집합투자규약
+                                    </button> 
+                                    <button type="button" aria-label="투자설명서 열기" onclick="javascript:FFPM0503010.fncViewFundPDF('2');" class="pdf-button">
+                                        <i aria-hidden="true" class="pdf-button__icon">
+                                            <img src="../../../../resource/images/C/icon_pdf.png" alt="투자설명서">
+                                        </i>
+                                        투자설명서
+                                    </button>
+                                </div> 
+                                <div class="button-content__inner">
+                                    <button type="button" aria-label="간이투자설명서 열기" onclick="javascript:FFPM0503010.fncViewFundPDF('3');" class="pdf-button">
+                                        <i aria-hidden="true" class="pdf-button__icon">
+                                            <img src="../../../../resource/images/C/icon_pdf.png" alt="간이투자설명서">
+                                        </i>
+                                        간이투자설명서
+                                    </button>
+                                    <button type="button" aria-label="운용보고서 열기" onclick="javascript:FFPM0503010.fncViewFundPDF('4');" class="pdf-button">
+                                        <i aria-hidden="true" class="pdf-button__icon">
+                                            <img src="../../../../resource/images/C/icon_pdf.png" alt="운용보고서">
+                                        </i>
+                                        운용보고서
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //CONTENT -->
+
+        <!-- FOOTER -->
+        <div id="footer" class="app-footer app-footer--button app-footer--button-round-corner">
+            <div class="button-wrap">
+                
+                
+                <!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+                <button type="button" class="button button--positive round-corner" data-ecrm="JON1010">가입 시작하기</button>
+            </div>
+        </div>
+        <!-- //FOOTER -->
+    </div>
+
+
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
+    <!-- 상품상세 js 별도분기 -->
+    <script src="../../../../resource/library/lottie/lottie.min.js"></script>
+    <script src="../../../../resource/js/ui/prd_detail_n22UI.js"></script>
+
+
+
+    <!--모달-->
+    <div class="pualugin-modal" data-element="modal">
+        <!-- 가입기간 모달-->
+        <div id="combobox_1" class="modal modal--slide" data-element="modal__element" role="dialog" aria-modal="true" aria-hidden="false" z-index="10">
+            <div class="modal__container modal__container--interval" data-element="modal__element-container" style="bottom: 0px;">
+            <div class="modal__header modal__header--border">
+                <h1 class="modal__header--title" data-element="focus" tabindex="0">가입기간</h1>
+            </div>
+            <div class="modal__contents modal__contents--no-spacer">
+                <div class="container">
+                    <div class="list-section">
+                        <ul class="list-wrap list-wrap--line">
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">1년</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">2년</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">3년</strong>
+                                    </span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="modal__btn--close" data-element="modal__close" aria-label="닫기"></button>
+            </div>
+        </div>
+        <!--//가입기간 모달-->
+    </div>
+    <!--//모달-->
+</body>
+</html>

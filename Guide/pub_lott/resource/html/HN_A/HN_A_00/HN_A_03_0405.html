@@ -1,0 +1,339 @@
+
+<!-- v0.8 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+      <!-- 공통 css -->
+      <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+      <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+      <!-- 2022 상품몰 고도화 추가 -->
+      <link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap n22UI">
+        <!-- header -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">약관동의</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //header -->
+        <!-- Content -->
+        <div id="content" class="app-main accept-the-term">
+            <div class="step-header">
+                <div class="tit-large">
+                    <div class="stepper" role="img" aria-label="3단계 중 1단계">
+                        <ul>
+                            <li class="stepper__step stepper__step--current">1</li>
+                            <li class="stepper__step">2</li>
+                            <li class="stepper__step">3</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--2022-08-02 | 전체동의 추가-->
+            <div class="privacy__item full-consent">
+                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"></button>
+                <button type="button" class="privacy__detail">전체 동의</button>
+            </div>
+            <!-- 2022-09-23 약관동의 폼 변경 -->
+            <div class="container">
+                <div class="agree-wrap">
+                    <div class="privacy modi-privacy1">
+                        <!-- 2022-09-13 항목문구 변경 -->
+                        <div class="privacy__simple-wrap">
+                            <div class="privacy__item privacy__item--checked">
+                                <button type="button" class="privacy__icon" role="checkbox"
+                                    aria-checked="true"></button>
+                                <button type="button" class="privacy__detail">예금거래기본 약관</button>
+                            </div>
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox"
+                                    aria-checked="false"></button>
+                                <button type="button" class="privacy__detail">입출금이 자유로운 예금 약관</button>
+                            </div>
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox"
+                                    aria-checked="false"></button>
+                                <button type="button" class="privacy__detail">비과세종합저축 특약</button>
+                            </div>
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox"
+                                    aria-checked="false"></button>
+                                <button type="button" class="privacy__detail">$상품명$ 특약</button>
+                            </div>
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox"
+                                    aria-checked="false"></button>
+                                <button type="button" class="privacy__detail">$상품명$ 상품설명서</button>
+                            </div>
+                            <!-- <div class="agree-wrap__txt">본인은 약관 및 상품설명서에 대해 충분히 이해 하고 가입하였으며, 하나은행으로부터 예금자 보호여부 및
+                                보호한도(원금과 소정의 이자를 합하여 1인당 5천만원)에 대하여 설명 듣고 이해하였음을 확인합니다.
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2022-10-20 mgt120 클래스 추가 및 text-guide-bold 클래스 추가 -->
+            <div class="container mgt120">
+				<p class="text-guide-regular text-guide-bold">금융회사는「금융소비자보호에 관한 법률(시행일 2021.03.25)」 제19조(설명의무)에 따라 예금상품의 중요한 사항을 소비자가 이해할수 있도록 설명해야 하며, 동법 제23조(계약서류의 제공의무)에 따라 금융소비자에게 지체없이 제공해야 합니다.</p>
+			</div>
+            
+            <!--2022-08-02 | 중요한 사항 테이블 내부 수정(아이콘) -->
+            <div class="container">
+                <!-- 2022-10-20 내용 추가 -->
+                <p class="text-guide-regular text-guide-bold">본인은 약관 및 상품설명서의 주요 내용에 대하여 충분히 이해하였습니다.</p>
+
+				<div class="checkbox-wrap flex mgt120" data-input-selector="checkbox">
+					<input type="checkbox" id="imptMttrBtn" class="checkbox-wrap__check" name="chk-info" data-input-name="chk-info" data-input-target="info-check-section-1" :checked="imptMttrChecked">
+					<label for="imptMttrBtn" class="checkbox-wrap__label color-green underline">중요한 사항 내용 보기</label>
+				</div>
+				<div data-input-labeledby="chk-info" data-input-section="info-check-section-1">
+					<div class="table table-horizontal mgt60">
+						<table>
+							<colgroup>
+								<col style="width:10%;">
+								<col style="width:10%;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row" rowspan="3" class="table-horizontal__th fw-400" style="border-right:1px solid #e7e9ee;">중요한 사항</th>
+									<th scope="row" class="table-horizontal__th fw-400">공통</th>
+									<td class="table-horizontal__td">
+										<span class="new-point">민원처리 절차 및 분쟁조정</span><br>
+                                        <span class="new-point">예금자보호 여부 및 그 내용</span><br>
+                                        <span class="new-point">계약의 해제, 해지 및 위법계약해지권</span>
+									</td>	
+								</tr>
+								<tr>
+									<th scope="row" class="table-horizontal__th fw-400">예금성</th>
+									<td class="table-horizontal__td">
+                                        <span class="new-point">계약기간, 이자의 지급시기 및 지급제한 사유</span><br>
+                                        <span class="new-point">이자율(기본+우대), 중도해지이자율, 만기해지이자율, 만기후이자율, 수익률 및 산출근거 등</span><br>
+                                        <span class="new-point">수수료 등 부대비용, 일반금융 소비자 계약해지 시 불이익</span><br>
+                                        <span class="new-point">이용 제한사항(계좌이체 제한 등)</span><br>
+                                        <span class="new-point">인용한 자료의 출처</span>
+									</td>	
+								</tr>
+								<tr>
+									<th scope="row" class="table-horizontal__th fw-400">연계제휴</th>
+									<td class="table-horizontal__td">
+                                        <span class="new-point">연계,제휴 서비스 등의 내용</span><br>
+                                        <span class="new-point">연계,제휴 서비스 등의 이행책임에 관한 사항</span><br>
+                                        <span class="new-point">연계,제휴 서비스 등의 제공기간</span><br>
+                                        <span class="new-point">연계,제휴 서비스 등의 변경에 관한 변경내용 및 그 사유 등을 일반금융소비자에게 알린다는 사실 및 그 고지방법 등의 내용</span>
+									</td>	
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+
+
+            <!--2022-08-02 | 체크박스 및 텍스트 수정 -->
+            <div class="container">
+				<div class="checkbox-wrap flex mgt120 essen-receive" data-input-selector="checkbox">
+					<input type="checkbox" id="imptMttrBtn2" class="checkbox-wrap__check" name="chk-info">
+					<label for="imptMttrBtn2" class="checkbox-wrap__label color-green underline">[필수]약관 및 상품설명서 받기
+                    </label>
+				</div>
+				<div data-input-labeledby="chk-info" class="essen-lookup">
+                    <!--하나원큐 계좌관리 조회-->
+                    <div class="checkbox-wrap">
+                        <input type="checkbox" id="AdminInquiry" class="checkbox-wrap__check" name="계좌관리조회">
+                        <label for="AdminInquiry" class="checkbox-wrap__label">하나원큐 계좌관리 조회 (필수)</label>
+                    </div>
+                    <p class="text-guide-regular">전체계좌조회>계좌관리>계약서/설명서/약관보기에서 확인</p>
+
+
+                    <!-- 이메일 선택 2022-09-06 마크업 변경 -->
+                    <div class="agree-wrap__mail">
+                        <div class="checkbox-wrap">
+                            <input type="checkbox" id="iptSendEMail" class="checkbox-wrap__check" name="mail-check">
+                            <label for="iptSendEMail" class="checkbox-wrap__label">이메일(선택)</label>
+                        </div>
+                        <div id="divEmailContent" class="input underline-type w100">
+                            <!--
+                                * 오류시 class="input input--error"
+                                * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                            -->
+                            <div class="input__inner">
+                                <input type="text" id="inputText03" class="input__element" title="이메일주소 입력" placeholder="email@hanafn.com"/>
+                                <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
+                            </div>
+                            <!-- 에러메시지 -->
+                            <p class="input__error" aria-live="assertive">as-is 텍스트 출력</p>
+                        </div>
+    
+                        <div class="inpwrap__txtinfo" style="display: none;">개인정보 변경을 원하실 경우 My하나 &gt; 개인정보조회/변경에서 수정하실 수 있습니다.</div>
+                        <div class="button--gray__wrap" style="display: none;">
+                            <button id="modifyCustInfo" type="button" class="button-square-small button-square-small--white">개인정보변경</button>
+                            <button id="recvEmail" type="button" class="button-square-small button-square-small--white">지금바로받기</button>
+                        </div>
+                    </div>
+                    <!-- //2022-09-06 마크업 변경 -->
+
+				</div>
+			</div>
+
+            <!-- 2022-09-16 이용안내 추가 -->
+            <div class="container last-content">
+                <div class="guide-wrap" data-element="toggle">
+                    <div class="title-xsmall">
+                        <button type="button" class="pualugin__button button-arrow font-small" data-element="toggle__anchor" aria-expanded="false">이용안내</button>
+                    </div>
+                    <ul class="guide-wrap__list" data-element="toggle__panel" style="display: block;">
+                        <!-- 주거래하나 통장/급여하나 통장/연금하나 통장 -->
+                        <li class="guide-wrap__item font-smal fw-300">상품을 전환한 달은 기존 통장의 수수료 면제 잔여횟수를 적용하며, 다음달부터는 전환 통장의 수수료 우대 서비스에 따른 수수료 면제 혜택이 제공됩니다.</li>
+                        <li class="guide-wrap__item font-smal fw-300">위의 통장으로 전환 후 다시 일반 통장으로 전환할 수 있습니다. 단, 일반 통장으로 전환은 통장 발급을 위해 영업점에서만 가능합니다.
+                        </li>
+                        <!-- 하나플러스 통장 -->
+                        <li class="guide-wrap__item font-smal fw-300">하나플러스 통장으로 전환 후 다시 일반 통장으로 전환할 수 있습니다. 단, 일반 통장으로 전환은 통장 발급을 위해 영업점에서만 가능합니다.</li>
+                        <li class="guide-wrap__item font-smal fw-300">현금(직불)카드는 가까운 영업점에서 발급해 주세요.</li>
+                        <!-- 영하나플러스 통장 -->
+                        <li class="guide-wrap__item font-smal fw-300">상품을 전환한 달은 기존 통장의 수수료 면제 잔여횟수를 적용하며, 다음달부터는 전환 통장의 수수료 우대 서비스에 따른 수수료 면제 혜택이 제공됩니다.</li>
+                        <li class="guide-wrap__item font-smal fw-300">위의 통장으로 전환 후 다시 일반 통장으로 전환할 수 있습니다. 단, 일반 통장으로 전환은 통장 발급을 위해 영업점에서만 가능합니다.</li>
+                        <li class="guide-wrap__item font-smal fw-300">상품 가입/전환 후, 만 35세가 되는 시점의 다음달 첫 영업일에 주거래하나통장으로 자동 전환됩니다. 단, 이미 동일한 상품을 보유한 경우 저축예금으로 전환됩니다.</li>
+                        <li class="guide-wrap__item font-smal fw-300">자세한 내용은 상품특약 및 상품설명서를 확인해 주세요.</li>
+                        <!-- 머니박스 통장 -->
+                        <li class="guide-wrap__item font-smal fw-300">저축예금인 경우, 다른 예금에서 머니박스 통장으로 전환 또는 머니박스 통장에서 다른 예금으로 전환 가능하며, 전환일부터 전환 후 예금의 금리가 적용됩니다.<br>
+                        단, 머니박스 통장에서 다른예금으로 전환한 경우, 다음 이자 원가일(지급일)까지 머니박스 통장으로 재전환은 불가하며 공간 나누기 서비스는 자동 해지됩니다.<br>
+                        - 이자지급일 : 매월 3번째 금요일의 다음 영업일
+                        </li>
+                        <li class="guide-wrap__item font-smal fw-300">자세한 내용은 상품특약 및 상품설명서를 확인해 주세요.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!-- //Content -->
+        <!-- footer -->
+        <!--2022-08-25 | 약관동의 공통 as-is 그라데이션 바탕 처리 필요 클래스 지정-->
+        <div id="footer" class="app-footer app-footer--button app-footer--button-round-corner  accept-the-term-footer">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive round-corner" data-element="modal__open" data-target="#joinInfoCheck">다음</button>
+            </div>
+        </div>
+        <!-- //footer -->
+    </div>
+
+<!-- 공통 script -->
+<script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+<!-- 2022 상품몰 고도화 추가 -->
+<script src="../../../../resource/library/swiper/swiper.min.js"></script>
+<script src="../../../../resource/js/ui/common_n22UI.js"></script>
+
+<!-- 2022-09-19 수정 -->
+
+<div id="joinInfoCheck" class="modal modal--slide n22UI-modal  join-info-check" data-element="modal__element">
+    <div class="modal__container modal__container--sentence" data-element="modal__element-container"><!-- 접근성 및 디자인현행화 | 클래스 수정 -->
+        <div class="modal__header">
+            <!-- 2022-08-25 | 타이틀 텍스트 수정-->
+            <h1 class="modal__header--title bold">
+                <span><em>상품명</em>으로<br> 전환하시겠어요?</span>
+            </h1>
+        </div>
+        <div class="modal__contents modal__contents--modi">
+            <!-- 접근성 및 디자인현행화 | div.list-section을 div.container container--full로 감쌈  -->
+            <div class="container container--full">
+                <div class="list-section">
+                    <ul class="list-wrap">
+                        <!-- 외화 출금계좌 선택시  -->
+                        <!-- 2022-09-13 마크업 변경 
+                            info-check-num 이 포함된 항목만 info-num가 li에 부여되어있음.
+                        -->
+                        <li class="list-wrap__item info-num">
+                            <div class="list-wrap__box">
+                                <strong class="list-wrap__title list-wrap__title--value">상품전환일</strong>
+                            </div>
+                            <div class="list-wrap__box list-wrap__box--unit">
+                                <strong class="list-wrap__text list-wrap__text--value"><span class="info-check-num">2022-06-15</span>
+                                </strong>
+                            </div>
+                        </li>
+                        <li class="list-wrap__item info-num">
+                            <div class="list-wrap__box">
+                                <strong class="list-wrap__title list-wrap__title--value">전환계좌</strong>
+                            </div>
+                            <div class="list-wrap__box list-wrap__box--unit">
+                                <strong class="list-wrap__text list-wrap__text--value"><span class="info-check-num">123-456789-01234</span></strong>
+                            </div>
+                        </li>
+                        <li class="list-wrap__item">
+                            <div class="list-wrap__box">
+                                <strong class="list-wrap__title list-wrap__title--value">예금주</strong>
+                            </div>
+                            <div class="list-wrap__box list-wrap__box--unit">
+                                <strong class="list-wrap__text list-wrap__text--value">김하나</strong>
+                            </div>
+                        </li>
+                        <li class="list-wrap__item info-num">
+                            <div class="list-wrap__box">
+                                <strong class="list-wrap__title list-wrap__title--value">예금잔액</strong>
+                            </div>
+                            <div class="list-wrap__box list-wrap__box--unit">
+                                <strong class="list-wrap__text list-wrap__text--value"><span class="info-check-num">123,586,742</span>원
+                                </strong>
+                            </div>
+                        </li>
+                        <li class="list-wrap__item info-num">
+                            <div class="list-wrap__box">
+                                <strong class="list-wrap__title list-wrap__title--value">급여일</strong>
+                            </div>
+                            <div class="list-wrap__box list-wrap__box--unit">
+                                <strong class="list-wrap__text list-wrap__text--value"><span class="info-check-num">25</span>일</strong>
+                            </div>
+                        </li>
+                        <!--// 외화 출금계좌 선택시  -->
+                    </ul>
+                    <!-- <p class="text-guide">
+                        출금계좌가 원화계좌인 경우 외화예매가 발생하며,외화예금이 가입 완료되면 취소가 불가능합니다.
+                    </p> -->
+                </div>
+            </div>
+            <!-- //접근성 및 디자인현행화 | div.list-section을 div.container container--full로 감쌈  -->
+
+            <!-- 2020-06-04 수정 -->
+            <!--
+            <div class="guide-wrap">
+                <ul class="guide-wrap__list guide-wrap__list--small guide-wrap__list--dotstar">
+                    <li class="guide-wrap__item">신규 비밀번호는 출금계좌와 동일하게 설정 됩니다.</li>
+
+                </ul>
+            </div>
+            -->
+            <!-- 2020-06-04 수정 -->
+        </div>
+        
+        <div class="button-fixed">
+            <!--2022-08-25 | 텍스트 수정-->
+            <div class="button-wrap">
+                <button type="button" class="button button--positive">확인</button>
+            </div>
+        </div>
+        <button type="button" class="modal__btn--close" data-element="modal__close" title="닫기" data-ecrm="CIE1010"></button>
+        -->
+    </div>
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/prodmall-main.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap n22UI">
+        <!-- HEADER -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <!-- 2022-09-15 띄어쓰기 수정 -->
+            <h1 class="app-header__title">적금찾기</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //HEADER -->
+
+        <!-- CONTENT -->
+        <div id="content" class="app-main prodmall-main find-savings">
+            <!-- 2022-09-23 검색전 그룹핑 -->
+            <div>
+                <div class="main-section"> <!-- 적금 -->
+                    <strong class="sub-title">기간/금액</strong>
+                    <div class="main-white-box">
+                        <div class="period-and-cost">
+                            <div class="button-select underline-type inline">
+                                <button type="button" class="button button-select__item" data-element="modal__open" data-target="#CCOM0015002_P02" id="dialOpenBtn">1년</button>
+                                <p>만기로</p>
+                            </div>
+
+                            <div class="input native-readonly input--error underline-type" data-native="focus">
+                                <!--
+                                    * 오류시 class="input input--error"
+                                    * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                                -->
+                                <div class="input__inner">
+                                    <span>매월</span>
+                                    <div class="native-inner" role="button">
+                                        <span id="inputText02" class="input__element" title="가입금액 입력" placeholder="20만원"></span>
+                                    </div>
+                                    <span>저축하기</span>
+
+                                    <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
+                                </div>
+                                <!-- 에러메시지 -->
+                                <p class="input__error" aria-live="assertive">
+                                    월 납입금액을 입력해 주세요.
+                                    <!-- 
+                                최대 입력가능금액은 1,000만원 입니다.
+                                -->
+                                </p>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="main-section"> <!-- 적립방식 -->
+                    <strong class="sub-title">적립방식</strong>
+                    <!-- "main-white-box class 삭제, accum-method class 추가" -->
+                    <div class="accum-method">
+                        <div class="accum-method-wrap">
+                            <div class="radio-wrap flex essen-receive" data-input-selector="radio">
+                                <input type="radio" id="accumMethod1" class="radio-wrap__check" name="radio-info">
+                                <label for="accumMethod1" class="radio-wrap__label">자유적립식</label>
+                            </div>
+                            <div class="radio-wrap flex essen-receive" data-input-selector="radio">
+                                <input type="radio" id="accumMethod2" class="radio-wrap__check" name="radio-info">
+                                <label for="accumMethod2" class="radio-wrap__label">정액적립식
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-section"> <!-- 우대항목 -->
+                    <strong class="sub-title">우대항목</strong>
+                    <!-- "main-white-box" class 삭제, "prefer-wrap" class 추가" -->
+                    <div class="prefer-wrap">
+                        <div class="prefer-items">
+                            <div class="checkbox-wrap flex select-receive" data-input-selector="checkbox">
+                                <input type="checkbox" id="preferItem1" class="checkbox-wrap__check" name="chk-info">
+                                <label for="preferItem1" class="checkbox-wrap__label">급여</label>
+                            </div>
+                            <div class="checkbox-wrap flex select-receive" data-input-selector="checkbox">
+                                <input type="checkbox" id="preferItem2" class="checkbox-wrap__check" name="chk-info">
+                                <label for="preferItem2" class="checkbox-wrap__label">연금<!-- 2022-09-15 문구수정 -->
+                                </label>
+                            </div>
+                            <div class="checkbox-wrap flex select-receive" data-input-selector="checkbox">
+                                <input type="checkbox" id="preferItem3" class="checkbox-wrap__check" name="chk-info">
+                                <label for="preferItem3" class="checkbox-wrap__label">공과금<!-- 2022-09-15 문구수정 -->
+                                </label>
+                            </div>
+                            <div class="checkbox-wrap flex select-receive" data-input-selector="checkbox">
+                                <input type="checkbox" id="preferItem4" class="checkbox-wrap__check" name="chk-info">
+                                <label for="preferItem4" class="checkbox-wrap__label">관리비<!-- 2022-09-15 문구수정 -->
+                                </label>
+                            </div>
+                            <div class="checkbox-wrap flex select-receive" data-input-selector="checkbox">
+                                <input type="checkbox" id="preferItem5" class="checkbox-wrap__check" name="chk-info">
+                                <label for="preferItem5" class="checkbox-wrap__label">하나카드<!-- 2022-09-15 문구수정 -->
+                                </label>
+                            </div>
+                            <div class="checkbox-wrap flex select-receive" data-input-selector="checkbox">
+                                <input type="checkbox" id="preferItem6" class="checkbox-wrap__check" name="chk-info">
+                                <label for="preferItem6" class="checkbox-wrap__label">하나합<!-- 2022-09-15 문구수정 -->
+                                </label>
+                            </div>
+                            <div class="checkbox-wrap flex select-receive" data-input-selector="checkbox">
+                                <input type="checkbox" id="preferItem7" class="checkbox-wrap__check" name="chk-info">
+                                <label for="preferItem7" class="checkbox-wrap__label">자동이체<!-- 2022-09-15 문구수정 -->
+                                </label>
+                            </div>
+                            <div class="checkbox-wrap flex select-receive" data-input-selector="checkbox">
+                                <input type="checkbox" id="preferItem8" class="checkbox-wrap__check" name="chk-info">
+                                <label for="preferItem8" class="checkbox-wrap__label">마케팅동의<!-- 2022-09-15 문구수정 -->
+                                </label>
+                            </div>
+                            <div class="checkbox-wrap flex select-receive" data-input-selector="checkbox">
+                                <input type="checkbox" id="preferItem9" class="checkbox-wrap__check" name="chk-info">
+                                <label for="preferItem9" class="checkbox-wrap__label">청약저축<!-- 2022-09-15 문구수정 -->
+                                </label>
+                            </div>
+                        </div>
+                        <div class="main-emp-bubble">
+                            <p>선택하지 않아도 검색 가능</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-section using-info">
+                    <div class="guide-wrap" data-element="toggle">
+                            <div class="title-xsmall">
+                                <!-- 220905 "font-small" class 삭제 -->
+                                <button type="button" class="pualugin__button button-arrow" data-element="toggle__anchor" aria-expanded="false">이용안내</button>
+                            </div>
+                            <ul class="guide-wrap__list" data-element="toggle__panel" style="display: none;">
+                                <li class="guide-wrap__item font-smal fw-300">기간/금액 항목은 필수사항이며, 우대항목은 선택사항입니다.
+                                </li>
+                                <li class="guide-wrap__item font-smal fw-300">동일한 우대항목이라도 상품별로 적용되는 우대금리 등 상세내용은 다를 수 있습니다. 
+                                </li>
+                            </ul>
+                    </div>
+                </div>
+                
+                <!--  2022-10-14 마크업 변경 -->
+                <div class="app-footer app-footer--button">
+                    <div class="button-wrap" id="divFooter2">
+                        <button type="button" class="button button--positive">검색</button> 
+                    </div>     
+                </div>
+            </div>
+
+            <!-- 2022-09-23 검색 후 검색조건 그룹핑 -->
+            <div style="display:none;">
+                <div class="main-section"> <!-- 검색조건 -->
+                    <div class="search-condition">
+                        <strong class="sub-title">검색조건</strong>
+                        <div class="main-white-box">
+                            <ul class="condition-list">
+                                <li>
+                                    <dl class="condition-tit">
+                                        <dt>기간</dt>
+                                    </dl>
+                                    <div class="condition-amount">
+                                        <span><em class="amount">1</em> 년</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <dl class="condition-tit">
+                                        <dt>금액</dt>
+                                    </dl>
+                                    <div class="condition-amount">
+                                        <span><em class="amount">200,000</em> 원</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <dl class="condition-tit">
+                                        <dt>적립방식</dt>
+                                    </dl>
+                                    <div class="condition-amount">
+                                        <span>만기일시지급식</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <dl class="condition-tit">
+                                        <dt>우대항목<em>2</em></dt>
+                                    </dl>
+                                    <div class="condition-amount etc">
+                                        <!-- 2022-09-05 마크업 변경 -->
+                                        <span>급여</span><span>연금이체</span><span>공과금 이체</span><span>아파트 관리비</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="control-btn">
+                                <button class="control-fold">접기</button>
+                                <button class="control-expand clicked">펼치기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2022-09-23 검색 후 검색결과 그룹핑 -->
+            <div style="display:none;">
+                <div class="main-section"> <!-- 검색결과 -->
+                    <div class="savings-tit-wrap">
+                        <strong class="sub-title">검색결과<em>18</em><span class="unit">건</span></strong>
+                        <button type="button" class="button-arrow" data-element="toggle__anchor">추천순</button>
+                    </div>
+                    <div class="main-white-box">
+                        <ul class="prod-list item-sim">
+                            <li><button type="button" class="arrow-none">
+                                <dl class="item-tit">
+                                    <dt><span class="prd-name">급여 하나 월복리 적금</span></dt>
+                                </dl>
+                                <div class="item-amount">
+                                    <span>최대</span>
+                                    <em class="amount">0.00%</em>
+                                </div>
+                            </button></li>
+                            <li><button type="button" class="arrow-none">
+                                <dl class="item-tit">
+                                    <dt><span class="prd-name">주거래 하나 월복리 적금</span><span class="status-label use">보유중</span></dt>
+                                </dl>
+                                <div class="item-amount">
+                                    <span>최대</span>
+                                    <em class="amount">0.00%</em>
+                                </div>
+                            </button></li>
+                            <li><button type="button" class="arrow-none">
+                                <dl class="item-tit">
+                                    <dt><span class="prd-name">아이꿈 하나 적금</span></dt>
+                                </dl>
+                                <div class="item-amount">
+                                    <span>최대</span>
+                                    <em class="amount">1천만원</em>
+                                </div>
+                            </button></li>
+                            <li><button type="button" class="arrow-none">
+                                <dl class="item-tit">
+                                    <dt><span class="prd-name">함께하는 사랑 적금</span></dt>
+                                </dl>
+                                <div class="item-amount">
+                                    <span>최대</span>
+                                    <em class="amount">1억원</em>
+                                </div>
+                            </button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2022-09-23 검색 후 검색결과없는케이스 그룹핑 -->
+            <div style="display:none;">
+                <!-- 2022-09-22 검색결과 없을시 추가 -->
+                <div class="main-section result-text">
+                    <span class="no-data">
+                        검색조건에 맞는 상품이 없어요.
+                    </span>
+                </div>
+
+                <!-- 2022-09-22 추가 -->
+                <div class="main-section">
+                    <strong class="sub-title">다른 손님들이 많이 검색하는 조건이에요!</strong>
+                    <div class="main-white-box">
+                        <ul class="condition-list">
+                            <li>
+                                <dl class="condition-tit">
+                                    <dt>기간</dt>
+                                </dl>
+                                <div class="condition-amount">
+                                    <span><em class="amount">1</em> 년</span>
+                                </div>
+                            </li>
+                            <li>
+                                <dl class="condition-tit">
+                                    <dt>금액</dt>
+                                </dl>
+                                <div class="condition-amount">
+                                    <span><em class="amount">200,000</em> 원</span>
+                                </div>
+                            </li>
+                            <li>
+                                <dl class="condition-tit">
+                                    <dt>적립방식</dt>
+                                </dl>
+                                <div class="condition-amount">
+                                    <span>자유적립식</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                     <!-- 2022-10-08 조회하기 버튼 추가 -->
+                    <div class="contents-footer-button">
+                        <div class="progress-button">
+                            <div class="button-wrap">
+                                <button id="btnReSrchInst" type="button" class="button button--positive" data-element="modal__close">조회하기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- //CONTENT -->
+        
+    </div>
+
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
+</body>
+</html>

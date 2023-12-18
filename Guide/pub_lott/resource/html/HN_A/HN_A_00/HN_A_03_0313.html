@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap n22UI">
+        <!-- HEADER -->
+        <div id="header" class="app-header">
+            <!-- <button class="app-header__button app-header__button--back" title="이전 화면"></button> -->
+            <h1 class="app-header__title">가입완료</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //HEADER -->
+
+        <!-- CONTENT -->
+        <div id="content" class="app-main prodmall-join">
+            <div class="icon-wrap">
+                <i class="icon-wrap__icon icon-wrap__icon--check" aria-hidden="true"></i>
+                <span class="icon-wrap__icon-word"><span class="name">상품명</span><br>가입했어요</span>
+            </div>
+            <div class="container">
+                <div class="list-section">
+                    <ul class="list-wrap" data-element="toggle-list" style="display:none">
+                        <!-- 2차디자인현행화 | 항목순서변경 -->
+                        <!-- 2022-09-13 마크업 변경 
+                            info-check-num 이 포함된 항목만 info-num가 li에 부여되어있음.
+                        -->
+                        <li class="list-wrap__item info-num">
+                            <div class="list-wrap__box">
+                                <strong class="list-wrap__title list-wrap__title--value">신규계좌번호</strong>
+                            </div>
+                            <div class="list-wrap__box list-wrap__box--unit">
+                                <strong class="list-wrap__text list-wrap__text--value color-green eng"><span class="info-check-num">100-123456-12345</span></strong>
+                            </div>
+                        </li>
+                        <li class="list-wrap__item info-num">
+                            <div class="list-wrap__box">
+                                <strong class="list-wrap__title list-wrap__title--value">가입금액</strong>
+                            </div>
+                            <div class="list-wrap__box list-wrap__box--unit">
+                                <strong class="list-wrap__text list-wrap__text--value"><span class="info-check-num">200,000</span>원</strong>
+                            </div>
+                        </li>
+                        <li class="list-wrap__item info-num">
+                            <div class="list-wrap__box">
+                                <strong class="list-wrap__title list-wrap__title--value">납입회차</strong>
+                            </div>
+                            <div class="list-wrap__box list-wrap__box--unit">
+                                <strong class="list-wrap__text list-wrap__text--value"><span class="info-check-num">12</span>회</strong><!-- 2022-10-18 기획수정 -->
+                            </div>
+                        </li>
+                        <!-- 2022-09-28 우대금리 포함 삭제 // -->
+                        <li class="list-wrap__item info-num">
+                            <div class="list-wrap__box">
+                                <!-- 2022-10-31 텍스트 수정 -->
+                                <strong class="list-wrap__title list-wrap__title--value">적용금리</strong>
+                            </div>
+                            <div class="list-wrap__box list-wrap__box--unit">
+                                <!-- 2022-10-31 수정 -->
+                                <strong class="list-wrap__text list-wrap__text--value"><span class="info-check-num">기간별 차등금리</span><span class="include-pr">(상품설명서 참조)</span></strong>
+                                <!-- // 2022-10-31 수정 -->
+                            </div>
+                        </li>
+                        <!-- //2022-09-28 -->
+                        <li class="list-wrap__item">
+                            <div class="list-wrap__box">
+                                <strong class="list-wrap__title list-wrap__title--value">자동이체</strong>
+                            </div>
+                            <div class="list-wrap__box list-wrap__box--unit">
+                                <strong class="list-wrap__text list-wrap__text--value">신청안함 or 매월 23일 10,000원</strong>
+                            </div>
+                        </li>
+                        <li class="list-wrap__item info-num">
+                            <div class="list-wrap__box">
+                                <strong class="list-wrap__title list-wrap__title--value">출금 계좌</strong>
+                            </div>
+                            <div class="list-wrap__box list-wrap__box--unit">
+                                <strong class="list-wrap__text list-wrap__text--value">하나은행<br>
+                                    <span class="info-check-num">123-456789-01234</span></strong>
+                            </div>
+                        </li>
+                        <li class="list-wrap__item">
+                            <div class="list-wrap__box">
+                                <strong class="list-wrap__title list-wrap__title--value">세금우대</strong>
+                            </div>
+                            <div class="list-wrap__box list-wrap__box--unit">
+                                <strong class="list-wrap__text list-wrap__text--value eng">일반과세 or 비과세종합저축</strong>
+                            </div>
+                        </li>
+                        <li class="list-wrap__item info-num">
+                            <div class="list-wrap__box">
+                                <!-- 2022-09-06 문구 변경 -->
+                                <strong class="list-wrap__title list-wrap__title--value">세금우대 설정금액</strong>
+                            </div>
+                            <div class="list-wrap__box list-wrap__box--unit">
+                                <strong class="list-wrap__text list-wrap__text--value"><span class="info-check-num">10,000</span></strong>
+                            </div>
+                        </li>
+                        <!-- 2022-09-28 추가 -->
+                        <li class="list-wrap__item">
+                            <div class="list-wrap__box">
+                                <strong class="list-wrap__title list-wrap__title--value">관리점/직원</strong>
+                            </div>
+                            <div class="list-wrap__box list-wrap__box--unit">
+                                <strong class="list-wrap__text list-wrap__text--value">김하나(1234567)</strong>
+                            </div>
+                        </li>
+                        <li class="list-wrap__item">
+                            <div class="list-wrap__box">
+                                <strong class="list-wrap__title list-wrap__title--value">스탬프</strong>
+                            </div>
+                            <div class="list-wrap__box list-wrap__box--unit">
+                                <strong class="list-wrap__text list-wrap__text--value">2개</strong>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="container container--full">
+                     <!-- 2022-08-25 | 텍스트 수정-->
+                    <button type="button" class="button-simple button-simple--right" data-element="toggle-btn">
+                        상세정보 <span class="off">보기</span> <span class="on">닫기</span>
+                    </button>
+                </div>
+            </div>
+            <div class="container">
+                <!-- 2022-08-17 
+                <button type="button" class="border-box-navy">
+                    <dl>
+                        <dt>내 추천번호</dt>
+                        <dd>0267006805</dd>
+                    </dl>
+                    <span class="btn-ui">복사</span>
+                </button>
+                -->
+                
+                <!-- 2022-11-02 이벤트 배너 추가 -->
+                <a href="#" class="n22-evt-banner">
+                    <span class="thumb"><img src="../../../images/C/n22_evt_banner01.png"></span>
+                    <div>
+                        <span>#골드카드 #유니폼</span>
+                        <em>100돈 골든슈에<br>도전하라</em>
+                    </div>
+                </a>
+
+                <!-- 2022-08-17 클래스 수정 및 style속성 제거 -->
+                <a href="#" class="double-up" data-ecrm="1468020">
+                    <span>내집마련 더블업 적금</span>
+                    <em>청약통장을 가입한<br>단 하루만 연 3.00%</em>
+                </a>
+                <!--2022-07-29 | 디자인 수급 후 수정 필요 사항-->
+<!-- 2022-08-17
+                
+                <a href="#" class="color-box-gray">
+                    <em>걸음 수 측정하고<br>우대금리 받기</em>
+                    <span>신규 가입일로 부터<br>11개월까지</span>
+                    <span class="underline">내 걸음수 확인</span>
+                </a>
+                <a href="#" class="color-box-gray">
+                    <em>두드리면 오르는 금리</em>
+                    <span>하나 타이밍 적금</span>
+                    <span class="underline">타이밍 PLAY</span>
+                </a>
+                <a href="#" class="color-box-gray">
+                    <em>하나투어 여행상품</em>
+                    <span class="underline">바로가기</span>
+                </a>
+-->
+                <!-- 2022-08-17 br 제거 -->
+                <a href="#" class="color-box-notification"><em>상품 우대금리, 혜택 알림 받기</em></a>
+            </div>
+            <div class="container">
+                <!-- 안내 목록 -->
+                <div class="guide-wrap" data-element="toggle">
+                    <div class="title-xsmall">
+                        <button
+                            type="button"
+                            class="pualugin__button button-arrow"
+                            data-element="toggle__anchor">
+                            이용안내
+                        </button>
+                    </div>
+                    <ul class="guide-wrap__list guide-wrap__list--small" data-element="toggle__panel">
+                        <li class="guide-wrap__item">통장은 영업점에서 발급받을 수 있습니다.</li>
+                        <li class="guide-wrap__item">신규 계좌는 손님의 계좌관리점으로 개설되며, 관리점을 선택하지 않은 경우 출금계좌를 개설한 영업점으로 개설됩니다.</li>
+                    </ul>
+                </div>
+                <!-- //안내 목록 -->
+            </div>
+        </div>
+        <!-- //CONTENT -->
+
+        <!-- FOOTER -->
+        <div id="footer" class="app-footer app-footer--button app-footer--button-round-corner">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive round-corner" data-ecrm="COM1010">확인</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+        </div>
+        <!-- //FOOTER -->
+    </div>
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
+    <script src="../../../../resource/js/ui/common_n22UI.js"></script>
+</body>
+</html>

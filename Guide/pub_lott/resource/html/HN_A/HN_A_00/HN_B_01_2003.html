@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+
+<body>
+    <!-- 2022-08-23 LP 팝업으로 구조 변경. -->
+    <div class="modal-full modal-full--button n22UI">
+        <div class="modal__header">
+            <h1 class="modal__header--title">소비</h1>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="modal__contents moneybox">
+            <div class="moneybox-cont parking">
+                <div class="input underline-type">
+
+                    <!--2022-08-03 | 직접입력 타이틀-->
+                    <div class="input__inner">
+                        <!--  DEV set
+                            더하기 진입일경우 
+                            placeholder="얼마를 더할까요?"
+                            빼기 진입일경우 
+                            placeholder="얼마를 뺄까요?"
+                        -->
+                        <span  id="localKeyPadResult" class="input__element direct-tit" title="이동 금액" placeholder="얼마를 더할까요?"></span>
+                        <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
+                    </div>
+
+                    <!--2022-08-03 | 넘버 키패드 -->
+                    <div class="about-money">
+                        
+                            <p class="direct-cash-guide insuff-cash">잔액이 부족해요</p>
+                            <!-- 2022-09-30 최대금액 기획변경 반영 -->
+                            <p class="direct-cash-guide" style="display:none;">최대 300만원까지 보관할 수 있어요.</p>
+                            <p class="minus-number"  style="display:none;">- 50 만원</p>
+                            <p class="plus-number"  style="display:none;">+ 100 만원</p>
+                       
+                    </div>
+
+                    
+                    <div class="enterable-amount">
+                        <em>입력가능금액</em> <span>1,000,000 원</span>
+                    </div>
+                </div>
+
+
+
+                <div class="number-pad-wrap">
+                    <ul class="number-pad">
+                        <li>
+                            <button type="button" class="number-button" title="넘버패드" data-element="" data-target="" aria-controls="" >1</button>
+                        </li>
+                        <li><button type="button" class="number-button" title="넘버패드" data-element="" data-target="" aria-controls="" >2</button></li>
+                        <li><button type="button" class="number-button" title="넘버패드" data-element="" data-target="" aria-controls="" >3</button></li>
+                        <li><button type="button" class="number-button" title="넘버패드" data-element="" data-target="" aria-controls="" >4</button></li>
+                        <li><button type="button" class="number-button" title="넘버패드" data-element="" data-target="" aria-controls="" >5</button></li>
+                        <li><button type="button" class="number-button" title="넘버패드" data-element="" data-target="" aria-controls="" >6</button></li>
+                        <li><button type="button" class="number-button" title="넘버패드" data-element="" data-target="" aria-controls="" >7</button></li>
+                        <li><button type="button" class="number-button" title="넘버패드" data-element="" data-target="" aria-controls="" >8</button></li>
+                        <li><button type="button" class="number-button" title="넘버패드" data-element="" data-target="" aria-controls="" >9</button></li>
+                        <li><button type="button" class="number-button" title="넘버패드" data-element="" data-target="" aria-controls="" >00</button></li>
+                        <li><button type="button" class="number-button" title="넘버패드" data-element="" data-target="" aria-controls="" >0</button></li>
+                        <li><button type="button" class="number-button num-delete" title="넘버패드" data-element="" data-target="" aria-controls="" ></button></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        <!-- //CONTENT -->
+        <div class="button-fixed">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive" onclick="javascript:HanaClosePopup('','');">확인</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+        </div>
+        <button class="modal__btn--close" type="button" title="닫기" onclick="javascript:HanaClosePopup('','');"></button>
+        
+    </div>
+
+
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/ui/jquery-ui.js"></script>
+    <script src="../../../../resource/library/jquery/jquery.ui.touch-punch.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
+    <script src="../../../../resource/js/ui/common_n22UI.js"></script>
+    <script type="text/javascript">
+        var localKeypad = function(obj){
+            var warpper = $(obj);
+            if(!warpper.length){ return false;}
+            var resultObj;
+            var available;
+            var localKeyPadResult = "";
+            var maxAvailable = 0;
+            var totalMoney = 0;
+            var parkingVal = 0;
+            var isParkingCategory = false;
+            var realAvailable = 0;
+            var inpDisable = false;
+            var pageType = "";
+            var wonUnit = ['원','만원', '억원'];
+            /*
+                샘플 세팅 데이터 
+                isParkingCategory =  파킹 금액조절화면일경우 true로 변경 필요
+                available :  분류가능금액
+                parkingVal  : 보관금액
+                totalMoney  :  보관금액 + 분류가능금액
+                realAvailable : 최대한도금액 - 보관금액
+                pageType : 더하기 화면인지 뺴기 화면인지 에 따라 문자열 "plus" or "minus" 할당;
+            */
+            
+            function init(){
+                resultObj = $('#localKeyPadResult');
+                //====== DEV set =============
+                pageType = "plus"; 
+                available = 500000000;//분류가능금액
+                parkingVal = 1000000;//파킹된 금액
+
+                realAvailable = available - parkingVal;
+                //파킹화면 아닌경우가 defalut set입니다.
+                
+                //if 파킹화면일경우
+                isParkingCategory = true; //파킹 화면이라면 true
+                maxAvailable = 3000000 //2022-09-30 기획변경 최대 설정한도 금액을 300만으로 제한 최대금액 
+                //================ DEV set ===
+
+                if(maxAvailable) { //한도 설정 금액이 존재한다면 적용
+                    realAvailable = maxAvailable - parkingVal;
+                }
+            }
+
+            function hanglePrice(price){
+                var _priceStr = price.split(',').join('');
+                var inpResult2 = 0;
+                if(_priceStr.length > 4){//만
+                    if(_priceStr.slice(_priceStr.length-4, _priceStr.length) == "0000"){
+                        inpResult2 = _priceStr.slice(0,_priceStr.length-4) +  "만원";
+                    }else{
+                        inpResult2 = _priceStr.slice(0,_priceStr.length-4) +  "만" + _priceStr.slice(_priceStr.length-4, _priceStr.length) + "원";
+                    }
+                    
+                }else{
+                    inpResult2 = price + '원';
+                }
+                return inpResult2;
+            }
+
+            //2022-09-21 수정
+            function event(){
+                //2022-09-21 입력가능금액 tap시
+                availableObj = $('.enterable-amount');
+                availableObj.on('click', function(){
+                    var movePrice = availableObj.find('span').text().split('원')[0].split(',').join('');
+                    var inpResult = new Intl.NumberFormat('ko-KR').format(movePrice);
+                    resultObj.text(inpResult);
+                    $('.about-money').html('<p class="'+pageType+'-number">'+hanglePrice(inpResult)+'</p>');
+                    $( '.input__inner').find('.won').text('원');
+                })
+                
+                
+                warpper.find('.number-button').click(function(){
+                    var _me = $(this);
+                    if(_me.is('.num-delete')){//삭제 클릭시
+                        inpDisable = false;
+                        localKeyPadResult = localKeyPadResult.slice(0, -1);
+                    }else{
+                        if(!inpDisable){
+                            localKeyPadResult += _me.text();
+                        }
+                    }
+
+                    var inpResult = new Intl.NumberFormat('ko-KR').format(localKeyPadResult);
+                    var descResult = parseInt(inpResult.split(',').join(''));
+
+                    //2022-09-21 추가
+                    if(!localKeyPadResult.length){
+                        inpResult = '';
+                        $('.target-amount .input').removeClass('input--focus');
+                        $( '.input__inner').find('.won').text('');
+                    }else{
+                        $('.target-amount .input').addClass('input--focus');
+                        $( '.input__inner').find('.won').text('원');
+                    }
+
+                    if(realAvailable < descResult){ //가능금액보다 크다면
+                        inpDisable = true;//삭제 전까지 추가 입력 방지
+                        if(isParkingCategory){//파킹카테고리라면
+                            //2022-09-30 최대금액 변경 반영
+                            $('.about-money').html('<p class="direct-cash-guide">최대 300만원까지 보관할 수 있어요</p>')
+                        }else{//그외
+                            $('.about-money').html('<p class="direct-cash-guide insuff-cash">잔액이 부족해요</p>')
+                        }
+                    }else{
+                        resultObj.text(inpResult);// 2022-09-19 수정
+                        inpResult2 = hanglePrice(inpResult);
+                        //2022-09-21 수정
+                        if(!localKeyPadResult.length){
+                            $('.about-money').html('');
+                        }else{
+                            $('.about-money').html('<p class="'+pageType+'-number">'+inpResult2+'</p>')
+                        }
+                        
+                    }
+
+                    
+                })
+                //2022-09-21 | 챌린지 금액 입력 수정
+                $( '.input__inner').append( '<span class="won"></span>' );
+            }
+            init();
+            event();
+        }
+        $(document).ready(function(){
+            localKeypad('.number-pad-wrap')
+        })
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap n22UI">
+        <!-- HEADER -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">담보대출</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //HEADER -->
+
+        <!-- CONTENT -->
+        <div id="content" class="app-main prodmall-detail-loans">
+            <div class="prodmall-section section-top">
+                <div>
+                    <em>예금담보대출</em>
+                    <div class="tit-default">중도해지 필요 없이<br>내 예금(청약) 담보로<br>간편하게</div>
+                </div>
+                <div class="content-wrap">
+                    <div class="main-desc">
+                        <em>최대한도</em>
+                        <strong><em>1인당 1억원</em></strong>
+                    </div>
+					<div class="half-cont">
+						<dl>
+							<dt>상환방식</dt>
+							<dd>만기일시상환</dd>
+						</dl>
+					</div>
+                    <div class="util-btn-group finance-detail__button-wrap">
+                            <!-- 2022-08-10 활성화시 util-btn에 추가클래스 부여 is-active
+                            <button type="button" class="util-btn icon-favorite is-active">관심상품</button>
+                             -->
+                        <button type="button" class="util-btn icon-share" data-ecrm="SHE1010">공유하기</button>
+                        <button type="button" class="util-btn icon-favorite">
+                                <i class="icon-heart icon-heart--large" aria-hidden="true"></i>
+                            </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prodmall-section">
+                <div class="tit-default txt-bold">예금/청약 있다면 언제든지</div>
+                <p>중도해지 없이 예금(청약) 담보로<br>간편하게 대출받고, 만기이자도 놓치지 마세요.</p>
+                <div id="prd_detail_04_3202_01" class="icon-svg-area" style="height: 12.5rem;"></div>
+            </div>
+
+            <div class="prodmall-section pb-0">
+                <div class="tit-default">신청 전 확인해 주세요!</div>
+                <div class="finance-box-wrap prodmall-notice">
+                    <!-- 상품정보 -->
+                    <div class="white-box white-box--fund" data-element="toggle"><!-- 내용펼침 class: data-options="{&quot;isOpened&quot;:true}" -->
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">상품정보</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+                        <div class="white-box__content" data-element="toggle__panel" style="display: block;">
+                            
+                            <!-- 대출 -->
+                            <div class="tit-small">대출대상</div>
+                              <div><div class="guide-wrap">
+                            <ul class="guide-list guide-list--large">
+                            <li class="guide-list__item">하나은행에 예금(일부 제외) 거래가 있는 본인 또는 제3자 명의의 당행 예·적·부금 등을 담보로 제공하는 개인</li>
+                            <li class="guide-list__item">전자금융을 통한 예금담보대출은 본인명의 당행 예·적·부금 만 가능</li>
+                            </ul>
+                            </div></div>
+                                                        <div class="tit-small">담보가능 예금</div>
+                                                        <div><div class="guide-wrap">
+                            <ul class="guide-list guide-list--large">
+                            <li class="guide-list__item">하나은행에서 신규한 예·적·부금</li>
+                            <li class="guide-list__item">예금담보 설정금액은 대출약정금액의 110%로 설정됩니다.
+                                <ul class="guide-sub-list guide-sub-list--gray">
+                                    <li class="guide-sub-list__item">금전신탁상품은 전자금융을 통한 예금담보대출 취급 시 담보제공이 불가합니다.</li>
+                                </ul>
+                            </li>
+                            </ul>
+                            </div></div>
+                                                        <div class="tit-small">대출한도</div>
+                                                        <div><div class="guide-wrap">
+                            <ul class="guide-list guide-list--large">
+                            <li class="guide-list__item">당행 예·적·부금의 납입(예치)금액의 100%범위내. 단, 월이자지급식 예금 및 주택청약종합저축은 납입(예치)금액의 95%범위 내(투자신탁 등은 별도의 담보인정비율이 적용되므로 영업점에 대출 신청 시 확인)</li>
+                            <li class="guide-list__item">전자금융을 통한 예금담보대출 취급한도는 1인당 최저 10만원 이상 최고 1억원까지 10만원 단위로 대출 가능(신규 및 증액에 한함)
+                                <ul class="guide-sub-list guide-sub-list--gray">
+                                    <li class="guide-sub-list__item">1억원을 초과하여 예금담보대출을 취급하고자 하시는 경우, 영업점을 방문하여 주시기 바랍니다.(신분증,통장,도장 지참)</li>
+                                </ul>
+                            </li>
+                            </ul>
+                            </div></div>
+                                                        <div class="tit-small">대출기간</div>
+                                                        <div><p class="text-guide">담보 예·적·부금의 만기일 이내(만기일이 없는 예·적·부금의 경우 취급 후 1년까지)</p>
+                            <div class="guide-wrap">
+                            <ul class="guide-sub-list guide-sub-list--gray guide-sub-list--large">
+                            <li class="guide-sub-list__item">단, 만기일이 다른 2개 이상의 예금을 담보로 한 경우 대출 기일은 최초 도래하는 예금의 만기일</li>
+                            </ul>
+                            </div></div>
+                                                        <div class="tit-small">상환방식</div>
+                                                        <div><p class="text-guide">만기일시상환 (일시대출, 통장대출)</p>
+                            <div class="guide-wrap">
+                            <ul class="guide-sub-list guide-sub-list--gray guide-sub-list--large">
+                            <li class="guide-sub-list__item">단, 전자금융을 통한 신청시에는 전자금융 출금계좌로 등록된 계좌만 약정 가능합니다.</li>
+                            </ul>
+                            </div></div>
+                                                        <div class="tit-small">이자계산 방법</div>
+                                                        <div><div class="guide-wrap">
+                            <ul class="guide-list guide-list--large">
+                            <li class="guide-list__item">대출금에 연이율과 대출일수를 곱한 후 이를 365일(윤년인 경우 366일)로 나누어 산출하되 원단위 미만은 절사<br>원리금균등분할상환대출의 월별이자 계산은 대출원금에 연이율을 곱한 다음 12로 나누어 계산<br>일수계산은 여신당일로부터 기일 또는 상환일(일부상환 및 분할상환 포함) 전일까지로 한다.(한편넣기)<br>위 내용에도 불구하고 다음의 여신은 여신당일부터 기일 또는 상환일까지로 한다.
+                                <ul class="guide-sub-list guide-sub-list--gray">
+                                    <li class="guide-sub-list__item">대출 당일에 회수되는 대출금</li>
+                                    <li class="guide-sub-list__item">대외기관으로부터 자금을 차입하는 대출금으로서 이자를 상환일까지 지급하는 대출금</li>
+                                    <li class="guide-sub-list__item">연체기간이 1일인 연체대출채권 및 지급보증대지급금</li>
+                                    <li class="guide-sub-list__item">대여유가증권</li>
+                                </ul>
+                            </li>
+                            <li class="guide-list__item">원금 균등분할상환대출 : 대출금액 x 대출이자율 x 이자일수 ÷ 365(윤년은 366일)</li>
+                            <li class="guide-list__item">원리금 균등분할상환대출 : 대출금액 × 대출이자율 ÷ 12</li>
+                            </ul>
+                            </div></div>
+                                                        <div class="tit-small">원금/이자의 상환시기 및 방법</div>
+                                                        <div><div class="guide-wrap">
+                            <ul class="guide-list guide-list--large">
+                            <li class="guide-list__item">건별대출(만기일시상환) : 원금은 만기에 일시상환, 이자는 일정주기(매1개월 등) 단위로 납부</li>
+                            <li class="guide-list__item">한도대출(마이너스통장) : 원금은 만기에 일시상환, 이자는 일정주기(매1개월 등) 단위로 납부</li>
+                            <li class="guide-list__item">분할상환대출 : 분할상환원금 및 이자를 일정주기(매1개월 등) 단위로 납부</li>
+                            <li class="guide-list__item">대출실행 응당일/별도지정일에 대출금 입금계좌/자동등록계좌에서 자동이체 처리</li>
+                            <li class="guide-list__item">고객님께서 선택하시는 대출방식 및 상품별로 원금/이자의 상환시기 및 방법이 일부 상이할 수 있으므로, 대출취급시 작성하시는 대출거래약정서의 상환방법 및 이자지급방법 내용을 참조하여 주시기 바랍니다.</li>
+                            </ul>
+                            </div></div>
+                                                        <div class="tit-small">대출관련비용</div>
+                                                        <div><p class="text-guide">인지세법에 의해 대출약정 체결시 납부하는 세금으로 대출금액에 따라 세액이 차등 적용되며, 은행과 고객이 각 50% 씩 부담합니다.</p>
+                            <button type="button" onclick="pbk.mbp.cmsUtil.fncCallStampTaxPop();" class="button-arrow button-arrow--right">인지세 자세히 보기</button></div>
+                                                        <div class="tit-small">통장대출 한도부여 방식</div>
+                                                        <div><div class="guide-wrap">
+                            <ul class="guide-list guide-list--large">
+                            <li class="guide-list__item">대출한도 고정방식<br>하나은행에 가입하신 예금을 담보로 대출한도가 부여되는 마이너스 통장대출</li>
+                            <li class="guide-list__item">대출한도 자동증액방식<br>하나은행에 가입하신 예금을 담보로 대출신청 가능 금액 범위내 에서 예/적금 불입금액까지 자동으로 한도가 증액되는 마이너스 통장 대출</li>
+                            </ul>
+                            </div>
+                            <div class="tit-small">금리인하요구권</div>
+                            <div class="guide-wrap">
+                            <ul class="guide-list guide-list--large">
+                            <li class="guide-list__item">본 상품은 금리인하요구권 적용 비대상 상품입니다.</li>
+                            </ul>
+                            </div>
+                            <div class="tit-small">대출계약철회권</div>
+                            <div class="guide-wrap">
+                            <ul class="guide-list guide-list--large">
+                            <li class="guide-list__item">대출금 수령일로부터 14일(기간의 말일이 휴일인 경우 다음 영업일)까지 은행에 서면, 전화, 컴퓨터 통신으로 철회의사를 표시하고 원금, 이자 및 부대비용을 전액 반환한 경우 대출계약을 철회할 수 있습니다.</li>
+                            <li class="guide-list__item">대출계약 철회권 남용 시 불이익: 당행에서 최근 1개월 내에 2회 이상 대출계약을 철회하는 경우, 신규대출·만기연장 거절, 대출한도 축소, 금리우대 제한 등 불이익이 발생할 수 있습니다.</li>
+                            </ul>
+                            </div>
+                            <div class="tit-small">위법계약해지권</div>
+                            <div class="guide-wrap">
+                            <ul class="guide-list guide-list--large">
+                            <li class="guide-list__item">은행이 「금융소비자 보호에 관한 법률」에서 정하는 적합성원칙, 적정성원칙 및 설명의무를 위반하였거나, 불공정영업행위 혹은 부당권유행위를 하여 대출계약을 체결한 경우, '법 위반사실을 안 날'부터 1년(계약체결일로부터 5년 이내의 범위에 있어야 합니다.) 이내에 해당 계약의 해지를 요구할 수 있습니다.</li>
+                            <li class="guide-list__item">은행은 해지를 요구받은 날부터 10일 이내에 고객에게 수락여부를 통지하며, 거절할 때에는 그 사유를 함께 통지합니다.</li>
+                            </ul>
+                            </div></div>
+
+                            
+                            
+                            
+
+                         </div>
+                    </div>
+
+                    <!-- 대출금리 -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">대출금리</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <div class="white-box__content" data-element="toggle__panel" style="display: block;">
+                                
+                            <div class="tit-small">금리</div>
+                            <div class="additional-button">
+                                <button type="button" class="button-underline button-underline--green" onclick="HanaGoPage(MIAPS_DOMAIN+'/mbp/resource/html/BLON/BLON02/BLON0204002.html')">가계대출기준금리 조회</button>
+                            </div><div id="depRateArea"><div class="tit-small">
+                                <span class="table-header__unit text-guide">(2022-09-23 현재, 연이율)</span>
+                            </div>
+                            
+                            <!-- cms 표 표시 여부  -->
+                            
+                            
+                            
+                            <div class="table table-vertical table-vertical--narrow">
+                                <table>
+                                    <colgroup>
+                                        <col span="3">
+                                    </colgroup>
+                                    <!-- thead Title -->
+                                    <thead>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                        <tr>
+                                            <th scope="col" class="table-vertical__th">금리구분</th>
+                                            <th scope="col" class="table-vertical__th">금리변동주기</th>
+                                            <th scope="col" class="table-vertical__th">기본금리</th>
+                                        </tr>
+                                    
+                                    
+                                    </thead>
+                                    <!-- tbody Contents -->
+                                    <tbody>
+                                    
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                            
+                                                <tr>
+                                                    <td class="table-vertical__td">온라인 신청시 예금금리+1.0%(영업점 신청시 +1.20%)</td>
+                                                
+                                                    <td class="table-vertical__td">0 개월</td>
+                                                
+                                                    <td class="table-vertical__td">0.000%</td>
+                                                
+                                                </tr>
+                                            
+                                        
+                                    
+                                    </tbody>
+                                </table> 
+                                
+                            </div></div>
+                            
+                            
+                            <div class="tit-small">대출금리</div>
+                            <div>
+                                <div class="guide-wrap">
+                                    <ul class="guide-list guide-list--large">
+                                    <li class="guide-list__item">대출금리는 담보로 제공되는 예/적금 상품금리 + 1.2%(전자금융에서 신청 시 예/적금금리 + 1.0%)로 결정됩니다.<br>단, 제공되는 예금이 다수일 경우에는 해당 예금의 가중평균 예금금리 + 1.2 %(전자금융에서 신청 시 예금의 가중평균 예금금리 + 1.0%)로 적용</li>
+                                    <li class="guide-list__item">담보예금이 주택청약종합저축인 경우 대출금리는 금융채 1년물 + 1.7% (전자금융에서 신청 시 금융채 1년물 + 1.2% )로 결정됩니다. 단, 통장대출 취급 시 0.5% 가산</li>
+                                    <li class="guide-list__item">담보예금이 지수플러스 정기예금인 경우 해당상품에서 정한 대출금리(확정금리)로 결정됩니다.</li>
+                                    </ul>
+                                </div>
+                            </div>			
+                        
+                        
+                         </div>
+                    </div>
+                        
+                    <!-- 상품해지 -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">상품해지</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <div class="white-box__content" data-element="toggle__panel" style="display: block;">
+                                    
+                            <div class="tit-small">계약해지 또는 갱신방법</div>
+                              <div>
+                                <div class="guide-wrap">
+                                    <ul class="guide-list guide-list--large">
+                                        <li class="guide-list__item">건별대출 계약해지 : 고객이 대출금 전액을 상환한 때</li>
+                                        <li class="guide-list__item">한도대출(마이너스통장방식) 계약해지 : 고객이 통장대출 약정에 대한 해지의사를 표시한 때</li>
+                                        <li class="guide-list__item">계약갱신 : 대출금은 약정기일(만기일)에 상환이 원칙이나, 당행에서 정한 일정요건을 갖춘 경우 기간연장 가능</li>
+                                    </ul>
+                                    <ul class="guide-sub-list guide-sub-list--gray guide-sub-list--large">
+                                    <li class="guide-sub-list__item">대출기간 만료시 은행이 정한 기준에 따라 기간연장 가능여부 심사후 승인을 득한 경우 계약갱신 가능하며, 고객님의 신용도, 대출상품 등에 따라 영업점 방문/고객센터 연장/전자금융채널(인터넷뱅킹·스마트폰뱅킹) 등의 방법을 통해 연장 가능합니다.</li>
+                                    </ul>
+                                </div>
+                              </div>
+                            <div class="tit-small">질권설정 및 해지</div>
+                              <div><p class="text-guide">대출약정 시 담보예금에 대하여 자동으로 질권이 설정되고 대출완제 시 담보예금에 대하여 자동으로 질권설정이 해지됩니다.</p></div>
+                            <div class="tit-small">중도상환 해약금</div>
+                              <div><p class="text-guide">중도상환해약금 없음</p></div>
+                            
+                        </div>
+                    </div>
+                        
+                    <!-- 유의사항 -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">유의사항</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <div class="white-box__content" data-element="toggle__panel" style="display: block;">
+                                    
+                            <div class="tit-small">유의사항</div>
+                              <div>
+                                <div class="guide-wrap">
+                                    <ul class="guide-list guide-list--large">
+                                        <li class="guide-list__item">고객님의 신용도에 따라 대출취급이 불가능 할 수 있습니다.</li>
+                                        <li class="guide-list__item">5천만원을 초과하여 예금담보대출 취급 시 담보 예·적·부금의 신규일로부터 2영업일 이후 신청 가능합니다.</li>
+                                        <li class="guide-list__item">금융상품에 관한 계약을 체결하기 전에 금융상품 설명서 및 약관을 읽어 보시기 바랍니다.</li>
+                                        <li class="guide-list__item">상환능력에 비해 대출금이 과도할 경우 귀하의 신용점수가 하락할 수 있습니다.</li>
+                                        <li class="guide-list__item">신용등급 또는 개인신용평점의 하락으로 금융거래 관련 불이익을 받을 수 있습니다.</li>
+                                        <li class="guide-list__item">원리금 연체 시 계약만료 기한 전에 모든 원리금을 변제해야할 의무가 발생될 수 있습니다.</li>
+                                    </ul>
+                                    <ul class="guide-sub-list guide-sub-list--gray guide-sub-list--large">
+                                        <li class="guide-sub-list__item">자세한 사항은 상품설명서를 참조하시거나, 하나은행 고객센터(1599-2222) 또는 영업점에 문의하시기 바랍니다.</li>
+                                    </ul>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                        
+                    <!-- 상품변경안내 -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">상품변경안내</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <div class="white-box__content" data-element="toggle__panel" style="display: block;">
+                                
+                            <div><div class="changes-info" data-element="accordion" data-options="{&quot;isInitActive&quot;:true}" role="presentation">
+<div class="changes-info__item" data-element="accordion__item">
+<button type="button" class="changes-info__anchor is-active" data-element="accordion__anchor" aria-expanded="true" role="button">
+    <span class="title">2018.11.29 변경</span>
+</button>
+<div class="changes-info__panel is-active" data-element="accordion__panel" style="">
+    <div class="tit-small">담보가능예금</div>
+    <pre>				변경 전
+        하나은행에서 신규한 예·적·부금
+         예금담보 설정금액은 대출약정금액의 110%로 설정됩니다
+        ※주택청약종합저축, 금전신탁상품은 전자금융을 통한 예금담보대출 취급 시 담보제공이 불가합니다. 
+
+        변경 후
+        하나은행에서 신규한 예·적·부금
+         예금담보 설정금액은 대출약정금액의 110%로 설정됩니다.
+        ※ 금전신탁상품은 전자금융을 통한 예금담보대출 취급 시 담보제공이 불가합니다. 
+    </pre>
+    <div class="tit-small">대출한도</div>
+    <pre>				변경 전
+        당행 예·적·부금의 납입(예치)금액의 100%범위내. 단, 월이자지급식 예금은 납입(예치)금액의 95%범위 내.(청약저축, 투자신탁 등은 별도의 담보인정비율이 적용되므로 영업점에 대출 신청 시 확인)
+        전자금융을 통한 예금담보대출 취급한도는 1인당 10만원 이상 최고 1억원까지 10만원 단위로 대출 가능(신규 및 증액에 한함)
+        ※ 1억원을 초과하여 예금담보대출을 취급하고자 하시는 경우, 영업점을 방문하여 주시기 바랍니다.(신분증,통장,도장 지참) 
+        
+        변경 후
+        당행 예·적·부금의 납입(예치)금액의 100%범위내. 단, 월이자지급식 예금 및 주택청약종합저축은 납입(예치)금액의 95%범위 내(투자신탁 등은 별도의 담보인정비율이 적용되므로 영업점에 대출 신청 시 확인)
+        전자금융을 통한 예금담보대출 취급한도는 1인당 10만원 이상 최고 1억원까지 10만원 단위로 대출 가능(신규 및 증액에 한함)
+        ※ 1억원을 초과하여 예금담보대출을 취급하고자 하시는 경우, 영업점을 방문하여 주시기 바랍니다.(신분증, 통장, 도장 지참) 
+    </pre>
+    <div class="tit-small">대출기간</div>
+    <pre>				변경 전
+        담보 예·적·부금의 만기일 이내
+        ※ 단, 만기일이 다른 2개 이상의 예금을 담보로 한 경우 대출 기일은 최초 도래하는 예금의 만기일 
+
+        변경 후
+        담보 예·적·부금의 만기일 이내 (만기일이 없는 예·적·부금의 경우 취급 후 1년까지)
+        ※ 단, 만기일이 다른 2개 이상의 예금을 담보로 한 경우 대출 기일은 최초 도래하는 예금의 만기일 
+    </pre>
+    <div class="tit-small">대출금리</div>
+    <pre>				변경 전
+        대출금리는 담보로 제공되는 예/적금 상품금리 + 1.2% (전자금융에서 신청 시 예금금리 + 1.0%)
+        담보예금이 지수플러스 정기예금일 경우 해당 상품에서 정한 대출금리(확정금리)로, 제공되는 예금이 다수일 경우에는 해당 예금의 가중평균 예금금리 + 1.2%(전자금융에서 신청 시 예금금리 + 1.0%)로 적용합니다.
+        ※ 주택청약종합저축을 담보로 한 대출금리는 영업점에 문의하시기 바랍니다.
+
+        변경 후
+        - 대출금리는 담보로 제공되는 예/적금 상품금리 + 1.2%(전자금융에서 신청 시 예/적금금리 + 1.0%)로 결정됩니다. 단, 제공되는 예금이 다수일 경우에는 해당 예금의 가중평균 예금금리 + 1.2 %(전자금융에서 신청 시 예금의 가중평균 예금금리 + 1.0%)로 적용
+        - 담보예금이 주택청약종합저축인 경우 대출금리는 금융채 1년물 + 1.7% (전자금융에서 신청 시 금융채 1년물 + 1.2%)로 결정됩니다. 단, 통장대출 취급 시 0.5% 가산
+        - 담보예금이 지수플러스 정기예금인 경우 해당상품에서 정한 대출금리(확정금리)로 결정됩니다.
+    </pre>
+</div>
+</div>
+</div>
+<div class="changes-info" data-element="accordion" role="presentation">
+<div class="changes-info__item" data-element="accordion__item">
+<button type="button" class="changes-info__anchor" data-element="accordion__anchor" aria-expanded="false" role="button">
+    <span class="title">2018.01.12 변경</span>
+</button>
+<div class="changes-info__panel" data-element="accordion__panel" style="display: none;">
+    <div class="tit-small">대출대상</div>
+    <pre>				변경 전
+        하나은행에 예금 및 신탁(일부 제외) 거래가 있는 본인 또는 제 3 자 명의의 당행 예·적·부금 등을 담보로 제공하는 고객 
+
+        변경 후
+        하나은행에 예금(일부 제외) 거래가 있는 본인 또는 제3자 명의의 당행 예·적·부금 등을 담보로 제공하는 개인
+        전자금융을 통한 예금담보대출은 본인명의 당행 예·적·부금 만 가능 
+    </pre>
+    <div class="tit-small">담보가능예금</div>
+    <pre>				변경 전
+        당행 예·적·부금 등
+
+        변경 후
+        하나은행에서 신규한 예·적·부금
+         예금담보 설정금액은 대출약정금액의 110%로 설정됩니다.
+        ※ 주택청약종합저축, 금전신탁상품은 전자금융을 통한 예금담보대출 취급 시 담보제공이 불가합니다. 
+    </pre>
+    <div class="tit-small">대출한도</div>
+    <pre>				변경 전
+        전자금융을 통한 예금담보대출 취급한도는 1인당 최고 3천만원입니다.(신규 및 증액에 한함)
+        ※ 3천만원을 초과하여 예금담보대출을 취급하고자 하시는 경우, 영업점을 방문하여 주시기 바랍니다.(신분증,통장,도장 지참)
+
+        변경 후 : 전자금융을 통한 예금담보대출 취급한도는 1인당 최저 10만원 이상 최고 1억원까지 10만원 단위로 대출 가능(신규 및 증액에 한함)
+        ※ 1억원을 초과하여 예금담보대출을 취급하고자 하시는 경우, 영업점을 방문하여 주시기 바랍니다.(신분증,통장,도장 지참)
+    </pre>
+    <div class="tit-small">대출기간</div>
+    <pre>				변경 전
+        담보 예·적·부금의 만기일 이내
+
+        변경 후
+        담보 예·적·부금의 만기일 이내
+        ※ 단, 만기일이 다른 2개 이상의 예금을 담보로 한 경우 대출 기일은 최초 도래하는 예금의 만기일
+    </pre>
+    <div class="tit-small">상환방식 및 대출종류</div>
+    <pre>				변경 전
+        거래방식
+         만기일시상환 또는 자유입출금식 통장대출(마이너스대출방식)
+         ※ 단, 인터넷 신청시에는 통장대출 방식만 가능하며 인터넷 뱅킹 출금계좌로 등록된 계좌 중 다른 대출 약정이 없는 계좌에만 약정 가능합니다. 
+
+         변경 후
+         상환방식 및 대출종류
+         만기일시상환 (일시대출, 통장대출)
+        ※ 단, 전자금융을 통한 신청시에는 전자금융 출금계좌로 등록된 계좌만 약정 가능합니다.
+    </pre>
+    <div class="tit-small">통장대출 한도부여방식</div>
+    <pre>				신설
+        - 대출한도 고정방식
+        하나은행에 가입하신 예금을 담보로 대출한도가 부여되는 마이너스 통장대출
+        - 대출한도 자동증액방식
+        하나은행에 가입하신 예금을 담보로 대출신청 가능 금액 범위 내 에서 예/적금 불입금액까지 자동으로 한도가 증액되는 마이너스 통장 대출
+    </pre>
+    <div class="tit-small">대출금리</div>
+    <pre>				신설
+        - 대출금리는 담보로 제공되는 예/적금 상품금리 + 1.2% (전자금융에서 신청 시 예금금리 + 1.0%)
+        - 담보예금이 지수플러스 정기예금일 경우 해당 상품에서 정한 대출금리(확정금리)로, 제공되는 예금이 다수일 경우에는 해당 예금의 가중평균 예금금리 + 1.2%(전자금융에서 신청 시 예금금리 +1.0%)로 적용합니다.
+        ※ 주택청약종합저축을 담보로 한 대출금리는 영업점에 문의하시기 바랍니다. 
+    </pre>
+    <div class="tit-small">질권설정 및 설정해지</div>
+    <pre>				신설
+        대출약정 시 담보예금에 대하여 자동으로 질권이 설정되고 대출완제 시 담보예금에 대하여 자동으로 질권설정이 해지됩니다. 
+    </pre>
+    <div class="tit-small">유의사항</div>
+    <pre>				변경 전
+        담보 예·적·부금의 신규일로부터 2영업일 이후 신청 가능합니다.
+
+        변경 후
+        5천만원을 초과하여 예금담보대출 취급 시 담보 예·적·부금의 신규일로부터 2영업일 이후 신청 가능합니다. 
+    </pre>
+</div>
+</div>
+</div>
+<div class="changes-info" data-element="accordion" role="presentation">
+<div class="changes-info__item" data-element="accordion__item">
+<button type="button" class="changes-info__anchor" data-element="accordion__anchor" aria-expanded="false" role="button">
+    <span class="title">2013.01.18 변경</span>
+</button>
+<div class="changes-info__panel" data-element="accordion__panel" style="display: none;">
+    <div class="tit-small">대출한도</div>
+    <pre>				변경 전
+        인터넷뱅킹을 통한 예금담보대출 취급한도 1인당 최고 1억원
+
+        변경 후
+        전자금융을 통한 예금담보대출 취급한도 1인당 최고 3천만원				
+    </pre>
+</div>
+</div>
+</div>
+<div class="changes-info" data-element="accordion" role="presentation">
+<div class="changes-info__item" data-element="accordion__item">
+<button type="button" class="changes-info__anchor" data-element="accordion__anchor" aria-expanded="false" role="button">
+    <span class="title">2011.11.26 변경</span>
+</button>
+<div class="changes-info__panel" data-element="accordion__panel" style="display: none;">
+    <div class="tit-small">대출한도</div>
+    <pre>				변경 전
+        당행 예∙적∙부금의 납입(예치)금액의 100% 범위내
+
+        변경 후
+        당행 예∙적∙부금의 납입(예치)금액의 100% 범위내
+        단, 월이자지급식 예금은 납입(예치)금액의 95% 범위내 
+    </pre>
+</div>
+</div>
+</div>
+<div class="changes-info" data-element="accordion" role="presentation">
+<div class="changes-info__item" data-element="accordion__item">
+<button type="button" class="changes-info__anchor" data-element="accordion__anchor" aria-expanded="false" role="button">
+    <span class="title">2011.07.01 변경</span>
+</button>
+<div class="changes-info__panel" data-element="accordion__panel" style="display: none;">
+    <div class="tit-small">수입인지세 부담주체</div>
+    <pre>				변경 전
+        고객 부담
+
+        변경 후
+        은행과 고객이 각 50%씩 부담				
+    </pre>
+</div>
+</div>
+</div></div>
+                        
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- 2022-11-07 텍스트 수정 -->
+                <span class="notice">준법감시인 심의필 제2022-상품-1380호 (2022.11.04)<br>
+                    본 공시내용의 유효기간 : 2022.11.04 ~ 2024.11.03<br>기준일 : 2022년 11월 4일
+            </div>
+        </div>
+        <!-- //CONTENT -->
+
+        <!-- FOOTER -->
+        <div id="footer" class="app-footer app-footer--button app-footer--button-round-corner">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive round-corner" data-ecrm="STS1020">한도 알아보기</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+        </div>
+        <!-- //FOOTER -->
+    </div>
+
+
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
+    <!-- 상품상세 js 별도분기 -->
+    <script src="../../../../resource/library/lottie/lottie.min.js"></script>
+    <script src="../../../../resource/js/ui/prd_detail_n22UI.js"></script>
+    <!-- 2022-10-08 추가 -->
+    <script>
+        $(document).ready(function(){
+            setSVGApply('#prd_detail_04_3202_01', '/pub/resource/images/C/lottie/detail/J25.json');
+        });
+    </script>
+</body>
+</html>

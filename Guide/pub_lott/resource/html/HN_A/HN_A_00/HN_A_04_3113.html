@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/prodmall.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap n22UI">
+        <!-- HEADER -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">신용대출</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //HEADER -->
+
+        <!-- CONTENT -->
+        <div id="content" class="app-main prodmall-detail-loans">
+            <div class="prodmall-section section-top">
+                <div>
+                    <em>햇살론15</em>
+                    <div class="tit-default">당장 생활비가<br>걱정이라면</div>
+                </div>
+                <div class="content-wrap">
+                    <div class="main-desc">
+                        <em>최대한도</em>
+                        <!-- 2022-10-31 문구 변경 -->
+                        <strong><em>2천만원</em></strong>
+                    </div>
+					<div class="half-cont">
+						<dl>
+							<dt>상환방식</dt>
+							<dd>원리금균등분할상환</dd>
+						</dl>
+					</div>
+                    <div class="util-btn-group finance-detail__button-wrap">
+                            <!-- 2022-08-10 활성화시 util-btn에 추가클래스 부여 is-active
+                            <button type="button" class="util-btn icon-favorite is-active">관심상품</button>
+                             -->
+                        <button type="button" class="util-btn icon-share" data-ecrm="SHE1010">공유하기</button>
+                        <button type="button" class="util-btn icon-favorite">
+                                <i class="icon-heart icon-heart--large" aria-hidden="true"></i>
+                            </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prodmall-section">
+                <div class="tit-default txt-bold">하나원큐로 걱정 없이</div>
+                <p>국민행복기금의 보증서를 담보로<br>긴급한 생활자금을 마련해 보세요.
+                </p>
+                <div class="interaction-area mt-30">
+                    <span class="bg-bar"></span>
+                    <!--2022-08-19 | 인터렉션 수정 / other-action 클래스 추가-->
+                    <!-- 2022-09-19 span 태그 추가, 클래스 thumb 추가, bg -> img로 변경-->
+                    <!-- 2022-09-22 span img -> bg로 변경-->
+                    <ul class="steps three-steps">
+                        <li class="one other-action">신청 및 한도조회<span>ㅣ 손님</span></li>
+                        <li class="two other-action">심사/승인<span>ㅣ 은행 및 보증기관</span></li>
+                        <li class="three other-action">약정/실행<span>ㅣ 손님</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="prodmall-section pb-0">
+                <div class="tit-default">신청 전 확인해 주세요!</div>
+                <div class="finance-box-wrap prodmall-notice">
+                    <!-- 상품내용 -->
+                    <div class="white-box white-box--fund" data-element="toggle"><!-- 내용펼침 class: data-options="{&quot;isOpened&quot;:true}" -->
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">상품정보</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+                        <div class="white-box__content" data-element="toggle__panel" style="display: none;">
+                             
+                            
+                            
+                            
+                            <!-- 대출 -->
+                            
+                            <div class="tit-small">대출대상</div>
+                            <div><p class="text-guide">아래의 조건을 모두 만족하는 손님</p>
+<div class="guide-wrap">
+	<ol class="ordered-list">
+		<li class="ordered-list__item">인증서 로그인이 가능한 손님</li>
+		<li class="ordered-list__item">3개월 이상 재직중인 직장인<br>(스크래핑에 의해 현 직장 기준 3개월 이상 건강보험 가입 및 최근 3개월 건강 보험료를 납부한 기록이 확인 가능한 손님)</li>
+		<li class="ordered-list__item">최근 3개월 건강보험료 환산소득 기준 연소득 35백만원 이하<br>(단 CB 신용평점 하위 20%는 연소득 45백만원 이하)인 손님</li>
+		<li class="ordered-list__item">국민행복기금 신용보증서 발급이 가능한 손님</li>
+		<li class="ordered-list__item">당행 심사기준을 충족하는 손님</li>
+	</ol>
+</div>
+<p class="text-guide mgt30">※ 개인사업자, 연금소득자 및 스크래핑이 불가한 손님의 경우 영업점을 방문하여 신청가능</p></div>
+                            <div class="tit-small">대출한도</div>
+                            <div><p class="text-guide">최소 50만원이상 최대 20백만원 이내로 만원 단위</p>
+<div class="guide-wrap">
+	<ul class="guide-list guide-list--large">
+		<li class="guide-list__item color-red">하나원큐(비대면채널)에서는 위탁보증으로만 신청이 가능 </li>
+		<li class="guide-list__item">위탁보증은 은행이 기금으로부터 위탁받아 직접 보증접수하는 생계자금 용도의 신용보증</li>
+	</ul>
+</div></div>
+                            <div class="tit-small">대출기간</div>
+                            <div><p class="text-guide">3년 또는 5년</p></div>
+                            <div class="tit-small">담보</div>
+                            <div><p class="text-guide">국민행복기금의 신용보증서</p></div>
+                            <div class="tit-small">상환방식</div>
+                            <div><p class="text-guide">전액 원리금균등분할상환</p></div>
+                            <div class="tit-small">이자계산 방법</div>
+                            <div><div class="guide-wrap">
+	<ul class="guide-list guide-list--large">
+		<li class="guide-list__item">대출금에 연이율과 대출일수를 곱한 후 이를 365일(윤년인경우 366일)로 나누어 산출하되 원단위 미만은 절사</li>
+		<li class="guide-list__item">원리금균등분할상환대출의 월별이자 계산은 대출원금에 연이율을 곱한 다음 12로 나누어 계산</li>
+		<li class="guide-list__item">일수 계산은 여신당일로부터 기일 또는 상환일(일부상환 또는 분할상환 포함) 전일까지로 한다.(한편넣기)</li>
+		<li class="guide-list__item">
+			위 내용에도 불구하고 다음의 여신은 여신 당일부터 기일 또는 상환일까지로 한다.
+			<ul class="guide-sub-list guide-sub-list--gray"><!-- color 값 #666일때  guide-sub-list--gray 추가-->
+				<li class="guide-sub-list__item">대출 당일에 회수되는 대출금</li>
+				<li class="guide-sub-list__item">대외기관으로부터 자금을 차입하는 대출금으로서 이자를 상환일까지 지급하는 대출금</li>
+				<li class="guide-sub-list__item">연체기간이 1일인 연체대출채권 및 지급보증대지급금</li>
+				<li class="guide-sub-list__item">대여유가증권</li>
+			</ul>
+		</li>
+		<li class="guide-list__item">원금 균등분할상환대출 : 대출금액 X 대출이자율 X이자일수÷365(윤년은 366일)</li>
+		<li class="guide-list__item">원리금 균등분할상환대출 : 대출금액X대출이자율÷12</li>
+	</ul>
+</div></div>
+                            <div class="tit-small">원금/이자의 상환시기 및 방법</div>
+                            <div><div class="guide-wrap">
+	<ul class="guide-list guide-list--large">
+		<li class="guide-list__item">분할상환대출 : 분할상환원금 및 이자를 일정주기(매1개월 등)단위로 납부</li>
+		<li class="guide-list__item">대출실행 응당일/별도지정일에 대출금 입금계좌/자동등록계좌에서 자동이체 처리</li>
+		<li class="guide-list__item">고객님께서 선택하시는 대출방식 및 상품별로 원금/이자의 상환시기 및 방법이 일부 상이할 수 있으므로, 대출취급시 작성하시는 대출거래약정서의 상환방법 및 이자지급방법 내용을 참조하여 주시기 바랍니다.</li>
+	</ul>
+</div></div>
+                            <div class="tit-small">필요서류</div>
+                            <div><p class="text-guide">없음</p></div>
+                            <div class="tit-small">대출관련비용</div>
+                            <div><p class="text-guide-regular">인지세</p>
+<p class="text-guide-xsmall">※ 인지세법에 의해 대출약정 체결시 납부하는 세금으로 대출금액에 따라 세액이 차등 적용되며, 은행과 손님이 각 50%씩 부담합니다.</p>
+<button type="button" onclick="pbk.mbp.cmsUtil.fncCallStampTaxPop();" class="button-arrow button-arrow--right">인지세 자세히 보기</button></div>
+                            
+                            
+    
+                        </div>
+                        <!-- //white-box__content-->
+                    </div>
+
+                    <!-- 신청정보 -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">신청정보</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <div class="white-box__content" data-element="toggle__panel" style="display: none;">
+                            
+                            
+                            <div class="tit-small"><div class="tit-small">이용시간</div></div>
+                            <div><p class="text-guide">대출 신청 및 약정/실행 :  은행영업일 (09:00 ~ 17:00)</p></div> 
+                            <div class="tit-small"><div class="tit-small">대출 진행 절차</div></div>
+                            <div><ol class="ordered-list ordered-list--circle ordered-list--large pdt0">
+	<li class="ordered-list__item">
+		손님신청
+		<div class="text-guide-sub text-guide-sub--regular">
+			하나원큐를 이용하여 대출 신청
+			<div class="guide-wrap">
+				<ul class="guide-list color-333">
+					<li class="guide-list__item">하나원큐 로그인 후 신청가능합니다. (당행 입출금계좌 필수보유)</li>
+					<li class="guide-list__item">스크래핑으로 건강보험 관련 서류 제출이 가능한 경우만 신청 가능합니다.</li>
+				</ul>
+			</div>
+		</div>
+	</li>
+	<li class="ordered-list__item">
+		은행 및 보증기관 심사 /승인
+		<div class="text-guide-sub text-guide-sub--regular">보증한도 및 대출 신청 내용에 대하여 심사/승인</div>
+	</li>
+	<li class="ordered-list__item">
+		고객 약정/대출실행
+		<div class="text-guide-sub text-guide-sub--regular">약정 및 대출실행</div>
+	</li>
+</ol></div>                   
+                        </div>
+                        <!-- //white-box__content-->
+                    </div>
+                        
+                    <!-- 금리안내 -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">대출금리</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <div class="white-box__content" data-element="toggle__panel" style="display: none;">
+                                         
+                            <div class="tit-small">금리</div>
+                            <div class="additional-button">
+                                <button type="button" class="button-underline button-underline--green" onclick="HanaGoPage(MIAPS_DOMAIN+'/mbp/resource/html/BLON/BLON02/BLON0204002.html')">가계대출기준금리 조회</button>
+
+                            </div>
+                                <!-- 2022-10-31 운영이행시 반영(as-is준용) -->
+                                <div class="tit-small">손님부담금리(2022.10기준)</div>
+                                <div><p class="text-guide">연 15.9.% (대출금리(은행) + 보증료율(기금))</p>
+                                    <div class="guide-wrap">
+                                    <ul class="guide-list guide-list--large">
+                                    <li class="guide-list__item">대출금리(은행) : 연 3.5%, 고정금리</li>
+                                    <li class="guide-list__item">보증료율(기금) : 연 12.4%</li>
+                                    <li class="guide-list__item">성실상환 금리감면 : 대출기간이 1년을 초과하는 경우 매 1년 경과 시점부터 과거 1년간 누적 연체일수가 30일 이하인 손님께 아래와 같이 적용</li>
+                                    </ul>
+                                    </div>
+
+                                    <div class="guide-wrap">
+                                    <ul class="guide-list guide-list--large single">
+                                    <li class="guide-list__item">
+                                    ① 대출기간에 따른 금리 감면 적용은 다음과 같으며, 보증료율에서 차감하는 방법에 의함
+                                    <ul class="guide-sub-list guide-sub-list--gray"><!-- color 값 #666일때  guide-sub-list--gray 추가-->
+                                        <li class="guide-sub-list__item">대출기간 3년인 경우 매년 연 3.0%씩 최대 연 6%까지 감면 적용</li>
+                                        <li class="guide-sub-list__item">대출기간 5년인 경우 매년 연 1.5%씩 최대 연 6%까지 감면 적용</li>
+                                    </ul>
+                                    </li>
+                                    <li class="guide-list__item">② 금리 감면시점은 대출 응당일이며, 연체중인 경우는 제외함</li>
+                                    </ul>
+                                    </div></div>
+                                                                    <div class="tit-small">연체가산율</div>
+                                                                    <div><p class="text-guide">연체 시 적용하는 가산율은 아래와 같습니다.</p>
+                                    <div class="guide-wrap">
+                                    <ul class="guide-list guide-list--large">
+                                    <li class="guide-list__item">은행이자에 대한 연체가산율 : 연3%</li>
+                                    <li class="guide-list__item">보증료에 대한 지연보증료율 : 연 3%</li>
+                                    </ul>
+                                    </div>
+                                    <p class="text-guide mgt60">단, 기한의이익상실(분할상환원리금 납부의 경우 3회 이상 연속 연체, 만기일 경과)한 때에는 해당 시점부터 대출잔액에 대하여 직전 보증료율을 곱하여 계산한 위약금을 징수한다.</p></div> 
+                            </div>
+                            <!-- //white-box__content-->
+                        
+                    </div>
+
+                    <!-- 상품해지 -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">상품해지</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <div class="white-box__content" data-element="toggle__panel" style="display: none;">
+                                        
+    
+                                             
+                                             
+                            <div class="tit-small">계약해지 또는 갱신방법</div>
+                             
+                             
+                            
+                        
+                        <div><div class="guide-wrap">
+<ul class="guide-list guide-list--large">
+<li class="guide-list__item">계약해지 : 고객이 대출금 전액을 상환한 때</li>
+<li class="guide-list__item">계약갱신 : 분할상환대출은 기간연장 불가</li>
+</ul>
+</div></div>
+                        <div class="tit-small">중도상환 해약금</div>
+                        <div><p class="text-guide">없음</p></div> 
+                    </div>
+                         <!-- //white-box__content-->
+                    </div>
+                        
+
+                    <!-- 유의사항 및 기타 -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">유의사항</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <div class="white-box__content" data-element="toggle__panel" style="display: none;">
+                                        
+                            <div class="tit-small">유의사항</div>
+                            <div><div class="guide-wrap">
+<ul class="guide-list guide-list--large">
+<li class="guide-list__item">모바일 신청은 인증서 로그인이 가능한 손님만 신청이 가능합니다.</li>
+<li class="guide-list__item">해당상품은 보증한도 조회 이후 대출신청이 가능합니다.</li>
+<li class="guide-list__item">보증승인 유효일(승인일 포함 5영업일) 이내 대출승인을 받지 않거나,&nbsp;대출승인 후 30일 이내 약정/실행하지 않을 경우,&nbsp;신청내역은 자동취소되며, 취소된 이후에는 다시 신청하셔야 합니다.</li>
+<li class="guide-list__item">고객님의 신용도에 따라 대출한도와 대출금리가 차등 적용되며 대출취급이 제한될 수 있습니다.</li>
+<li class="guide-list__item">원리금 연체 또는 대출만기 도래 시 대출금액을 상환하지 않을 경우에는 연체이자가 부과되며 채무자의 재산/신용상의 불이익(압류, 경매 등)이 발생할 수 있으니 주의하시기 바랍니다.</li>
+</ul>
+</div>
+<p class="text-guide">※ 자세한 사항은 상품설명서를 참조하시거나 하나은행 고객센터(1599-2222) 또는 영업점에 문의하시기 바랍니다.</p></div> 
+                        </div>
+                         <!-- //white-box__content-->
+                    </div>
+                        
+                    <!-- 상품변경에 관한 사항 -->
+                    <div class="white-box white-box--fund" data-element="toggle">
+                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false" role="button" tabindex="0">
+                            <div class="list-wrap__item list-wrap__item--bottom list-wrap__item--arrow">
+                                <div class="list-wrap__box">
+                                    <strong class="title">상품변경안내</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--button" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <div class="white-box__content" data-element="toggle__panel" style="display: none;">
+                                        
+                            <div><div class="changes-info" data-options="{&quot;isInitActive&quot;:true}" data-element="accordion" role="presentation"> 
+<div class="changes-info__item" data-element="accordion__item"> <button class="changes-info__anchor is-active" type="button" data-element="accordion__anchor" aria-expanded="true" role="button"> <span class="title">2022.08.08 변경</span> </button> 
+<div class="changes-info__panel is-active" data-element="accordion__panel" style=""> 
+<div class="tit-small">대출한도</div> <pre>변경 전 : 
+    1. 위탁보증 : 최소 50만원이상 최대 7백만원 이내로 만원 단위
+    (기금과의 상호합의한 경우 대출최대금액 14백만원으로 확대 가능)
+    2. 특례보증 : 최소 50만원이상 최대 14백만원 이내(위탁보증 포함)로 만원 단위
+    - 위탁보증 한도 초과자를 대상으로 서민금융진흥원이 기금으로부터 위탁받아 보증접수하는 생계자금 또는 대환자금 용도의 신용보증 </pre> <pre>변경 후 : 
+    1. 위탁보증 : 최소 50만원이상 최대 7백만원 이내로 만원 단위
+    - 은행이 기금으로부터 위탁받아 직접 보증접수하는 생계자금 용도 또는 햇살론17을 대환하기위한 용도의 신용 보증
+    2. 특례보증 : 최소 50만원이상 최대 14백만원 이내 (위탁보증포함)로 만원 단위
+    - 위탁보증 한도 초과자를 대상으로 서민금융진흥원이 기금으로부터 위탁받아 보증접수하는 생계자금 또는 대환자금 용도의 신용보증
+    - 기금과 상호합의한 경우 위탁 및 특례보증의 최고 한도를 조정할 수 있음
+    ※ 기존 가입고객에 대한 적용 여부 : 적용 </pre> </div> </div></div>
+<div class="changes-info" data-element="accordion" role="presentation"> 
+<div class="changes-info__item" data-element="accordion__item"> <button class="changes-info__anchor" type="button" data-element="accordion__anchor" aria-expanded="false" role="button"> <span class="title">2021.09.24 변경</span> </button> 
+<div class="changes-info__panel" data-element="accordion__panel" style="display: none;"> 
+<div class="tit-small">철회권 대상</div> <pre>변경 전 : 
+대출금 수령일로부터 14일(기간의 말일이 휴일인 경우 다음 영업일)까지 은행에 서면, 전화, 컴퓨터 통신으로 철회의사를 표시하고 원금, 이자 및 부대비용을 전액 반환한 경우 대출계약을 철회할 수 있습니다.
+대출계약 철회권 남용 시 불이익 : 당행에서 최근 1개월 내에 2회 이상 대출계약을 철회하는 경우, 신규대출 만기연장 거절, 대출한도 축소, 금리우대 제한 등 불이익이 발생할 수 있습니다.</pre> <pre>변경 후 : 
+본 상품은 대출계약 철회권 비대상 상품입니다.
+※ 기존 가입고객에 대한 적용 여부 : 적용</pre> </div> </div></div></div>
+                            
+                        </div>
+                        <!-- //white-box__content-->
+                        
+                    </div>
+                        
+
+                </div>
+                <!-- 2022-11-07 텍스트 수정 -->
+                <span class="notice">준법감시인 심의필 제2022-상품-1374호 (2022.11.04)<br>
+                    본 공시내용의 유효기간 : 2022.11.04 ~ 2024.11.03<br>기준일 : 2022년 11월 4일    
+                </span>
+            </div>
+        </div>
+        <!-- //CONTENT -->
+
+        <!-- FOOTER -->
+        <div id="footer" class="app-footer app-footer--button app-footer--button-round-corner">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive round-corner" data-ecrm="STS1020">한도 알아보기</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+        </div>
+        <!-- //FOOTER -->
+    </div>
+
+
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
+    <!-- 상품상세 js 별도분기 -->
+    <script src="../../../../resource/library/lottie/lottie.min.js"></script>
+    <script src="../../../../resource/js/ui/prd_detail_n22UI.js"></script>
+</body>
+</html>
