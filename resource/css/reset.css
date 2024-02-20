@@ -68,6 +68,15 @@ caption { overflow: hidden; width: 0; height: 0; font-size: 0; line-height: 0; }
 
 body * {box-sizing: border-box; font-size: 1.4rem; line-height: 1.5; color: #000; font-family: 'poppins-Regular', 'roboto', 'NotoSansKR', 'AppeGothic', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Dotum', Arial, Helvetica, sans-serif; font-weight: 400;}
 
+:root {
+  --color-c: center;
+  --align-r: right;
+  --align-l: left;
+
+  --color-1: blue;
+  --color-2: red;
+  --color-3: green;
+}
 
 
 #wrapper .buttonTop {

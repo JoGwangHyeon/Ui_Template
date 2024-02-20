@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="resource/css/import.css">
+</head>
+<body>
+<style>
+    h1 {
+        padding-top: 5rem;
+        font-weight: 700;
+        font-size: 5rem;
+        text-align: center;
+        
+    }
+    body #Document {
+        padding: 3rem;
+    }
+    body #Document pre {
+        padding-top: 2rem;
+        font-weight: 700;
+        font-size: 1.3rem;
+        line-height: 1.5;
+    }
+    body #Document pre .esc {margin: -2rem 0;}
+    body #Document pre ul {margin-bottom: -2rem;}
+</style>  
+<h1>##### 가이드 문서</h1>
+<div id="Document">
+
+<pre>
+1 전체 선택자(Universal Selector)
+- 전체 선택자(Universal Selector)는 모든 HTML 요소를 선택합니다. 별표(*)로 나타냅니다.
+</pre>
+
+
+<pre>
+2 타입 선택자(Type Selector)
+- 타입 선택자(Type Selector)는 h1, p, div, span 등 HTML 요소(Element)를 선택하는 선택자입니다.
+</pre>
+
+<pre>
+3 속성 선택자(Attribute Selector)
+- 속성 선택자(Attribute Selector)는 특정 속성(attribute)을 갖고 있거나 특정 속성이 특정 값 등을 갖고 있는 요소(element)를 선택합니다.
+<div class="esc">
+    <ul class="Attribute">
+        <li class="aaa xxx">[class^=aaa xxx] = 앞 aaa 선택</li>
+        <li class="xxx bbb">[class$=xxx bbb] = 뒤 bbb 선택</li>
+        <li class="xxx ccc zzz">[class*=xxx ccc xxx] = 모든 ccc 선택</li>
+    </ul>
+</div>
+<style>
+    .Attribute {display: inline-grid;}
+    .Attribute [class^=aaa] {color: red;}
+    .Attribute [class$=bbb] {color: blue;}
+    .Attribute [class*=ccc] {color: green;}
+</style>
+</pre>
+
+
+<pre>
+4 자식 선택자(Child Selector)
+<div class="esc">
+- css : div > span
+- html : &#60;div&#62;div(부모)
+                   &#60;span&#62;span(자식)&#60;/span&#62;
+              &#60;/div&#62;
+</div>
+</pre>
+
+<pre>
+5 형제 선택자(Sibling Selector)
+<div class="esc">
+- css : div ~ span
+- html : &#60;div&#62;div(형제)&#60;/div&#62;
+               &#60;span&#62;span(형제)&#60;/span&#62;
+</div>
+</pre>
+
+<pre>
+6 인접 형제 선택자(Adjacent Sibling Selector)
+<div class="esc">
+- css : div + span
+- html : &#60;div&#62;div(형제)&#60;/div&#62;
+               &#60;span&#62;span(형제)&#60;/span&#62;
+</div>
+</pre>
+
+<pre>
+7 가상 요소(Pseudo-elements)
+- ::first-line은 요소의 첫 번째 줄을 선택합니다.
+- ::first-letter는 요소의 첫 번째 문자를 선택합니다.
+- ::before는 요소의 앞을 선택합니다.
+- ::after은 요소의 뒤를 선택합니다.
+- ::selection은 마우스 드래그 등으로 선택한 텍스트를 선택합니다.
+<div class="esc">
+<ul class="pseudo">
+    <li class="">가나다라마바사아자차카타파하</li>
+    <li class="">가나다라마바사아자차카타파하</li>
+    <li class="">가나다라마바사아자차카타파하</li>
+    <li class="">가나다라마바사아자차카타파하</li>
+</ul>
+</div>
+<style>
+    .pseudo {display: inline-grid;}
+    .pseudo li {display: block;}
+    .pseudo li::selection {color: black;}
+    .pseudo li::first-line {color: red;border: 1px solid red;}
+    .pseudo li::first-letter {color: blue;}
+    .pseudo li::before {color: green;}
+    .pseudo li::after {color: pink;}
+</style>
+</pre>
+
+<pre>
+8 가상 클래스(Pseudo-class)
+- :nth-child()는 형제 요소 중에서 특정 순서에 있는 요소를 선택할 때 사용합니다.
+- n에 0, 1, 2, 3, …을 대입하면 3n+2은 2, 5, 8, 11, …이 됩니다. li 요소 중 그 순서에 있는 것을 선택하고 빨간색으로 만듭니다.
+<div class="esc">
+- css : :nth-child( an+b )
+</div>
+</pre>
+
+<pre>
+9 가상 클래스(Pseudo-class)
+- :nth-child()는 형제 요소 중에서 특정 순서에 있는 요소를 선택할 때 사용합니다.
+- n에 0, 1, 2, 3, …을 대입하면 3n+2은 2, 5, 8, 11, …이 됩니다. li 요소 중 그 순서에 있는 것을 선택하고 빨간색으로 만듭니다.
+<div class="esc">
+- css : :nth-child( an+b )
+</div>
+</pre>
+
+<pre>
+ 10 가상 클래스(Pseudo-class)
+- :nth-child()는 형제 요소 중에서 특정 순서에 있는 요소를 선택할 때 사용합니다.
+- n에 0, 1, 2, 3, …을 대입하면 3n+2은 2, 5, 8, 11, …이 됩니다. li 요소 중 그 순서에 있는 것을 선택하고 빨간색으로 만듭니다.
+<div class="esc">
+- css : :nth-child( an+b )
+</div>
+</pre>
+
+
+</div>
+아닌가요? 😢
+
+<script>
+export default {
+    data() {
+        return {
+        awesome: true
+        }
+    }
+}
+</script>
+
+<button @click="awesome = !awesome">전환</button>
+
+<h1 v-if="awesome">Vue는 정말 멋지죠!</h1>
+<h1 v-else>아닌가요? 😢</h1>
+
+</body>
+</html>

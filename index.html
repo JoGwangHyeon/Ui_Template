@@ -30,8 +30,8 @@
 
 
 <!-- 그래프 -->
-<link type="text/css" rel="stylesheet" href="test/al-range-slider.css">
-<script src="test/al-range-slider.js"></script>
+<link type="text/css" rel="stylesheet" href="range/al-range-slider.css">
+<script src="range/al-range-slider.js"></script>
 
 <style>
 	pre {
@@ -49,7 +49,7 @@
     border-radius: 4px;
 	}
 	#ui-datepicker-div {
-		display: block !important;
+		/* display: block !important; */
 		position: absolute; top: 835px; left: 896.719px; z-index: 1;
 	}
 </style>
@@ -58,6 +58,7 @@
 	$(document).ready(function() {
 		$("#ID").load("FILE.html");
 		$(".guide_menu").load("aside.html");
+		$(".guide_component").load("component.html");
 	});
   </script>
 
@@ -74,17 +75,40 @@
 	<div id="container" class="guide_container">
 
 
+	<!-- 컴퍼넌트 인크루드
+	<div class="guide_component"></div>
+	-->
+
 <pre style="margin-top:0;">&#60;&#60;&#60; 테스트 코드  &#62;&#62;&#62;</pre>
 
+<section class="case_dev">
+	가나다라마바사 아자차카타파하
+</section>
+<style>
+	.case_dev {
+		text-align: var( --align-r );
+		color: var( --color-1 );
+	}
+</style>
 
+
+
+
+<pre>&#60;&#60;&#60; 색상 & 년/월/일 & 시간 선택  &#62;&#62;&#62;</pre>
 <input type="color" class="aa">
 <input type="date" class="aa">
 <input type="time" class="aa">
+<style lang="">
+	.aa {
+		border: 1px solid black;
+		vertical-align: middle;
+	}
+</style>
 
 
-<br><br>
+<pre>&#60;&#60;&#60; 작성글 등록  &#62;&#62;&#62;</pre>
 <p id="displayText" style="white-space: pre-line;"></p>
-<textarea id="inputText" placeholder="여러 줄을 추가해보세요" oninput="saveText(this.value)"></textarea>
+<textarea id="inputTexts" placeholder="여러 줄을 추가해보세요" oninput="saveText(this.value)"></textarea>
 
 
 <script>
@@ -93,7 +117,7 @@
 		var savedText = localStorage.getItem('savedInput');
 
 		if (savedText) {
-			document.getElementById('inputText').value = savedText;
+			document.getElementById('inputTexts').value = savedText;
 			displayText(savedText);
 		}
 	};
@@ -102,25 +126,15 @@
 		document.getElementById('displayText').innerText = value;
 		localStorage.setItem('savedInput', value);
 	}
-
-
 </script>
-
 <style lang="">
 	#displayText {
-		min-height: 10rem;
+		min-height: 3rem;
 	}
-	#inputText {
+	#inputTexts {
 		min-height: 10rem;
-	}
-	.aa {
-		border: 1px solid black;
-		vertical-align: middle;
 	}
 </style>
-
-<br><br><br><br>
-
 
 <pre>&#60;&#60;&#60; 텍스트 흐름 &#62;&#62;&#62;</pre>
 		<div class="acme-news-ticker">
@@ -231,6 +245,11 @@
 
 <pre>&#60;&#60;&#60; 그래프 &#62;&#62;&#62;</pre>
 		<div class="basic"></div>
+		<div class="example"></div>
+
+
+
+
 		<script>
 			$('.basic').alRangeSlider();
 			const options = {
@@ -239,6 +258,12 @@
 				grid: { minTicksStep: 1, marksStep: 5 },
 				theme: "pink",
 			};
+
+			// from a range object
+			$('.example').alRangeSlider({
+				orientation:"vertical",
+			});
+
 		</script>
 
 <pre>&#60;&#60;&#60; 아코디언  &#62;&#62;&#62;</pre>
@@ -331,10 +356,6 @@
 		
 
 	</div>
-
-
-
-
 
 </body>
 </html>
