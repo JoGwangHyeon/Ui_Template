@@ -1,0 +1,204 @@
+@charset "utf-8";
+
+.cs_diceroll .content_wrap {
+    margin: 18px 0 0;
+    color: #424242;
+}
+.cs_diceroll .cntrl_area {
+    text-align: left;
+}
+.cs_diceroll .cntrl_area:after {
+    display: block;
+    clear: both;
+    content: '';
+}  
+.cs_diceroll .cntrl_area .prsn_num {
+    float: left;
+    position: relative;
+    padding: 6px 5px 5px 1px;
+}
+.cs_diceroll .cntrl_area .prsn_num {
+    float: left;
+    position: relative;
+    padding: 0 5px 5px 1px;
+}
+.cs_diceroll .prsn_num button {
+    overflow: hidden;
+    width: 27px;
+    height: 27px;
+    border: 0;
+    border-radius: 0;
+    background: url(../img/sp_sadari.png) no-repeat 0 0 #fafafa;
+    background-size: 82px 57px;
+    text-indent: -999px;
+    cursor: pointer;
+}
+.cs_diceroll .prsn_num .people_num {
+    float: left;
+    margin-left: -2px;
+    padding-right: 8px;
+    line-height: 28px;
+    color: #666;
+}
+.cs_diceroll .prsn_num em {
+    float: left;
+    padding: 0 6px 0 2px;
+    line-height: 26px;
+    font-size: 14px;
+    color: #000;
+}  
+.cs_diceroll .prsn_num em span {
+    margin: 0 1px 0 8px;
+    font-size: 16px;
+    font-weight: bold;
+}  
+.cs_diceroll .prsn_num .pls {
+    padding: 0;
+    background-position: -25px 0;
+}
+.cs_diceroll .prsn_num .mns {
+    float: left;
+    padding: 0;
+    background-position: -55px 0;
+}  
+.cs_diceroll .prsn_num .pls[disabled=disabled] {
+    background-position: -25px -30px;
+}
+.cs_diceroll .prsn_num .mns[disabled=disabled] {
+    background-position: -55px -30px;
+}
+.cs_diceroll .ifm {
+    overflow: hidden;
+    padding-top: 4px;
+    line-height: 20px;
+    color: #909090;
+}
+.cntrl_area {
+    margin-top: -1px;
+}  
+.cs_diceroll .cnt_area {
+    position: relative;
+    height: 285px;
+    border: 1px solid #92b5ba;
+    background: url(../img/bg_pattern2.png) repeat;
+    background-size: 8px 8px;
+    text-align: center;
+}
+.cs_diceroll .cnt_area .canvas_area {
+    position: relative;
+}  
+.cs_diceroll .cnt_area .canvas_area .canvas_info {
+    position: relative;
+    padding: 9px 0;
+    font-size: 14px;
+    color: #3f5864;
+    text-shadow: 0 1px 0 #cbe4e5;
+}
+.cs_diceroll .cnt_area .canvas_area .container {
+    overflow: hidden;
+    height: 234px;
+    margin: 0 auto;
+    text-align: center;
+}  
+.cs_diceroll .cnt_area .canvas_area .canvas_info:before {
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    border-top: 1px solid #416064;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+    content: '';
+}  
+.cs_diceroll .cnt_area .canvas_area .canvas_info:after {
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    width: 100%;
+    border-top: 1px solid #fff;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+    content: '';
+}  
+.cs_diceroll .cnt_area .canvas_area .canvas_info .ico_mobile {
+    display: inline-block;
+    width: 27px;
+    height: 16px;
+    margin-right: 4px;
+    margin-left: 2px;
+    margin-top: -2px;
+    background: url(../img/ico_mobile.png) no-repeat;
+    background-size: 27px 16px;
+    text-indent: -9999px;
+    vertical-align: middle;
+}  
+.cs_diceroll .cnt_area .canvas_area .canvas_info .choice {
+    font-size: 21px;
+    color: #53423b;
+}  
+.cs_diceroll .cnt_area .btn_are {
+    overflow: hidden;
+    margin-top: 4px;
+    text-align: center;
+}  
+.cs_diceroll .cnt_area .btn_are .btn_turn {
+    display: inline-block;
+    width: 105px;
+    height: 33px;
+    border: 0;
+    background: url(../img/bg_btn.png) no-repeat;
+    background-size: 105px 147px;
+    text-indent: -9999px;
+    cursor: pointer;
+}  
+.cs_diceroll .cnt_area .btn_are .btn_stop {
+    display: inline-block;
+    width: 105px;
+    height: 33px;
+    border: 0;
+    background: url(../img/bg_btn.png) no-repeat 0 -38px;
+    background-size: 105px 147px;
+    text-indent: -9999px;
+    cursor: pointer;
+}  
+.cs_diceroll .cnt_area .btn_are .btn_new {
+    display: inline-block;
+    width: 105px;
+    height: 33px;
+    border: 0;
+    background: url(../img/bg_btn.png) no-repeat 0 -76px;
+    background-size: 105px 147px;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+.cs_diceroll .cnt_area .btn_are .btn_return {
+    display: inline-block;
+    width: 105px;
+    height: 33px;
+    margin-right: 6px;
+    border: 0;
+    background: url(../img/bg_btn.png) no-repeat 0 -114px;
+    background-size: 105px 147px;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+.cs_diceroll .rel_link {
+    margin-top: 15px;
+}
+.cs_diceroll .rel_link dl {
+    overflow: hidden;
+    padding: 15px 0;
+    line-height: 1.6rem;
+    color: #424242;
+    font-size: 1.3rem;
+    border-top: 1px solid #f0f0f0;
+}
+.cs_diceroll .rel_link dl dt {
+    float: left;
+    padding-right: 11px;
+    color: #808080;
+}
+.cs_diceroll .rel_link dl dd {
+    overflow: hidden;
+}

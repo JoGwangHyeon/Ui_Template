@@ -1,0 +1,22 @@
+/* 전반적인 스타일링 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+/* 네비게이션 메뉴 */
+/* 로고 */
+/* 카드 상품 소개 */
+
+/* 하단 정보 */

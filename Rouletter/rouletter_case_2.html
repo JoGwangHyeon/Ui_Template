@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<title>샘플 테스트</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="description" content="프로젝트 설명">
+	<meta name="keywords" content="키워드1, 키워드2, 키워드3">
+	<!-- 안드로이드 홈화면추가시 상단 주소창 제거 -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<!-- ios홈화면추가시 상단 주소창 제거 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link type="text/css" rel="stylesheet" href="/resource/css/import.css">
+	<link type="text/css" rel="stylesheet" href="/resource/css/content.css">
+	<script src="/resource/js/jquery-3.6.0.min.js"></script>
+	<script src="/resource/js/com_ui.js"></script>
+
+<script>
+	// jQuery 인크루드
+	/* $(document).ready(function() {
+		$("#ID").load("FILE.html");
+		$(".guide_menu").load("aside.html");
+		$(".guide_component").load("component.html");
+	}); */
+  </script>
+
+  <style>
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+* {
+  font-family: Pretendard;
+}
+
+body {
+  background: #f7f8fc;
+}
+
+canvas {
+  transition: 2s;
+}
+
+button {
+  background: #febf00;
+  margin-top: 1rem;
+  padding: .8rem 1.8rem;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: .2s;
+  cursor: pointer;
+}
+
+button:active {
+  background: #444;
+  color: #f9f9f9;
+}
+ 
+div {
+  width: 380px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+div::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 50px;
+  border-radius: 5px;
+  background: #000;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 22;
+}
+  </style>
+
+
+
+
+</head>
+<body>
+
+<div>
+  <canvas width="380" height='380'></canvas>  
+  <button onclick="rotate()">룰렛 돌리기</button>
+</div>
+<script>
+  const $c = document.querySelector("canvas");
+  const ctx = $c.getContext(`2d`);
+  
+  
+  const product = [
+    "찹쌀떡!!", '돈가스', "초밥", "피자", "냉면", "치킨", '족발', "피자", "삼겹살",
+  ];
+  
+  const colors = ["#dc0936", "#e6471d", "#f7a416", "#efe61f ", "#60b236", "#209b6c", "#169ed8", "#3f297e", "#87207b", "#be107f", "#e7167b"];
+  
+  const newMake = () => {
+      const [cw, ch] = [$c.width / 2, $c.height / 2];
+      const arc = Math.PI / (product.length / 2);
+    
+      for (let i = 0; i < product.length; i++) {
+        ctx.beginPath();
+        ctx.fillStyle = colors[i % (colors.length -1)];
+        ctx.moveTo(cw, ch);
+        ctx.arc(cw, ch, cw, arc * (i - 1), arc * i);
+        ctx.fill();
+        ctx.closePath();
+      }
+  
+      ctx.fillStyle = "#fff";
+      ctx.font = "18px Pretendard";
+      ctx.textAlign = "center";
+  
+      for (let i = 0; i < product.length; i++) {
+        const angle = (arc * i) + (arc / 2);
+  
+        ctx.save()  ;
+  
+        ctx.translate(
+          cw + Math.cos(angle) * (cw - 50),
+          ch + Math.sin(angle) * (ch - 50),
+        );
+  
+        ctx.rotate(angle + Math.PI / 2);
+  
+        product[i].split(" ").forEach((text, j) => {
+          ctx.fillText(text, 0, 30 * j);
+        });
+  
+        ctx.restore();
+      }
+  }
+  
+  const rotate = () => {
+    $c.style.transform = `initial`;
+    $c.style.transition = `initial`;
+    
+    setTimeout(() => {
+      
+      const ran = Math.floor(Math.random() * product.length);
+  
+      const arc = 360 / product.length;
+      const rotate = (ran * arc) + 3600 + (arc * 3) - (arc/4);
+      
+      $c.style.transform = `rotate(-${rotate}deg)`;
+      $c.style.transition = `2s`;
+      
+      setTimeout(() => alert(`오늘의 야식은?! ${product[ran]} 어떠신가요?`), 2000);
+    }, 1);
+  };
+  
+  newMake();
+    </script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<title>샘플 테스트</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="description" content="프로젝트 설명">
+	<meta name="keywords" content="키워드1, 키워드2, 키워드3">
+	<!-- 안드로이드 홈화면추가시 상단 주소창 제거 -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<!-- ios홈화면추가시 상단 주소창 제거 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link type="text/css" rel="stylesheet" href="/resource/css/import.css">
+	<link type="text/css" rel="stylesheet" href="/resource/css/content.css">
+	<script src="/resource/js/jquery-3.6.0.min.js"></script>
+	<script src="/resource/js/com_ui.js"></script>
+  
+
+<script>
+	// jQuery 인크루드
+	/* $(document).ready(function() {
+		$("#ID").load("FILE.html");
+		$(".guide_menu").load("aside.html");
+		$(".guide_component").load("component.html");
+	}); */
+  </script>
+<script>
+  
+</script>
+</head>
+<body>
+
+  <link rel="stylesheet" type="text/css" href="ladders.css"/>
+  <section class="sc_new" data-dss-logarea="xmg">
+      <div class="api_subject_bx">
+          <div class="api_title_area">
+              <h2 class="api_title">사다리게임</h2>
+          </div>
+          <div class="api_cs_wrap">
+              <div id="ladders" style="position: relative; background-image: url('https://ssl.pstatic.net/sstatic/search/acao/img/ladders_back.png'); background-position:50% 2px; background-repeat: no-repeat; margin-bottom:13px; text-align: center; ">
+                  <canvas id="ladders_canvas" width="580" height="320" style=""></canvas>
+              </div>
+          </div>
+      </div>
+  </section>
+  <script>
+      (function() {
+          var ua = jindo.$Agent().navigator();
+          if (!(ua.ie && ua.version < 10)) {
+              var sJavascriptFile = "ladders_min.js";
+              var fnCallback = function() {};
+              nhn.common.load_js(sJavascriptFile, fnCallback, true, 150);
+          }
+      }());
+  </script>
+<script src="ladders.js"></script>
+
+
+</body>
+</html>

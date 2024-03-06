@@ -126,6 +126,25 @@ function countBytes() {
     }
 }
 
+// 스크롤 상단 버튼
+$('#scrollButton').hide();
+
+// 윈도우의 스크롤 이벤트 처리
+$(window).scroll(function() {
+    // 현재 스크롤 위치가 100보다 크면 버튼 보이기
+    if ($(this).scrollTop() > 100) {
+        $('#scrollButton').fadeIn();
+    } else {
+        $('#scrollButton').fadeOut();
+    }
+});
+
+// 버튼 클릭 시 페이지 맨 위로 스크롤
+$('#scrollButton').click(function() {
+    $('html, body').animate({scrollTop: 0}, 'slow');
+    return false;
+});
+
 
 
 

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link type="text/css" rel="stylesheet" href="resource/css/import.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <style>
@@ -141,24 +142,52 @@
 </div>
 </pre>
 
-
+<pre style="display: none;">
+    
+    이벤트(event)
+    - 마우스 이벤트
+     : [ click, dbclick, mouseenter, mouseleave ]
+    - 키보드 이벤트
+    : [ keypress, keydown, keyup ]
+    - 폼 이벤트
+    : [ submit, change, focus, blur ]
+    - 윈도우 이벤트
+    : [ load, resize, scroll, unload ]
+</pre>
+<div class="">
+    <p class="onClick">버튼 문장문단으로 검색해주세요</p>
+    <button type="button">버튼을 클릭해주세요1111</button>
+    <button type="button">버튼을 클릭해주세요2222</button>
 </div>
-아닌가요? 😢
 
-<script>
-export default {
-    data() {
-        return {
-        awesome: true
-        }
+<div class="input_dv">
+    <input type="text" />
+    <input type="text" />
+</div>
+<style>
+    * {
+        
     }
-}
+</style>
+<script>
+    $(document).ready(function(){
+        $("button").on(function(){
+            $(".onClick").css("background", "red");
+        });
+    });
+    $("input[type=text]").on({
+        focus : function(){
+            $(this).css("background", "red")
+        },
+        blur : function(){
+            $(this).css("background", "blue")
+        }
+    });
+
 </script>
 
-<button @click="awesome = !awesome">전환</button>
 
-<h1 v-if="awesome">Vue는 정말 멋지죠!</h1>
-<h1 v-else>아닌가요? 😢</h1>
+</div>
 
 </body>
 </html>
