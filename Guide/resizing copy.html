@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<title>샘플 테스트</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="description" content="프로젝트 설명">
+	<meta name="keywords" content="키워드1, 키워드2, 키워드3">
+	<!-- 안드로이드 홈화면추가시 상단 주소창 제거 -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<!-- ios홈화면추가시 상단 주소창 제거 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link type="text/css" rel="stylesheet" href="../resource/css/import.css">
+	<link type="text/css" rel="stylesheet" href="../resource/css/content.css">
+
+<!--
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+-->
+    <script src="resizing.min.js"></script>
+    
+</head>
+<body>
+<div id="demoRoot">
+  <div id="grid-snap">
+    Dragging is constrained to the corners of a grid
+  </div>
+</div>  
+<style>
+html, body {width: 100%; height: 100%;}
+#demoRoot {
+  height: 100%;
+}
+#grid-snap {
+  width: 40%;
+  border-radius: 4px;
+  padding: 2%;
+  margin: 1rem 0 0 1rem;
+  background-color: #29e;
+  color: #fff;
+  font-size: 1.2em;
+  touch-action: none;
+}
+</style>
+<script>
+var element = document.getElementById('grid-snap')
+var x = 0; var y = 0
+
+interact(element)
+  .draggable({
+    modifiers: [
+      interact.modifiers.snap({
+        targets: [
+          interact.snappers.grid({ x: 30, y: 30 })
+        ],
+        range: Infinity,
+        relativePoints: [ { x: 0, y: 0 } ]
+      }),
+      interact.modifiers.restrict({
+        restriction: element.parentNode,
+        elementRect: { top: 0, left: 0, bottom: 1, right: 1 },
+        endOnly: true
+      })
+    ],
+    inertia: true
+  })
+  .on('dragmove', function (event) {
+    x += event.dx
+    y += event.dy
+
+    event.target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
+  })
+</script>
+
+</body>
+</html>
